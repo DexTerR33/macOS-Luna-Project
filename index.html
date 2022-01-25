@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="icons.css" />
+    <link rel="stylesheet" href="mediaquerryes.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="container-itemsPage">
+          <div class="container-topheader">
+            <div class="container_topheader_left">
+              <ul class="container_topheader_items">
+                <li>
+                  <a href="#"><i class="fab fa-apple apple_logoM"></i></a>
+                </li>
+                <li>
+                  <div class="drop-down">
+                    <a class="drop-down_name" id="dropDown">Finder</a>
+                    <div class="drop-down_menu-box">
+                      <ul id="drop-down_menu" class="dropdown-content">
+                        <li class="drop-down_item">
+                          <a href="#">about finder</a>
+                        </li>
+                        <li class="drop-down_item">
+                          <a href="#">preferences</a>
+                        </li>
+                        <li class="drop-down_item"><a href="#">Services</a></li>
+                        <li class="drop-down_item"><a href="#">about</a></li>
+                        <li class="drop-down_item"><a href="#">help</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="drop-down2">
+                    <a class="drop-down_name" id="dropDown2">View</a>
+                    <div class="drop-down_menu-box">
+                      <ul id="drop-down_menu" class="dropdown-content">
+                        <li class="drop-down_item">
+                          <a href="#">about finder</a>
+                        </li>
+                        <li class="drop-down_item">
+                          <a href="#">preferences</a>
+                        </li>
+                        <li class="drop-down_item"><a href="#">Services</a></li>
+                        <li class="drop-down_item"><a href="#">about</a></li>
+                        <li class="drop-down_item"><a href="#">help</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="section4_topheader_right">
+              <ul>
+                <li>
+                  <a href="#"><i class="fas fa-wifi"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fas fa-volume-up"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-bluetooth-b"></i></a>
+                </li>
+                <li><a href="#">43%</a></li>
+                <li>
+                  <a href="#"><i class="fas fa-battery-half"></i></a>
+                </li>
+                <li><a href="#">Tue 6:42 AM</a></li>
+                <li>
+                  <a href="#"><i class="fas fa-search"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fas fa-home"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="section4_middle">
+            <div class="section4_middle_grid">
+              <div id="mydiv">
+                <div class="container-finder">
+                  <div class="finder-topnav">
+                    <div class="finder-topnav-items" id="mydivheader">
+                      <div class="circle circle1"></div>
+                      <div class="circle circle2"></div>
+                      <div class="circle circle3"></div>
+                    </div>
+                    <p>macOs Luna</p>
+                  </div>
+                  <div class="finder-secondnav">
+                    <div class="items-secondnav-left">
+                      <a href="#"><i class="fas fa-chevron-left"></i></a>
+                      <a href="#"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="items-secondnav-center">
+                      <ul>
+                        <li>
+                          <a href="#"><i class="fas fa-list-ul"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-bars"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-server"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-network-wired"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-cog"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="far fa-clock"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="far fa-clock"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="far fa-clock"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="items-secondnav-right">
+                      <div class="search">
+                        <input
+                          type="text"
+                          class="searchTerm"
+                          placeholder="What are you looking for?"
+                        />
+                        <button type="submit" class="searchButton">
+                          <i class="fa fa-search"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="finder-middle">
+                    <div class="finder-middle-left">
+                      <ul>
+                        <div>Favorites</div>
+                        <li>
+                          <a href="#"><i class="far fa-clock"></i>Recent</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-home"></i>Home</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-desktop"></i>Desktop</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><i class="far fa-folder-open"></i>Documents</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><i class="fas fa-download"></i>download</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-music"></i>music</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-image"></i>picture</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-video"></i>videos</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><i class="fas fa-project-diagram"></i>network</a
+                          >
+                        </li>
+                        <div>location</div>
+                        <li>
+                          <a href="#"
+                            ><i class="fas fa-hdd"></i>255 gb Volume</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><i class="fas fa-hdd"></i>255 gb Volume</a
+                          >
+                        </li>
+                        <div>icloud</div>
+                        <li>
+                          <a href="#"><i class="fas fa-hdd"></i>computer</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="finder-middle-right">
+                      <ul>
+                        <li>
+                          <a href="#"
+                            ><img
+                              src="./png/folders/mac_folder_me.png"
+                              alt=""
+                            />Me</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><img
+                              src="./png/folders/mac_folder_photo.png"
+                              alt=""
+                            />
+                            Video</a
+                          >
+                        </li>
+
+                        <li>
+                          <a href="#"
+                            ><img
+                              src="./png/folders/mac_folder_drive.png"
+                              alt=""
+                            />
+                            Music</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><img
+                              src="./png/folders/mac_folder_contact.png"
+                              alt=""
+                            />
+                            Projects</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><img src="./png/folders/mac_folder2.png" alt="" />
+                            Video</a
+                          >
+                        </li>
+
+                        <li>
+                          <a href="#"
+                            ><img src="./png/folders/mac_folder2.png" alt="" />
+                            Music</a
+                          >
+                        </li>
+
+                        <li>
+                          <a href="#"
+                            ><img
+                              src="./png/folders/mac_folder_app.png "
+                              alt=""
+                            />
+                            Projects</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><img src="./png/folders/mac_folder2.png" alt="" />
+                            Video</a
+                          >
+                        </li>
+
+                        <li>
+                          <a href="#"
+                            ><img src="./png/folders/mac_folder2.png" alt="" />
+                            Music</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><img src="./png/folders/mac_folder2.png" alt="" />
+                            Projects</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><img src="./png/folders/mac_folder2.png" alt="" />
+                            Video</a
+                          >
+                        </li>
+
+                        <li>
+                          <a href="#"
+                            ><img src="./png/folders/mac_folder2.png" alt="" />
+                            Music</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><img src="./png/folders/mac_folder2.png" alt="" />
+                            Video</a
+                          >
+                        </li>
+
+                        <li>
+                          <a href="#"
+                            ><img src="./png/folders/mac_folder2.png" alt="" />
+                            Music</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><img src="./png/folders/mac_folder2.png" alt="" />
+                            Music</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><img src="./png/folders/mac_folder2.png" alt="" />
+                            Music</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><img src="./png/folders/mac_folder2.png" alt="" />
+                            Music</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><img src="./png/folders/mac_folder2.png" alt="" />
+                            Music</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="container-footer-finder">
+                    <i class="fas fa-home"></i>
+                    <div>25 items, 280.63 GB available</div>
+                    <div>Marian Iordache</div>
+                  </div>
+                </div>
+              </div>
+              <div id="mydiv2">
+                <div class="container-contact">
+                  <div class="contact-topnav" id="mydivheader2">
+                    <div class="contact-topnav-items finder-topnav-items">
+                      <div class="circle circle1"></div>
+                      <div class="circle circle2"></div>
+                      <div class="circle circle3"></div>
+                    </div>
+                    <p>macOs Luna</p>
+                  </div>
+                  <div class="contact-middle">
+                    <div class="contact-middle-left">
+                      <ul>
+                        <li>
+                          <a href="#"><i class="far fa-clock"></i>Home</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-desktop"></i>who i am</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><i class="fas fa-download"></i>Projects</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-music"></i>youtube</a>
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><i class="far fa-folder-open"></i>Parteners</a
+                          >
+                        </li>
+                        <li><a href="#">Sorin Eugen</a></li>
+                        <li><a href="#">Rares Craciun</a></li>
+                      </ul>
+                    </div>
+                    <div class="contact-middle-right">
+                      <div class="contact-middle-image">
+                        <div class="contact-image-container">
+                          <div class="contact-profile-img"></div>
+                        </div>
+                        <div class="contact-name">
+                          <div>Marian Iordache</div>
+                          <div>" front-end developer "</div>
+                        </div>
+                      </div>
+                      <div class="contact-middle-top">
+                        <div class="contact-middle-items">
+                          <a href="#"
+                            ><i class="fab fa-facebook-messenger"></i>
+                            <br />messenger</a
+                          >
+                          <a href="#"
+                            ><i class="fab fa-facebook-messenger"></i>
+                            <br />call</a
+                          >
+                          <a href="#"
+                            ><i class="fab fa-facebook-messenger"></i>
+                            <br />video</a
+                          >
+                          <a href="#"
+                            ><i class="fab fa-facebook-messenger"></i>
+                            <br />email</a
+                          >
+                        </div>
+                        <div class="contact-middle-information">
+                          <div class="info-middle">
+                            <div class="info-middle-list">
+                              <p>phone:</p>
+                              <span>0765965155</span>
+                            </div>
+                            <hr />
+                            <div class="info-middle-list">
+                              <p>home:</p>
+                              <span><a href="http://">bucuresti</a></span>
+                            </div>
+                            <hr />
+                            <div class="info-middle-list">
+                              <p>Linkdin:</p>
+                              <span>
+                                <a href="http://">marian Iordache</a>
+                              </span>
+                            </div>
+                            <hr />
+                            <div class="info-middle-list">
+                              <p>youtube:</p>
+                              <span> <a href="http://">js geek</a></span>
+                            </div>
+                            <hr />
+                            <div class="info-middle-list">
+                              <p>email:</p>
+                              <span>
+                                <a href="mailto:iordache.marian21@gmail.com"
+                                  >Iordache.marian21@gmail.com</a
+                                ></span
+                              >
+                            </div>
+                            <hr />
+                            <div class="info-middle-list">
+                              <p>birthday:</p>
+                              <span>
+                                <a href="mailto:iordache.marian21@gmail.com"
+                                  >june 21</a
+                                ></span
+                              >
+                            </div>
+                            <hr />
+                            <div class="info-middle-list">
+                              <p>css battle:</p>
+                              <span><a href="#">rank link</a></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="contact-middle-footer">
+                          <input
+                            type="button"
+                            value="CV"
+                            class="btn btn-standard btn-danger btn-contact"
+                          />
+                          <div class="contact-middle-footer-btn">
+                            <input
+                              type="button"
+                              class="btn btn-standard btn-danger btn-contact"
+                              value="hire me"
+                            />
+                            <input
+                              type="button"
+                              class="btn btn-standard btn-danger btn-contact"
+                              value="linkdin"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container-footer-contact">
+                    <i class="fas fa-home"></i>
+                    <div>wallet code{} <span>donate</span></div>
+                    <div>Marian Iordache</div>
+                  </div>
+                </div>
+              </div>
+              <div id="mystickyNotes">
+                <div class="stickyNotes-container" id="mydivheader">
+                  <div class="finder-topnav-items notes-topnav-items">
+                    <div class="circle circle1"></div>
+                    <div class="circle circle2"></div>
+                    <div class="circle circle3"></div>
+                    
+                  </div>
+                  <hr>
+                  <div class="notes-middle-content">
+                    <p>Hints</p>
+                    <p>double click on folders</p>
+                    <hr>
+                    <p>double click on folders</p>
+                    <hr>
+                    <p>double click on folders</p>
+                    <hr>
+                    <p>double click on folders</p>
+                    <hr>
+                    <p>double click on folders</p>
+                    <hr>
+                    <p>double click on folders</p>
+                    <hr>
+                    <p>searcch</p>
+                
+                  </div>
+                  <div class="notes-footer-content">
+                    <input
+                      type="button"
+                      value="Close"
+                      class="btn btn-standard btn-contact"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="section4_footer">
+                <div class="section4_botIcons">
+                  <ul>
+                    <li>
+                      <div class="container-hover-icons bounce-4">
+                        <div class="finder-icon">
+                          <div class="finder-icon-grey-side"></div>
+                          <div class="finder-icon-eyes">
+                            <div class="finder-icon-eye-left eye"></div>
+                            <div class="finder-icon-eye-right eye"></div>
+                          </div>
+                          <div class="finder-icon-smile"></div>
+                        </div>
+                      </div>
+                    </li>
+                    <hr />
+                    <li>
+                      <a href="#"
+                        ><img src="./png/dockcontact/rocket.png" alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><img src="./png/dockcontact/safari.png" alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><img src="./png/dockcontact/mail_free.png" alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><img src="./png/dockcontact/message.png" alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><img src="./png/dockcontact/facetime.png" alt=""
+                      /></a>
+                    </li>
+                    <hr />
+                    <li>
+                      <div class="container-hover-icons bounce-4">
+                        <div class="appStore-icon icons-dimension">
+                          <div
+                            class="appstore-icon-line1 appStore-icons-inside"
+                          ></div>
+                          <div
+                            class="appstore-icon-line2 appStore-icons-inside"
+                          ></div>
+                          <div
+                            class="appstore-icon-line3 appStore-icons-inside"
+                          ></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="container-hover-icons bounce-4">
+                        <div class="calendar-icon">
+                          <div class="calendar-icon-bg">
+                            <div class="calendar-icon-top">
+                              <div>jun</div>
+                            </div>
+                            <div class="calendar-icon-middle">
+                              <div>21</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><img src="./png/dockcontact/roadmaps.png" alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <div class="container-hover-icons">
+                        <div class="icon-chrome chrome">
+                          <div class="icon-chrome-red"></div>
+                          <div class="icon-chrome-green"></div>
+                          <div class="icon-chrome-yellow"></div>
+                          <div class="icon-chrome-circle"></div>
+                          <div class="icon-chrome-center"></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="container-hover-icons bounce-4">
+                        <div class="github-icon">
+                          <div class="github-icon-ears">
+                            <div class="github-icon-ears-left"></div>
+                            <div class="github-icon-ears-right"></div>
+                          </div>
+                          <div class="github-icon-face"></div>
+                          <div class="github-icon-body"></div>
+                          <div class="github-icon-tails"></div>
+                        </div>
+                      </div>
+                    </li>
+                    <hr />
+                    <li>
+                      <div class="container-hover-icons bounce-4">
+                        <div class="adobe-icons afterEffect-icon">
+                          <div>Ae</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="container-hover-icons bounce-4">
+                        <div class="adobe-icons premiere-icon">
+                          <div>Pr</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="container-hover-icons bounce-4">
+                        <div class="adobe-icons adobe-xd-icon">
+                          <div>Xd</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="container-hover-icons bounce-4">
+                        <div class="adobe-icons photoshop-icon">
+                          <div>Ps</div>
+                        </div>
+                      </div>
+                    </li>
+                    <hr />
+                    <li><a href="#">pm</a></li>
+                    <li><a href="#">search</a></li>
+                    <hr />
+                    <li><a href="#">icons</a></li>
+                    <li><a href="#">menu</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      //Make the DIV element draggagle:
+      dragElement(document.getElementById("mydiv"));
+      function dragElement(elmnt) {
+        var pos1 = 0,
+          pos2 = 0,
+          pos3 = 0,
+          pos4 = 0;
+        if (document.getElementById(elmnt.id + "header")) {
+          /* if present, the header is where you move the DIV from:*/
+          document.getElementById(elmnt.id + "header").onmousedown =
+            dragMouseDown;
+        } else {
+          /* otherwise, move the DIV from anywhere inside the DIV:*/
+          elmnt.onmousedown = dragMouseDown;
+        }
+        function dragMouseDown(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // get the mouse cursor position at startup:
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          document.onmouseup = closeDragElement;
+          // call a function whenever the cursor moves:
+          document.onmousemove = elementDrag;
+        }
+        function elementDrag(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // calculate the new cursor position:
+          pos1 = pos3 - e.clientX;
+          pos2 = pos4 - e.clientY;
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          // set the element's new position:
+          elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+          elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+        }
+        function closeDragElement() {
+          /* stop moving when mouse button is released:*/
+          document.onmouseup = null;
+          document.onmousemove = null;
+        }
+      }
+      //Make the DIV element draggagle:
+      dragElement2(document.getElementById("mydiv2"));
+      function dragElement2(elmnt) {
+        var pos1 = 0,
+          pos2 = 0,
+          pos3 = 0,
+          pos4 = 0;
+        if (document.getElementById(elmnt.id + "header")) {
+          /* if present, the header is where you move the DIV from:*/
+          document.getElementById(elmnt.id + "header").onmousedown =
+            dragMouseDown;
+        } else {
+          /* otherwise, move the DIV from anywhere inside the DIV:*/
+          elmnt.onmousedown = dragMouseDown;
+        }
+        function dragMouseDown(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // get the mouse cursor position at startup:
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          document.onmouseup = closeDragElement;
+          // call a function whenever the cursor moves:
+          document.onmousemove = elementDrag;
+        }
+        function elementDrag(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // calculate the new cursor position:
+          pos1 = pos3 - e.clientX;
+          pos2 = pos4 - e.clientY;
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          // set the element's new position:
+          elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+          elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+        }
+        function closeDragElement() {
+          /* stop moving when mouse button is released:*/
+          document.onmouseup = null;
+          document.onmousemove = null;
+        }
+      }
+
+      //Make the DIV element draggagle:
+      dragElement3(document.getElementById("mystickyNotes"));
+      function dragElement3(elmnt) {
+        var pos1 = 0,
+          pos2 = 0,
+          pos3 = 0,
+          pos4 = 0;
+        if (document.getElementById(elmnt.id + "header")) {
+          /* if present, the header is where you move the DIV from:*/
+          document.getElementById(elmnt.id + "header").onmousedown =
+            dragMouseDown;
+        } else {
+          /* otherwise, move the DIV from anywhere inside the DIV:*/
+          elmnt.onmousedown = dragMouseDown;
+        }
+        function dragMouseDown(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // get the mouse cursor position at startup:
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          document.onmouseup = closeDragElement;
+          // call a function whenever the cursor moves:
+          document.onmousemove = elementDrag;
+        }
+        function elementDrag(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // calculate the new cursor position:
+          pos1 = pos3 - e.clientX;
+          pos2 = pos4 - e.clientY;
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          // set the element's new position:
+          elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+          elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+        }
+        function closeDragElement() {
+          /* stop moving when mouse button is released:*/
+          document.onmouseup = null;
+          document.onmousemove = null;
+        }
+      }
+
+      // Close the dropdown if the user clicks outside of it
+
+      $("#dropDown").click(function () {
+        $(".drop-down").toggleClass("drop-down--active");
+      });
+      $("#dropDown2").click(function () {
+        $(".drop-down2").toggleClass("drop-down--active");
+      });
+    </script>
+    <script type="text/javascript" src="/index.js" async></script>
+  </body>
+</html>

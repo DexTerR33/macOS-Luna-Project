@@ -1,0 +1,129 @@
+/*
+@media screen and (min-width: 600px) {
+  .grid_container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 738px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 962px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1250px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .grid_container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .test {
+    position: relative;
+    left: -540px;
+    top: -4px;
+  }
+  .arrow {
+    width: 0px;
+    height: 0px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #313131;
+ 
+    margin: auto;
+    position: relative;
+    top: 720px;
+  }
+  .arrow::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #313131;
+ 
+    margin: auto;
+    position: relative;
+    bottom: 230;
+    right: 15px;
+  }
+}
+@media screen and (min-width: 3840px) {
+  .grid_container {
+    width: 3810px;
+  }
+  .test {
+    position: relative;
+    left: -951px;
+    top: -4px;
+  }
+  .fas {
+    vertical-align: middle;
+    font-size: 2rem;
+    margin-right: 2px;
+    color: rgb(85, 85, 85);
+  }
+
+  .firstP {
+    color: #dddddd;
+    font-size: 3em;
+    margin-bottom: -15px;
+    position: relative;
+    right: 75px;
+  }
+  .secondP {
+    color: var(--text-color);
+    font-size: 3.5em;
+    position: relative;
+    left: 65px;
+  }
+  .btn {
+    border: 1px solid #dddddd42;
+    padding: 16px;
+    width: 148px;
+    color: #dddddd;
+    background-color: var(--text-color);
+    cursor: pointer;
+    display: inline-block;
+    margin: 3px 5px 11px 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    outline: none;
+    font-size: 1em;
+    transition: all 0.3s;
+  }
+}
+*/
+/*
+@media screen and (min-width: 2560px) {
+
+  .section4_middle_grid {
+    display: grid;
+    grid-template-columns: repeat(10, minmax(145px, 1fr));
+    grid-template-rows: repeat(9, minmax(40px, 145px));
+  }
+  .section4_footer {
+    grid-column: 4 / auto;
+    grid-row: 9;
+    margin: 40px auto;
+  }
+  #mydiv {
+    position: absolute;
+    z-index: 101;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+}
+*/
