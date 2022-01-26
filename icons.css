@@ -3,12 +3,12 @@
 .icon-chrome {
     height: 50px;
     width: 50px;
-    border: 1px solid rgb(201, 201, 201);
     box-shadow: 0 0 5px 1px rgb(0 0 0 / 30%);
     border-radius: 50%;
     z-index: 1;
     position: relative;
     overflow: hidden;
+
 }
 
 .icon-chrome-center {
@@ -41,7 +41,7 @@
     height: 22px;
     background-color: #e93c35;
     position: absolute;
-    top: -8px;
+    top: -5px;
     left: 11px;
     z-index: 5;
 }
@@ -106,6 +106,7 @@
     justify-content: flex-end;
     position: relative;
     overflow: hidden;
+    
 }
 
 .container-hover-icons {
@@ -216,45 +217,52 @@
 .adobe-icons {
     width: 48px;
     height: 48px;
-    background: #001d34;
     border-radius: 0.7em;
     display: flex;
-    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%);
+    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%);  
 }
 
 .adobe-icons>div {
     margin: auto;
     font-size: 1.3em;
     font-family: "Open Sans Condensed", sans-serif;
-    font-weight: 700;
-    color: #1c9cff;
-    transform: scaleY(1.1);
+    font-weight: 700;  
 }
 
 .premiere-icon {
     background: #240832;
+    border: 1px solid #e373f7;
 }
-
 .premiere-icon>div {
-    color: #e373f7;
+    color: #e373f7; 
+}
+.photoshop-icon{
+    background: #001d34;
+    border: 1px solid #1c9cff;
+}
+.photoshop-icon >div{
+    color: #1c9cff;
 }
 
 .afterEffect-icon {
     background: #000058;
+    border: 1px solid #9494f7;
 }
 
 .afterEffect-icon>div {
     color: #9494f7;
+ 
 }
 
 .adobe-xd-icon {
     background: #450135;
+    border: 1px solid #c215b6;
 }
 
 .adobe-xd-icon>div {
     color: #f75eee;
+   
 }
-
 
 /*-------------end adobe cloud icons------------*/
 
@@ -314,10 +322,6 @@
     margin: auto;
 }
 
-.calendar-icon-middle>div {
-    margin-left: 8px;
-}
-
 .icons-dimension {
     width: 50px;
     height: 50px;
@@ -325,7 +329,8 @@
     border-radius: 50%;
     background: lightskyblue;
 }
-
+/*----------end calendar----------*/
+/*----------start app store ----------*/
 .appStore-icons-inside {
     margin-left: 1px;
 }
@@ -334,6 +339,7 @@
     position: relative;
     background-image: linear-gradient(to bottom, rgba(187, 187, 187, 0), #1671F2);
     box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%);
+    
 }
 
 .appStore-icon .appStore-icons-inside {
@@ -403,38 +409,55 @@
 }
 
 
-/*-------------end appstore cloud
+/*-------------end appstore cloud------------*/
 
 /*-------------start github icons------------*/
+.git-hub-container {
+    background: #333;
+    width: 54px;
+    height: 54px;
+    border-radius: 50px;
+    overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1px solid rgb(228, 228, 228);
+   box-shadow: 0 2px 5px 2px rgb(0 0 0 / 40%); 
+
+}
 
 .github-icon {
-    width: 50px;
-    height: 50px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    border: 1px solid rgb(3, 18, 37);
     position: relative;
-    background: #333;
+    background: rgb(240, 240, 240);
     border-bottom: none;
+    overflow: hidden;
+   
 }
 
 .github-icon-face {
     position: relative;
-    top: 8px;
-    width: 28px;
-    height: 23px;
-    background: white;
+    top: 9px;
+    width: 20px;
+    height: 14px;
+    background: #333;
     border-radius: 20px;
     margin: auto;
+
 }
 
 .github-icon-ears {
     position: absolute;
     display: flex;
-    gap: 7px;
+    gap: -1px;
     flex-direction: column;
-    left: 17px;
-    top: -2px;
-    transform: rotate(90deg);
+    left: 12px;
+    top: 1px;
+    transform: rotate( 
+90deg
+ );
 }
 
 .github-icon-ears-left {
@@ -442,7 +465,7 @@
     height: 0;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
-    border-top: 10px solid white;
+    border-top: 10px solid #333;
     border-radius: 50%;
 }
 
@@ -451,17 +474,17 @@
     height: 0;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
-    border-bottom: 10px solid white;
+    border-bottom: 10px solid #333;
     border-radius: 50%;
 }
 
 .github-icon-body {
-    width: 17px;
-    height: 20px;
-    background: white;
+    width: 13px;
+    height: 22px;
+    background: #333;
     position: relative;
-    top: -3px;
-    margin: 10px auto;
+    top: 7px;
+    margin: 0px auto;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 }
@@ -470,13 +493,15 @@
     width: 30px;
     height: 10px;
     position: absolute;
-    border: solid 5px white;
-    border-color: white transparent transparent transparent;
+    border: solid 5px #333;
+    border-color: #333 transparent transparent transparent;
     border-radius: 200px/100px 10px 10px 10px;
-    transform: rotate(47deg);
-    top: 38px;
+    transform: rotate(
+47deg
+);
+    top: 28px;
     z-index: 231;
-    left: -1px;
+    left: -3px;
 }
 
 
@@ -493,6 +518,8 @@
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    border: 1px solid rgb(228, 228, 228);
+    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%); 
 }
 
 .google-maps-circlePart {
@@ -544,7 +571,7 @@
     height: 68px;
     width: 8px;
     position: absolute;
-    transform: rotate( -45deg);
+    transform: rotate(-45deg);
     box-shadow: 0 0 2px rgb(119, 119, 119);
     left: 13px;
     z-index: 1;
@@ -588,12 +615,12 @@
     bottom: 4px;
     right: 5px;
     border-radius: 6px;
-    font-size: 0.3em;
+    font-size: 0.4rem;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgb(56, 56, 252);
+    border: 1px solid rgb(236, 10, 59);
     font-weight: 500;
     color: white;
     letter-spacing: 0.4px;
@@ -615,6 +642,8 @@
     align-items: center;
     gap: 5px;
     position: relative;
+    border: 1px solid rgb(228, 228, 228);
+    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%); 
 }
 
 .photo-icon {
@@ -643,7 +672,7 @@
 .photo-icon-shape3 {
     left: 28px;
     top: 21px;
-    transform: rotate( -40deg);
+    transform: rotate(-40deg);
     background-color: brown;
     z-index: 32;
     opacity: 0.8;
@@ -652,7 +681,7 @@
 .photo-icon-shape4 {
     top: 14px;
     left: 30px;
-    transform: rotate( 90deg);
+    transform: rotate(90deg);
     background-color: rgb(194, 95, 14);
     z-index: 35;
     opacity: 0.8;
@@ -661,7 +690,7 @@
 .photo-icon-shape5 {
     top: 5px;
     left: 28px;
-    transform: rotate( 45deg);
+    transform: rotate(45deg);
     background-color: palevioletred;
     z-index: 32;
     opacity: 0.8;
@@ -677,7 +706,7 @@
 
 .photo-icon-shape7 {
     top: 5px;
-    transform: rotate( -45deg);
+    transform: rotate(-45deg);
     left: 10px;
     z-index: 32;
     opacity: 0.8;
@@ -686,7 +715,7 @@
 .photo-icon-shape8 {
     top: 14px;
     left: 8px;
-    transform: rotate( 90deg);
+    transform: rotate(90deg);
     background-color: darkgoldenrod;
     z-index: 36;
     opacity: 0.8;
@@ -695,7 +724,7 @@
 .photo-icon-shape9 {
     left: 10px;
     top: 21px;
-    transform: rotate( 45deg);
+    transform: rotate(45deg);
     background-color: darkorchid;
     z-index: 34;
     opacity: 0.8;
@@ -712,6 +741,10 @@
 
 /*-------------end photos icons------------*/
 
+
+
+/*-----  start musical icon --------*/
+
 .music-icons {
     width: 51px;
     height: 51px;
@@ -719,6 +752,7 @@
     background-image: linear-gradient(to bottom, rgba(247, 19, 19, 0.281) -10px, rgb(223, 16, 16));
     border: 1px solid rgb(228, 228, 228);
     overflow: hidden;
+    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%); 
 }
 
 .music-icon-top {
@@ -783,7 +817,7 @@
 }
 
 
-/*-----  start musical icon --------*/
+/*-----  start linkdin icon --------*/
 
 .linkDin-icon {
     width: 48px;
@@ -791,6 +825,7 @@
     border-radius: 10px;
     background: rgba(34, 129, 207, 0.993);
     display: flex;
+    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%); 
 }
 
 .linkDin-icon>div {
@@ -802,7 +837,7 @@
 }
 
 
-/*-----  end musical icon --------*/
+/*-----  end linkdin icon --------*/
 
 
 /*-----  start figma icon --------*/
@@ -816,6 +851,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: #240832;
+    border: 1px solid ;
+    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%); 
 }
 
 .figma-icons-center {
