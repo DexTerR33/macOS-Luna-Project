@@ -7,6 +7,14 @@
     <title>Document</title>
 
     <style>
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /*
       #loader {
         border: 12px solid #f3f3f3;
         border-radius: 50%;
@@ -31,10 +39,67 @@
         right: 0;
         margin: auto;
       }
+      */
+
+      .wireless-container {
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .wireless-circle {
+        width: 5px !important;
+        height: 5px !important;
+        border-radius: 50px;
+        background: blue;
+        z-index: 3;
+        margin: 5px auto;
+      }
+      .wireless-first {
+        background: none;
+        z-index: 4;
+        width: 30px !important;
+        height: 30px !important;
+        border-radius: 52px;
+        border: 2px solid black;
+        border-right: 1px solid transparent;
+        border-left: 1px solid transparent;
+        -webkit-transform: rotate(0deg);
+        border-bottom: 100px;
+      }
+
+      .wireless-second {
+        background: none;
+        z-index: 4;
+        width: 20px !important;
+        height: 20px !important;
+        border-radius: 50px;
+        border: 2px solid black;
+        border-right: 1px solid transparent;
+        border-left: 1px solid transparent;
+        -webkit-transform: rotate(0deg);
+        border-bottom: 100px;
+        margin: 3px auto;
+      }
+      .box {
+        width: 20px;
+        height: 20px;
+      }
     </style>
   </head>
 
   <body>
+    <div class="wireless-container">
+      <div class="wireless-first box">
+        <div class="wireless-second box">
+          <div class="wireless-circle box"></div>
+        </div>
+      </div>
+    </div>
+
+    <!--
     <div id="loader" class="centerLoader"></div>
     <script>
       document.onreadystatechange = function () {
@@ -48,6 +113,8 @@
           }
         }, 2000)
       };
+
     </script>
+          -->
   </body>
 </html>
