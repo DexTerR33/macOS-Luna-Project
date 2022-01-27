@@ -106,7 +106,7 @@
     justify-content: flex-end;
     position: relative;
     overflow: hidden;
-    
+
 }
 
 .container-hover-icons {
@@ -117,38 +117,39 @@
 }
 
 .container-hover-icons:hover {
-    transform: scale(1.3) translateY(-10px);
+    transform: scale(1.2) translateY(-10px) translateX(0px);
     transition: all 0.5s cubic-bezier(.47, 1.64, .41, .8);
     cursor: pointer;
 }
 
 @keyframes bounce-4 {
     0% {
-        transform: scale(1.3) translateY(0);
+        transform: scale(1.2) translateY(-10px);
     }
 
     10% {
-        transform: scale(1) translateY(0);
+        transform: scale(1.2) translateY(0);
     }
 
     30% {
-        transform: scale(1) translateY(-30px);
+        transform: scale(1.2) translateY(-30px);
     }
 
     50% {
-        transform: scale(1) translateY(0px);
+        transform: scale(1.2) translateY(0px);
     }
 
     100% {
-        transform: scale(1) translateY(0);
+        transform: scale(1.2) translateY(0);
     }
 }
 
 .container-hover-icons:active {
-    transform: scale(3.5);
+    transform: scale(1.2) translateY(-10px) translateX(0px);
     cursor: pointer;
     animation-name: bounce-4;
-    animation-timing-function: ease;
+
+    transition: all 250ms ease;
 }
 
 .finder-icon-grey-side {
@@ -219,28 +220,31 @@
     height: 48px;
     border-radius: 0.7em;
     display: flex;
-    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%);  
+    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%);
 }
 
 .adobe-icons>div {
     margin: auto;
     font-size: 1.3em;
     font-family: "Open Sans Condensed", sans-serif;
-    font-weight: 700;  
+    font-weight: 700;
 }
 
 .premiere-icon {
     background: #240832;
     border: 1px solid #e373f7;
 }
+
 .premiere-icon>div {
-    color: #e373f7; 
+    color: #e373f7;
 }
-.photoshop-icon{
+
+.photoshop-icon {
     background: #001d34;
     border: 1px solid #1c9cff;
 }
-.photoshop-icon >div{
+
+.photoshop-icon>div {
     color: #1c9cff;
 }
 
@@ -251,7 +255,7 @@
 
 .afterEffect-icon>div {
     color: #9494f7;
- 
+
 }
 
 .adobe-xd-icon {
@@ -261,7 +265,7 @@
 
 .adobe-xd-icon>div {
     color: #f75eee;
-   
+
 }
 
 /*-------------end adobe cloud icons------------*/
@@ -329,6 +333,7 @@
     border-radius: 50%;
     background: lightskyblue;
 }
+
 /*----------end calendar----------*/
 /*----------start app store ----------*/
 .appStore-icons-inside {
@@ -339,7 +344,7 @@
     position: relative;
     background-image: linear-gradient(to bottom, rgba(187, 187, 187, 0), #1671F2);
     box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%);
-    
+
 }
 
 .appStore-icon .appStore-icons-inside {
@@ -408,7 +413,6 @@
     border-radius: 20px;
 }
 
-
 /*-------------end appstore cloud------------*/
 
 /*-------------start github icons------------*/
@@ -418,12 +422,10 @@
     height: 54px;
     border-radius: 50px;
     overflow: hidden;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   border: 1px solid rgb(228, 228, 228);
-   box-shadow: 0 2px 5px 2px rgb(0 0 0 / 40%); 
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 10%);
 }
 
 .github-icon {
@@ -434,30 +436,25 @@
     background: rgb(240, 240, 240);
     border-bottom: none;
     overflow: hidden;
-   
 }
 
 .github-icon-face {
     position: relative;
     top: 9px;
-    width: 20px;
+    width: 24px;
     height: 14px;
     background: #333;
     border-radius: 20px;
     margin: auto;
-
 }
 
 .github-icon-ears {
     position: absolute;
     display: flex;
-    gap: -1px;
     flex-direction: column;
     left: 12px;
     top: 1px;
-    transform: rotate( 
-90deg
- );
+    transform: rotate(90deg);
 }
 
 .github-icon-ears-left {
@@ -487,21 +484,21 @@
     margin: 0px auto;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
+
+
 }
 
 .github-icon-tails {
-    width: 30px;
-    height: 10px;
+    width: 17px;
+    height: 11px;
     position: absolute;
-    border: solid 5px #333;
+    border: solid 3px #333;
     border-color: #333 transparent transparent transparent;
-    border-radius: 200px/100px 10px 10px 10px;
-    transform: rotate(
-47deg
-);
-    top: 28px;
+    border-radius: 100px/100px 0px;
+    transform: rotate(49deg);
+    top: 27px;
     z-index: 231;
-    left: -3px;
+    left: 3px;
 }
 
 
@@ -519,7 +516,7 @@
     position: relative;
     overflow: hidden;
     border: 1px solid rgb(228, 228, 228);
-    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%); 
+    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%);
 }
 
 .google-maps-circlePart {
@@ -643,23 +640,24 @@
     gap: 5px;
     position: relative;
     border: 1px solid rgb(228, 228, 228);
-    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%); 
+    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%);
 }
 
 .photo-icon {
     position: absolute;
     width: 10px;
     height: 18px;
-    background-color: red;
+    background-color: rgb(202, 54, 84);
     border-radius: 30px;
 }
 
 .photo-icon-shape1 {
     top: 23px;
     left: 19px;
-    background-color: orange;
+    background-color: #d94b0d;
     z-index: 35;
     opacity: 0.8;
+    mix-blend-mode: hard-light;
 }
 
 .photo-icon-shape2 {
@@ -676,6 +674,7 @@
     background-color: brown;
     z-index: 32;
     opacity: 0.8;
+    mix-blend-mode: hard-light;
 }
 
 .photo-icon-shape4 {
@@ -699,17 +698,19 @@
 .photo-icon-shape6 {
     top: 2px;
     left: 19px;
-    background-color: #eb6206;
+    background-color: #914412;
     z-index: 34;
     opacity: 0.8;
+    mix-blend-mode: hard-light;
 }
 
 .photo-icon-shape7 {
     top: 5px;
     transform: rotate(-45deg);
     left: 10px;
-    z-index: 32;
+    z-index: 52;
     opacity: 0.8;
+    mix-blend-mode: darken;
 }
 
 .photo-icon-shape8 {
@@ -719,6 +720,7 @@
     background-color: darkgoldenrod;
     z-index: 36;
     opacity: 0.8;
+    mix-blend-mode: normal;
 }
 
 .photo-icon-shape9 {
@@ -728,12 +730,13 @@
     background-color: darkorchid;
     z-index: 34;
     opacity: 0.8;
+    mix-blend-mode: hard-light;
 }
 
 .photos-icons-center {
     position: relative;
-    top: 2px;
-    left: 0;
+    top: 1px;
+    left: -1px;
     width: 100%;
     height: 100%;
 }
@@ -752,7 +755,7 @@
     background-image: linear-gradient(to bottom, rgba(247, 19, 19, 0.281) -10px, rgb(223, 16, 16));
     border: 1px solid rgb(228, 228, 228);
     overflow: hidden;
-    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%); 
+    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%);
 }
 
 .music-icon-top {
@@ -825,7 +828,7 @@
     border-radius: 10px;
     background: rgba(34, 129, 207, 0.993);
     display: flex;
-    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%); 
+    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%);
 }
 
 .linkDin-icon>div {
@@ -852,8 +855,8 @@
     align-items: center;
     justify-content: center;
     background: #240832;
-    border: 1px solid ;
-    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%); 
+    border: 1px solid;
+    box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%);
 }
 
 .figma-icons-center {
@@ -928,8 +931,7 @@
 
 
 
-
-
+/* ///////////////////// small icons small top \\\\\\\\\\\\\*/
 
 
 
@@ -959,7 +961,6 @@
     border: 1px solid white;
     border-right: 1px solid transparent;
     border-left: 1px solid transparent;
-    -webkit-transform: rotate(0deg);
     border-bottom: 100px;
     overflow: hidden;
     position: absolute;
@@ -976,7 +977,6 @@
     border: 1px solid white;
     border-right: 1px solid transparent;
     border-left: 1px solid transparent;
-    -webkit-transform: rotate(0deg);
     border-bottom: 100px;
     margin: 4px auto;
 }
@@ -988,3 +988,77 @@
 
 
 /* ***---END icon wireless-----***** */
+.container-buttonH {
+    width: 48px;
+    height: 48px;
+    background-color: #119DA4;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.buttonsd {
+    text-align: center;
+    font-size: 20px;
+    color: #E9D758;
+    z-index: 1;
+}
+
+
+
+
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+    color: white;
+    z-index: 2000;
+    visibility: hidden;
+
+
+}
+
+.overlay::after {
+    background-color: rgba(24, 24, 24, 1.603);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(50px);
+    opacity: 0.7;
+}
+
+
+.overlay .close {
+    cursor: help;
+
+
+
+
+}
+
+.overlay .content {}
+
+.overlay.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.4s ease;
+    top: 0;
+    height: 100%;
+}
+
+.overlay.active2 {
+
+
+    display: none;
+
+}
