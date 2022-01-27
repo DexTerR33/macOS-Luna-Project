@@ -1020,6 +1020,7 @@
     color: white;
     z-index: 2000;
     visibility: hidden;
+    display: none;
 
 
 }
@@ -1045,7 +1046,6 @@
 
 }
 
-.overlay .content {}
 
 .overlay.active {
     display: block;
