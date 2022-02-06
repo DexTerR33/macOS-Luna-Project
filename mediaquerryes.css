@@ -105,25 +105,13 @@
   }
 }
 */
-/*
-@media screen and (min-width: 2560px) {
+
+@media screen and (max-width: 1440px) {
 
   .section4_middle_grid {
     display: grid;
-    grid-template-columns: repeat(10, minmax(145px, 1fr));
-    grid-template-rows: repeat(9, minmax(40px, 145px));
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(4, 250px);
   }
-  .section4_footer {
-    grid-column: 4 / auto;
-    grid-row: 9;
-    margin: 40px auto;
-  }
-  #mydiv {
-    position: absolute;
-    z-index: 101;
-    top: 40%;
-    left: 40%;
-    transform: translate(-50%, -50%);
+
 }
-}
-*/

@@ -1,8 +1,22 @@
+.square-icon-size{
+    width: 48px;
+    height: 48px;
+}
+.circle-icon-size {
+    width: 50px;
+    height: 50px;
+}
+
+.folder-me2 {
+    transform: scaleY(1.2) scaleX(1.1);
+ 
+   
+}
+
 /*-------------start chrome icon------------*/
 
 .icon-chrome {
-    height: 50px;
-    width: 50px;
+   
     box-shadow: 0 0 5px 1px rgb(0 0 0 / 30%);
     border-radius: 50%;
     z-index: 1;
@@ -98,8 +112,6 @@
 
 .finder-icon {
     background: #52b1ef;
-    width: 48px;
-    height: 48px;
     border-radius: 10px;
     box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%);
     display: flex;
@@ -216,8 +228,7 @@
 /*-------------start adobe cloud icons------------*/
 
 .adobe-icons {
-    width: 48px;
-    height: 48px;
+   
     border-radius: 0.7em;
     display: flex;
     box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%);
@@ -274,8 +285,8 @@
 /*-------------start adobe cloud icons------------*/
 
 .calendar-icon {
-    width: 45px;
-    height: 44px;
+    width: 45px !important;
+    height: 44px !important;
     background: rgb(167 167 167) !important;
     position: relative;
     z-index: 3;
@@ -327,8 +338,7 @@
 }
 
 .icons-dimension {
-    width: 50px;
-    height: 50px;
+
     border: 0.5px solid rgb(255, 255, 255);
     border-radius: 50%;
     background: lightskyblue;
@@ -418,8 +428,8 @@
 /*-------------start github icons------------*/
 .git-hub-container {
     background: #333;
-    width: 54px;
-    height: 54px;
+    width: 52px !important;
+    height: 52px !important;
     border-radius: 50px;
     overflow: hidden;
     display: flex;
@@ -509,8 +519,7 @@
 /*-------------start google-maps icons------------*/
 
 .google-maps-icon {
-    width: 48px;
-    height: 48px;
+  
     background-color: rgb(10, 230, 83);
     border-radius: 10px;
     position: relative;
@@ -630,8 +639,6 @@
 /*-------------start photos icons------------*/
 
 .photos-icons {
-    width: 48px;
-    height: 48px;
     background-color: rgb(231, 231, 231);
     border-radius: 10px;
     display: flex;
@@ -749,8 +756,8 @@
 /*-----  start musical icon --------*/
 
 .music-icons {
-    width: 51px;
-    height: 51px;
+    width: 51px !important;
+    height: 51px !important;
     border-radius: 50px;
     background-image: linear-gradient(to bottom, rgba(247, 19, 19, 0.281) -10px, rgb(223, 16, 16));
     border: 1px solid rgb(228, 228, 228);
@@ -823,8 +830,7 @@
 /*-----  start linkdin icon --------*/
 
 .linkDin-icon {
-    width: 48px;
-    height: 48px;
+
     border-radius: 10px;
     background: rgba(34, 129, 207, 0.993);
     display: flex;
@@ -846,8 +852,7 @@
 /*-----  start figma icon --------*/
 
 .figma-icon {
-    width: 48px;
-    height: 48px;
+
     background: #333;
     border-radius: 10px;
     display: flex;
@@ -911,86 +916,10 @@
 /*-----  end figma icon --------*/
 
 
+/*-----  test test icon --------*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ///////////////////// small icons small top \\\\\\\\\\\\\*/
-
-
-
-
-/* ***---top icon wireless-----***** */
-.wireless-container {
-    position: relative;
-    width: 25px;
-    height: 15px;
-}
-
-.wireless-circle {
-    width: 3px !important;
-    height: 3px !important;
-    border-radius: 50px;
-    background: white;
-    z-index: 3;
-    margin: 4px auto;
-}
-
-.wireless-first {
-    background: none;
-    z-index: 4;
-    width: 30px !important;
-    height: 30px !important;
-    border-radius: 92px;
-    border: 1px solid white;
-    border-right: 1px solid transparent;
-    border-left: 1px solid transparent;
-    border-bottom: 100px;
-    overflow: hidden;
-    position: absolute;
-    left: 0px;
-    top: 2px;
-}
-
-.wireless-second {
-    background: none;
-    z-index: 4;
-    width: 20px !important;
-    height: 20px !important;
-    border-radius: 50px;
-    border: 1px solid white;
-    border-right: 1px solid transparent;
-    border-left: 1px solid transparent;
-    border-bottom: 100px;
-    margin: 4px auto;
-}
-
-.box {
-    width: 20px;
-    height: 20px;
-}
-
-
-/* ***---END icon wireless-----***** */
 .container-buttonH {
-    width: 48px;
-    height: 48px;
+
     background-color: #119DA4;
     border-radius: 10px;
     display: flex;
@@ -1019,7 +948,7 @@
     transition: all 0.4s ease;
     color: white;
     z-index: 2000;
-    visibility: hidden;
+   
     display: none;
 
 
