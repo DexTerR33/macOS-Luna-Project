@@ -44,7 +44,7 @@ font-family: 'Poppins', sans-serif;
   --medium-black: #292c33;
   --low-black: #282828;
   --hard-grey: #404040;
-  --medium-grey: #6f7378;
+  --medium-grey: #2e333a;
   --easy-grey: #abb0b8;
   --soft-grey: #cecdcd;
   --light-white: #ffffff;
@@ -68,8 +68,9 @@ a,
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   font-size: 12px !important;
+  color: var(--text-low-finder-color);
 }
 
 h3,
@@ -91,7 +92,10 @@ ul li a {
   content: "\f0e0";
   font-weight: 800 !important;
 }
-
+.fullname-bold{
+  font-weight: 600 !important;
+  
+}
 
 
 
@@ -202,13 +206,18 @@ ul li a {
 
 .dropDown-menu>li>a:hover,
 .dropDown-menu>li>a:focus {
-  background: #2e333a;
+  background-color: var(--medium-grey);
+ 
 }
 
 .dropdown-button {
   position: relative;
 }
-
+.dropBtn.primary-text-dropdown{
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  letter-spacing: 1px;
+}
 .dropMenu-list {
   position: absolute;
   display: none;
@@ -216,9 +225,12 @@ ul li a {
   left:3px;
   border: 1px solid color;
   width: 109px;
-  background: #CB242D;
-  font-size: 0.8em;
+  background: var(--primaryM-finder-color);
+  font-size: 0.8em !important;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   z-index: 1;
+  overflow: hidden;
 }
 
 .show {
@@ -250,13 +262,13 @@ ul li a {
 
 .section4_topheader_right ul li {
 
-  padding: 0 7px;
+  padding: 0 4px;
   width: max-content;
 }
 
-.section4_topheader_right ul li a {
-  color: white;
-  font-size: 0.8rem;
+.section4_topheader_right ul li a ,.dropDown-menu>li>a {
+  color: var(--text-low-finder-color) !important;
+  font-size: 0.72rem !important;
 }
 
 .section4_topheader_right ul li:hover,
@@ -273,6 +285,9 @@ ul li a {
   animation-duration: 9s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.14, -0.21, 0, 0.44);
+  font-size: 15px !important;
+  padding: 0px 5px;
+  text-align: center;
 }
 
 @keyframes randomAppleColors {
@@ -466,7 +481,7 @@ ul li a {
   padding: 8px;
   background: var(--finder-opacity-color-left);
   border-radius: 3px;
-  font-size: 0.5em;
+  font-size: 0.5rem;
   font-weight: 100;
 }
 
@@ -556,7 +571,6 @@ ul li a {
 }
 
 .finder-middle-right {
-  float: right;
   width: 75%;
   background: var(--primaryM-finder-color);
   height: 400px;
@@ -571,6 +585,7 @@ ul li a {
   margin-top: 40px;
   gap: 30px;
   width: 100%;
+  max-height: 290px;
   align-items: center;
   text-align: center;
   overflow: hidden;
@@ -653,13 +668,18 @@ ul li a {
   color: rgb(180, 180, 180);
   justify-content: space-between;
   margin: 0 10px 0 10px;
-  font-size: 0.6em;
-  font-weight: 300;
+  font-size: 0.6em !important;
+  font-weight: 400 !important;
   padding: 5px;
   font-family: "Lato", sans-serif;
 }
 
+.container-footer-finder-settingsPanel a {
+  font-size: 0.6rem !important;
+  font-weight: 300 !important;
+  margin-right: 65px;
 
+}
 .container-footer-contact>div:nth-child(2) {
   margin-left: 72px;
 }
@@ -851,7 +871,7 @@ ul li a {
 
 .contact-middle-items a {
   color: var(--text-low-finder-color);
-  font-size: 0.6rem;
+  font-size: 0.6rem !important;
   width: 60px;
   text-align: center;
   text-transform: capitalize;
@@ -860,9 +880,9 @@ ul li a {
 
 .contact-middle-items a i {
   color: var(--text-low-finder-color);
-  font-size: 1rem;
+  font-size: 1rem !important;
   text-align: center;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 
 .contact-middle-information {
@@ -896,12 +916,12 @@ text-transform: none !important;
 }
 .info-middle-list span a {
   color: var(--text-low-finder-color);
-  font-size: 0.72rem;
+  font-size: 0.72rem !important;
 }
 
 .info-middle-list span {
   color: var(--text-low-finder-color);
-  font-size: 0.72em;
+  font-size: 0.72em !important;
   text-transform: capitalize;
   font-weight: 400;
   font-family: "Poppins";
@@ -912,7 +932,7 @@ text-transform: none !important;
 .info-middle-list p {
   width: 113px;
   text-align: end;
-  font-size: 0.89em;
+  font-size: 0.82em !important;
   text-transform: capitalize;
   margin-right: 2px;
   color: var(--items-finder-color);
@@ -932,7 +952,7 @@ text-transform: none !important;
 
 .btn-contact {
   padding: 5px 10px;
-  font-size: 0.6rem;
+  font-size: 0.6rem !important;
   background-color: var(--btn-contact-simple);
   border: none;
   outline: none;

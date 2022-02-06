@@ -178,7 +178,7 @@
                   <div class="dropDown-container">
                     <ul class="dropDown-menu">
                       <li class="dropdown-button">
-                        <a class="dropBtn" href="#">Finder</a>
+                        <a class="dropBtn primary-text-dropdown" href="#">Finder</a>
                         <ul class="dropMenu-list">
                           <li><a href="#">Price (hi to low)</a></li>
                           <hr>
@@ -301,7 +301,7 @@
               <ul>
                 <li>
                   <a href="#">
-                    <i class="fas fa-network-wired"></i>
+                    <i class="fas fa-wifi"></i>
                   </a>
                 </li>
                 <li>
@@ -315,7 +315,7 @@
                   <a href="#"><i class="fas fa-battery-half"></i></a>
                 </li>
                 <li><a href="#">Tue 6:42 AM</a></li>
-                <li><a href=""> Marian Iordache</a></li>
+                <li><a href="#" class="fullname-standard fullname-thin fullname-bold"> Marian Iordache</a></li>
                 <li>
                   <a href="#"><i class="fas fa-search"></i></a>
                 </li>
@@ -403,17 +403,17 @@
                       </li>
                       <li>
                         <a href="#"
-                          ><i class="far fa-folder-open"></i>Documents</a
+                          ><i class="far fa-folder-open"></i>Script</a
                         >
                       </li>
                       <li>
-                        <a href="#"><i class="fas fa-download"></i>download</a>
+                        <a href="#"><i class="fas fa-download"></i>Photos</a>
                       </li>
                       <li>
-                        <a href="#"><i class="fas fa-music"></i>music</a>
+                        <a href="#"><i class="fas fa-music"></i>ScreenShot</a>
                       </li>
                       <li>
-                        <a href="#"><i class="fas fa-image"></i>picture</a>
+                        <a href="#"><i class="fas fa-image"></i>Simulator</a>
                       </li>
                       <li>
                         <a href="#"><i class="fas fa-video"></i>videos</a>
@@ -425,14 +425,14 @@
                       </li>
                       <div>location</div>
                       <li>
-                        <a href="#"><i class="fas fa-hdd"></i>255 gb Volume</a>
+                        <a href="#"><i class="fas fa-hdd"></i>455 gb Volume I</a>
                       </li>
                       <li>
-                        <a href="#"><i class="fas fa-hdd"></i>255 gb Volume</a>
+                        <a href="#"><i class="fas fa-hdd"></i>250 gb Volume II</a>
                       </li>
                       <div>icloud</div>
                       <li>
-                        <a href="#"><i class="fas fa-hdd"></i>computer</a>
+                        <a href="#"><i class="fas fa-hdd"></i>GitHub Remote</a>
                       </li>
                     </ul>
                   </div>
@@ -570,7 +570,10 @@
                   </div>
                 </div>
                 <div class="container-footer-finder">
-                  <i class="fas fa-home"></i>
+                  
+            <div class="container-footer-finder-settingsPanel">
+              <a href="#"> <i class="fas fa-user-cog"></i>  Settings</a>
+            </div>
                   <div>25 items, 280.63 GB available</div>
                   <div>Marian Iordache</div>
                 </div>
@@ -628,8 +631,8 @@
                   <hr />
                   <li>
                     <div class="container-hover-icons bounce-4">
-                      <div class="container-buttonH square-icon-size">
-                        <div class="buttonsd">Hello</div>
+                      <div class="container-aboutMe square-icon-size">
+                        <div class="aboutMe-text">ME</div>
                       </div>
                     </div>
                   </li>
@@ -959,7 +962,7 @@
       }
 
       // Close the dropdown if the user clicks outside of it
-      $(".buttonsd").click(function () {
+      $(".container-aboutMe").click(function () {
         $(".overlay").toggleClass("active2");
         $(".overlay").addClass("active");
 
