@@ -92,14 +92,8 @@ ul li a {
   font-weight: 800 !important;
 }
 
-/* section 1 Site
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-*/
+
+
 
 /*section 4*/
 .wrapper {
@@ -151,7 +145,6 @@ ul li a {
 
 .container_topheader_items {
   display: flex;
-  gap: 5px;
   width: 600px;
   align-items: center;
 }
@@ -179,7 +172,7 @@ ul li a {
 
 
 .dropDown-container {
-  background: #434A54;
+ 
   margin: 0;
   padding: 0;
   text-align: center;
@@ -199,11 +192,12 @@ ul li a {
 
 .dropDown-menu>li>a {
   display: inline-block;
-  padding: 16px 30px;
+  padding: 1px 6px;
   margin: 0;
-  font-size: 0.8em;
+  font-size: 0.7em !important;
   color: #fff;
-  text-decoration: none;
+  text-transform: capitalize;
+
 }
 
 .dropDown-menu>li>a:hover,
@@ -218,8 +212,8 @@ ul li a {
 .dropMenu-list {
   position: absolute;
   display: none;
-  top: 46px;
-  left: 0px;
+  top: 26px;
+  left:3px;
   border: 1px solid color;
   width: 109px;
   background: #CB242D;
@@ -237,9 +231,11 @@ ul li a {
 
 .dropMenu-list li a {
   display: block;
-  padding: 16px 20px;
+  padding: 7px 12px;
   color: #fff;
+  text-align: start;
   text-decoration: none;
+  font-size: 11px !important;
 }
 
 .dropMenu-list li a:hover {
@@ -705,14 +701,12 @@ ul li a {
   max-width: 750px;
   width: 750px;
   min-width: 650px;
-  /*  max-height: 600px;*/
   min-height: 470px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   overflow: hidden;
   display: flex;
   position: absolute;
-  /* top: 0; */
   top: 54px;
   left: 0px;
   transform: translate(-261px, 329px);
@@ -808,13 +802,6 @@ ul li a {
 }
 
 .contact-name {
-  /*
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 55%;
-  */
 
   margin-left: 40px;
 }
@@ -837,14 +824,11 @@ ul li a {
 }
 
 .contact-image-container {
-  /* width: 118px; */
   height: 67px;
   border-radius: 50px;
   padding: 10px;
   display: flex;
-  /* justify-self: center; */
-  /* align-items: center; */
-  /* justify-content: center;*/
+
 }
 
 .contact-profile-img {
@@ -907,7 +891,9 @@ ul li a {
   flex-direction: row;
   padding: 1px;
 }
-
+.info-middle-list-email {
+text-transform: none !important;
+}
 .info-middle-list span a {
   color: var(--text-low-finder-color);
   font-size: 0.72rem;
@@ -1063,7 +1049,6 @@ iframe {
 .chrome-link-middle {
   display: flex;
   flex-direction: row;
-
   flex-basis: 70%;
 }
 
