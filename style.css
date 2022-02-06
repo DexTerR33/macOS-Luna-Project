@@ -106,7 +106,7 @@ ul li a {
 }
 
 .container {
-  background-image: url(./png/nature1.jpg);
+  background-image: url(./png/nature12.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -375,6 +375,7 @@ ul li a {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  display: none;
 }
 
 .finder-topnav {
@@ -537,7 +538,7 @@ overflow: hidden !important;
 
 .finder-middle-left ul li a i {
   margin-right: 6px;
-  font-weight: 100 !important;
+
   color: var(--link-finder-color);
   font-size: 1.2em;
   width: 20px;
@@ -560,19 +561,15 @@ overflow: hidden !important;
 
 .finder-middle-right ul {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  /* justify-content: center; */
-  gap: 23px;
-  height: 338px;
-  width: 481px;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 30px;
+  width: 100%;
   align-items: center;
   text-align: center;
   overflow: hidden;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .finder-middle-right ul li {
@@ -583,7 +580,7 @@ overflow: hidden !important;
 .finder-middle-right ul li a {
   text-decoration: none;
   color: var(--link-finder-color);
-  font-size: 0.72em;
+  font-size: 0.68em !important;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
 }
@@ -591,8 +588,8 @@ overflow: hidden !important;
 .finder-middle-right ul li img {
   color: var(--link-finder-color);
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   margin: 0 auto;
 }
 
@@ -970,6 +967,7 @@ overflow: hidden !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  display: none !important;
 }
 
 #mystickyNotes {
@@ -997,3 +995,51 @@ border-radius:20px ;
 
 
 /* -------------end --- sticky-notes---------*/
+
+
+
+/*-----------page chrome -----------*/
+
+ iframe{
+  outline: none;
+  border: none;
+  width: 1000px;
+  height: 800px;
+ 
+}
+
+.chrome-page{
+  max-width: 1000px;
+  width: 1000px;
+  height: 600px;
+}
+.chrome-page-container {
+  background: red;
+ 
+}
+.container-page-top-header{
+  background-color: grey;
+
+}
+.chrome-page-line{
+  width: 100%;
+  background: honeydew;
+}
+.chrome-page-link {
+  display: flex;
+  background-color: hotpink;
+  height: 30px;
+ 
+}
+.chrome-link-left{
+  flex-basis: 10%;
+}
+.chrome-link-middle{
+  flex-basis: 70%;
+}
+.chrome-link-right{
+  flex-basis: 20%;
+}
+.chrome-page-middle{
+  border: 1px solid black;
+}
