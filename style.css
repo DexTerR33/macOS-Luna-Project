@@ -114,7 +114,7 @@ ul li a {
 }
 
 .container {
-  background-image: url(./png/nature1.jpg);
+  background-image: url(./png/nightdesk.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -1052,7 +1052,7 @@ border-right: none;
 .contact-profile-img {
   width: 100px;
   height: 100px;
-  background-image: url(./png/marean.jpg);
+  background-image: url(./png/marean.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
