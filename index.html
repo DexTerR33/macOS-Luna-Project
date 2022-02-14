@@ -45,10 +45,11 @@
                 <div class="contact-middle-left">
                   <ul>
                     <li>
-                      <a href="#"><i class="far fa-clock"></i>Home</a>
+                      <a href="#"><button class="tablink-profile" onclick="openPage2('person_one', this, 'red')" id="defaultOpenPerson"><i class="far fa-clock"></i>Home</button></a>
                     </li>
                     <li>
-                      <a href="#"><i class="fas fa-desktop"></i>who i am</a>
+                      <a href="#">
+                      <button class="tablink-profile" onclick="openPage2('person_two', this, 'red')" id="defaultOpenPerson"><i class="fas fa-desktop"></i>Home</button></a>
                     </li>
                     <li>
                       <a href="#"><i class="fas fa-download"></i>Projects</a>
@@ -73,6 +74,7 @@
                   </div>
                 </div>
                 <div class="contact-middle-right">
+                  <div class="contact-middle-right-person" id="person_one">
                   <div class="contact-middle-image">
                     <div class="contact-image-container">
                       <div class="contact-profile-img"></div>
@@ -190,9 +192,249 @@
                     </div>
                   </div>
                 </div>
+                <div class="contact-middle-right-person" id="person_two">
+                  <div class="contact-middle-image">
+                    <div class="contact-image-container">
+                      <div class="contact-profile-img"></div>
+                    </div>
+                    <div class="contact-name">
+                      <div>Sorin Stefan Eugen</div>
+                      <div>" front-end developer "</div>
+                    </div>
+                  </div>
+                  <div class="contact-middle-top">
+                    <div class="close-button-contact">
+                      <button class="push-me-button press-me-button" onclick="pushme()"></button>
+                    </div>
+                    <div class="contact-middle-items">
+                      <a href="#"
+                        ><i class="fab fa-facebook-messenger"></i>
+                        <br />messenger</a
+                      >
+                      <a href="#"
+                        ><i class="fas fa-phone-alt"></i> <br />call</a
+                      >
+                      <a href="#"><i class="fas fa-video"></i> <br />video</a>
+                      <a href="#"><i class="far fa-envelope"></i><br />email</a>
+                    </div>
+                    <div class="contact-middle-information">
+                      <div class="info-middle">
+                        <div class="info-middle-list">
+                          <p>phone:</p>
+                          <a href="http://tel:+40.765.965.155"></a
+                          ><span>0765965155</span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>home:</p>
+                          <span><a href="http://">bucuresti</a></span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>Linkdin:</p>
+                          <span>
+                            <a href="http://">marian Iordache</a>
+                          </span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>youtube:</p>
+                          <span>
+                            <a
+                              href="https://www.youtube.com/watch?v=6AyEce0NdM0&ab_channel=JSGeek"
+                              target="_blank"
+                              >js geek</a
+                            ></span
+                          >
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>email:</p>
+                          <span>
+                            <a
+                              href="mailto:iordache.marian21@gmail.com"
+                              class="info-middle-list-email"
+                              >Iordache.marian21@gmail.com</a
+                            ></span
+                          >
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>birthday:</p>
+                          <span> june 21 </span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>css battle:</p>
+                          <span
+                            ><a
+                              href="https://cssbattle.dev/player/VbqbK0gKScgciHu3kMxYoIko40B2"
+                              target="_blank"
+                              ><div class="cssbattle-container">
+                                <div class="css-Grank">
+                                  <div>Global Rank</div>
+                                  <div>1797/172217</div>
+                                </div>
+                                <div class="css-TScore">
+                                  <div>Total Score</div>
+                                  <div>27326.32</div>
+                                </div>
+                                <div class="css-Tplayed">
+                                  <div>Targets Played</div>
+                                  <div>47/100</div>
+                                </div>
+                              </div></a
+                            >click me!</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="contact-middle-footer">
+                      <input
+                        type="button"
+                        value="CV"
+                        class="btn btn-standard btn-danger btn-contact"
+                      />
+                      <div class="contact-middle-footer-btn">
+                        <input
+                          type="button"
+                          class="btn btn-standard btn-contact"
+                          value="hire me"
+                        />
+                        <input
+                          type="button"
+                          class="btn btn-standard btn-active btn-contact"
+                          value="linkdin"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-middle-right-person" id="person_three">
+                  <div class="contact-middle-image">
+                    <div class="contact-image-container">
+                      <div class="contact-profile-img"></div>
+                    </div>
+                    <div class="contact-name">
+                      <div>Marian Iordache</div>
+                      <div>" front-end developer "</div>
+                    </div>
+                  </div>
+                  <div class="contact-middle-top">
+                    <div class="close-button-contact">
+                      <button class="push-me-button press-me-button" onclick="pushme()"></button>
+                    </div>
+                    <div class="contact-middle-items">
+                      <a href="#"
+                        ><i class="fab fa-facebook-messenger"></i>
+                        <br />messenger</a
+                      >
+                      <a href="#"
+                        ><i class="fas fa-phone-alt"></i> <br />call</a
+                      >
+                      <a href="#"><i class="fas fa-video"></i> <br />video</a>
+                      <a href="#"><i class="far fa-envelope"></i><br />email</a>
+                    </div>
+                    <div class="contact-middle-information">
+                      <div class="info-middle">
+                        <div class="info-middle-list">
+                          <p>phone:</p>
+                          <a href="http://tel:+40.765.965.155"></a
+                          ><span>0765965155</span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>home:</p>
+                          <span><a href="http://">bucuresti</a></span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>Linkdin:</p>
+                          <span>
+                            <a href="http://">marian Iordache</a>
+                          </span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>youtube:</p>
+                          <span>
+                            <a
+                              href="https://www.youtube.com/watch?v=6AyEce0NdM0&ab_channel=JSGeek"
+                              target="_blank"
+                              >js geek</a
+                            ></span
+                          >
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>email:</p>
+                          <span>
+                            <a
+                              href="mailto:iordache.marian21@gmail.com"
+                              class="info-middle-list-email"
+                              >Iordache.marian21@gmail.com</a
+                            ></span
+                          >
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>birthday:</p>
+                          <span> june 21 </span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>css battle:</p>
+                          <span
+                            ><a
+                              href="https://cssbattle.dev/player/VbqbK0gKScgciHu3kMxYoIko40B2"
+                              target="_blank"
+                              ><div class="cssbattle-container">
+                                <div class="css-Grank">
+                                  <div>Global Rank</div>
+                                  <div>1797/172217</div>
+                                </div>
+                                <div class="css-TScore">
+                                  <div>Total Score</div>
+                                  <div>27326.32</div>
+                                </div>
+                                <div class="css-Tplayed">
+                                  <div>Targets Played</div>
+                                  <div>47/100</div>
+                                </div>
+                              </div></a
+                            >click me!</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="contact-middle-footer">
+                      <input
+                        type="button"
+                        value="CV"
+                        class="btn btn-standard btn-danger btn-contact"
+                      />
+                      <div class="contact-middle-footer-btn">
+                        <input
+                          type="button"
+                          class="btn btn-standard btn-contact"
+                          value="hire me"
+                        />
+                        <input
+                          type="button"
+                          class="btn btn-standard btn-active btn-contact"
+                          value="linkdin"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
                 <div class="wrapper-contact-form" id="newcontact">
                   <div class="container-contact-form">
-                    <h3 class="contact-form-title">contact</h3>         
+                    <div style="line-height: 0.8;">
+                    <h3 class="contact-form-title">contact</h3>     
+                    <h3 class="contact-form-title-after">Thank you <br><span>i'll be in touch</span></h3>   
+                  </div>
                     <div class="contact-forms">
                       <div class="contact-name-form">
                    
@@ -207,13 +449,15 @@
                         <input type="number" class="input-style" id="phone" placeholder="enter a valid phone">
                       </div>
                       <div class="contact-textarea">
-                   
                         <textarea type="text" id="textarea" class="input-style" placeholder="say something" style="resize: none;"></textarea>
                       </div>
                       <div class="contact-form-buttons">
                         <button class="btn-contact btn btn-contact-form">send me</button>
                       </div>
-                    </div>                         
+                    </div> 
+                    <div class="power-by">
+                      <div>macOs Luna template v1.1<p></p> <span>powered by </span><span>M-designs</span></div>
+                    </div>                        
                   </div>
                 </div>
               </div>
@@ -396,7 +640,7 @@
             </div>
           </div>
           <div class="section4_middle">
-            <iframe src="./chrome-page1.html" title="Iframe Example"></iframe>
+            <iframe src="./assets/chrome-page.html" title="Iframe Example"></iframe>
           </div>
           <div class="section4_middle_grid">
             <div id="finderclone">
@@ -896,8 +1140,34 @@
         </div>
       </div>
     </div>
-    <script>
-      //Make the DIV element draggagle:
+    <script type="text/javascript">
+     function openPage2(pageName, elmnt, color) {
+    // Hide all elements with class="tabcontent" by default */
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("contact-middle-right-person");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    // Remove the background color of all tablinks/buttons
+    tablinks = document.getElementsByClassName("tablink-profile");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+
+    // Show the specific tab content
+    document.getElementById(pageName).style.display = "block";
+
+    // Add the specific color to the button used to open the tab content
+    elmnt.style.backgroundColor = color;
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpenPerson").click();
+
+
+
+
     </script>
     <script type="text/javascript" src="index.js"></script>
   </body>

@@ -23,7 +23,7 @@ font-family: 'Poppins', sans-serif;
 :root {
   /*finder colors*/
   /*contact colors*/
-  --aditional-finder-color:#161616;
+  --aditional-finder-color: #161616;
   --primaryM-finder-color: #2424249e;
   --primaryS-finder-color: #3333338c;
   --primary-finder-color: #333333;
@@ -66,7 +66,7 @@ hr {
 p,
 a,
 label,
-button,
+button,span
 .input-style,
 ::placeholder,
 .btn {
@@ -103,7 +103,8 @@ ul li a {
   font-weight: 600 !important;
 
 }
-.move-explorer{
+
+.move-explorer {
   position: absolute;
 }
 
@@ -333,7 +334,7 @@ ul li a {
 
 .section4_middle_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-rows: minmax(110px, auto);
   position: relative;
   top: -14px;
@@ -341,7 +342,7 @@ ul li a {
 
 /* !!!!!   FINDER !!!!!!*/
 .section4_footer {
-  grid-column: 3 / 9;
+  grid-column: 3 / 8;
   grid-row: 8;
   display: grid;
 }
@@ -674,13 +675,14 @@ ul li a {
 
 .container-footer-finder,
 .container-footer-contact {
+  color: rgb(180, 180, 180);
   display: flex;
   flex-direction: row;
-  color: rgb(180, 180, 180);
   justify-content: space-between;
+  align-items: center;
   margin: 0 10px 0 10px;
   font-size: 0.6em !important;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
   padding: 5px;
   font-family: "Lato", sans-serif;
 }
@@ -697,20 +699,22 @@ ul li a {
 }
 
 
-#finderclonetest{
+#finderclonetest {
   z-index: 3410 !important;
   top: 257px;
   left: 587px;
   position: absolute;
 
 }
-#finderclone{
+
+#finderclone {
   position: absolute;
-  top: 210px ;
-  left:960px ;
+  top: 210px;
+  left: 960px;
 }
 
-#findercloneheader,#finderclonetestheader {
+#findercloneheader,
+#finderclonetestheader {
   cursor: move;
   z-index: 40;
   color: #fff;
@@ -738,7 +742,7 @@ ul li a {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   position: relative;
   text-align: start;
   padding: 12px;
@@ -771,15 +775,15 @@ input-style:hover {
 }
 
 
- .press-me-button {
- color: var(--hover-finder-color);
+.press-me-button {
+  color: var(--hover-finder-color);
   border: none;
   outline: none;
   cursor: pointer;
   border-radius: 1px;
   width: 10px;
   height: 30px;
- 
+
 }
 
 .press-me-button:hover {
@@ -801,13 +805,13 @@ input-style:hover {
 .btn-contact-form {
   width: 100% !important;
   border-radius: 0 !important;
-  
+
 }
 
 .contact-forms>div {
   width: 90%;
   margin: 0 auto;
-  
+
 
 }
 
@@ -817,7 +821,35 @@ input-style:hover {
   color: var(--text-low-finder-color);
   font-weight: 500;
   opacity: 0.5;
-  
+
+}
+
+.power-by {
+  width: 100%;
+
+}
+
+.power-by div {
+  font-size: 8px !important;
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-finder-color);
+  font-weight: 400;
+}
+
+.power-by div p {
+  width: 2px;
+  height: 10px;
+  background: var(--medium-grey);
+
+}
+
+.power-by div span:nth-child(3){
+
+  font-weight: 700;
 }
 
 /*----------------- END  contact form-------------*/
@@ -894,8 +926,8 @@ input-style:hover {
 .like-button>div {
   position: relative;
   text-align: center;
-    top: -295px;
-    left: 4px;
+  top: -295px;
+  left: 4px;
   line-height: 0.8;
   font-weight: 300;
   letter-spacing: -2px;
@@ -1017,17 +1049,28 @@ input-style:hover {
 
 
 }
-.contact-form-title{
+
+.contact-form-title {
   margin: 0 auto;
   text-transform: uppercase;
-width: 200px;
-padding: 12px;
-border: 1px solid white;
-border-top: none;
-border-left: none;
-border-right: none;
-             font-size: 10px;
-
+  width: 200px;
+  padding: 12px;
+  font-size: 22px;
+  text-align: center;
+}
+.contact-form-title-after{
+  line-height: -0.7;
+  font-size: 20px;
+  position: absolute;
+  top: 15%;
+  left: 97px;
+text-align: center;
+font-weight: 300;
+text-transform: uppercase;
+}
+.contact-form-title-after span {
+  font-size: 10px;
+  font-weight: 100;
 }
 
 
@@ -1248,12 +1291,14 @@ iframe {
   outline: none;
   border: none;
   width: 1000px;
-  height: 800px;
+  height: 600px;
   position: absolute;
   top: 35px;
   left: 20%;
-
+  z-index: 31241241;
+  display: none;
 }
+
 
 /*-----------page chrome -----------*/
 .chrome-page {
@@ -1261,13 +1306,11 @@ iframe {
   background-color: #121212 !important;
   width: 1000px;
   height: 600px;
-
 }
 
 
-
 .container-page-top-header {
-  background-color: grey;
+  background-color: var(--easy-grey);
 
 }
 
@@ -1278,6 +1321,8 @@ iframe {
 
 .chrome-page-link {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: hotpink;
   height: 30px;
 
@@ -1285,6 +1330,7 @@ iframe {
 
 .chrome-link-left {
   flex-basis: 10%;
+
 }
 
 .chrome-link-left ul {
@@ -1298,6 +1344,7 @@ iframe {
   display: flex;
   flex-direction: row;
   flex-basis: 70%;
+
 }
 
 .chrome-link-search {
@@ -1321,8 +1368,57 @@ iframe {
 
 .chrome-link-right {
   flex-basis: 20%;
+  background-color: blue;
 }
 
 .chrome-page-middle {
   border: 1px solid black;
+  height: 515px;
+}
+.chrome-page-bookmark{
+  background-color: hotpink;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  padding: 1px 10px;
+  font-size: 12px;
+  width: 20%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  height: 100%;
+}
+.chrome-home-items{display: flex;align-items: center;justify-content: center;flex-direction: column; height: 100%;}
+#chrome-home, #person_one {background-color: red;}
+#chrome-news,#person_two {background-color: green;}
+#chrome-contact {background-color: blue;}
+#chrome-about {background-color: orange;}
+#chrome-linkdin {background-color: purple;}
+
+
+/*=================END CHROME=====================*/
+
+
+
+
+.contact-middle-right-person{
+  color: white;
+  display: none;
+  height: 100%;
 }
