@@ -24,7 +24,7 @@ font-family: 'Poppins', sans-serif;
   /*finder colors*/
   /*contact colors*/
   --aditional-finder-color: #161616;
-  --primaryM-finder-color: #2424249e;
+  --primaryM-finder-color: #222222e3;
   --primaryS-finder-color: #3333338c;
   --primary-finder-color: #333333;
   --second-finder-color: rgba(27, 27, 27, 0.2);
@@ -33,12 +33,12 @@ font-family: 'Poppins', sans-serif;
   --text-low-finder-color: #dbdbdb;
   --text-low-finder-color-hover: #ff87ca;
   --items-finder-color: grey;
-  --hover-finder-color: #2e53ce;
+  --hover-finder-color: #816b4b;
   --link-finder-color: #d8d8d8;
   --finder-opacity-color: #171618bf;
   --finder-opacity-color-left: #33333369;
   --finder-opacity-color-back: #33333369;
-  --btn-contact-simple: #2666CF;
+  --btn-contact-simple: #816b4b;
   --btn-contact-simple-hover: #ff4301;
   --btn-contact-simple-focus: #f4a442;
   --btn-contact-simple-active: #e43f5a;
@@ -865,8 +865,8 @@ input-style:hover {
 
 .container-contact {
   background: var(--primaryS-finder-color);
-  max-width: 750px;
-  width: 750px;
+  max-width: 820px;
+  width: 820px;
   min-width: 650px;
   min-height: 470px;
   border-top-left-radius: 5px;
@@ -1022,18 +1022,18 @@ input-style:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 36px;
+  gap: 7px;
   min-height: 368px;
 }
 
 .contact-middle-image {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   gap: 10px;
   align-items: center;
   position: relative;
-  top: 20px;
-  left: 5px;
+  top: 27px;
+  left: -57px;
 }
 
 .contact-name {
@@ -1046,8 +1046,6 @@ input-style:hover {
   font-family: "Poppins", sans-serif;
   font-size: 1.5em;
   font-weight: 500;
-
-
 }
 
 .contact-form-title {
@@ -1077,11 +1075,12 @@ text-transform: uppercase;
 .contact-name div:nth-child(2) {
   color: var(--text-low-finder-color);
   font-family: "Poppins", sans-serif;
-  font-size: 0.66em;
+  font-size: 0.66rem;
+  width: 200px;
   font-weight: 100;
   font-style: oblique;
   margin-top: -5px;
-  margin-left: 5rem;
+text-align: end;
 }
 
 .contact-image-container {
@@ -1093,14 +1092,17 @@ text-transform: uppercase;
 }
 
 .contact-profile-img {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   background-image: url(./png/marean.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 1px solid var(--text-low-finder-color);
-  border-radius: 50px;
+  border: 1px solid #919191;
+  border-radius: 12px;
+  position: relative;
+  left: 29px;
+  top: -19px;
 }
 
 .contact-middle-items {
@@ -1195,20 +1197,27 @@ text-transform: uppercase;
   font-family: "Poppins";
   display: flex;
   align-items: center;
+  margin-left: 5px;
 }
 
 .info-middle-list p {
-  width: 113px;
+  width: 100px;
   text-align: end;
-  font-size: 0.82em !important;
+  font-size: 0.72em !important;
   text-transform: capitalize;
-  margin-right: 2px;
-  color: var(--items-finder-color);
+  color: var(--text-low-finder-color);
+  background-color: var(--aditional-finder-color);
+  padding: 5px;
+  border-radius: 4px;
+  
 }
 
 .info-middle>hr {
   border-color: var(--text-low-finder-color);
   opacity: 0.2;
+  width: 100%;
+  margin: 2px 0px 2px 0px;
+
 }
 
 .contact-middle-footer-btn {
@@ -1405,8 +1414,8 @@ iframe {
   height: 100%;
 }
 .chrome-home-items{display: flex;align-items: center;justify-content: center;flex-direction: column; height: 100%;}
-#chrome-home, #person_one {background-color: red;}
-#chrome-news,#person_two {background-color: green;}
+#chrome-home {background-color: red;}
+#chrome-news {background-color: green;}
 #chrome-contact {background-color: blue;}
 #chrome-about {background-color: orange;}
 #chrome-linkdin {background-color: purple;}
