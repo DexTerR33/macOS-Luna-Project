@@ -56,6 +56,7 @@ font-family: 'Poppins', sans-serif;
   --Rlight-blue-color: #14d5dc;
   --Rcrimson-color: crimson;
 
+
   /*End  Colors*/
 }
 
@@ -228,6 +229,7 @@ ul li a {
   font-weight: 500 !important;
   font-size: 13px !important;
   letter-spacing: 1px;
+  color: var(--speedy);
 }
 
 .dropMenu-list {
@@ -1103,6 +1105,12 @@ text-align: end;
   position: relative;
   left: 29px;
   top: -19px;
+}
+.contact-profile-img.Sorin {
+  background-image: url(./png/sorin.jpg);
+}
+.contact-profile-img.Rares {
+  background-image: url(./png/rares.jpg);
 }
 
 .contact-middle-items {

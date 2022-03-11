@@ -13,9 +13,9 @@
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="icons.css" />
-  <link rel="stylesheet" href="mediaquerryes.css" />
+  <link href="style.css" rel="stylesheet" media="all"/>
+  <link defer href="icons.css" rel="stylesheet" media="all" />
+  <link defer href="mediaquerryes.css" rel="stylesheet" media="all"/>
   <title>macOS LUNA</title>
 </head>
 
@@ -46,7 +46,8 @@
                    
                   </li>
                   <li>
-                    <a href="#"><i class="fas fa-download"></i>Projects</a>
+                    <a href="#" class="tablink-profile" onclick="openPage2('myProjects', this, 'purple')"
+                    id="defaultOpenPerson"><i class="fas fa-download"></i>Projects</a>
                   </li>
                   <li>
                     <a href="#"><i class="fas fa-music"></i>youtube</a>
@@ -55,10 +56,10 @@
                     <a href="#"><i class="far fa-folder-open"></i>Parteners</a>
                   </li>
           
-                  <li> <a href="#"class="tablink-profile" onclick="openPage2('person_two', this, 'green')"
+                  <li> <a href="#" class="tablink-profile" onclick="openPage2('person_two', this, 'blue')"
                     id="defaultOpenPerson">Sorin Eugen</a>
                   </li>
-                  <li> <a href="#"class="tablink-profile" onclick="openPage2('person_three', this, 'green')"
+                  <li> <a href="#" class="tablink-profile" onclick="openPage2('person_three', this, 'cyan')"
                     id="defaultOpenPerson">Rares Craciun</a>
                   </li>
                 </ul>
@@ -70,16 +71,15 @@
                   <button><i class="fas fa-home"></i>Like!</button>
                 </div>
               </div>
-              <div class="contact-middle-right">
-           
-                <div class="contact-middle-right-person" id="person_two">
+              <div class="contact-middle-right">          
+                <div class="contact-middle-right-person" id="person_one">
                   <div class="contact-middle-image">
                     <div class="contact-image-container">
                       <div class="contact-profile-img"></div>
                     </div>
                     <div class="contact-name">
                       <div>Marian Iordache</div>
-                      <div>"front-end developer"</div>
+                      <div>"Front-End Developer"</div>
                     </div>
                     <div class="number-person">ID</div>
                   </div>
@@ -156,7 +156,218 @@
                     </div>
                   </div>
                 </div>
-          
+                <div class="contact-middle-right-person" id="person_two">
+                  <div class="contact-middle-image">
+                    <div class="contact-image-container">
+                      <div class="contact-profile-img Sorin"></div>
+                    </div>
+                    <div class="contact-name">
+                      <div>Sorin Eugen</div>
+                      <div>"UI/UX Designer"</div>
+                    </div>
+                    <div class="number-person">ID</div>
+                  </div>
+                  <div class="contact-middle-top">
+                    <div class="close-button-contact">
+                      <button class="push-me-button press-me-button" onclick="pushme()"></button>
+                    </div>
+                  
+                    <div class="contact-middle-information">
+                      <div class="info-middle">
+                        <div class="info-middle-list">
+                          <p>phone:</p>
+                         <span> <a href="http://">0753.460.584</a></span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>Website:</p>
+                          <span><a href="http://" style="text-transform: lowercase !important;">sorineugen.ro</a></span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>Linkdin:</p>
+                          <span>
+                            <a href="http://">Sorin Eugen</a>
+                          </span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>youtube:</p>
+                          <span>
+                            <a href="https://www.youtube.com/watch?v=6AyEce0NdM0&ab_channel=JSGeek" target="_blank">drift atlas</a></span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>email:</p>
+                          <span>
+                            <a href="mailto:iordache.marian21@gmail.com"
+                              class="info-middle-list-email">sorin.eugen@gmail.com</a></span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>birthday:</p>
+                          <span> december 14 </span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>Vimeo</p>
+                          <span><a href="https://cssbattle.dev/player/VbqbK0gKScgciHu3kMxYoIko40B2" target="_blank">
+                              <div class="cssbattle-container">
+                                <div class="css-Grank">
+                                  <div>Global Rank</div>
+                                  <div>1797/172217</div>
+                                </div>
+                                <div class="css-TScore">
+                                  <div>Total Score</div>
+                                  <div>27326.32</div>
+                                </div>
+                                <div class="css-Tplayed">
+                                  <div>Targets Played</div>
+                                  <div>47/100</div>
+                                </div>
+                              </div>
+                            </a>click me!</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="contact-middle-footer">
+                      <input type="button" value="CV" class="btn btn-standard btn-danger btn-contact" />
+                      <div class="contact-middle-footer-btn">
+                        <input type="button" class="btn btn-standard btn-contact" value="hire me" />
+                        <input type="button" class="btn btn-standard btn-active btn-contact" value="linkdin" />
+                      </div>
+                    </div>
+                  </div>
+                </div>    
+                <div class="contact-middle-right-person" id="person_three">
+                  <div class="contact-middle-image">
+                    <div class="contact-image-container">
+                      <div class="contact-profile-img Rares"></div>
+                    </div>
+                    <div class="contact-name">
+                      <div>Rares Craciun</div>
+                      <div>"Professional Photographer"</div>
+                    </div>
+                    <div class="number-person">ID</div>
+                  </div>
+                  <div class="contact-middle-top">
+                    <div class="close-button-contact">
+                      <button class="push-me-button press-me-button" onclick="pushme()"></button>
+                    </div>
+                  
+                    <div class="contact-middle-information">
+                      <div class="info-middle">
+                        <div class="info-middle-list">
+                          <p>phone:</p>
+                         <span> <a href="http://">0746.695.231</a></span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>Website:</p>
+                          <span><a href="http://" style="text-transform: lowercase !important;">rarescraciun.ro</a></span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>instagram:</p>
+                          <span>
+                            <a href="http://">crative Raws</a>
+                          </span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>Portofolio:</p>
+                          <span>
+                            <a href="#" target="_blank">photo album</a></span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>email:</p>
+                          <span>
+                            <a href="mailto:iordache.marian21@gmail.com"
+                              class="info-middle-list-email">rares.craciun@gmail.com</a></span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>birthday:</p>
+                          <span> june 21 </span>
+                        </div>
+                        <hr />
+                        <div class="info-middle-list">
+                          <p>Best Photo:</p>
+                          <span><a href="https://cssbattle.dev/player/VbqbK0gKScgciHu3kMxYoIko40B2" target="_blank">
+                              <div class="cssbattle-container">
+                                <div class="css-Grank">
+                                  <div>Global Rank</div>
+                                  <div>1797/172217</div>
+                                </div>
+                                <div class="css-TScore">
+                                  <div>Total Score</div>
+                                  <div>27326.32</div>
+                                </div>
+                                <div class="css-Tplayed">
+                                  <div>Targets Played</div>
+                                  <div>47/100</div>
+                                </div>
+                              </div>
+                            </a>click me!</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="contact-middle-footer">
+                      <input type="button" value="CV" class="btn btn-standard btn-danger btn-contact" />
+                      <div class="contact-middle-footer-btn">
+                        <input type="button" class="btn btn-standard btn-contact" value="hire me" />
+                        <input type="button" class="btn btn-standard btn-active btn-contact" value="linkdin" />
+                      </div>
+                    </div>
+                  </div>
+                </div>  
+                <div class="contact-middle-right-person" id="myProjects">
+                  <div class="contact-middle-image">
+                    <div class="contact-image-container">
+                      <div class="contact-profile-img Rares"></div>
+                    </div>
+                    <div class="contact-name">
+                      <div>My Projects</div>
+                      <div>"Dexter Laboratory"</div>
+                    </div>
+                    <div class="number-person">ID</div>
+                  </div>
+                  <div class="contact-middle-top">
+                 
+<!-- *************************   MY PROJECTS ****************-->
+
+<div class="container-myProjects">
+  <div class="project-one projects-box">
+    <div class="container-project-one">
+      <div class="text">HTML/CSS</div>
+    </div>
+  </div>
+  <div class="project-two projects-box">
+    <div class="container-project-one">
+      <div class="text">To-do list</div>
+    </div>
+  </div>
+  <div class="project-three projects-box">
+    <div class="container-project-one">
+      <div class="text">Xgarage</div>
+    </div>
+  </div>
+  <div class="project-three projects-box">
+    <div class="container-project-one">
+      <div class="text">Crud</div>
+    </div>
+  </div>
+  <div class="project-three projects-box">
+    <div class="container-project-one">
+      <div class="text">macOs Luna</div>
+    </div>
+  </div>
+</div>
+
+
+                  </div>
+                </div>     
               </div>
               <div class="wrapper-contact-form" id="newcontact">
                 <div class="container-contact-form">
@@ -801,7 +1012,7 @@
       // Hide all elements with class="tabcontent" by default */
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName(
-        "contact-middle-right-person"
+        "contact-middle-right-person" 
       );
       for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
@@ -823,7 +1034,7 @@
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpenPerson").click();
   </script>
-  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="index.js" async></script>
 </body>
 
 </html>
