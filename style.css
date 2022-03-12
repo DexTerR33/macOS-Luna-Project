@@ -907,7 +907,7 @@ input-style:hover {
 
 .contact-middle-left {
   height: 430px;
-  width: 25%;
+  width: 20%;
   float: left;
   background: var(--finder-opacity-color-left);
   position: relative;
@@ -925,39 +925,6 @@ input-style:hover {
 
 }
 
-.like-button>div {
-  position: relative;
-  text-align: center;
-  top: -295px;
-  left: 4px;
-  line-height: 0.8;
-  font-weight: 300;
-  letter-spacing: -2px;
-  color: var(--text-finder-color);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.like-counts {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  letter-spacing: 2px;
-}
-
-.like-counts>.d {
-  line-height: 0;
-  font-size: 0.8rem !important;
-  letter-spacing: 9px;
-  /* margin-left: -103px; */
-  /* transform: rotate(31deg); */
-  position: relative;
-  left: 6.5px;
-  top: 4px;
-}
-
-.like-counts>.e {
-  font-size: 3.5rem !important;
-}
 
 .like-button button {
   background-color: var(--btn-contact-simple);
@@ -1013,7 +980,7 @@ input-style:hover {
 
 .contact-middle-right {
   float: right;
-  width: 75%;
+  width: 80%;
   height: 430px;
   padding: 5px;
   background: var(--primaryM-finder-color);
@@ -1488,40 +1455,44 @@ iframe {
   border-radius: 10px;
   position: relative;
 }
-.projects-box:hover::after{
+
+.projects-box:hover::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-background-image: url(./png/marean.png);
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
+  background-image: url(./png/marean.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   opacity: 0.3;
   filter: blur(2px);
   width: 100%;
   height: 100%;
   border-radius: 10px;
   color: var(--aditional-finder-color)
-
- 
 }
-.projects-box:hover{
+
+.projects-box:hover {
   background-color: var(--soft-grey);
   transform: scale(1.02) translateY(-2px);
-  -webkit-transform:scale(1.02) translateY(-2px);
+  -webkit-transform: scale(1.02) translateY(-2px);
   transition: .5s ease;
-  cursor:pointer;
+  cursor: pointer;
   color: var(--aditional-finder-color)
 }
-.project-four, .project-five, .project-six {
-  margin-top:-32px;
+
+.project-four,
+.project-five,
+.project-six {
+  margin-top: -32px;
 }
 
 .container-project-one {
   margin: auto;
 
 }
+
 .container-project-one .text {
   font-size: 0.92em;
   text-transform: capitalize;
@@ -1530,12 +1501,80 @@ background-size: cover;
 
 
 
-
-
-
-
-
-
-
-
 /*=================~~~~~~~~~END MY PROJECTS =======================!!!!!!!!!!!!*/
+
+
+
+
+
+
+
+/*=================~~~~~~~~~start analog clock=======================!!!!!!!!!!!!*/
+
+
+.clock-analog {
+  position: absolute;
+  top: 1.15em;
+  left: 2.08em;
+  height: 90px;
+  width: 90px;
+border-radius: 100%;
+  z-index: 31;
+  background-image:
+    radial-gradient(circle at center, #252525 5px, transparent 2px),
+    radial-gradient(circle at center, var(--medium-black) 50%, transparent 50%, transparent 65%,rgb(78, 78, 78) 65%),
+    linear-gradient(to right, transparent 50%, #979797 50%, transparent 51%),
+    linear-gradient(to bottom, transparent 50%, #949494 50%, transparent 51%)
+}
+
+.hour-line {
+  position: absolute;
+  height: 17px;
+  width: 3px;
+  margin: auto;
+  top: -20%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 4px;
+  background-color: #d3d3d3;
+  transform-origin: bottom;
+  transform: rotate(0deg);
+}
+
+.minute-line {
+  position: absolute;
+  height: 25px;
+  width: 3px;
+  margin: auto;
+  top: -30%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 4px;
+  background-color: #d3d3d3;
+  transform-origin: bottom;
+  transform: rotate(90deg);
+}
+
+.second-line {
+  position: absolute;
+  height: 27px;
+  width: 1px;
+  margin: auto;
+  top: -30%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 4px;
+  background-color: #d3d3d3;
+  transform-origin: bottom;
+  transform: rotate(180deg);
+}
+
+
+
+
+
+
+/*=================~~~~~~~~~END start analog clock=======================!!!!!!!!!!!!*/

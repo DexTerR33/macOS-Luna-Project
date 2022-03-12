@@ -35,9 +35,14 @@
             </div>
             <div class="contact-middle">
               <div class="contact-middle-left">
-                <ul>
+                <div class="clock-analog">
+                  <div class="hour-line"></div>
+                  <div class="minute-line"></div>
+                  <div class="second-line"></div>
+                </div>
+                <ul style="z-index: 32;">
                   <li>
-                    <a href="#" class="tablink-profile" onclick="openPage2('person_one', this, 'red')"
+                    <a href="#" class="tablink-profile" onclick="openPage2('person_one')"
                       id="defaultOpenPerson">
                       <i class="far fa-clock"></i>Home
                     </a>
@@ -46,7 +51,7 @@
 
                   </li>
                   <li>
-                    <a href="#" class="tablink-profile" onclick="openPage2('myProjects', this, 'purple')"
+                    <a href="#" class="tablink-profile" onclick="openPage2('myProjects')"
                       id="defaultOpenPerson"><i class="fas fa-download"></i>Projects</a>
                   </li>
                   <li>
@@ -56,20 +61,17 @@
                     <a href="#"><i class="far fa-folder-open"></i>Parteners</a>
                   </li>
 
-                  <li> <a href="#" class="tablink-profile" onclick="openPage2('person_two', this, 'blue')"
+                  <li> <a href="#" class="tablink-profile" onclick="openPage2('person_two')"
                       id="defaultOpenPerson">Sorin Eugen</a>
                   </li>
-                  <li> <a href="#" class="tablink-profile" onclick="openPage2('person_three', this, 'cyan')"
+                  <li> <a href="#" class="tablink-profile" onclick="openPage2('person_three')"
                       id="defaultOpenPerson">Rares Craciun</a>
                   </li>
                 </ul>
-                <div class="like-button">
-                  <div class="like-counts">
-                    <div class="e">010</div>
-                    <div class="d">likes</div>
-                  </div>
+                <div class="like-button">                
                   <button><i class="fas fa-home"></i>Like!</button>
                 </div>
+
               </div>
               <div class="contact-middle-right">
                 <div class="contact-middle-right-person" id="person_one">
@@ -92,18 +94,18 @@
                       <div class="info-middle">
                         <div class="info-middle-list">
                           <p>phone:</p>
-                          <span> <a href="http://">+40.765.965.155</a></span>
+                          <span> <a href="http://">0765.965.155</a></span>
                         </div>
                         <hr />
                         <div class="info-middle-list">
-                          <p>home:</p>
-                          <span><a href="http://">bucuresti</a></span>
+                          <p>Website:</p>
+                          <span><a href="https://crafties.ro" target="_blank" style="text-transform: lowercase !important;">crafties.ro</a></span>
                         </div>
                         <hr />
                         <div class="info-middle-list">
-                          <p>Linkdin:</p>
+                          <p>website:</p>
                           <span>
-                            <a href="http://">marian Iordache</a>
+                            <a href="https://#" style="text-transform: lowercase !important;">marianiordache.ro</a>
                           </span>
                         </div>
                         <hr />
@@ -122,8 +124,8 @@
                         </div>
                         <hr />
                         <div class="info-middle-list">
-                          <p>birthday:</p>
-                          <span> june 21 </span>
+                          <p>Linkdin:</p>
+                          <span> <a href="http://">Marian Iordache</a </span>
                         </div>
                         <hr />
                         <div class="info-middle-list">
@@ -1039,6 +1041,44 @@
 
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpenPerson").click();
+
+     
+function updateClock(hours, minutes, seconds) {
+
+var hourDegrees = hours * 30;
+var minuteDegrees = minutes * 6;
+var secondDegrees = seconds * 6;
+
+$('.hour-line').css({
+  'transform': `rotate(${hourDegrees}deg)`
+});
+
+$('.minute-line').css({
+  'transform': `rotate(${minuteDegrees}deg)`
+});
+
+$('.second-line').css({
+  'transform': `rotate(${secondDegrees}deg)`
+});
+
+}
+
+setClockWithCurrentTime();
+
+function setClockWithCurrentTime() {
+  var date = new Date();
+
+var hours = ((date.getHours() + 11) % 12 + 1);
+var minutes = date.getMinutes();
+var seconds = date.getSeconds();
+
+updateClock(hours, minutes, seconds);
+}
+
+
+
+setInterval(setClockWithCurrentTime, 1000);
+
   </script>
   <script type="text/javascript" src="index.js" async></script>
 </body>
