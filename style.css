@@ -1004,7 +1004,7 @@ input-style:hover {
   align-items: center;
   position: relative;
   top: 27px;
-  left: -117px;
+  left: -100px;
 }
 /*
 .contact-name {
@@ -1053,7 +1053,7 @@ input-style:hover {
   font-weight: 100;
   font-style: oblique;
   margin-top: -5px;
-  text-align: end;
+  text-align: center;
 }
 
 .contact-image-container {
@@ -1074,7 +1074,7 @@ input-style:hover {
   border: 1px solid #919191;
   border-radius: 12px;
   position: relative;
-  left: 85px;
+  left: 69px;
   top: -19px;
 }
 
