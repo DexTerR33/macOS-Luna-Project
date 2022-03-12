@@ -67,8 +67,8 @@ hr {
 p,
 a,
 label,
-button,span
-.input-style,
+button,
+span .input-style,
 ::placeholder,
 .btn {
   font-family: "Poppins", sans-serif;
@@ -849,7 +849,7 @@ input-style:hover {
 
 }
 
-.power-by div span:nth-child(3){
+.power-by div span:nth-child(3) {
 
   font-weight: 700;
 }
@@ -1058,16 +1058,18 @@ input-style:hover {
   font-size: 22px;
   text-align: center;
 }
-.contact-form-title-after{
+
+.contact-form-title-after {
   line-height: -0.7;
   font-size: 20px;
   position: absolute;
   top: 15%;
   left: 97px;
-text-align: center;
-font-weight: 300;
-text-transform: uppercase;
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
 }
+
 .contact-form-title-after span {
   font-size: 10px;
   font-weight: 100;
@@ -1082,7 +1084,7 @@ text-transform: uppercase;
   font-weight: 100;
   font-style: oblique;
   margin-top: -5px;
-text-align: end;
+  text-align: end;
 }
 
 .contact-image-container {
@@ -1106,11 +1108,19 @@ text-align: end;
   left: 29px;
   top: -19px;
 }
+
 .contact-profile-img.Sorin {
   background-image: url(./png/sorin.jpg);
 }
+
 .contact-profile-img.Rares {
   background-image: url(./png/rares.jpg);
+}
+
+.contact-middle-right-person {
+  color: white;
+  display: none;
+  height: 100%;
 }
 
 .contact-middle-items {
@@ -1217,7 +1227,7 @@ text-align: end;
   background-color: var(--aditional-finder-color);
   padding: 5px;
   border-radius: 4px;
-  
+
 }
 
 .info-middle>hr {
@@ -1392,7 +1402,8 @@ iframe {
   border: 1px solid black;
   height: 515px;
 }
-.chrome-page-bookmark{
+
+.chrome-page-bookmark {
   background-color: hotpink;
 }
 
@@ -1421,21 +1432,110 @@ iframe {
   display: none;
   height: 100%;
 }
-.chrome-home-items{display: flex;align-items: center;justify-content: center;flex-direction: column; height: 100%;}
-#chrome-home {background-color: red;}
-#chrome-news {background-color: green;}
-#chrome-contact {background-color: blue;}
-#chrome-about {background-color: orange;}
-#chrome-linkdin {background-color: purple;}
+
+.chrome-home-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+#chrome-home {
+  background-color: red;
+}
+
+#chrome-news {
+  background-color: green;
+}
+
+#chrome-contact {
+  background-color: blue;
+}
+
+#chrome-about {
+  background-color: orange;
+}
+
+#chrome-linkdin {
+  background-color: purple;
+}
 
 
 /*=================END CHROME=====================*/
 
 
 
+/*=================~~~~~~~~~ MY PROJECTS =======================!!!!!!!!!!!!*/
 
-.contact-middle-right-person{
-  color: white;
-  display: none;
-  height: 100%;
+.container-myProjects {
+  margin: auto;
+  width: 25vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 15vmax;
 }
+
+.projects-box {
+  width: 120px;
+  height: 120px;
+  background-color: var(--medium-grey);
+  display: flex;
+  border-radius: 10px;
+  position: relative;
+}
+.projects-box:hover::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+background-image: url(./png/marean.png);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+  opacity: 0.3;
+  filter: blur(2px);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  color: var(--aditional-finder-color)
+
+ 
+}
+.projects-box:hover{
+  background-color: var(--soft-grey);
+  transform: scale(1.02) translateY(-2px);
+  -webkit-transform:scale(1.02) translateY(-2px);
+  transition: .5s ease;
+  cursor:pointer;
+  color: var(--aditional-finder-color)
+}
+.project-four, .project-five, .project-six {
+  margin-top:-32px;
+}
+
+.container-project-one {
+  margin: auto;
+
+}
+.container-project-one .text {
+  font-size: 0.92em;
+  text-transform: capitalize;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*=================~~~~~~~~~END MY PROJECTS =======================!!!!!!!!!!!!*/
