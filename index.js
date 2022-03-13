@@ -1,3 +1,5 @@
+
+
 (function () {
   var dropBtns = document.querySelectorAll('.dropdown-button');
   function closeOpenItems() {
@@ -104,13 +106,5 @@ $(".press-me-button").click(function() {
     $(".drop-down2").toggleClass("drop-down--active");
   });
 
-  
-
-
-
-
-  
-
-
-
 })();
+

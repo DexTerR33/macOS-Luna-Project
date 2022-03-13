@@ -21,6 +21,7 @@
 
 <body>
   <div class="wrapper">
+    <input type="file" onchange="previewFile()" id="files" name="files[]" multiple />
     <div class="overlay">
       <div class="content">
         <div id="finderclonetest">
@@ -35,16 +36,18 @@
             </div>
             <div class="contact-middle">
               <div class="contact-middle-left">
+                <div class="container-clock-analog">
                 <div class="clock-analog">
                   <div class="hour-line"></div>
                   <div class="minute-line"></div>
                   <div class="second-line"></div>
                 </div>
+              </div>
                 <ul style="z-index: 32;">
                   <li>
                     <a href="#" class="tablink-profile" onclick="openPage2('person_one')"
                       id="defaultOpenPerson">
-                      <i class="far fa-clock"></i>Marian Iordache
+                      <i class="far fa-clock"></i>About Me
                     </a>
                   </li>
                   <li>
@@ -74,13 +77,13 @@
                 <div class="like-button">                
                   <button><i class="fas fa-home"></i>Like!</button>
                 </div>
-
+                <input type="file" onchange="previewFile()" id="files" name="files[]" multiple />
               </div>
               <div class="contact-middle-right">
                 <div class="contact-middle-right-person" id="person_one">
                   <div class="contact-middle-image">
                     <div class="contact-image-container">
-                      <div class="contact-profile-img"></div>
+                      <div class="contact-profile-img" id="your_img_id"></div>
                     </div>
                     <div class="contact-name">
                       <div>Marian Iordache</div>
@@ -106,9 +109,9 @@
                         </div>
                         <hr />
                         <div class="info-middle-list">
-                          <p>website:</p>
+                          <p>GitHub:</p>
                           <span>
-                            <a href="https://#" style="text-transform: lowercase !important;">marianiordache.ro</a>
+                            <a href="https://github.com/DexTerR33" style="text-transform: lowercase !important;">/DexTerR33</a>
                           </span>
                         </div>
                         <hr />
@@ -1038,7 +1041,7 @@
       document.getElementById(pageName).style.display = "block";
 
       // Add the specific color to the button used to open the tab content
-      elmnt.style.backgroundColor = color;
+     // elmnt.style.backgroundColor = color;
     }
 
     // Get the element with id="defaultOpen" and click on it
@@ -1046,11 +1049,9 @@
 
      
 function updateClock(hours, minutes, seconds) {
-
 var hourDegrees = hours * 30;
 var minuteDegrees = minutes * 6;
 var secondDegrees = seconds * 6;
-
 $('.hour-line').css({
   'transform': `rotate(${hourDegrees}deg)`
 });
@@ -1066,23 +1067,24 @@ $('.second-line').css({
 }
 
 setClockWithCurrentTime();
-
 function setClockWithCurrentTime() {
-  var date = new Date();
-
+var date = new Date();
 var hours = ((date.getHours() + 11) % 12 + 1);
 var minutes = date.getMinutes();
 var seconds = date.getSeconds();
-
 updateClock(hours, minutes, seconds);
 }
-
-
-
 setInterval(setClockWithCurrentTime, 1000);
 
+
   </script>
-  <script type="text/javascript" src="index.js" async></script>
+
+ 
+
+<script type="text/javascript" src="index.js"></script>
+
+
+
 </body>
 
 </html>
