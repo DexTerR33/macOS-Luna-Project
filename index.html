@@ -21,7 +21,7 @@
 
 <body>
   <div class="wrapper">
-    <input type="file" onchange="previewFile()" id="files" name="files[]" multiple />
+
     <div class="overlay">
       <div class="content">
         <div id="finderclonetest">
@@ -77,7 +77,7 @@
                 <div class="like-button">                
                   <button><i class="fas fa-home"></i>Like!</button>
                 </div>
-                <input type="file" onchange="previewFile()" id="files" name="files[]" multiple />
+             
               </div>
               <div class="contact-middle-right">
                 <div class="contact-middle-right-person" id="person_one">
@@ -349,31 +349,37 @@
                       <div class="project-one projects-box">
                         <div class="container-project-one">
                           <div class="text">HTML/CSS</div>
+                          <p class="small-text">funny stuff</p>
                         </div>
                       </div>
                       <div class="project-two projects-box">
                         <div class="container-project-one">
                           <div class="text">To-do list</div>
+                          <p class="small-text">React + firebase</p>
                         </div>
                       </div>
                       <div class="project-three projects-box">
                         <div class="container-project-one">
-                          <div class="text">Xgarage</div>
+                          <div class="text">X-garage</div>
+                          <p class="small-text">Administration system</p>
                         </div>
                       </div>
                       <div class="project-four projects-box">
                         <div class="container-project-one">
-                          <div class="text">Crud</div>
+                          <div class="text">CRUD</div>
+                          <p class="small-text">Funny Js Operations</p>
                         </div>
                       </div>
                       <div class="project-five projects-box">
                         <div class="container-project-one">
                           <div class="text">macOs Luna</div>
+                          <p class="small-text">Administration system</p>
                         </div>
                       </div>
                       <div class="project-six projects-box">
                         <div class="container-project-one">
                           <div class="text">Editing</div>
+                          <p class="small-text">Administration system</p>
                         </div>
                       </div>
                     </div>
@@ -714,64 +720,64 @@
                     </li>
                     <li>
                       <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                        Video</a>
+                        ReactJs</a>
                     </li>
 
                     <li>
                       <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                        Music</a>
+                        NodeJs</a>
                     </li>
 
                     <li>
                       <a href="#"><img src="./png/folders/mac_folder_app.png " alt="" />
-                        Projects</a>
+                        MERN</a>
                     </li>
                     <li>
                       <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                        Video</a>
-                    </li>
-
-                    <li>
-                      <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                        Music</a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                        Projects</a>
-                    </li>
-                    <li>
-                      <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                        Video</a>
+                        test1</a>
                     </li>
 
                     <li>
                       <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                        Music</a>
+                        Folder1</a>
                     </li>
                     <li>
                       <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                        Video</a>
+                        GitHub</a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
+                        Steam</a>
                     </li>
 
                     <li>
                       <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                        Music</a>
+                        Jquerry</a>
                     </li>
                     <li>
                       <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                        Music</a>
+                        Games</a>
+                    </li>
+
+                    <li>
+                      <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
+                        Torrent</a>
                     </li>
                     <li>
                       <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                        Music</a>
+                        Root</a>
                     </li>
                     <li>
                       <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                        Music</a>
+                        Designs</a>
                     </li>
                     <li>
                       <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                        Music</a>
+                        CSS</a>
+                    </li>
+                    <li>
+                      <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
+                        Stuff</a>
                     </li>
                   </ul>
                 </div>
@@ -1009,10 +1015,7 @@
                       </div>
                     </div>
                   </div>
-                </li>
-                <hr />
-
-                <li><a href="#">search</a></li>
+                </li>                     
               </ul>
             </div>
           </div>
@@ -1036,14 +1039,12 @@
       for (i = 0; i < tablinks.length; i++) {
         tablinks[i].style.backgroundColor = "";
       }
-
       // Show the specific tab content
       document.getElementById(pageName).style.display = "block";
 
       // Add the specific color to the button used to open the tab content
      // elmnt.style.backgroundColor = color;
     }
-
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpenPerson").click();
 

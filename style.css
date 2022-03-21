@@ -55,15 +55,11 @@ font-family: 'Poppins', sans-serif;
   --Rhard-black-color: #313131;
   --Rlight-blue-color: #14d5dc;
   --Rcrimson-color: crimson;
-
-
   /*End  Colors*/
 }
-
 hr {
   opacity: 0.4;
 }
-
 p,
 a,
 label,
@@ -73,13 +69,11 @@ span .input-style,
 .btn {
   font-family: "Poppins", sans-serif;
 }
-
 a {
   text-decoration: none !important;
   font-size: 12px !important;
   color: var(--text-low-finder-color);
 }
-
 h3,
 h1,
 h2 {
@@ -116,7 +110,7 @@ ul li a {
 }
 
 .container {
-  background-image: url(./png/nightdesk.jpg);
+  background-image: url(./png/macos3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -366,7 +360,7 @@ ul li a {
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  background-color: var(--medium-grey);
+  background-color: var(--Rwhite-color);
   opacity: 0.2;
   z-index: -34;
   box-shadow: 5px 2px 2px 2px var(--third-finder-color);

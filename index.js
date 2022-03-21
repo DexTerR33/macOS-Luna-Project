@@ -1,5 +1,9 @@
 
 
+
+
+
+
 (function () {
   var dropBtns = document.querySelectorAll('.dropdown-button');
   function closeOpenItems() {
@@ -14,7 +18,6 @@
         dropContent = btn.querySelector('.dropMenu-list'),
         shouldOpen = !dropContent.classList.contains('show');
       e.preventDefault();
-
       // First close all open items.
       closeOpenItems();
       // Check if the clicked item should be opened. It is already closed at this point so no further action is required if it should be closed.
@@ -25,22 +28,15 @@
       e.stopPropagation();
     });
   });
-
-  //   close menus when clicking outside of them
+  // close menus when clicking outside of them
   window.addEventListener('click', function (event) {
     if (event.target != dropBtns) {
-      // Moved the code here to its own function.
+  // Moved the code here to its own function.
       closeOpenItems();
     }
   });
-
-
-
-
-
 dragElement(document.getElementById("finderclone"));
 dragElement(document.getElementById("finderclonetest"));
-
   function dragElement(elmnt) {
     var pos1 = 0,
       pos2 = 0,
@@ -83,8 +79,6 @@ dragElement(document.getElementById("finderclonetest"));
     }
   }
   //Make the DIV element draggagle:
-
-
 $(".press-me-button").click(function() {
   $("#newcontact").toggle();
 });
@@ -92,12 +86,12 @@ $(".press-me-button").click(function() {
   $(".container-aboutMe").click(function () {
     $(".overlay").toggleClass("active2");
     $(".overlay").addClass("active");
-    console.log("overlay", "dasfa");
+    console.log("overlay", "pass1");
   });
 
   $(".close").click(function () {
     $(".overlay").addClass("active2");
-    console.log("overlay", "rrrrdasfa");
+    console.log("overlay", "pass2");
   });
   $("#dropDown").click(function () {
     $(".drop-down").toggleClass("drop-down--active");
@@ -105,6 +99,5 @@ $(".press-me-button").click(function() {
   $("#dropDown2").click(function () {
     $(".drop-down2").toggleClass("drop-down--active");
   });
-
 })();
 
