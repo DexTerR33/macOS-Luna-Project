@@ -291,33 +291,52 @@ ul li a {
 .apple_logoM {
   color: white;
   animation: FrandomAppleColors;
-  animation-duration: 9s;
-  animation-iteration-count: infinite;
-  animation-timing-function: cubic-bezier(0.14, -0.21, 0, 0.44);
+  animation: rgb-anime 12s infinite;
   font-size: 15px !important;
   padding: 0px 5px;
   text-align: center;
 }
 
-@keyframes randomAppleColors {
-  15% {
-    color: red;
-  }
+@keyframes rgb-anim {
+  0% {
 
-  30% {
-    color: yellow;
+    color: #ff0000;
   }
-
-  45% {
-    color: green;
+  11% {
+  
+    color: #ff8000;
   }
-
-  60% {
-    color: blue;
+  22% {
+   
+    color: #ffff00;
   }
+  33% {
+  
+    color: #00ff80;
+  }
+  44% {
+    
+    color: #00ffff;
+  }
+  55% {
+   
+    color: #0080ff;
+  }
+  66% {
+  
+    color: #0000ff;
+  }
+  77% {
 
-  75% {
-    color: white;
+    color: #8000ff;
+  }
+  88% {
+
+    color: #ff00ff;
+  }
+  100% {
+
+    color: #ff0000;
   }
 }
 
@@ -1267,11 +1286,62 @@ input-style:hover {
 
 
 
-
-
 /* -------------end --- sticky-notes---------*/
 
 
+
+/*-----------popuo Mac -----------*/
+
+.popupMac{
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 200ms ease-in-out;
+  pointer-events: none;
+  z-index: 122;
+  max-width: 500px;
+  min-height:350px;
+  background-color: red;
+}
+.popupMac.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.close-popup-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.content-popup{
+  display: flex;
+  flex-direction: column-reverse;
+}
+#overlayP {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .7);
+  pointer-events: none;
+}
+
+#overlayP.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+
+/*-----------END popuo Mac -----------*/
 
 
 
@@ -1459,7 +1529,7 @@ iframe {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(./png/marean.png);
+  background-image: url(./png/nightdesk.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1484,11 +1554,22 @@ iframe {
 
 .container-project-one {
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
 }
+.small-text {
+  font-size: 10px;
+  font-weight: 200;
+}
+
 
 .container-project-one .text {
-  font-size: 0.92em;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 1px;
   text-transform: capitalize;
   font-family: 'Poppins', sans-serif;
 }
@@ -1581,3 +1662,8 @@ border:1px solid white;
 
 
 /*=================~~~~~~~~~END start analog clock=======================!!!!!!!!!!!!*/
+
+
+
+
+

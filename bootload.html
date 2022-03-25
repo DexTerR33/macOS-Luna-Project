@@ -204,7 +204,7 @@
     <script>
       let progress = document.querySelector(".progress");
       let loading = document.querySelector(".loading");
-      let uploadPerc = [0, 0, 10, 15, 40, 90, 95, 105];
+      let uploadPerc = [0,10, 40, 95, 105];
       let i = 0;
       let interval = setInterval(function () {
         progress.style.width = `${uploadPerc[i]}%`;
@@ -212,7 +212,7 @@
         if (i == uploadPerc.length) {
           clearInterval(interval);
         }
-      }, 1000);
+      }, 500);
 
       /*
       $(document).ready(function(){

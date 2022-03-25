@@ -3,8 +3,8 @@
 
 
 
-
-(function () {
+/*
+function moveWindows() {
   var dropBtns = document.querySelectorAll('.dropdown-button');
   function closeOpenItems() {
     openMenus = document.querySelectorAll('.dropMenu-list');
@@ -43,11 +43,11 @@ dragElement(document.getElementById("finderclonetest"));
       pos3 = 0,
       pos4 = 0;
     if (document.getElementById(elmnt.id + "header")) {
-      /* if present, the header is where you move the DIV from:*/
+      // if present, the header is where you move the DIV from:
       document.getElementById(elmnt.id + "header").onmousedown =
         dragMouseDown;
     } else {
-      /* otherwise, move the DIV from anywhere inside the DIV:*/
+      // otherwise, move the DIV from anywhere inside the DIV:
       elmnt.onmousedown = dragMouseDown;
     }
     function dragMouseDown(e) {
@@ -73,31 +73,81 @@ dragElement(document.getElementById("finderclonetest"));
       elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
     }
     function closeDragElement() {
-      /* stop moving when mouse button is released:*/
+    // stop moving when mouse button is released:
       document.onmouseup = null;
       document.onmousemove = null;
     }
   }
+  
   //Make the DIV element draggagle:
 $(".press-me-button").click(function() {
   $("#newcontact").toggle();
 });
   // Close the dropdown if the user clicks outside of it
-  $(".container-aboutMe").click(function () {
-    $(".overlay").toggleClass("active2");
-    $(".overlay").addClass("active");
+  $(".container-aboutMe1").click(function () {
+    $(".overlay1").toggleClass("active2");
+    $(".overlay1").addClass("active");
     console.log("overlay", "pass1");
   });
 
   $(".close").click(function () {
-    $(".overlay").addClass("active2");
+    $(".overlay1").addClass("active2");
     console.log("overlay", "pass2");
   });
-  $("#dropDown").click(function () {
+  $("#dropDown1").click(function () {
     $(".drop-down").toggleClass("drop-down--active");
   });
   $("#dropDown2").click(function () {
     $(".drop-down2").toggleClass("drop-down--active");
   });
-})();
+}
+moveWindows();
+*/
+
+
+
+const openPopupButtons = document.querySelectorAll('[data-popup-target]');
+const closePopupButtons = document.querySelectorAll('[data-popup-close]');
+const overlay = document.getElementById('overlayP');
+const popupClass = document.querySelector('.popupMac');
+console.log(popupClass, "popupClass");
+
+
+
+openPopupButtons.forEach(button => {
+  button.addEventListener('click', (e) => {
+    console.log(button, "2");
+    const popupOpen = document.querySelector(button.dataset.popupTarget);
+    openPopup(popupOpen);
+    e.preventDefault();
+  });
+
+});
+/*
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.popupMac.active');
+  modals.forEach(popupTarget => {
+    closeModal(popupTarget);
+  });
+});*/
+closePopupButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const popupClose = button.closest('.popupMac');
+    closePopup(popupClose);
+  });
+});
+
+function openPopup(popupOpen) {
+  if(popupOpen == null) return;
+  popupClass.classList.add('active');
+  overlay.classList.add('active');
+  console.log(popupOpen, "2");
+}
+function closePopup(popupClose) {
+  if(popupClose == null) return;
+  popupClose.classList.remove('active');
+  overlay.classList.remove('active');
+  console.log(popupClose, "test");
+}
+
 

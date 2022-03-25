@@ -978,3 +978,25 @@ color: white;
 .overlay.active2 {
     display: none;
 }
+
+.notes-icon{
+    background: rgb(224, 224, 220);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.notes-icon-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height:35px;
+
+}
+.notes-icon-top{
+    background: rgb(248, 214, 62);
+    height: 10px;
+    border-radius: 2px;
+}
+.notes-icon-container hr {
+    background: rgb(131, 131, 131);
+    height: 2px;
+}
