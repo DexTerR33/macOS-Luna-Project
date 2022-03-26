@@ -290,8 +290,7 @@ ul li a {
 
 .apple_logoM {
   color: white;
-  animation: FrandomAppleColors;
-  animation: rgb-anime 12s infinite;
+  animation: rgb-anim 12s infinite;
   font-size: 15px !important;
   padding: 0px 5px;
   text-align: center;
@@ -1429,7 +1428,7 @@ iframe {
   top: 35px;
   left: 20%;
   z-index: 31241241;
-  display: none;
+  display: flex;
 }
 
 
