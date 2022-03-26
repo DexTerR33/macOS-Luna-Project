@@ -296,6 +296,12 @@ ul li a {
   padding: 0px 5px;
   text-align: center;
 }
+.apple_logo-container{
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
 
 @keyframes rgb-anim {
   0% {
@@ -349,8 +355,8 @@ ul li a {
 
 .section4_middle_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-auto-rows: minmax(110px, auto);
+  grid-template-columns: repeat(5, minmax(232px, 1fr));
+  grid-template-rows: repeat(4,minmax(200px, auto));
   position: relative;
   top: -14px;
 }
@@ -360,17 +366,17 @@ ul li a {
   grid-column: 3 / 8;
   grid-row: 8;
   display: grid;
+  place-content: center;
 }
 
 .section4_botIcons {
-  width: 100%;
-  position: relative;
-  z-index: 35;
-  height: 70px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  z-index: 2001;
+     position: relative;
+     height: 70px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 2001;
+     margin-bottom: 3vh;
 }
 
 .section4_botIcons::after {
@@ -1157,15 +1163,12 @@ input-style:hover {
   gap: 22px;
   text-align: center;
 }
-
 .css-Grank div:first-child,
 .css-TScore div:first-child,
 .css-Tplayed div:first-child {
   font-size: .7rem !important;
   font-weight: 600 !important;
-
 }
-
 .css-Grank div:nth-child(2),
 .css-TScore div:nth-child(2),
 .css-Tplayed div:nth-child(2) {
@@ -1174,22 +1177,18 @@ input-style:hover {
   font-weight: 300 !important;
   margin-top: -3px;
 }
-
 .info-middle-list {
   display: inline-flex;
   flex-direction: row;
   padding: 1px;
 }
-
 .info-middle-list-email {
   text-transform: none !important;
 }
-
 .info-middle-list span a {
   color: var(--text-low-finder-color);
   font-size: 0.72rem !important;
 }
-
 .info-middle-list span {
   color: var(--text-low-finder-color);
   font-size: 0.72em !important;
@@ -1200,7 +1199,6 @@ input-style:hover {
   align-items: center;
   margin-left: 5px;
 }
-
 .info-middle-list p {
   width: 100px;
   text-align: end;
@@ -1212,7 +1210,6 @@ input-style:hover {
   border-radius: 4px;
 
 }
-
 .info-middle>hr {
   border-color: var(--text-low-finder-color);
   opacity: 0.2;
@@ -1227,7 +1224,6 @@ input-style:hover {
   justify-content: end;
   gap: 10px;
 }
-
 .btn-contact {
   padding: 5px 10px;
   font-size: 0.6rem !important;
@@ -1242,7 +1238,6 @@ input-style:hover {
   letter-spacing: 1px;
   cursor: pointer;
 }
-
 .btn-contact:hover {
   background-color: var(--text-low-finder-color);
   color: var(--max-black);
@@ -1263,20 +1258,17 @@ input-style:hover {
   justify-content: space-between;
   display: none !important;
 }
-
 #mystickyNotes {
   position: absolute;
   border: none;
   left: 50%;
   z-index: 110;
 }
-
 .notes-middle-content,
 .notes-footer-content {
   text-align: start;
   margin: auto;
 }
-
 .notes-topnav-items {
   border-radius: 20px;
   width: 100% !important;
@@ -1292,6 +1284,9 @@ input-style:hover {
 
 /*-----------popuo Mac -----------*/
 
+
+
+
 .popupMac{
   position: fixed;
   opacity: 0;
@@ -1302,9 +1297,12 @@ input-style:hover {
   transition: 200ms ease-in-out;
   pointer-events: none;
   z-index: 122;
-  max-width: 500px;
-  min-height:350px;
-  background-color: red;
+  width: 600px;
+  max-width: 600px;
+  max-height: 350px;
+  background: var(--primaryS-finder-color);
+  height: 350px;
+  border-radius: 10px;
 }
 .popupMac.active {
   opacity: 1;
@@ -1318,9 +1316,77 @@ input-style:hover {
   font-size: 1.25rem;
   font-weight: bold;
 }
-.content-popup{
+.content-popup {
+  height: 100%;  
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+}
+.popup-header {
+  display: flex;
+  flex-direction: row;
+  background: var(--primaryM-finder-color);
+  align-items: center;
+}
+.popup-header ul {
+  display: inline-flex;
+  gap: 10px;  
+}
+.popup-header ul li {
+  padding: 5px;
+  font-size: 1.4em;
+}
+.content-popup-middle{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  flex: 1; 
+ color: var(--text-low-finder-color);
+}
+.popup-image-profile{
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:1px solid grey;
+}
+.popup-image-profile img {
+height: 45%;
+margin: 0 auto;
+}
+.circle-popup {
+  width: 25%;
+  gap: 3px;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.popup-information-profile{
+ 
+}
+.popup-information-profile h1 {
+  font-size: 2em;
+}
+.popup-information-profile h1 span {
+  font-weight: 300;
+}
+.popup-information-profile p {
+  font-weight: 200;
+  font-size: 0.7em;
+  margin-top: -12px;
+}
+.popup-information-profile ul {
+  display: block;
+}
+.popup-information-profile ul li {
+  font-weight: 900;
+  font-size: 0.8em;
+}
+.popup-information-profile ul li span {
+  font-weight: 200;
+  font-size: 0.8rem;
+  margin-left: 5px;
 }
 #overlayP {
   position: fixed;
@@ -1332,6 +1398,12 @@ input-style:hover {
   bottom: 0;
   background-color: rgba(0, 0, 0, .7);
   pointer-events: none;
+}
+
+.btn-popup {
+  font-size: 0.5rem;
+  padding: 0.8em 20px;
+  text-transform: uppercase;
 }
 
 #overlayP.active {
