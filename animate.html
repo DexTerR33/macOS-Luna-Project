@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 100vh;
+        align-items: center;
+    }
+    .box{
+        width: 100px;
+        height: 100px;      
+    }
+
+.box1{
+    background-color:red;
+    animation-name: red;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-fill-mode: both;
+    z-index: 1;
+   
+
+}
+.box2{
+    background-color:aqua;
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    z-index: 0;
+    animation-name: aqua;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-fill-mode: both;
+}
+.box3{
+    background-color:pink;
+    z-index: 2;
+    animation-name: pink;
+    animation-duration: 19.2s;
+    animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-fill-mode: forwards;
+
+}
+
+@keyframes red {
+
+0% {
+    transform: translateX(0px) scale(1.1) ;
+}
+
+
+80%,100% {
+    transform: translateX(250px) scale(1) ;
+}
+}
+@keyframes pink {
+
+0% {
+    transform: translateX(0px) scale(1) ;
+}
+
+
+80%,100% {
+    transform: translateX(-60px) scale(1.1) ;
+}
+}
+@keyframes aqua {
+
+0% {
+    transform:  scale(1) ;
+}
+
+
+80%,100% {
+    transform: scale(1.1) ;
+}
+}
+
+
+</style>
+
+<body>
+
+
+<div class="box1 box">1</div>
+<div class="box2 box">2</div>
+<div class="box3 box">3</div>
+
+
+
+
+    
+</body>
+</html>

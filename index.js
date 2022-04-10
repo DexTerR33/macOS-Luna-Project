@@ -99,7 +99,9 @@ const openPopupButtons = document.querySelectorAll('[data-popup-target]');
 const closePopupButtons = document.querySelectorAll('[data-popup-close]');
 const overlay = document.getElementById('overlayP');
 const popupClass = document.querySelector('.popupMac');
+const popupClass1 = document.querySelector('.popupMac2');
 console.log(popupClass, "popupClass");
+console.log(popupClass1, "popupClass1");
 
 
 
@@ -122,7 +124,8 @@ overlay.addEventListener('click', () => {
 closePopupButtons.forEach(button => {
   button.addEventListener('click', () => {
     const popupClose = button.closest('.popupMac');
-    closePopup(popupClose);
+    const popupClose1 = button.closest('.popupMac2');
+    closePopup(popupClose, popupClose1);
   });
 });
 

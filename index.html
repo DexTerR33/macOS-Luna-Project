@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -35,7 +34,7 @@
                 <div class="dropDown-container">
                   <ul class="dropDown-menu">
                     <li class="dropdown-button">
-                      <a class="dropBtn primary-text-dropdown" href="#">Finder</a>
+                      <a class="dropBtn primary-text-dropdown" href="#" >Finder</a>
                       <ul class="dropMenu-list">
                         <li><a href="#">Price (hi to low)</a></li>
                         <hr />
@@ -907,7 +906,9 @@
             </div>
           </div>
         </div>
-        <iframe src="./assets/chrome-page.html" frameborder="0">test</iframe>
+       <!-- <iframe src="./assets/chrome-page.html" frameborder="0">test</iframe>-->
+       
+      <!--  <div Chrome-page="./assets/chrome-page.html"></div> -->
         <div class="section4_footer">
           <div class="section4_botIcons">
             <ul>
@@ -1029,7 +1030,7 @@
                 </div>
               </li>
               <li>
-                <div class="container-hover-icons">
+                <div class="container-hover-icons" data-popup-target=".popupMac2">
                   <div class="icon-chrome chrome circle-icon-size">
                     <div class="icon-chrome-red"></div>
                     <div class="icon-chrome-green"></div>
@@ -1120,7 +1121,6 @@
       for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
       }
-
       // Remove the background color of all tablinks/buttons
       tablinks = document.getElementsByClassName("tablink-profile");
       for (i = 0; i < tablinks.length; i++) {
@@ -1128,13 +1128,12 @@
       }
       // Show the specific tab content
       document.getElementById(pageName).style.display = "block";
-
       // Add the specific color to the button used to open the tab content
       // elmnt.style.backgroundColor = color;
     }
     // Get the element with id="defaultOpen" and click on it
+   
     document.getElementById("defaultOpenPerson").click();
-
     function updateClock(hours, minutes, seconds) {
       var hourDegrees = hours * 30;
       var minuteDegrees = minutes * 6;
@@ -1151,7 +1150,6 @@
         transform: `rotate(${secondDegrees}deg)`,
       });
     }
-
     setClockWithCurrentTime();
 
     function setClockWithCurrentTime() {
@@ -1161,10 +1159,41 @@
       var seconds = date.getSeconds();
       updateClock(hours, minutes, seconds);
     }
-    setInterval(setClockWithCurrentTime, 1000);
-  </script>
 
+    setInterval(setClockWithCurrentTime, 1000);
+
+
+/*
+    function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  loop through a collection of all HTML elements:
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    search for elements with a certain atrribute:
+    file = elmnt.getAttribute("Chrome-page");
+    if (file) {
+      make an HTTP request using the attribute value as the file name:
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:
+          elmnt.removeAttribute("Chrome-page");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      exit the function:
+      return;
+    }
+  }
+};
+includeHTML();
+*/
+  </script>
   <script type="text/javascript" src="index.js"></script>
 </body>
-
 </html>
