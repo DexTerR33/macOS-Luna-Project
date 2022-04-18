@@ -22,7 +22,8 @@ font-family: 'Poppins', sans-serif;
 
 @font-face {
   font-family: product-sans;
-  src: url(./assets/fonts/product-sans/Product\ Sans\ Regular.ttf)}
+  src: url(./assets/fonts/product-sans/Product\ Sans\ Regular.ttf)
+}
 
 :root {
   /*finder colors*/
@@ -1933,7 +1934,7 @@ h1 span[rel="green"] {
 .desktop-volumeFiles {
   grid-column: 5;
   grid-row: 2;
-  background-color: red;
+
 }
 
 .desktop-imagesFiles {
@@ -2011,12 +2012,153 @@ h1 span[rel="green"] {
 /*============ start volume partion ===========================*/
 
 
-.desktop-volumeFiles {
+.desktop-volumeFiles {}
+
+.volume-container {
+  width: 120px;
+  height: 56px;
+  transform: rotatex(326deg);
+  background: grey;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(80% 20%, 81% 100%, 40% 100%, 46% 20%);
+  position: relative;
+  border-bottom: 1px solid antiquewhite;
+  margin-left: -48px;
+  margin-bottom: -5px;
+  position: relative;
+}
+.volume-container::before{
+  content: '';
+  position: absolute;
+  top:38%;
+  left: 47%;
+  background: rgb(158, 158, 158);
+  width: 35px;
+  border-radius: 40px;
+  height: 30px;
+  border: 1px solid azure;
+  perspective: 400px;
+
 
 }
-.volume-container{
-  background-color: grey;
-  height: 100%;
-  transform: skewY(-15deg);
+.dotsHdd {
+  position: absolute;
+  border-radius: 100px;
+  background-color: black;
+  width: 3px;
+  height: 3px;
 }
+
+.hdd-dots1::after,
+.hdd-dots2::after,
+.hdd-dots3::after,
+.hdd-dots4::after,
+.hdd-dots5::after,
+.hdd-dots6::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  background: rgb(124, 120, 111);
+  width: 1.5px;
+  height: 1.5px;
+  border-radius: 20pxz;
+}
+
+.hdd-dots1 {
+  top: 23%;
+  left: 47%;
+}
+
+.hdd-dots2 {
+  top: 55%;
+  left: 44%;
+}
+
+.hdd-dots3 {
+  top: 90%;
+  left: 42%;
+}
+
+.hdd-dots4 {
+  top: 23%;
+  right: 21%;
+}
+
+.hdd-dots5 {
+  top: 55%;
+  right: 21.2%;
+}
+
+.hdd-dots6 {
+  top: 90%;
+  right: 21%;
+}
+
+
+.volume-face {
+  background-color: rgb(161, 161, 161);
+  width: 49px;
+  margin-left: -0.7px;
+  margin-top: -7px;
+  height: 14px;
+  transform: rotatex(48deg) perspective(298px);
+  clip-path: polygon(100% 0%, 99% 100%, 2% 100%, 0% 0%);
+  border-bottom: 1px solid grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.leg-left,
+.leg-right {
+  width: 6px;
+  height: 100%;
+  background:  rgb(78, 78, 78);
+}
+
+.volume-face-center {
+
+  z-index: 4;
+  width: 37px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.volume-fanGrill{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+}
+
+.volume-fan{
+  width: 1px;
+  height: 11.4px;
+  background-color: rgb(19, 19, 19);
+}
+.volume-light{
+  width: 6.7px;
+  height: 6.7px;
+  border: 1px solid rgb(94, 94, 94);
+  border-radius: 20px;
+  background-color: yellow;
+  margin-top: 4px;
+}
+.volume-inside{
+  width:13px;
+  height: 10px;
+  background-color: rgb(110, 110, 110);
+}
+
+
+
+
 /*=================~~~~~~~~~end desktop icons   =======================!!!!!!!!!!!!*/
