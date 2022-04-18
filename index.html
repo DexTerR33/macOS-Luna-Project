@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -34,9 +35,9 @@
                 <div class="dropDown-container">
                   <ul class="dropDown-menu">
                     <li class="dropdown-button">
-                      <a class="dropBtn primary-text-dropdown" href="#" >Finder</a>
+                      <a class="dropBtn primary-text-dropdown" href="#">Finder</a>
                       <ul class="dropMenu-list">
-                        <li><a href="#">Price (hi to low)</a></li>
+                        <li><a href="#">Show Desktop Icons</a></li>
                         <hr />
                         <li><a href="#">Price (low to hi)</a></li>
                         <hr />
@@ -191,6 +192,35 @@
           <iframe src="./assets/chrome-page.html" title="Iframe Example"></iframe>
         </div>-->
         <div class="section4_middle_grid">
+          <div class="desktop-volumeFiles desktopFiles">
+            <div class="volume-container">project</div>
+            <div class="project-folder">Img</div>
+          </div>
+          <div class="desktop-imagesFiles desktopFiles">
+            <div class="project-folder">test</div>
+            <div class="project-folder">Img</div>
+          </div>
+          <div class="desktop-contactFiles desktopFiles">
+            <div class="pdf-folder-wrapper">
+              <div class="pdf-container">
+                <div class="pdf-top">
+                  <div class="pdf-text2">download</div>
+                  <div class="pdf-tails"></div>
+                  <div class="pdf-arrow"></div>
+                </div>
+                <div class="pdf-bottom">
+                  <div class="pdf-text">PDF</div>
+                </div>
+              </div>
+
+            </div>
+            <div class="project-folder">Img</div>
+          </div>
+          <div class="desktop-shortcuts desktopFiles">
+            <div class="project-folder">test2</div>
+            <div class="project-folder">Img</div>
+          </div>
+
           <div class="overlay">
             <div class="content">
               <div id="finderclone">
@@ -730,7 +760,7 @@
                           <div class="container-myProjects">
                             <div class="project-one projects-box">
                               <div class="container-project-one">
-                                <div class="text">HTML/CSS</div>
+                                <div class="text">Landing Pages</div>
                                 <p class="small-text">funny stuff</p>
                               </div>
                             </div>
@@ -906,9 +936,9 @@
             </div>
           </div>
         </div>
-       <!-- <iframe src="./assets/chrome-page.html" frameborder="0">test</iframe>-->
-       
-      <!--  <div Chrome-page="./assets/chrome-page.html"></div> -->
+        <!--     <iframe src="./assets/chrome-page.html" frameborder="0">test</iframe>-->
+
+        <!--  <div Chrome-page="./assets/chrome-page.html"></div> -->
         <div class="section4_footer">
           <div class="section4_botIcons">
             <ul>
@@ -1132,8 +1162,9 @@
       // elmnt.style.backgroundColor = color;
     }
     // Get the element with id="defaultOpen" and click on it
-   
+
     document.getElementById("defaultOpenPerson").click();
+
     function updateClock(hours, minutes, seconds) {
       var hourDegrees = hours * 30;
       var minuteDegrees = minutes * 6;
@@ -1163,37 +1194,38 @@
     setInterval(setClockWithCurrentTime, 1000);
 
 
-/*
-    function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  loop through a collection of all HTML elements:
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    search for elements with a certain atrribute:
-    file = elmnt.getAttribute("Chrome-page");
-    if (file) {
-      make an HTTP request using the attribute value as the file name:
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:
-          elmnt.removeAttribute("Chrome-page");
-          includeHTML();
+    /*
+        function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      loop through a collection of all HTML elements:
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        search for elements with a certain atrribute:
+        file = elmnt.getAttribute("Chrome-page");
+        if (file) {
+          make an HTTP request using the attribute value as the file name:
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:
+              elmnt.removeAttribute("Chrome-page");
+              includeHTML();
+            }
+          }      
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          exit the function:
+          return;
         }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      exit the function:
-      return;
-    }
-  }
-};
-includeHTML();
-*/
+      }
+    };
+    includeHTML();
+    */
   </script>
   <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>

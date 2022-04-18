@@ -22,8 +22,7 @@ font-family: 'Poppins', sans-serif;
 
 @font-face {
   font-family: product-sans;
-  src: url("./assets/fonts/product-sans/Product\ Sans\ Regular.ttf");
-}
+  src: url(./assets/fonts/product-sans/Product\ Sans\ Regular.ttf)}
 
 :root {
   /*finder colors*/
@@ -1339,7 +1338,7 @@ input-style:hover {
 }
 
 .popupMac.active {
- /* opacity: 1;*/
+  /* opacity: 1;*/
   display: block;
   pointer-events: all;
 }
@@ -1497,7 +1496,8 @@ iframe.active {
   font-family: product-sans;
   overflow: hidden;
 }
-.chrome-page-left{
+
+.chrome-page-left {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1505,10 +1505,12 @@ iframe.active {
   width: 100%;
 
 }
+
 .chrome-page-container {
   height: 100%;
 }
-.chrome-topnav-items{
+
+.chrome-topnav-items {
   width: 5%;
 }
 
@@ -1522,10 +1524,16 @@ iframe.active {
   align-items: center;
   justify-content: space-between;
   height: 35px;
-  
+
 }
-.chrome-page-link.chrome-page-line, .tabcontent, .tablink, .chrome-page-bookmark.chrome-page-line, .chrome-page-left, .chrome-page-top-header{
-  background-color:var(--primaryM-finder-color)
+
+.chrome-page-link.chrome-page-line,
+.tabcontent,
+.tablink,
+.chrome-page-bookmark.chrome-page-line,
+.chrome-page-left,
+.chrome-page-top-header {
+  background-color: var(--primaryM-finder-color)
 }
 
 .chrome-link-left {
@@ -1539,7 +1547,8 @@ iframe.active {
   gap: 18px;
   margin-left: 10px;
 }
-.chrome-link-left .link{
+
+.chrome-link-left .link {
   display: flex;
   justify-content: center;
 }
@@ -1564,7 +1573,7 @@ iframe.active {
   height: 24px;
   outline: none;
   padding: 0 20px;
-    color: aliceblue;
+  color: aliceblue;
 }
 
 .chrome-search-icn {
@@ -1576,8 +1585,9 @@ iframe.active {
   top: 3px;
   font-size: 0.8em;
 }
-.chrome-search-icn > i{
-  margin-left:5px;
+
+.chrome-search-icn>i {
+  margin-left: 5px;
 }
 
 .chrome-link-right {
@@ -1586,7 +1596,7 @@ iframe.active {
   justify-content: center;
   gap: 15px;
   font-size: 0.8em;
-  color:var(--text-low-finder-color); 
+  color: var(--text-low-finder-color);
 }
 
 .chrome-page-middle {
@@ -1604,11 +1614,12 @@ iframe.active {
   height: 4vh;
 }
 
-.bookmark-chrome > i {
+.bookmark-chrome>i {
   margin-right: 5px;
 }
-.bookmark-chrome{
-  margin-left:0.5em;
+
+.bookmark-chrome {
+  margin-left: 0.5em;
 }
 
 .chrome-items-buttons>button {
@@ -1617,7 +1628,8 @@ iframe.active {
   outline: none;
   border: none;
 }
-.chrome-page-bookmark.chrome-page-line{
+
+.chrome-page-bookmark.chrome-page-line {
   margin-left: 10px;
 }
 
@@ -1637,7 +1649,7 @@ iframe.active {
 }
 
 /* Style tab links */
-.tablink-circle{
+.tablink-circle {
   border-radius: 50px;
   width: 20px;
   height: 20px;
@@ -1908,3 +1920,103 @@ h1 span[rel="green"] {
 
 
 /*=================~~~~~~~~~END start analog clock=======================!!!!!!!!!!!!*/
+
+
+
+/*=================~~~~~~~~~start desktop icons   =======================!!!!!!!!!!!!*/
+
+.desktopFiles {
+  width: 55px;
+  height: 60px;
+}
+
+.desktop-volumeFiles {
+  grid-column: 5;
+  grid-row: 2;
+  background-color: red;
+}
+
+.desktop-imagesFiles {
+  grid-column: 2;
+  grid-row: 4;
+  background-color: purple;
+}
+
+.desktop-contactFiles {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.desktop-shortcuts {
+  grid-column: 1;
+  grid-row: 2 / span 3;
+  background-color: orange;
+}
+
+/*=================~~~~~~~~~start  desktop icons   =======================!!!!!!!!!!!!*/
+
+
+.pdf-container {
+
+  border: 0 solid transparent;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+}
+
+.pdf-top {
+  height: 70%;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pdf-text2 {
+  font-size: 0.5em;
+  margin-top: 3px;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.pdf-arrow {
+  width: 0;
+  height: 0;
+  border-top: 10px solid #333;
+  border-right: 10px solid transparent;
+  border-bottom: 0 solid transparent;
+  border-left: 10px solid transparent;
+  margin-bottom: 5px;
+}
+
+.pdf-tails {
+  width: 8px;
+  height: 15px;
+  background-color: #333;
+}
+
+.pdf-bottom {
+  background-color: crimson;
+  color: white;
+  height: 30%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+
+/*============ start volume partion ===========================*/
+
+
+.desktop-volumeFiles {
+
+}
+.volume-container{
+  background-color: grey;
+  height: 100%;
+  transform: skewY(-15deg);
+}
+/*=================~~~~~~~~~end desktop icons   =======================!!!!!!!!!!!!*/
