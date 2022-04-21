@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Terminal macOS</title>
+    <style>
+        .terminal-container {
+            font-family: 'Poppins', sans-serif;
+            width: 600px;
+            max-width: 600px;
+            height: 340px;
+            max-height: 350px;
+            background-color: #333;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .terminal-top-nav {
+            color: white;
+            width: 35%;
+
+        }
+
+        .terminal-body .terminal-text li {
+            color: white;
+            font-size: 0.8em;
+        }
+.terminal-text{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+        .terminal-body {
+            background-color: rgb(24, 24, 24);
+            padding: 10px;
+            height: 100%;
+            font-size: 0.75em;
+            letter-spacing: 0.5px;
+            font-weight: 200;
+
+        }
+
+        .terminal-topnav {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .text-terminal-top {
+            color: var(--text-low-finder-color);
+            font-size: 0.7em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="terminal-container">
+        <div class="terminal-topnav">
+
+            <div class="terminal-top-nav finder-topnav-items">
+                <div class="circle circle1 close"></div>
+                <div class="circle circle2"></div>
+                <div class="circle circle3"></div>
+            </div>
+            <div class="text-terminal-top">Luna ~ bash terminal</div>
+        </div>
+        <div class="terminal-body">
+            <div class="terminal-text">
+                <li>macOS Luna [Version 1.0.0.2022]</li>
+                <li>(c) M Design. All rights reserved</li>
+                <br>
+                <li>Last login: Fri Jun 4 13:10:49 on dexter00</li>
+                <li>Luna@macBook-Pro - % sudo /application/install\ macOS\ Luna.app/Content</li>
+                <li>Password:******</li>
+                <li>Ready to start</li>
+                <li>To continue we need to erase the volume at /volume/myVolume</li>
+                <li>If you wish to continue type (Y) then press return: Y</li>
+                <li>Erasing disk:0%....10%....20%....30%....100%</li>
+                <li>Copy to disk:0%....10%....20%....30%....40%....50%....60%....100%</li>
+                <li>Making disk Bootable....</li>
+                <li>Copying boot files</li>
+                <li>install media now available at "/Volumes/install macOs Luna"</li>
+                <li>Luna@macBook-pro ~ % [ Boot Loading.... ]</li>
+                <li>Please wait.... </li>
+                <br>
+                <li>Start...</li>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
