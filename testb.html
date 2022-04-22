@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        .class{
+            width: 100px;
+            height: 100px;
+            color: white;
+            background-color: red;
+            margin-top: 20px;
+            display: inline-flex;
+
+        }
+        button{
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box1">Box 1</div>
+    <div id="box2">Box 2</div>
+    <div id="box3">Box 3</div>
+
+    <div class="class" id="one">1</div>
+    <div class="class" id="two" >2</div>
+    <div class="class" id="three">3</div>
+
+    <button>click me</button>
+    
+    <script>
+
+let one = document.getElementById("one");
+let two = document.getElementById("two");
+let three = document.getElementById("two");
+
+let all = [one, two, three];
+console.log(all , "test all");
+
+const boxes = document.querySelectorAll('#box1, #box2, #box3');
+
+// 👇️ [div#box1, div#box2, div#box3]
+console.log(boxes, "boxexs");
+
+boxes.forEach(box => {
+  console.log(box);
+  const ids = ['box1', 'box2', 'box3'];
+
+const boxes = document.querySelectorAll(
+  ids.map(id => `#${id}`).join(', ')
+);
+
+// 👇️ [div#box1, div#box2, div#box3]
+console.log(boxes, "test2");
+});
+
+    </script>
+</body>
+</html>

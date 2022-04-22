@@ -1,1268 +1,1636 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <link href="style.css" rel="stylesheet" media="all" />
+    <link defer href="icons.css" rel="stylesheet" media="all" />
+    <link defer href="mediaquerryes.css" rel="stylesheet" media="all" />
+    <title>macOS LUNA</title>
+  </head>
 
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous"></script>
-  <link href="style.css" rel="stylesheet" media="all" />
-  <link defer href="icons.css" rel="stylesheet" media="all" />
-  <link defer href="mediaquerryes.css" rel="stylesheet" media="all" />
-  <title>macOS LUNA</title>
-</head>
-
-<body>
-  <div class="wrapper">
-    <div class="container">
-      <div class="container-itemsPage">
-        <div class="container-topheader">
-          <div class="container_topheader_left">
-            <ul class="container_topheader_items">
-              <li>
-                <button data-popup-target=".popupMac" class="apple_logo-container">
-                  <i class="fab fa-apple apple_logoM"></i>
-                </button>
-              </li>
-              <li>
-                <div class="dropDown-container">
-                  <ul class="dropDown-menu">
-                    <li class="dropdown-button">
-                      <a class="dropBtn primary-text-dropdown" href="#">Finder</a>
-                      <ul class="dropMenu-list">
-                        <li><a href="#">Show Desktop Icons</a></li>
-                        <hr />
-                        <li><a href="#">Price (low to hi)</a></li>
-                        <hr />
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <div class="dropDown-container">
-                  <ul class="dropDown-menu">
-                    <li class="dropdown-button">
-                      <a class="dropBtn" href="#">file</a>
-                      <ul class="dropMenu-list">
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <div class="dropDown-container">
-                  <ul class="dropDown-menu">
-                    <li class="dropdown-button">
-                      <a class="dropBtn" href="#">edit</a>
-                      <ul class="dropMenu-list">
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <div class="dropDown-container">
-                  <ul class="dropDown-menu">
-                    <li class="dropdown-button">
-                      <a class="dropBtn" href="#">view</a>
-                      <ul class="dropMenu-list">
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <div class="dropDown-container">
-                  <ul class="dropDown-menu">
-                    <li class="dropdown-button">
-                      <a class="dropBtn" href="#">go</a>
-                      <ul class="dropMenu-list">
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <div class="dropDown-container">
-                  <ul class="dropDown-menu">
-                    <li class="dropdown-button">
-                      <a class="dropBtn" href="#">window</a>
-                      <ul class="dropMenu-list">
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <div class="dropDown-container">
-                  <ul class="dropDown-menu">
-                    <li class="dropdown-button">
-                      <a class="dropBtn" href="#">Help</a>
-                      <ul class="dropMenu-list">
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                        <li><a href="#">Price (hi to low)</a></li>
-                        <li><a href="#">Price (low to hi)</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="section4_topheader_right">
-            <ul>
-              <li>
-                <a href="#">
-                  <i class="fas fa-wifi"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-volume-up"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-bluetooth-b"></i></a>
-              </li>
-              <li><a href="#">43%</a></li>
-              <li>
-                <a href="#"><i class="fas fa-battery-half"></i></a>
-              </li>
-              <li><a href="#">Tue 6:42 AM</a></li>
-              <li>
-                <a href="#" class="fullname-standard fullname-thin fullname-bold">
-                  Marian Iordache</a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-search"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-home"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fas fa-ellipsis-v"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!--  <div class="section4_middle">
-          <iframe src="./assets/chrome-page.html" title="Iframe Example"></iframe>
-        </div>-->
-        <div class="section4_middle_grid">
-          <div class="container-icons-dekstop">
-          <div class="desktop-volumeFiles desktopFiles">
-            <div class="apple-volume"></div>
-          
-            <div class="volume-container">
-              <div class="hdd-dots1 dotsHdd"></div>
-              <div class="hdd-dots2 dotsHdd"></div>
-              <div class="hdd-dots3 dotsHdd"></div>
-              <div class="hdd-dots4 dotsHdd"></div>
-              <div class="hdd-dots5 dotsHdd"></div>
-              <div class="hdd-dots6 dotsHdd"></div>
-            </div>
-            <div class="volume-face">
-              <div class="leg-left">
-              </div>
-              <div class="volume-face-center">
-                <div class="volume-inside"> </div>
-                <div class="volume-fanGrill">
-                  <div class="volume-fan"></div>
-                  <div class="volume-fan"></div>
-                  <div class="volume-fan"></div>
-                  <div class="volume-fan"></div>
-                  <div class="volume-fan"></div>
-                  <div class="volume-fan"></div>
-                  <div class="volume-fan"></div>
-                </div>
-               
-                <div class="volume-light"></div>               
-              </div>
-              <div class="leg-right">
-              </div>
-            </div>
-            <div class="volume-text">Partition 1</div>
-          </div>
-          <div class="desktop-volumeFiles desktopFiles">
-            <div class="apple-volume"></div>
-          
-            <div class="volume-container">
-              <div class="hdd-dots1 dotsHdd"></div>
-              <div class="hdd-dots2 dotsHdd"></div>
-              <div class="hdd-dots3 dotsHdd"></div>
-              <div class="hdd-dots4 dotsHdd"></div>
-              <div class="hdd-dots5 dotsHdd"></div>
-              <div class="hdd-dots6 dotsHdd"></div>
-            </div>
-            <div class="volume-face">
-              <div class="leg-left">
-              </div>
-              <div class="volume-face-center">
-                <div class="volume-inside"> </div>
-                <div class="volume-fanGrill">
-                  <div class="volume-fan"></div>
-                  <div class="volume-fan"></div>
-                  <div class="volume-fan"></div>
-                  <div class="volume-fan"></div>
-                  <div class="volume-fan"></div>
-                  <div class="volume-fan"></div>
-                  <div class="volume-fan"></div>
-                </div>
-               
-                <div class="volume-light"></div>               
-              </div>
-              <div class="leg-right">
-              </div>
-            </div>
-            <div class="volume-text">Partition 2</div>
-          </div>
-          <div class="desktop-cmdTerminal desktopFiles">
-            <div class="container-terminal">
-            <div class="terminal-text">><span>_</span></div>
-           
-          </div>
-          <div class="terminal-textBottom volume-text">Terminal</div>
-          </div>      
-          <div class="desktop-contactFiles desktopFiles">
-            <div class="pdf-folder-wrapper">
-              <div class="pdf-container">
-                <div class="pdf-top">
-                  <div class="pdf-text2">download</div>
-                  <div class="pdf-tails"></div>
-                  <div class="pdf-arrow"></div>
-                </div>
-                <div class="pdf-bottom">
-                  <div class="pdf-text">PDF</div>
-                </div>
-              </div>
-
-            </div>
-            <div class="pdf-textBottom volume-text">Open CV</div>
-          </div>
-        </div>
-         
-        
-         
-<!-- assetssss -->
-
-          <div class="overlay">
-            <div class="content">
-              <div id="finderclone">
-                <div class="container-finder">
-                  <div class="finder-topnav header" id="findercloneheader">
-                    <div class="finder-topnav-items">
-                      <div class="circle circle1 close"></div>
-                      <div class="circle circle2"></div>
-                      <div class="circle circle3"></div>
-                    </div>
-                    <p>macOs Luna</p>
-                  </div>
-                  <div class="finder-secondnav">
-                    <div class="items-secondnav-left">
-                      <a href="#"><i class="fas fa-chevron-left"></i></a>
-                      <a href="#"><i class="fas fa-chevron-right"></i></a>
-                    </div>
-                    <div class="items-secondnav-center">
-                      <ul>
-                        <li>
-                          <a href="#"><i class="fas fa-list-ul"></i></a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fas fa-bars"></i></a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fas fa-server"></i></a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fas fa-network-wired"></i></a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fas fa-cog"></i></a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="far fa-clock"></i></a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="far fa-clock"></i></a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="far fa-clock"></i></a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="items-secondnav-right">
-                      <div class="search">
-                        <input type="text" class="searchTerm" placeholder="What are you looking for?" />
-                        <button type="submit" class="searchButton">
-                          <i class="fa fa-search"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="finder-middle">
-                    <div class="finder-middle-left">
-                      <ul>
-                        <div>Favorites</div>
-                        <li>
-                          <a href="#"><i class="far fa-clock"></i>Recent</a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fas fa-home"></i>Home</a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fas fa-desktop"></i>Desktop</a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="far fa-folder-open"></i>Script</a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fas fa-download"></i>Photos</a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fas fa-music"></i>ScreenShot</a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fas fa-image"></i>Simulator</a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fas fa-video"></i>videos</a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fas fa-project-diagram"></i>network</a>
-                        </li>
-                        <div>location</div>
-                        <li>
-                          <a href="#"><i class="fas fa-hdd"></i>455 gb Volume I</a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fas fa-hdd"></i>250 gb Volume II</a>
-                        </li>
-                        <div>icloud</div>
-                        <li>
-                          <a href="#"><i class="fas fa-hdd"></i>GitHub Remote</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="finder-middle-right">
-                      <ul>
-                        <li>
-                          <a href="#"><img src="./png/folders/mac_folder_me.png" alt="" />Me</a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="./png/folders/mac_folder_photo.png" alt="" />
-                            Video</a>
-                        </li>
-
-                        <li>
-                          <a href="#"><img src="./png/folders/mac_folder_drive.png" alt="" />
-                            Music</a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="./png/folders/mac_folder_contact.png" alt="" />
-                            Projects</a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                            ReactJs</a>
-                        </li>
-
-                        <li>
-                          <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                            NodeJs</a>
-                        </li>
-
-                        <li>
-                          <a href="#"><img src="./png/folders/mac_folder_app.png " alt="" />
-                            MERN</a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                            test1</a>
-                        </li>
-
-                        <li>
-                          <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                            Folder2</a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                            GitHub</a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                            Steam</a>
-                        </li>
-
-                        <li>
-                          <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                            Jquerry</a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                            Games</a>
-                        </li>
-
-                        <li>
-                          <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                            Torrent</a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                            Root</a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                            Designs</a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                            CSS</a>
-                        </li>
-                        <li>
-                          <a href="#"><img src="./png/folders/mac_folder2.png" alt="" />
-                            Stuff</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="container-footer-finder">
-                    <div class="container-footer-finder-settingsPanel">
-                      <a href="#">
-                        <i class="fas fa-user-cog"></i> Settings</a>
-                    </div>
-                    <div>25 items, 280.63 GB available</div>
-                    <div>Marian Iordache</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="overlay">
-            <div class="content">
-              <div id="finderclonetest">
-                <div class="container-contact">
-                  <div class="contact-topnav" id="finderclonetestheader">
-                    <div class="contact-topnav-items finder-topnav-items header">
-                      <div class="circle circle1 close"></div>
-                      <div class="circle circle2"></div>
-                      <div class="circle circle3"></div>
-                    </div>
-                    <p>macOs Luna</p>
-                  </div>
-                  <div class="contact-middle">
-                    <div class="contact-middle-left">
-                      <div class="container-clock-analog">
-                        <div class="clock-analog">
-                          <div class="hour-line"></div>
-                          <div class="minute-line"></div>
-                          <div class="second-line"></div>
-                        </div>
-                      </div>
-                      <ul style="z-index: 32">
-                        <li>
-                          <a href="#" class="tablink-profile" onclick="openPage2('person_one')" id="defaultOpenPerson">
-                            <i class="far fa-clock"></i>About Me
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="tablink-profile" onclick="openPage2('person_one')" id="defaultOpenPerson">
-                            <i class="far fa-clock"></i>Home
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="tablink-profile" onclick="openPage2('myProjects')"
-                            id="defaultOpenPerson"><i class="fas fa-download"></i>Projects</a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fas fa-music"></i>youtube</a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="far fa-folder-open"></i>Parteners</a>
-                        </li>
-
-                        <li>
-                          <a href="#" class="tablink-profile" onclick="openPage2('person_two')"
-                            id="defaultOpenPerson">Sorin Eugen</a>
-                        </li>
-                        <li>
-                          <a href="#" class="tablink-profile" onclick="openPage2('person_three')"
-                            id="defaultOpenPerson">Rares Craciun</a>
-                        </li>
-                      </ul>
-                      <div class="like-button">
-                        <button><i class="fas fa-home"></i>Like!</button>
-                      </div>
-                    </div>
-                    <div class="contact-middle-right">
-                      <div class="contact-middle-right-person" id="person_one">
-                        <div class="contact-middle-image">
-                          <div class="contact-image-container">
-                            <div class="contact-profile-img" id="your_img_id"></div>
-                          </div>
-                          <div class="contact-name">
-                            <div>Marian Iordache</div>
-                            <div style="
-                                  margin-left: -5px;
-                                  text-align: end !important;
-                                ">
-                              "Front-End Developer"
-                            </div>
-                          </div>
-                        </div>
-                        <div class="contact-middle-top">
-                          <div class="close-button-contact">
-                            <button class="push-me-button press-me-button" onclick="pushme()"></button>
-                          </div>
-
-                          <div class="contact-middle-information">
-                            <div class="info-middle">
-                              <div class="info-middle-list">
-                                <p>phone:</p>
-                                <span>
-                                  <a href="http://">0765.965.155</a></span>
-                              </div>
-                              <hr />
-                              <div class="info-middle-list">
-                                <p>Website:</p>
-                                <span><a href="https://crafties.ro" target="_blank" style="
-                                        text-transform: lowercase !important;
-                                      ">crafties.ro</a></span>
-                              </div>
-                              <hr />
-                              <div class="info-middle-list">
-                                <p>GitHub:</p>
-                                <span>
-                                  <a href="https://github.com/DexTerR33" style="
-                                        text-transform: lowercase !important;
-                                      ">/DexTerR33</a>
-                                </span>
-                              </div>
-                              <hr />
-                              <div class="info-middle-list">
-                                <p>youtube:</p>
-                                <span>
-                                  <a href="https://www.youtube.com/watch?v=6AyEce0NdM0&ab_channel=JSGeek"
-                                    target="_blank">js geek</a></span>
-                              </div>
-                              <hr />
-                              <div class="info-middle-list">
-                                <p>email:</p>
-                                <span>
-                                  <a href="mailto:iordache.marian21@gmail.com"
-                                    class="info-middle-list-email">Iordache.marian21@gmail.com</a></span>
-                              </div>
-                              <hr />
-                              <div class="info-middle-list">
-                                <p>Linkdin:</p>
-                                <span><a href="#">Marian Iordache</a></span>
-                              </div>
-                              <hr />
-                              <div class="info-middle-list">
-                                <p>css battle:</p>
-                                <span><a href="https://cssbattle.dev/player/VbqbK0gKScgciHu3kMxYoIko40B2"
-                                    target="_blank">
-                                    <div class="cssbattle-container">
-                                      <div class="css-Grank">
-                                        <div>Global Rank</div>
-                                        <div>1797/172217</div>
-                                      </div>
-                                      <div class="css-TScore">
-                                        <div>Total Score</div>
-                                        <div>27326.32</div>
-                                      </div>
-                                      <div class="css-Tplayed">
-                                        <div>Targets Played</div>
-                                        <div>47/100</div>
-                                      </div>
-                                    </div>
-                                  </a>click me!</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="contact-middle-footer">
-                            <input type="button" value="CV" class="btn btn-standard btn-danger btn-contact" />
-                            <div class="contact-middle-footer-btn">
-                              <input type="button" class="btn btn-standard btn-contact" value="hire me" />
-                              <input type="button" class="btn btn-standard btn-active btn-contact" value="linkdin" />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="contact-middle-right-person" id="person_two">
-                        <div class="contact-middle-image">
-                          <div class="contact-image-container">
-                            <div class="contact-profile-img Sorin"></div>
-                          </div>
-                          <div class="contact-name">
-                            <div>Sorin Eugen</div>
-                            <div style="
-                                  text-align: center !important;
-                                  margin-left: 1px;
-                                ">
-                              "UI/UX Designer"
-                            </div>
-                          </div>
-                        </div>
-                        <div class="contact-middle-top">
-                          <div class="close-button-contact">
-                            <button class="push-me-button press-me-button" onclick="pushme()"></button>
-                          </div>
-
-                          <div class="contact-middle-information">
-                            <div class="info-middle">
-                              <div class="info-middle-list">
-                                <p>phone:</p>
-                                <span>
-                                  <a href="http://">0753.460.584</a></span>
-                              </div>
-                              <hr />
-                              <div class="info-middle-list">
-                                <p>Website:</p>
-                                <span><a href="http://" style="
-                                        text-transform: lowercase !important;
-                                      ">sorineugen.ro</a></span>
-                              </div>
-                              <hr />
-                              <div class="info-middle-list">
-                                <p>Linkdin:</p>
-                                <span>
-                                  <a href="http://">Sorin Eugen</a>
-                                </span>
-                              </div>
-                              <hr />
-                              <div class="info-middle-list">
-                                <p>Portofolio:</p>
-                                <span>
-                                  <a href="https://www.youtube.com/watch?v=6AyEce0NdM0&ab_channel=JSGeek"
-                                    target="_blank">My Works</a></span>
-                              </div>
-                              <hr />
-                              <div class="info-middle-list">
-                                <p>email:</p>
-                                <span>
-                                  <a href="mailto:iordache.marian21@gmail.com"
-                                    class="info-middle-list-email">zaspeedy@yahoo.com</a></span>
-                              </div>
-                              <hr />
-                              <div class="info-middle-list">
-                                <p>birthday:</p>
-                                <span> december 14 </span>
-                              </div>
-                              <hr />
-                              <div class="info-middle-list">
-                                <p>Vimeo</p>
-                                <span><a href="https://cssbattle.dev/player/VbqbK0gKScgciHu3kMxYoIko40B2"
-                                    target="_blank">
-                                    <div class="cssbattle-container">
-                                      <div class="css-Grank">
-                                        <div>Global Rank</div>
-                                        <div>1797/172217</div>
-                                      </div>
-                                      <div class="css-TScore">
-                                        <div>Total Score</div>
-                                        <div>27326.32</div>
-                                      </div>
-                                      <div class="css-Tplayed">
-                                        <div>Targets Played</div>
-                                        <div>47/100</div>
-                                      </div>
-                                    </div>
-                                  </a>click me!</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="contact-middle-footer">
-                            <input type="button" value="CV" class="btn btn-standard btn-danger btn-contact" />
-                            <div class="contact-middle-footer-btn">
-                              <input type="button" class="btn btn-standard btn-contact" value="hire me" />
-                              <input type="button" class="btn btn-standard btn-active btn-contact" value="linkdin" />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="contact-middle-right-person" id="person_three">
-                        <div class="contact-middle-image">
-                          <div class="contact-image-container">
-                            <div class="contact-profile-img Rares"></div>
-                          </div>
-                          <div class="contact-name">
-                            <div>Rares Craciun</div>
-                            <div>"Professional Photographer"</div>
-                          </div>
-                        </div>
-                        <div class="contact-middle-top">
-                          <div class="close-button-contact">
-                            <button class="push-me-button press-me-button" onclick="pushme()"></button>
-                          </div>
-
-                          <div class="contact-middle-information">
-                            <div class="info-middle">
-                              <div class="info-middle-list">
-                                <p>phone:</p>
-                                <span>
-                                  <a href="http://">0746.695.231</a></span>
-                              </div>
-                              <hr />
-                              <div class="info-middle-list">
-                                <p>Website:</p>
-                                <span><a href="http://" style="
-                                        text-transform: lowercase !important;
-                                      ">rarescraciun.ro</a></span>
-                              </div>
-                              <hr />
-                              <div class="info-middle-list">
-                                <p>instagram:</p>
-                                <span>
-                                  <a href="http://">crative Raws</a>
-                                </span>
-                              </div>
-                              <hr />
-                              <div class="info-middle-list">
-                                <p>Portofolio:</p>
-                                <span>
-                                  <a href="#" target="_blank">photo album</a></span>
-                              </div>
-                              <hr />
-                              <div class="info-middle-list">
-                                <p>email:</p>
-                                <span>
-                                  <a href="mailto:iordache.marian21@gmail.com"
-                                    class="info-middle-list-email">rares.craciun@gmail.com</a></span>
-                              </div>
-                              <hr />
-                              <div class="info-middle-list">
-                                <p>birthday:</p>
-                                <span> june 21 </span>
-                              </div>
-                              <hr />
-                              <div class="info-middle-list">
-                                <p>Best Photo:</p>
-                                <span><a href="https://cssbattle.dev/player/VbqbK0gKScgciHu3kMxYoIko40B2"
-                                    target="_blank">
-                                    <div class="cssbattle-container">
-                                      <div class="css-Grank">
-                                        <div>Global Rank</div>
-                                        <div>1797/172217</div>
-                                      </div>
-                                      <div class="css-TScore">
-                                        <div>Total Score</div>
-                                        <div>27326.32</div>
-                                      </div>
-                                      <div class="css-Tplayed">
-                                        <div>Targets Played</div>
-                                        <div>47/100</div>
-                                      </div>
-                                    </div>
-                                  </a>click me!</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="contact-middle-footer">
-                            <input type="button" value="CV" class="btn btn-standard btn-danger btn-contact" />
-                            <div class="contact-middle-footer-btn">
-                              <input type="button" class="btn btn-standard btn-contact" value="hire me" />
-                              <input type="button" class="btn btn-standard btn-active btn-contact" value="linkdin" />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="contact-middle-right-person" id="myProjects">
-                        <div class="contact-middle-image">
-                          <div class="contact-image-container">
-                            <div class="contact-profile-img Projects"></div>
-                          </div>
-                          <div class="contact-name">
-                            <div>My Projects</div>
-                            <div style="margin-left: -14px">
-                              "Dexter Laboratory"
-                            </div>
-                          </div>
-                        </div>
-                        <div class="contact-middle-top middle-projects">
-                          <!-- *************************   MY PROJECTS ****************-->
-
-                          <div class="container-myProjects">
-                            <div class="project-one projects-box">
-                              <div class="container-project-one">
-                                <div class="text">Landing Pages</div>
-                                <p class="small-text">funny stuff</p>
-                              </div>
-                            </div>
-                            <div class="project-two projects-box">
-                              <div class="container-project-one">
-                                <div class="text">To-do list</div>
-                                <p class="small-text">React + firebase</p>
-                              </div>
-                            </div>
-                            <div class="project-three projects-box">
-                              <div class="container-project-one">
-                                <div class="text">X-garage</div>
-                                <p class="small-text">
-                                  Administration system
-                                </p>
-                              </div>
-                            </div>
-                            <div class="project-four projects-box">
-                              <div class="container-project-one">
-                                <div class="text">CRUD</div>
-                                <p class="small-text">Funny Js Operations</p>
-                              </div>
-                            </div>
-                            <div class="project-five projects-box">
-                              <div class="container-project-one">
-                                <div class="text">macOs Luna</div>
-                                <p class="small-text">
-                                  Administration system
-                                </p>
-                              </div>
-                            </div>
-                            <div class="project-six projects-box">
-                              <div class="container-project-one">
-                                <div class="text">Editing</div>
-                                <p class="small-text">
-                                  Administration system
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="wrapper-contact-form" id="newcontact">
-                      <div class="container-contact-form">
-                        <div style="line-height: 0.8">
-                          <h3 class="contact-form-title">contact</h3>
-                          <h3 class="contact-form-title-after">
-                            Thank you <br /><span>i'll be in touch</span>
-                          </h3>
-                        </div>
-                        <div class="contact-forms">
-                          <div class="contact-name-form">
-                            <input type="text" class="input-style" id="fullName" placeholder="name" />
-                          </div>
-                          <div class="contact-email">
-                            <input type="email" class="input-style" id="email" placeholder="enter a valid email..." />
-                          </div>
-                          <div class="contact-phone">
-                            <input type="number" class="input-style" id="phone" placeholder="enter a valid phone" />
-                          </div>
-                          <div class="contact-textarea">
-                            <textarea type="text" id="textarea" class="input-style" placeholder="say something"
-                              style="resize: none"></textarea>
-                          </div>
-                          <div class="contact-form-buttons">
-                            <button class="btn-contact btn btn-contact-form">
-                              send me
-                            </button>
-                          </div>
-                        </div>
-                        <div class="power-by">
-                          <div>
-                            macOs Luna template v1.1
-                            <p></p>
-                            <span>powered by </span><span>M-designs</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="container-footer-contact">
-                    <i class="fas fa-home"></i>
-                    <div>wallet code{} <span>donate</span></div>
-                    <div>Marian Iordache</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="popupMac">
-            <div class="content-popup">
-              <div class="popup-header">
-                <div class="circle-popup finder-topnav-items">
-                  <div class="circle circle1 close" data-popup-close></div>
-                  <div class="circle circle2"></div>
-                  <div class="circle circle3"></div>
-                </div>
-                <ul style="display: inline-flex">
-                  <li><a href="#">overview</a></li>
-                  <li><a href="#">Display</a></li>
-                  <li><a href="#">Storage</a></li>
-                  <li><a href="#">Support</a></li>
-                </ul>
-                <div class="circle-popup">
-                  <div class="circle circle1 close"></div>
-                  <div class="circle circle2"></div>
-                  <div class="circle circle3"></div>
-                </div>
-                <!--<button data-popup-close class="close-popup-button">&times;</button>-->
-              </div>
-              <div class="content-popup-middle">
-                <div class="popup-image-profile">
-                  <img src="./png/M2.png" alt="img profile" srcset="" />
-                </div>
-                <div class="popup-information-profile">
-                  <h1>macOs <span>Luna</span></h1>
-                  <p>version 1.0.0 (i210687)</p>
-                  <br />
-                  <ul>
-                    <li>macBook Pro <span>(15-inch. 2017)</span></li>
-                    <li>
-                      Procesor <span>2.8Ghz Quad-Core intel Core i7</span>
-                    </li>
-                    <li>Memory <span>16Gb 2133 Mhz Lpddr3</span></li>
-                    <li>Graphics <span>Radeon Pro 555 2gb</span></li>
-                    <li>Startup Disk <span>macOs Luna</span></li>
-                    <li>Serial Number <span>x12xxxx010xx10x</span></li>
-                  </ul>
-                  <br />
-                  <div class="content-popup-footer">
-                    <div class="popup-button-system">
-                      <button class="btn btn-standard btn-popup">
-                        Check Update
-                      </button>
-                      <button class="btn btn-standard btn-popup">
-                        system update
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="section4_footer">
-            <div class="section4_botIcons">
-              <ul>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="container-itemsPage">
+          <div class="container-topheader">
+            <div class="container_topheader_left">
+              <ul class="container_topheader_items">
                 <li>
-                  <div class="container-hover-icons bounce-4">
-                    <div class="finder-icon square-icon-size">
-                      <div class="finder-icon-grey-side"></div>
-                      <div class="finder-icon-eyes">
-                        <div class="finder-icon-eye-left eye"></div>
-                        <div class="finder-icon-eye-right eye"></div>
-                      </div>
-                      <div class="finder-icon-smile"></div>
-                    </div>
-                  </div>
+                  <button
+                    data-popup-target=".popupMac"
+                    class="apple_logo-container" id="myBtn"
+                  >
+                    <i class="fab fa-apple apple_logoM"></i>
+                  </button>
                 </li>
-                <hr />
                 <li>
-                  <div class="container-hover-icons bounce-4">
-                    <div class="container-aboutMe square-icon-size">
-                      <div class="aboutMe-text">ME</div>
-                    </div>
+                  <div class="dropDown-container">
+                    <ul class="dropDown-menu">
+                      <li class="dropdown-button">
+                        <a class="dropBtn primary-text-dropdown" href="#"
+                          >Finder</a
+                        >
+                        <ul class="dropMenu-list">
+                          <li><a href="#">Show Desktop Icons</a></li>
+                          <hr />
+                          <li><a href="#">Price (low to hi)</a></li>
+                          <hr />
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                        </ul>
+                      </li>
+                    </ul>
                   </div>
                 </li>
                 <li>
-                  <div class="container-hover-icons bounce-4">
-                    <div class="figma-icon square-icon-size">
-                      <div class="figma-icons-center">
-                        <div class="figma-shape1 figma"></div>
-                        <div class="figma-shape2 figma"></div>
-                        <div class="figma-shape3 figma"></div>
-                        <div class="figma-shape4 figma"></div>
-                        <div class="figma-shape5 figma"></div>
-                        <div class="figma-shape6 figma"></div>
-                      </div>
-                    </div>
+                  <div class="dropDown-container">
+                    <ul class="dropDown-menu">
+                      <li class="dropdown-button">
+                        <a class="dropBtn" href="#">file</a>
+                        <ul class="dropMenu-list">
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                        </ul>
+                      </li>
+                    </ul>
                   </div>
                 </li>
                 <li>
-                  <div class="container-hover-icons bounce-4">
-                    <div class="linkDin-icon square-icon-size">
-                      <div>in</div>
-                    </div>
+                  <div class="dropDown-container">
+                    <ul class="dropDown-menu">
+                      <li class="dropdown-button">
+                        <a class="dropBtn" href="#">edit</a>
+                        <ul class="dropMenu-list">
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                        </ul>
+                      </li>
+                    </ul>
                   </div>
                 </li>
                 <li>
-                  <div class="container-hover-icons bounce-4">
-                    <div class="music-icons circe-icon-size">
-                      <div class="music-icons-center">
-                        <div class="music-icon-top"></div>
-                        <div class="music-icon-bars">
-                          <div class="music-bar1 music-bars"></div>
-                          <div class="music-bar2 music-bars"></div>
-                        </div>
-                        <div class="music-icon-circle">
-                          <div class="music-circle1 music-circle"></div>
-                          <div class="music-circle2 music-circle"></div>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="dropDown-container">
+                    <ul class="dropDown-menu">
+                      <li class="dropdown-button">
+                        <a class="dropBtn" href="#">view</a>
+                        <ul class="dropMenu-list">
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                        </ul>
+                      </li>
+                    </ul>
                   </div>
                 </li>
                 <li>
-                  <div class="container-hover-icons bounce-4">
-                    <div class="photos-icons square-icon-size">
-                      <div class="photos-icons-center">
-                        <div class="photo-icon-shape1 photo-icon"></div>
-                        <div class="photo-icon-shape3 photo-icon"></div>
-                        <div class="photo-icon-shape4 photo-icon"></div>
-                        <div class="photo-icon-shape5 photo-icon"></div>
-                        <div class="photo-icon-shape6 photo-icon"></div>
-                        <div class="photo-icon-shape7 photo-icon"></div>
-                        <div class="photo-icon-shape8 photo-icon"></div>
-                        <div class="photo-icon-shape9 photo-icon"></div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <hr />
-                <li>
-                  <div class="container-hover-icons bounce-4">
-                    <div class="appStore-icon icons-dimension circle-icon-size">
-                      <div class="appstore-icon-line1 appStore-icons-inside"></div>
-                      <div class="appstore-icon-line2 appStore-icons-inside"></div>
-                      <div class="appstore-icon-line3 appStore-icons-inside"></div>
-                    </div>
+                  <div class="dropDown-container">
+                    <ul class="dropDown-menu">
+                      <li class="dropdown-button">
+                        <a class="dropBtn" href="#">go</a>
+                        <ul class="dropMenu-list">
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                        </ul>
+                      </li>
+                    </ul>
                   </div>
                 </li>
                 <li>
-                  <div class="container-hover-icons bounce-4">
-                    <div class="calendar-icon circe-icon-size">
-                      <div class="calendar-icon-bg">
-                        <div class="calendar-icon-top">
-                          <div>jun</div>
-                        </div>
-                        <div class="calendar-icon-middle">
-                          <div>21</div>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="dropDown-container">
+                    <ul class="dropDown-menu">
+                      <li class="dropdown-button">
+                        <a class="dropBtn" href="#">window</a>
+                        <ul class="dropMenu-list">
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                        </ul>
+                      </li>
+                    </ul>
                   </div>
                 </li>
                 <li>
-                  <div class="container-hover-icons bounce-4">
-                    <div class="google-maps-icon square-icon-size">
-                      <div class="google-maps-circlePart"></div>
-                      <div class="google-maps-greenPart"></div>
-                      <div class="google-maps-lineStraightPart"></div>
-                      <div class="google-maps-lineRotateghtPart"></div>
-                      <div class="google-maps-pinkShape"></div>
-                      <div class="google-maps-whiteShape"></div>
-                      <div class="google-maps-white2Shape"></div>
-                      <div class="google-maps-speed">
-                        280
-                        <div class="google-maps-speed-shape1"></div>
-                        <div class="google-maps-speed-shape2"></div>
-                        <div class="google-maps-speed-shape2"></div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="container-hover-icons" data-popup-target=".popupMac2">
-                    <div class="icon-chrome chrome circle-icon-size">
-                      <div class="icon-chrome-red"></div>
-                      <div class="icon-chrome-green"></div>
-                      <div class="icon-chrome-yellow"></div>
-                      <div class="icon-chrome-circle"></div>
-                      <div class="icon-chrome-center"></div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="container-hover-icons bounce-4">
-                    <div class="git-hub-container">
-                      <div class="github-icon circle-icon-size">
-                        <div class="github-icon-ears">
-                          <div class="github-icon-ears-left"></div>
-                          <div class="github-icon-ears-right"></div>
-                        </div>
-                        <div class="github-icon-face"></div>
-                        <div class="github-icon-body"></div>
-                        <div class="github-icon-tails"></div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <hr />
-                <li>
-                  <div class="container-hover-icons bounce-4">
-                    <div class="adobe-icons afterEffect-icon square-icon-size">
-                      <div>Ae</div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="container-hover-icons bounce-4">
-                    <div class="adobe-icons premiere-icon square-icon-size">
-                      <div>Pr</div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="container-hover-icons bounce-4">
-                    <div class="adobe-icons adobe-xd-icon square-icon-size">
-                      <div>Xd</div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="container-hover-icons bounce-4">
-                    <div class="adobe-icons photoshop-icon square-icon-size">
-                      <div>Ps</div>
-                    </div>
-                  </div>
-                </li>
-                <hr />
-                <li>
-                  <div class="container-hover-icons bounce-4">
-                    <div class="notes-icon square-icon-size">
-                      <div class="notes-icon-top"></div>
-                      <div class="notes-icon-container">
-                        <hr />
-                        <hr />
-                        <hr />
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="container-hover-icons bounce-4">
-                    <div class="folder-me2 circle-icon-size">
-                      <img src="./png/folders/mac_folder2.png" alt="" />
-                    </div>
+                  <div class="dropDown-container">
+                    <ul class="dropDown-menu">
+                      <li class="dropdown-button">
+                        <a class="dropBtn" href="#">Help</a>
+                        <ul class="dropMenu-list">
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                          <li><a href="#">Price (hi to low)</a></li>
+                          <li><a href="#">Price (low to hi)</a></li>
+                        </ul>
+                      </li>
+                    </ul>
                   </div>
                 </li>
               </ul>
             </div>
+            <div class="section4_topheader_right">
+              <ul>
+                <li>
+                  <a href="#">
+                    <i class="fas fa-wifi"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"><i class="fas fa-volume-up"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-bluetooth-b"></i></a>
+                </li>
+                <li><a href="#">43%</a></li>
+                <li>
+                  <a href="#"><i class="fas fa-battery-half"></i></a>
+                </li>
+                <li><a href="#">Tue 6:42 AM</a></li>
+                <li>
+                  <a
+                    href="#"
+                    class="fullname-standard fullname-thin fullname-bold"
+                  >
+                    Marian Iordache</a
+                  >
+                </li>
+                <li>
+                  <a href="#"><i class="fas fa-search"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fas fa-home"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="active-popup" id="overlayP"></div>
-        <div id="mystickyNotes">
-          <div class="stickyNotes-container" id="mydivheader">
-            <div class="finder-topnav-items notes-topnav-items">
-              <div class="circle circle1"></div>
-              <div class="circle circle2"></div>
-              <div class="circle circle3"></div>
+          <!--  <div class="section4_middle">
+          <iframe src="./assets/chrome-page.html" title="Iframe Example"></iframe>
+        </div>-->
+          <div class="section4_middle_grid">
+            <div class="container-icons-dekstop">
+              <div class="desktop-volumeFiles desktopFiles">
+                <div class="apple-volume"></div>
+
+                <div class="volume-container">
+                  <div class="hdd-dots1 dotsHdd"></div>
+                  <div class="hdd-dots2 dotsHdd"></div>
+                  <div class="hdd-dots3 dotsHdd"></div>
+                  <div class="hdd-dots4 dotsHdd"></div>
+                  <div class="hdd-dots5 dotsHdd"></div>
+                  <div class="hdd-dots6 dotsHdd"></div>
+                </div>
+                <div class="volume-face">
+                  <div class="leg-left"></div>
+                  <div class="volume-face-center">
+                    <div class="volume-inside"></div>
+                    <div class="volume-fanGrill">
+                      <div class="volume-fan"></div>
+                      <div class="volume-fan"></div>
+                      <div class="volume-fan"></div>
+                      <div class="volume-fan"></div>
+                      <div class="volume-fan"></div>
+                      <div class="volume-fan"></div>
+                      <div class="volume-fan"></div>
+                    </div>
+
+                    <div class="volume-light"></div>
+                  </div>
+                  <div class="leg-right"></div>
+                </div>
+                <div class="volume-text">Partition 1</div>
+              </div>
+              <div class="desktop-volumeFiles desktopFiles">
+                <div class="apple-volume"></div>
+
+                <div class="volume-container">
+                  <div class="hdd-dots1 dotsHdd"></div>
+                  <div class="hdd-dots2 dotsHdd"></div>
+                  <div class="hdd-dots3 dotsHdd"></div>
+                  <div class="hdd-dots4 dotsHdd"></div>
+                  <div class="hdd-dots5 dotsHdd"></div>
+                  <div class="hdd-dots6 dotsHdd"></div>
+                </div>
+                <div class="volume-face">
+                  <div class="leg-left"></div>
+                  <div class="volume-face-center">
+                    <div class="volume-inside"></div>
+                    <div class="volume-fanGrill">
+                      <div class="volume-fan"></div>
+                      <div class="volume-fan"></div>
+                      <div class="volume-fan"></div>
+                      <div class="volume-fan"></div>
+                      <div class="volume-fan"></div>
+                      <div class="volume-fan"></div>
+                      <div class="volume-fan"></div>
+                    </div>
+
+                    <div class="volume-light"></div>
+                  </div>
+                  <div class="leg-right"></div>
+                </div>
+                <div class="volume-text">Partition 2</div>
+              </div>
+              <div class="desktop-cmdTerminal desktopFiles">
+                <div class="container-terminal">
+                  <div class="terminal-text">><span>_</span></div>
+                </div>
+                <div class="terminal-textBottom volume-text">Terminal</div>
+              </div>
+              <div class="desktop-contactFiles desktopFiles">
+                <div class="pdf-folder-wrapper">
+                  <div class="pdf-container">
+                    <div class="pdf-top">
+                      <div class="pdf-text2">download</div>
+                      <div class="pdf-tails"></div>
+                      <div class="pdf-arrow"></div>
+                    </div>
+                    <div class="pdf-bottom">
+                      <div class="pdf-text">PDF</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pdf-textBottom volume-text">Open CV</div>
+              </div>
             </div>
-            <hr />
-            <div class="notes-middle-content">
-              <p>Hints</p>
-              <p>double click on folders</p>
-              <hr />
-              <p>double click on folders</p>
-              <hr />
-              <p>double click on folders</p>
-              <hr />
-              <p>double click on folders</p>
-              <hr />
-              <p>double click on folders</p>
-              <hr />
-              <p>double click on folders</p>
-              <hr />
-              <p>searcch</p>
+
+            <!-- assetssss -->
+
+            <div class="overlays modal" id="myModal3">
+              <div class="content">
+                <div id="finderclone">
+                  <div class="container-finder">
+                    <div class="finder-topnav header" id="findercloneheader">
+                      <div class="finder-topnav-items">
+                        <div class="circle circle1 close"></div>
+                        <div class="circle circle2"></div>
+                        <div class="circle circle3"></div>
+                      </div>
+                      <p>macOs Luna</p>
+                    </div>
+                    <div class="finder-secondnav">
+                      <div class="items-secondnav-left">
+                        <a href="#"><i class="fas fa-chevron-left"></i></a>
+                        <a href="#"><i class="fas fa-chevron-right"></i></a>
+                      </div>
+                      <div class="items-secondnav-center">
+                        <ul>
+                          <li>
+                            <a href="#"><i class="fas fa-list-ul"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fas fa-bars"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fas fa-server"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fas fa-network-wired"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fas fa-cog"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="far fa-clock"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="far fa-clock"></i></a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="far fa-clock"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="items-secondnav-right">
+                        <div class="search">
+                          <input
+                            type="text"
+                            class="searchTerm"
+                            placeholder="What are you looking for?"
+                          />
+                          <button type="submit" class="searchButton">
+                            <i class="fa fa-search"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="finder-middle">
+                      <div class="finder-middle-left">
+                        <ul>
+                          <div>Favorites</div>
+                          <li>
+                            <a href="#"><i class="far fa-clock"></i>Recent</a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fas fa-home"></i>Home</a>
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="fas fa-desktop"></i>Desktop</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="far fa-folder-open"></i>Script</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="fas fa-download"></i>Photos</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="fas fa-music"></i>ScreenShot</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="fas fa-image"></i>Simulator</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"><i class="fas fa-video"></i>videos</a>
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="fas fa-project-diagram"></i>network</a
+                            >
+                          </li>
+                          <div>location</div>
+                          <li>
+                            <a href="#"
+                              ><i class="fas fa-hdd"></i>455 gb Volume I</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="fas fa-hdd"></i>250 gb Volume II</a
+                            >
+                          </li>
+                          <div>icloud</div>
+                          <li>
+                            <a href="#"
+                              ><i class="fas fa-hdd"></i>GitHub Remote</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="finder-middle-right">
+                        <ul>
+                          <li>
+                            <a href="#"
+                              ><img
+                                src="./png/folders/mac_folder_me.png"
+                                alt=""
+                              />Me</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><img
+                                src="./png/folders/mac_folder_photo.png"
+                                alt=""
+                              />
+                              Video</a
+                            >
+                          </li>
+
+                          <li>
+                            <a href="#"
+                              ><img
+                                src="./png/folders/mac_folder_drive.png"
+                                alt=""
+                              />
+                              Music</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><img
+                                src="./png/folders/mac_folder_contact.png"
+                                alt=""
+                              />
+                              Projects</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><img
+                                src="./png/folders/mac_folder2.png"
+                                alt=""
+                              />
+                              ReactJs</a
+                            >
+                          </li>
+
+                          <li>
+                            <a href="#"
+                              ><img
+                                src="./png/folders/mac_folder2.png"
+                                alt=""
+                              />
+                              NodeJs</a
+                            >
+                          </li>
+
+                          <li>
+                            <a href="#"
+                              ><img
+                                src="./png/folders/mac_folder_app.png "
+                                alt=""
+                              />
+                              MERN</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><img
+                                src="./png/folders/mac_folder2.png"
+                                alt=""
+                              />
+                              test1</a
+                            >
+                          </li>
+
+                          <li>
+                            <a href="#"
+                              ><img
+                                src="./png/folders/mac_folder2.png"
+                                alt=""
+                              />
+                              Folder2</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><img
+                                src="./png/folders/mac_folder2.png"
+                                alt=""
+                              />
+                              GitHub</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><img
+                                src="./png/folders/mac_folder2.png"
+                                alt=""
+                              />
+                              Steam</a
+                            >
+                          </li>
+
+                          <li>
+                            <a href="#"
+                              ><img
+                                src="./png/folders/mac_folder2.png"
+                                alt=""
+                              />
+                              Jquerry</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><img
+                                src="./png/folders/mac_folder2.png"
+                                alt=""
+                              />
+                              Games</a
+                            >
+                          </li>
+
+                          <li>
+                            <a href="#"
+                              ><img
+                                src="./png/folders/mac_folder2.png"
+                                alt=""
+                              />
+                              Torrent</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><img
+                                src="./png/folders/mac_folder2.png"
+                                alt=""
+                              />
+                              Root</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><img
+                                src="./png/folders/mac_folder2.png"
+                                alt=""
+                              />
+                              Designs</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><img
+                                src="./png/folders/mac_folder2.png"
+                                alt=""
+                              />
+                              CSS</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><img
+                                src="./png/folders/mac_folder2.png"
+                                alt=""
+                              />
+                              Stuff</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="container-footer-finder">
+                      <div class="container-footer-finder-settingsPanel">
+                        <a href="#">
+                          <i class="fas fa-user-cog"></i> Settings</a
+                        >
+                      </div>
+                      <div>25 items, 280.63 GB available</div>
+                      <div>Marian Iordache</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="notes-footer-content">
-              <input type="button" value="Close" class="btn btn-standard btn-contact" />
+            <div class="overlays modal" id="myModal2">
+              <div class="content">
+                <div id="finderclonetest">
+                  <div class="container-contact">
+                    <div class="contact-topnav" id="finderclonetestheader">
+                      <div
+                        class="contact-topnav-items finder-topnav-items header"
+                      >
+                        <div class="circle circle1 close"></div>
+                        <div class="circle circle2"></div>
+                        <div class="circle circle3"></div>
+                      </div>
+                      <p>macOs Luna</p>
+                    </div>
+                    <div class="contact-middle">
+                      <div class="contact-middle-left">
+                        <div class="container-clock-analog">
+                          <div class="clock-analog">
+                            <div class="hour-line"></div>
+                            <div class="minute-line"></div>
+                            <div class="second-line"></div>
+                          </div>
+                        </div>
+                        <ul style="z-index: 32">
+                          <li>
+                            <a
+                              href="#"
+                              class="tablink-profile"
+                              onclick="openPage2('person_one')"
+                              id="defaultOpenPerson"
+                            >
+                              <i class="far fa-clock"></i>About Me
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="tablink-profile"
+                              onclick="openPage2('person_one')"
+                              id="defaultOpenPerson"
+                            >
+                              <i class="far fa-clock"></i>Home
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="tablink-profile"
+                              onclick="openPage2('myProjects')"
+                              id="defaultOpenPerson"
+                              ><i class="fas fa-download"></i>Projects</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"><i class="fas fa-music"></i>youtube</a>
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><i class="far fa-folder-open"></i>Parteners</a
+                            >
+                          </li>
+
+                          <li>
+                            <a
+                              href="#"
+                              class="tablink-profile"
+                              onclick="openPage2('person_two')"
+                              id="defaultOpenPerson"
+                              >Sorin Eugen</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="tablink-profile"
+                              onclick="openPage2('person_three')"
+                              id="defaultOpenPerson"
+                              >Rares Craciun</a
+                            >
+                          </li>
+                        </ul>
+                        <div class="like-button">
+                          <button><i class="fas fa-home"></i>Like!</button>
+                        </div>
+                      </div>
+                      <div class="contact-middle-right">
+                        <div
+                          class="contact-middle-right-person"
+                          id="person_one"
+                        >
+                          <div class="contact-middle-image">
+                            <div class="contact-image-container">
+                              <div
+                                class="contact-profile-img"
+                                id="your_img_id"
+                              ></div>
+                            </div>
+                            <div class="contact-name">
+                              <div>Marian Iordache</div>
+                              <div
+                                style="
+                                  margin-left: -5px;
+                                  text-align: end !important;
+                                "
+                              >
+                                "Front-End Developer"
+                              </div>
+                            </div>
+                          </div>
+                          <div class="contact-middle-top">
+                            <div class="close-button-contact">
+                              <button
+                                class="push-me-button press-me-button"
+                                onclick="pushme()"
+                              ></button>
+                            </div>
+
+                            <div class="contact-middle-information">
+                              <div class="info-middle">
+                                <div class="info-middle-list">
+                                  <p>phone:</p>
+                                  <span>
+                                    <a href="http://">0765.965.155</a></span
+                                  >
+                                </div>
+                                <hr />
+                                <div class="info-middle-list">
+                                  <p>Website:</p>
+                                  <span
+                                    ><a
+                                      href="https://crafties.ro"
+                                      target="_blank"
+                                      style="
+                                        text-transform: lowercase !important;
+                                      "
+                                      >crafties.ro</a
+                                    ></span
+                                  >
+                                </div>
+                                <hr />
+                                <div class="info-middle-list">
+                                  <p>GitHub:</p>
+                                  <span>
+                                    <a
+                                      href="https://github.com/DexTerR33"
+                                      style="
+                                        text-transform: lowercase !important;
+                                      "
+                                      >/DexTerR33</a
+                                    >
+                                  </span>
+                                </div>
+                                <hr />
+                                <div class="info-middle-list">
+                                  <p>youtube:</p>
+                                  <span>
+                                    <a
+                                      href="https://www.youtube.com/watch?v=6AyEce0NdM0&ab_channel=JSGeek"
+                                      target="_blank"
+                                      >js geek</a
+                                    ></span
+                                  >
+                                </div>
+                                <hr />
+                                <div class="info-middle-list">
+                                  <p>email:</p>
+                                  <span>
+                                    <a
+                                      href="mailto:iordache.marian21@gmail.com"
+                                      class="info-middle-list-email"
+                                      >Iordache.marian21@gmail.com</a
+                                    ></span
+                                  >
+                                </div>
+                                <hr />
+                                <div class="info-middle-list">
+                                  <p>Linkdin:</p>
+                                  <span><a href="#">Marian Iordache</a></span>
+                                </div>
+                                <hr />
+                                <div class="info-middle-list">
+                                  <p>css battle:</p>
+                                  <span
+                                    ><a
+                                      href="https://cssbattle.dev/player/VbqbK0gKScgciHu3kMxYoIko40B2"
+                                      target="_blank"
+                                    >
+                                      <div class="cssbattle-container">
+                                        <div class="css-Grank">
+                                          <div>Global Rank</div>
+                                          <div>1797/172217</div>
+                                        </div>
+                                        <div class="css-TScore">
+                                          <div>Total Score</div>
+                                          <div>27326.32</div>
+                                        </div>
+                                        <div class="css-Tplayed">
+                                          <div>Targets Played</div>
+                                          <div>47/100</div>
+                                        </div>
+                                      </div> </a
+                                    >click me!</span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                            <div class="contact-middle-footer">
+                              <input
+                                type="button"
+                                value="CV"
+                                class="btn btn-standard btn-danger btn-contact"
+                              />
+                              <div class="contact-middle-footer-btn">
+                                <input
+                                  type="button"
+                                  class="btn btn-standard btn-contact"
+                                  value="hire me"
+                                />
+                                <input
+                                  type="button"
+                                  class="btn btn-standard btn-active btn-contact"
+                                  value="linkdin"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="contact-middle-right-person"
+                          id="person_two"
+                        >
+                          <div class="contact-middle-image">
+                            <div class="contact-image-container">
+                              <div class="contact-profile-img Sorin"></div>
+                            </div>
+                            <div class="contact-name">
+                              <div>Sorin Eugen</div>
+                              <div
+                                style="
+                                  text-align: center !important;
+                                  margin-left: 1px;
+                                "
+                              >
+                                "UI/UX Designer"
+                              </div>
+                            </div>
+                          </div>
+                          <div class="contact-middle-top">
+                            <div class="close-button-contact">
+                              <button
+                                class="push-me-button press-me-button"
+                                onclick="pushme()"
+                              ></button>
+                            </div>
+
+                            <div class="contact-middle-information">
+                              <div class="info-middle">
+                                <div class="info-middle-list">
+                                  <p>phone:</p>
+                                  <span>
+                                    <a href="http://">0753.460.584</a></span
+                                  >
+                                </div>
+                                <hr />
+                                <div class="info-middle-list">
+                                  <p>Website:</p>
+                                  <span
+                                    ><a
+                                      href="http://"
+                                      style="
+                                        text-transform: lowercase !important;
+                                      "
+                                      >sorineugen.ro</a
+                                    ></span
+                                  >
+                                </div>
+                                <hr />
+                                <div class="info-middle-list">
+                                  <p>Linkdin:</p>
+                                  <span>
+                                    <a href="http://">Sorin Eugen</a>
+                                  </span>
+                                </div>
+                                <hr />
+                                <div class="info-middle-list">
+                                  <p>Portofolio:</p>
+                                  <span>
+                                    <a
+                                      href="https://www.youtube.com/watch?v=6AyEce0NdM0&ab_channel=JSGeek"
+                                      target="_blank"
+                                      >My Works</a
+                                    ></span
+                                  >
+                                </div>
+                                <hr />
+                                <div class="info-middle-list">
+                                  <p>email:</p>
+                                  <span>
+                                    <a
+                                      href="mailto:iordache.marian21@gmail.com"
+                                      class="info-middle-list-email"
+                                      >zaspeedy@yahoo.com</a
+                                    ></span
+                                  >
+                                </div>
+                                <hr />
+                                <div class="info-middle-list">
+                                  <p>birthday:</p>
+                                  <span> december 14 </span>
+                                </div>
+                                <hr />
+                                <div class="info-middle-list">
+                                  <p>Vimeo</p>
+                                  <span
+                                    ><a
+                                      href="https://cssbattle.dev/player/VbqbK0gKScgciHu3kMxYoIko40B2"
+                                      target="_blank"
+                                    >
+                                      <div class="cssbattle-container">
+                                        <div class="css-Grank">
+                                          <div>Global Rank</div>
+                                          <div>1797/172217</div>
+                                        </div>
+                                        <div class="css-TScore">
+                                          <div>Total Score</div>
+                                          <div>27326.32</div>
+                                        </div>
+                                        <div class="css-Tplayed">
+                                          <div>Targets Played</div>
+                                          <div>47/100</div>
+                                        </div>
+                                      </div> </a
+                                    >click me!</span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                            <div class="contact-middle-footer">
+                              <input
+                                type="button"
+                                value="CV"
+                                class="btn btn-standard btn-danger btn-contact"
+                              />
+                              <div class="contact-middle-footer-btn">
+                                <input
+                                  type="button"
+                                  class="btn btn-standard btn-contact"
+                                  value="hire me"
+                                />
+                                <input
+                                  type="button"
+                                  class="btn btn-standard btn-active btn-contact"
+                                  value="linkdin"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="contact-middle-right-person"
+                          id="person_three"
+                        >
+                          <div class="contact-middle-image">
+                            <div class="contact-image-container">
+                              <div class="contact-profile-img Rares"></div>
+                            </div>
+                            <div class="contact-name">
+                              <div>Rares Craciun</div>
+                              <div>"Professional Photographer"</div>
+                            </div>
+                          </div>
+                          <div class="contact-middle-top">
+                            <div class="close-button-contact">
+                              <button
+                                class="push-me-button press-me-button"
+                                onclick="pushme()"
+                              ></button>
+                            </div>
+
+                            <div class="contact-middle-information">
+                              <div class="info-middle">
+                                <div class="info-middle-list">
+                                  <p>phone:</p>
+                                  <span>
+                                    <a href="http://">0746.695.231</a></span
+                                  >
+                                </div>
+                                <hr />
+                                <div class="info-middle-list">
+                                  <p>Website:</p>
+                                  <span
+                                    ><a
+                                      href="http://"
+                                      style="
+                                        text-transform: lowercase !important;
+                                      "
+                                      >rarescraciun.ro</a
+                                    ></span
+                                  >
+                                </div>
+                                <hr />
+                                <div class="info-middle-list">
+                                  <p>instagram:</p>
+                                  <span>
+                                    <a href="http://">crative Raws</a>
+                                  </span>
+                                </div>
+                                <hr />
+                                <div class="info-middle-list">
+                                  <p>Portofolio:</p>
+                                  <span>
+                                    <a href="#" target="_blank"
+                                      >photo album</a
+                                    ></span
+                                  >
+                                </div>
+                                <hr />
+                                <div class="info-middle-list">
+                                  <p>email:</p>
+                                  <span>
+                                    <a
+                                      href="mailto:iordache.marian21@gmail.com"
+                                      class="info-middle-list-email"
+                                      >rares.craciun@gmail.com</a
+                                    ></span
+                                  >
+                                </div>
+                                <hr />
+                                <div class="info-middle-list">
+                                  <p>birthday:</p>
+                                  <span> june 21 </span>
+                                </div>
+                                <hr />
+                                <div class="info-middle-list">
+                                  <p>Best Photo:</p>
+                                  <span
+                                    ><a
+                                      href="https://cssbattle.dev/player/VbqbK0gKScgciHu3kMxYoIko40B2"
+                                      target="_blank"
+                                    >
+                                      <div class="cssbattle-container">
+                                        <div class="css-Grank">
+                                          <div>Global Rank</div>
+                                          <div>1797/172217</div>
+                                        </div>
+                                        <div class="css-TScore">
+                                          <div>Total Score</div>
+                                          <div>27326.32</div>
+                                        </div>
+                                        <div class="css-Tplayed">
+                                          <div>Targets Played</div>
+                                          <div>47/100</div>
+                                        </div>
+                                      </div> </a
+                                    >click me!</span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                            <div class="contact-middle-footer">
+                              <input
+                                type="button"
+                                value="CV"
+                                class="btn btn-standard btn-danger btn-contact"
+                              />
+                              <div class="contact-middle-footer-btn">
+                                <input
+                                  type="button"
+                                  class="btn btn-standard btn-contact"
+                                  value="hire me"
+                                />
+                                <input
+                                  type="button"
+                                  class="btn btn-standard btn-active btn-contact"
+                                  value="linkdin"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="contact-middle-right-person"
+                          id="myProjects"
+                        >
+                          <div class="contact-middle-image">
+                            <div class="contact-image-container">
+                              <div class="contact-profile-img Projects"></div>
+                            </div>
+                            <div class="contact-name">
+                              <div>My Projects</div>
+                              <div style="margin-left: -14px">
+                                "Dexter Laboratory"
+                              </div>
+                            </div>
+                          </div>
+                          <div class="contact-middle-top middle-projects">
+                            <!-- *************************   MY PROJECTS ****************-->
+
+                            <div class="container-myProjects">
+                              <div class="project-one projects-box">
+                                <div class="container-project-one">
+                                  <div class="text">Landing Pages</div>
+                                  <p class="small-text">funny stuff</p>
+                                </div>
+                              </div>
+                              <div class="project-two projects-box">
+                                <div class="container-project-one">
+                                  <div class="text">To-do list</div>
+                                  <p class="small-text">React + firebase</p>
+                                </div>
+                              </div>
+                              <div class="project-three projects-box">
+                                <div class="container-project-one">
+                                  <div class="text">X-garage</div>
+                                  <p class="small-text">
+                                    Administration system
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="project-four projects-box">
+                                <div class="container-project-one">
+                                  <div class="text">CRUD</div>
+                                  <p class="small-text">Funny Js Operations</p>
+                                </div>
+                              </div>
+                              <div class="project-five projects-box">
+                                <div class="container-project-one">
+                                  <div class="text">macOs Luna</div>
+                                  <p class="small-text">
+                                    Administration system
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="project-six projects-box">
+                                <div class="container-project-one">
+                                  <div class="text">Editing</div>
+                                  <p class="small-text">
+                                    Administration system
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="wrapper-contact-form" id="newcontact">
+                        <div class="container-contact-form">
+                          <div style="line-height: 0.8">
+                            <h3 class="contact-form-title">contact</h3>
+                            <h3 class="contact-form-title-after">
+                              Thank you <br /><span>i'll be in touch</span>
+                            </h3>
+                          </div>
+                          <div class="contact-forms">
+                            <div class="contact-name-form">
+                              <input
+                                type="text"
+                                class="input-style"
+                                id="fullName"
+                                placeholder="name"
+                              />
+                            </div>
+                            <div class="contact-email">
+                              <input
+                                type="email"
+                                class="input-style"
+                                id="email"
+                                placeholder="enter a valid email..."
+                              />
+                            </div>
+                            <div class="contact-phone">
+                              <input
+                                type="number"
+                                class="input-style"
+                                id="phone"
+                                placeholder="enter a valid phone"
+                              />
+                            </div>
+                            <div class="contact-textarea">
+                              <textarea
+                                type="text"
+                                id="textarea"
+                                class="input-style"
+                                placeholder="say something"
+                                style="resize: none"
+                              ></textarea>
+                            </div>
+                            <div class="contact-form-buttons">
+                              <button class="btn-contact btn btn-contact-form">
+                                send me
+                              </button>
+                            </div>
+                          </div>
+                          <div class="power-by">
+                            <div>
+                              macOs Luna template v1.1
+                              <p></p>
+                              <span>powered by </span><span>M-designs</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container-footer-contact">
+                      <i class="fas fa-home"></i>
+                      <div>wallet code{} <span>donate</span></div>
+                      <div>Marian Iordache</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popupMac modal"  id="myModal">
+              <div class="content-popup">
+                <div class="popup-header">
+                  <div class="circle-popup finder-topnav-items">
+                    <div class="circle circle1 close" data-popup-close></div>
+                    <div class="circle circle2"></div>
+                    <div class="circle circle3"></div>
+                  </div>
+                  <ul style="display: inline-flex">
+                    <li><a href="#">overview</a></li>
+                    <li><a href="#">Display</a></li>
+                    <li><a href="#">Storage</a></li>
+                    <li><a href="#">Support</a></li>
+                  </ul>
+                  <div class="circle-popup">
+                    <div class="circle circle1 close"></div>
+                    <div class="circle circle2"></div>
+                    <div class="circle circle3"></div>
+                  </div>
+                  <!--<button data-popup-close class="close-popup-button">&times;</button>-->
+                </div>
+                <div class="content-popup-middle">
+                  <div class="popup-image-profile">
+                    <img src="./png/M2.png" alt="img profile" srcset="" />
+                  </div>
+                  <div class="popup-information-profile">
+                    <h1>macOs <span>Luna</span></h1>
+                    <p>version 1.0.0 (i210687)</p>
+                    <br />
+                    <ul>
+                      <li>macBook Pro <span>(15-inch. 2017)</span></li>
+                      <li>
+                        Procesor <span>2.8Ghz Quad-Core intel Core i7</span>
+                      </li>
+                      <li>Memory <span>16Gb 2133 Mhz Lpddr3</span></li>
+                      <li>Graphics <span>Radeon Pro 555 2gb</span></li>
+                      <li>Startup Disk <span>macOs Luna</span></li>
+                      <li>Serial Number <span>x12xxxx010xx10x</span></li>
+                    </ul>
+                    <br />
+                    <div class="content-popup-footer">
+                      <div class="popup-button-system">
+                        <button class="btn btn-standard btn-popup">
+                          Check Update
+                        </button>
+                        <button class="btn btn-standard btn-popup">
+                          system update
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popupMac modal" id="myModal1">
+              <div class="content-popup">
+                <div class="popup-header">
+                  <div class="circle-popup finder-topnav-items">
+                    <div class="circle circle1 close" data-popup-close></div>
+                    <div class="circle circle2"></div>
+                    <div class="circle circle3"></div>
+                  </div>
+                  <ul style="display: inline-flex">
+                    <li><a href="#">sssss</a></li>
+                    <li><a href="#">ssss</a></li>
+                    <li><a href="#">ssss</a></li>
+                    <li><a href="#">ssss</a></li>
+                  </ul>
+                  <div class="circle-popup">
+                    <div class="circle circle1 close"></div>
+                    <div class="circle circle2"></div>
+                    <div class="circle circle3"></div>
+                  </div>
+                  <!--<button data-popup-close class="close-popup-button">&times;</button>-->
+                </div>
+                <div class="content-popup-middle">
+                  <div class="popup-image-profile">
+                    <img src="./png/M2.png" alt="img profile" srcset="" />
+                  </div>
+                  <div class="popup-information-profile">
+                    <h1>macOs <span>Luna</span></h1>
+                    <p>version 1.0.0 (i210687)</p>
+                    <br />
+                    <ul>
+                      <li>macBook Pro <span>(15-inch. 2017)</span></li>
+                      <li>
+                        Procesor <span>2.8Ghz Quad-Core intel Core i7</span>
+                      </li>
+                      <li>Memory <span>16Gb 2133 Mhz Lpddr3</span></li>
+                      <li>Graphics <span>Radeon Pro 555 2gb</span></li>
+                      <li>Startup Disk <span>macOs Luna</span></li>
+                      <li>Serial Number <span>x12xxxx010xx10x</span></li>
+                    </ul>
+                    <br />
+                    <div class="content-popup-footer">
+                      <div class="popup-button-system">
+                        <button class="btn btn-standard btn-popup">
+                          Check Update
+                        </button>
+                        <button class="btn btn-standard btn-popup">
+                          system update
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section4_footer">
+              <div class="section4_botIcons">
+                <ul>
+                  <li>
+                    <div class="container-hover-icons bounce-4">
+                      <div class="finder-icon square-icon-size" id="myBtn3">
+                        <div class="finder-icon-grey-side"></div>
+                        <div class="finder-icon-eyes">
+                          <div class="finder-icon-eye-left eye"></div>
+                          <div class="finder-icon-eye-right eye"></div>
+                        </div>
+                        <div class="finder-icon-smile"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <hr />
+                  <li>
+                    <div class="container-hover-icons bounce-4">
+                      <div class="container-aboutMe square-icon-size">
+                        <div class="aboutMe-text" id="myBtn2">ME</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="container-hover-icons bounce-4">
+                      <div class="figma-icon square-icon-size">
+                        <div class="figma-icons-center">
+                          <div class="figma-shape1 figma"></div>
+                          <div class="figma-shape2 figma"></div>
+                          <div class="figma-shape3 figma"></div>
+                          <div class="figma-shape4 figma"></div>
+                          <div class="figma-shape5 figma"></div>
+                          <div class="figma-shape6 figma"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="container-hover-icons bounce-4">
+                      <div class="linkDin-icon square-icon-size">
+                        <div>in</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="container-hover-icons bounce-4">
+                      <div class="music-icons circe-icon-size">
+                        <div class="music-icons-center">
+                          <div class="music-icon-top"></div>
+                          <div class="music-icon-bars">
+                            <div class="music-bar1 music-bars"></div>
+                            <div class="music-bar2 music-bars"></div>
+                          </div>
+                          <div class="music-icon-circle">
+                            <div class="music-circle1 music-circle"></div>
+                            <div class="music-circle2 music-circle"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="container-hover-icons bounce-4">
+                      <div class="photos-icons square-icon-size">
+                        <div class="photos-icons-center">
+                          <div class="photo-icon-shape1 photo-icon"></div>
+                          <div class="photo-icon-shape3 photo-icon"></div>
+                          <div class="photo-icon-shape4 photo-icon"></div>
+                          <div class="photo-icon-shape5 photo-icon"></div>
+                          <div class="photo-icon-shape6 photo-icon"></div>
+                          <div class="photo-icon-shape7 photo-icon"></div>
+                          <div class="photo-icon-shape8 photo-icon"></div>
+                          <div class="photo-icon-shape9 photo-icon"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <hr />
+                  <li>
+                    <div class="container-hover-icons bounce-4">
+                      <div
+                        class="appStore-icon icons-dimension circle-icon-size"
+                      >
+                        <div
+                          class="appstore-icon-line1 appStore-icons-inside"
+                        ></div>
+                        <div
+                          class="appstore-icon-line2 appStore-icons-inside"
+                        ></div>
+                        <div
+                          class="appstore-icon-line3 appStore-icons-inside"
+                        ></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="container-hover-icons bounce-4">
+                      <div class="calendar-icon circe-icon-size">
+                        <div class="calendar-icon-bg">
+                          <div class="calendar-icon-top">
+                            <div>jun</div>
+                          </div>
+                          <div class="calendar-icon-middle">
+                            <div>21</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="container-hover-icons bounce-4">
+                      <div class="google-maps-icon square-icon-size">
+                        <div class="google-maps-circlePart"></div>
+                        <div class="google-maps-greenPart"></div>
+                        <div class="google-maps-lineStraightPart"></div>
+                        <div class="google-maps-lineRotateghtPart"></div>
+                        <div class="google-maps-pinkShape"></div>
+                        <div class="google-maps-whiteShape"></div>
+                        <div class="google-maps-white2Shape"></div>
+                        <div class="google-maps-speed">
+                          280
+                          <div class="google-maps-speed-shape1"></div>
+                          <div class="google-maps-speed-shape2"></div>
+                          <div class="google-maps-speed-shape2"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div
+                      class="container-hover-icons"
+                      data-popup-target=".popupMac2" id="myBtn1"
+                    >
+                      <div class="icon-chrome chrome circle-icon-size">
+                        <div class="icon-chrome-red"></div>
+                        <div class="icon-chrome-green"></div>
+                        <div class="icon-chrome-yellow"></div>
+                        <div class="icon-chrome-circle"></div>
+                        <div class="icon-chrome-center"></div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="container-hover-icons bounce-4">
+                      <div class="git-hub-container">
+                        <div class="github-icon circle-icon-size">
+                          <div class="github-icon-ears">
+                            <div class="github-icon-ears-left"></div>
+                            <div class="github-icon-ears-right"></div>
+                          </div>
+                          <div class="github-icon-face"></div>
+                          <div class="github-icon-body"></div>
+                          <div class="github-icon-tails"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <hr />
+                  <li>
+                    <div class="container-hover-icons bounce-4">
+                      <div
+                        class="adobe-icons afterEffect-icon square-icon-size"
+                      >
+                        <div>Ae</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="container-hover-icons bounce-4">
+                      <div class="adobe-icons premiere-icon square-icon-size">
+                        <div>Pr</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="container-hover-icons bounce-4">
+                      <div class="adobe-icons adobe-xd-icon square-icon-size">
+                        <div>Xd</div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="container-hover-icons bounce-4">
+                      <div class="adobe-icons photoshop-icon square-icon-size">
+                        <div>Ps</div>
+                      </div>
+                    </div>
+                  </li>
+                  <hr />
+                  <li>
+                    <div class="container-hover-icons bounce-4">
+                      <div class="notes-icon square-icon-size">
+                        <div class="notes-icon-top"></div>
+                        <div class="notes-icon-container">
+                          <hr />
+                          <hr />
+                          <hr />
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="container-hover-icons bounce-4">
+                      <div class="folder-me2 circle-icon-size">
+                        <img src="./png/folders/mac_folder2.png" alt="" />
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
+          <div class="active-popup" id="overlayP"></div>
+          <div id="mystickyNotes">
+            <div class="stickyNotes-container" id="mydivheader">
+              <div class="finder-topnav-items notes-topnav-items">
+                <div class="circle circle1"></div>
+                <div class="circle circle2"></div>
+                <div class="circle circle3"></div>
+              </div>
+              <hr />
+              <div class="notes-middle-content">
+                <p>Hints</p>
+                <p>double click on folders</p>
+                <hr />
+                <p>double click on folders</p>
+                <hr />
+                <p>double click on folders</p>
+                <hr />
+                <p>double click on folders</p>
+                <hr />
+                <p>double click on folders</p>
+                <hr />
+                <p>double click on folders</p>
+                <hr />
+                <p>searcch</p>
+              </div>
+              <div class="notes-footer-content">
+                <input
+                  type="button"
+                  value="Close"
+                  class="btn btn-standard btn-contact"
+                />
+              </div>
+            </div>
+          </div>
+          <div id="result"></div>
+          <!-- <iframe src="./assets/chrome-page.html" frameborder="0">test</iframe> -->
+          <!-- <iframe src="./adobeXD.html" frameborder="0"></iframe>  -->
+          <!-- <iframe src="./terminal.html" frameborder="0"></iframe>  -->
+          <!--  <div Chrome-page="./assets/chrome-page.html"></div> -->
         </div>
-         <!-- <iframe src="./assets/chrome-page.html" frameborder="0">test</iframe> -->
-<!-- <iframe src="./terminal.html" frameborder="0"></iframe>  -->
-        <!--  <div Chrome-page="./assets/chrome-page.html"></div> -->
-       
       </div>
     </div>
-  </div>
 
-  <script type="text/javascript">
-    function openPage2(pageName, elmnt, color) {
-      // Hide all elements with class="tabcontent" by default */
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName(
-        "contact-middle-right-person"
-      );
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+    <script type="text/javascript">
+      function openPage2(pageName, elmnt, color) {
+        // Hide all elements with class="tabcontent" by default */
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName(
+          "contact-middle-right-person"
+        );
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        // Remove the background color of all tablinks/buttons
+        tablinks = document.getElementsByClassName("tablink-profile");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+        }
+        // Show the specific tab content
+        document.getElementById(pageName).style.display = "block";
+        // Add the specific color to the button used to open the tab content
+        // elmnt.style.backgroundColor = color;
       }
-      // Remove the background color of all tablinks/buttons
-      tablinks = document.getElementsByClassName("tablink-profile");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
+      // Get the element with id="defaultOpen" and click on it
+
+      document.getElementById("defaultOpenPerson").click();
+
+      function updateClock(hours, minutes, seconds) {
+        var hourDegrees = hours * 30;
+        var minuteDegrees = minutes * 6;
+        var secondDegrees = seconds * 6;
+        $(".hour-line").css({
+          transform: `rotate(${hourDegrees}deg)`,
+        });
+
+        $(".minute-line").css({
+          transform: `rotate(${minuteDegrees}deg)`,
+        });
+
+        $(".second-line").css({
+          transform: `rotate(${secondDegrees}deg)`,
+        });
       }
-      // Show the specific tab content
-      document.getElementById(pageName).style.display = "block";
-      // Add the specific color to the button used to open the tab content
-      // elmnt.style.backgroundColor = color;
-    }
-    // Get the element with id="defaultOpen" and click on it
+      setClockWithCurrentTime();
 
-    document.getElementById("defaultOpenPerson").click();
+      function setClockWithCurrentTime() {
+        var date = new Date();
+        var hours = ((date.getHours() + 11) % 12) + 1;
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+        updateClock(hours, minutes, seconds);
+      }
 
-    function updateClock(hours, minutes, seconds) {
-      var hourDegrees = hours * 30;
-      var minuteDegrees = minutes * 6;
-      var secondDegrees = seconds * 6;
-      $(".hour-line").css({
-        transform: `rotate(${hourDegrees}deg)`,
-      });
+      setInterval(setClockWithCurrentTime, 1000);
 
-      $(".minute-line").css({
-        transform: `rotate(${minuteDegrees}deg)`,
-      });
-
-      $(".second-line").css({
-        transform: `rotate(${secondDegrees}deg)`,
-      });
-    }
-    setClockWithCurrentTime();
-
-    function setClockWithCurrentTime() {
-      var date = new Date();
-      var hours = ((date.getHours() + 11) % 12) + 1;
-      var minutes = date.getMinutes();
-      var seconds = date.getSeconds();
-      updateClock(hours, minutes, seconds);
-    }
-
-    setInterval(setClockWithCurrentTime, 1000);
-
-
-    /*
+      /*
         function includeHTML() {
       var z, i, elmnt, file, xhttp;
       loop through a collection of all HTML elements:
@@ -1292,8 +1660,7 @@
     };
     includeHTML();
     */
-  </script>
-  <script type="text/javascript" src="index.js"></script>
-</body>
-
+    </script>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
 </html>

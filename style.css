@@ -1319,10 +1319,12 @@ input-style:hover {
 
 
 
-
-.popupMac {
-  position: fixed;
+.modal{
   display: none;
+}
+.popupMac{
+  position: fixed;
+
   /*opacity: 0;*/
   transition: 200ms ease-in-out;
   top: 50%;
@@ -1339,7 +1341,7 @@ input-style:hover {
   border-radius: 10px;
 }
 
-.popupMac.active {
+.popupMac.active{
   /* opacity: 1;*/
   display: block;
   pointer-events: all;
