@@ -33,7 +33,7 @@ function moveWindows() {
   dragElement(document.getElementById("finderBox"));
   dragElement(document.getElementById("aboutmeBox"));
   dragElement(document.getElementById("aboutmacBox"));
-  dragElement(document.getElementById("chromeBox"));
+  // dragElement(document.getElementById("chromeBox"));
 
   function dragElement(elmnt) {
     var pos1 = 0,
@@ -167,12 +167,14 @@ function closePopup(popupClose) {
     var closeButton = popupbox.getElementsByClassName("close")[0];
 
     buttonClick.addEventListener("click", function (event) {
+      event.preventDefault();
       popupbox.style.display = "block";
+    
      
     });
 
     closeButton.addEventListener("click", function (event) {
-      if (event.target ==  popupbox.style.display === "block"); {
+      if (event.target ==  popupbox.style.display == "block"); {
         popupbox.style.display = "none";
       }
   
