@@ -1,4 +1,9 @@
 
+
+
+
+
+
 function moveWindows() {
   var dropBtns = document.querySelectorAll(".dropdown-button");
   console.log(dropBtns, "btnSho");
@@ -33,6 +38,7 @@ function moveWindows() {
   dragElement(document.getElementById("finderBox"));
   dragElement(document.getElementById("aboutmeBox"));
   dragElement(document.getElementById("aboutmacBox"));
+  dragElement(document.getElementById("terminalBox"));
   // dragElement(document.getElementById("chromeBox"));
 
   function dragElement(elmnt) {
@@ -72,6 +78,7 @@ function moveWindows() {
     }
   }
 }
+
 document.addEventListener("DOMContentLoaded", function () {
 
   moveWindows();
@@ -155,22 +162,27 @@ function closePopup(popupClose) {
   var datamap = new Map([
     [document.getElementById("myBtn"), document.getElementById("myMacMaster")],
      //[document.getElementById("myBtn1"),document.getElementById("chromeBoxMaster")],
-    [document.getElementById("myBtn2"),document.getElementById("aboutMeMaster")],
-    [document.getElementById("myBtn3"),document.getElementById("finderMaster")],
+    [document.getElementById("myBtn2"), document.getElementById("aboutMeMaster")],
+    [document.getElementById("myBtn3"), document.getElementById("finderMaster")],
+    [document.getElementById("terminalButton"), document.getElementById("TerminalMaster")]
   ]);
+  console.log(myBtn, "button mac press");
+  console.log(myBtn2, "button about me press");
+  console.log(myBtn3, "button finder press");
+  console.log(terminalButton, "button terminal press");
   datamap.forEach((value, key) => {
     doModal(key, value);
   });
   console.log(datamap, "datamap");
 
   function doModal(buttonClick, popupbox) {
+ 
     var closeButton = popupbox.getElementsByClassName("close")[0];
-
     buttonClick.addEventListener("click", function (event) {
-      event.preventDefault();
-      popupbox.style.display = "block";
-    
-     
+    popupbox.style.display = "block"; 
+    if (event.target == (popupbox.style.display == "block")); {
+      console.log("test");
+    }
     });
 
     closeButton.addEventListener("click", function (event) {
@@ -190,3 +202,28 @@ function closePopup(popupClose) {
     console.log(popupbox, "popupbox");
   }
 });
+
+
+
+
+$("#terminalBoxJs").load("./template/assets/windows/terminal/terminal.html"); 
+// $("#bottomIconsJs").load("./template/assets/icons/icons.html"); 
+
+
+const button = document.getElementById('btn');
+let elementClicked = false;
+button.addEventListener('click', function handleClick() {
+  console.log('element clicked');
+
+  elementClicked = true;
+});
+setInterval(() => {
+  if (elementClicked) {
+    console.log('element was clicked');
+  } else {
+    console.log("element hasn't been clicked yet");
+  }
+}, 1500); // 👉️ invoke every 1500 milliseconds
+
+
+// document.getElementById("terminalBox").innerHTML='<object type="text/html" data="./terminal.html" ></object>';
