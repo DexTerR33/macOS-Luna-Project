@@ -1,6 +1,8 @@
+document.addEventListener("DOMContentLoaded", function () {
 function moveWindows() {
   var dropBtns = document.querySelectorAll(".dropdown-button");
   console.log(dropBtns, "btnSho");
+
   function closeOpenItems() {
     openMenus = document.querySelectorAll(".dropMenu-list");
     openMenus.forEach(function (menus) {
@@ -27,8 +29,12 @@ function moveWindows() {
       closeOpenItems();
     }
   });
-  dragElement(document.getElementById("finderclone"));
-  dragElement(document.getElementById("finderclonetest"));
+
+  dragElement(document.getElementById("finderBox"));
+  dragElement(document.getElementById("aboutmeBox"));
+  dragElement(document.getElementById("aboutmacBox"));
+  dragElement(document.getElementById("chromeBox"));
+
   function dragElement(elmnt) {
     var pos1 = 0,
       pos2 = 0,
@@ -39,6 +45,7 @@ function moveWindows() {
     } else {
       elmnt.onmousedown = dragMouseDown;
     }
+
     function dragMouseDown(e) {
       e = e || window.event;
       e.preventDefault();
@@ -67,6 +74,7 @@ function moveWindows() {
 }
 
 moveWindows();
+
 /*
  $(".press-me-button").click(function () {
     $("#newcontact").toggle();
@@ -142,31 +150,38 @@ function closePopup(popupClose) {
   console.log(popupClose, "close");
 }
 */
-var datamap = new Map([
-  [document.getElementById("myBtn"), document.getElementById("myModal")],
-  [document.getElementById("myBtn1"), document.getElementById("myModal1")],
-  [document.getElementById("myBtn2"), document.getElementById("myModal2")],
-  [document.getElementById("myBtn3"), document.getElementById("myModal3")],
-]);
-datamap.forEach((value, key) => {
-  doModal(key, value);
-});
 
-function doModal(anchor, popupbox) {
-  // Get the <span> element that closes the modal
-  var span = popupbox.getElementsByClassName("close")[0];
-
-  anchor.addEventListener("click", function (event) {
-    popupbox.style.display = "block";
+  var datamap = new Map([
+    [document.getElementById("myBtn"), document.getElementById("myMacMaster")],
+     //[document.getElementById("myBtn1"),document.getElementById("chromeBoxMaster")],
+    [document.getElementById("myBtn2"),document.getElementById("aboutMeMaster")],
+    [document.getElementById("myBtn3"),document.getElementById("finderMaster")],
+  ]);
+  datamap.forEach((value, key) => {
+    doModal(key, value);
   });
+  console.log(datamap, "datamap");
 
-  span.addEventListener("click", function (event) {
-    popupbox.style.display = "none";
-  });
+  console.log(doModal, "doModal");
 
-  window.addEventListener("click", function (event) {
-    if (event.target == popupbox) {
+  function doModal(anchor, popupbox) {
+    var span = popupbox.getElementsByClassName("close")[0];
+
+    anchor.addEventListener("click", function (event) {
+      popupbox.style.display = "block";
+    });
+
+    span.addEventListener("click", function (event) {
       popupbox.style.display = "none";
-    }
-  });
-}
+    });
+
+    window.addEventListener("click", function (event) {
+      if (event.target == popupbox) {
+        popupbox.style.display = "none";
+      }
+    });
+    console.log(anchor, "anchor");
+    console.log(span, "span");
+    console.log(popupbox, "popupbox");
+  }
+});

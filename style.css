@@ -742,7 +742,7 @@ ul li a {
 }
 
 
-#finderclonetest {
+#aboutmeBox {
   z-index: 3410 !important;
   top: 257px;
   left: 587px;
@@ -750,19 +750,32 @@ ul li a {
 
 }
 
-#finderclone {
+#finderBox {
   position: absolute;
   top: 210px;
   left: 960px;
 }
-
-#findercloneheader,
-#finderclonetestheader {
+#aboutmacBox{
+  position: absolute;
+  top: 310px;
+  left: 460px;
+}
+ #chromeBox{
+  position: absolute;
+  top: 250px;
+  left: 660px;
+}
+#finderBoxheader,
+#AboutmacBoxheader,
+#chromeBoxheader,
+#aboutmeBoxheader {
   cursor: move;
   z-index: 40;
   color: #fff;
 }
-
+.modal{
+display: none;
+}
 
 /*!!!!!!!!!!!! END FINDER !!!!!!!!!!!!!*/
 
@@ -1119,7 +1132,7 @@ input-style:hover {
 }
 
 .contact-profile-img.Sorin {
-  background-image: url(./png/sorin.jpg);
+  background-image: url(./png/marean.png);
 }
 
 .contact-profile-img.Rares {
@@ -1319,19 +1332,8 @@ input-style:hover {
 
 
 
-.modal{
-  display: none;
-}
-.popupMac{
-  position: fixed;
 
-  /*opacity: 0;*/
-  transition: 200ms ease-in-out;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 200ms ease-in-out;
-  pointer-events: none;
+.popupMac{
   z-index: 122;
   width: 600px;
   max-width: 600px;
