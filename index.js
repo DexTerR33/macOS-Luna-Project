@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+
 function moveWindows() {
   var dropBtns = document.querySelectorAll(".dropdown-button");
   console.log(dropBtns, "btnSho");
@@ -72,8 +72,9 @@ function moveWindows() {
     }
   }
 }
+document.addEventListener("DOMContentLoaded", function () {
 
-moveWindows();
+  moveWindows();
 
 /*
  $(".press-me-button").click(function () {
@@ -162,26 +163,28 @@ function closePopup(popupClose) {
   });
   console.log(datamap, "datamap");
 
-  console.log(doModal, "doModal");
+  function doModal(buttonClick, popupbox) {
+    var closeButton = popupbox.getElementsByClassName("close")[0];
 
-  function doModal(anchor, popupbox) {
-    var span = popupbox.getElementsByClassName("close")[0];
-
-    anchor.addEventListener("click", function (event) {
+    buttonClick.addEventListener("click", function (event) {
       popupbox.style.display = "block";
+     
     });
 
-    span.addEventListener("click", function (event) {
-      popupbox.style.display = "none";
-    });
-
-    window.addEventListener("click", function (event) {
-      if (event.target == popupbox) {
+    closeButton.addEventListener("click", function (event) {
+      if (event.target ==  popupbox.style.display === "block"); {
         popupbox.style.display = "none";
       }
+  
     });
-    console.log(anchor, "anchor");
-    console.log(span, "span");
+
+    // window.addEventListener("click", function (event) {
+    //   if (event.target == popupbox) {
+    //     popupbox.style.display = "none";
+    //   }
+    // });
+    console.log(buttonClick, "buttonClick");
+    console.log(closeButton, "closeButton");
     console.log(popupbox, "popupbox");
   }
 });
