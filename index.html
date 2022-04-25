@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
@@ -11,7 +10,6 @@
   </script>
   <title>macOS LUNA</title>
 </head>
-
 <body>
   <div class="wrapper">
     <div class="container">
@@ -20,7 +18,7 @@
           <div class="container_topheader_left">
             <ul class="container_topheader_items">
               <li>
-                <button data-popup-target=".popupMac" class="apple_logo-container" id="myBtn">
+                <button data-popup-target=".popupMac" class="apple_logo-container" id="logoAppleButton">
                   <i class="fab fa-apple apple_logoM"></i>
                 </button>
               </li>
@@ -925,7 +923,7 @@
                         <div class="circle circle2"></div>
                         <div class="circle circle3"></div>
                       </div>
-                      <!--<button data-popup-close class="close-popup-button">&times;</button>-->
+                     <!--<button data-popup-close class="close-popup-button">&times;</button>-->
                     </div>
                     <div class="content-popup-middle">
                       <div class="popup-image-profile">
@@ -964,20 +962,27 @@
               </div>
             </div>
           </div>
-<button id="TerminalMaster" class="modal">
-          <div class="overlays mo2dal" >
-            <div id="terminalBox">
-              <div id="terminalBoxJs"></div>
-            </div>
-          </div>
-        </button>
-          <div class="overlays modal" id="chromeBoxMaster">
-            <div class="content">
-              <div id="chromeBox">
-                <iframe src="./assets/chrome-page.html" frameborder="0" id="chromeBoxheader"></iframe>
+          <button id="TerminalMaster" class="modal">
+            <div class="overlays mo2dal">
+              <div id="terminalBox">
+                <div id="terminalBoxJs"></div>
               </div>
             </div>
-          </div>
+          </button>
+
+
+          <!-- <div class="overlays modal" id="chromeBoxMaster">
+              <div class="content">
+                <div id="chromeBox">
+                  <iframe
+                    src="./assets/popup.html"
+                    frameborder="0"
+                    id="chromeBoxheader"
+                  ></iframe>
+                </div>
+              </div>
+            </div> -->
+
           <div class="section4_footer" id="bottomIconsssJs">
             <div class="section4_botIcons">
               <ul>
@@ -1003,7 +1008,7 @@
                 </li>
                 <li>
                   <div class="container-hover-icons bounce-4">
-                    <div class="figma-icon square-icon-size">
+                    <div class="figma-icon square-icon-size" id="popupbtns">
                       <div class="figma-icons-center">
                         <div class="figma-shape1 figma"></div>
                         <div class="figma-shape2 figma"></div>
@@ -1024,7 +1029,7 @@
                 </li>
                 <li>
                   <div class="container-hover-icons bounce-4">
-                    <div class="music-icons circe-icon-size">
+                    <div class="music-icons circe-icon-size" id="myBtn4">
                       <div class="music-icons-center">
                         <div class="music-icon-top"></div>
                         <div class="music-icon-bars">
@@ -1217,6 +1222,18 @@
   </div>
 
   <script type="text/javascript">
+  
+   $('body').append('<div style="" id="loadingDiv"><div class="loader">Loading...</div></div>');
+    $(window).on('load', function () {
+      setTimeout(removeLoader, 1100); //wait for page load PLUS two seconds.
+    });
+    function removeLoader() {
+      $("#loadingDiv").fadeOut(500, function () {
+        // fadeOut complete. Remove the loading div
+        $("#loadingDiv").remove(); //makes page more lightweight 
+      });
+    }
+
     function openPage2(pageName, elmnt, color) {
       // Hide all elements with class="tabcontent" by default */
       var i, tabcontent, tablinks;

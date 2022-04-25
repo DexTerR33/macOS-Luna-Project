@@ -1,9 +1,5 @@
 
 
-
-
-
-
 function moveWindows() {
   var dropBtns = document.querySelectorAll(".dropdown-button");
   console.log(dropBtns, "btnSho");
@@ -79,9 +75,126 @@ function moveWindows() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
 
+document.addEventListener("DOMContentLoaded", function () {
   moveWindows();
+
+  var datamap = new Map([
+    [
+      document.getElementById("logoAppleButton"),
+      document.getElementById("myMacMaster"),
+    ],
+    [
+      document.getElementById("myBtn2"),
+      document.getElementById("aboutMeMaster"),
+    ],
+    [
+      document.getElementById("myBtn3"),
+      document.getElementById("finderMaster"),
+    ],
+    [
+      document.getElementById("terminalButton"),
+      document.getElementById("TerminalMaster"),
+    ],
+  ]);
+  function doModal(buttonClick, popupbox) {
+    var closeButton = popupbox.getElementsByClassName("close")[0];
+    buttonClick.addEventListener("click", function handleClick(event) {
+      checkisClicked();
+        popupbox.style.display = "block";
+    });
+  
+    closeButton.addEventListener("click", function handleClick(event) {
+      if ((event.target == popupbox.style.display) == "block");
+      {
+        popupbox.style.display = "none";
+      }
+    });
+  
+    // window.addEventListener("click", function (event) {
+    //   if (event.target == popupbox) {
+    //     popupbox.style.display = "none";
+    //   }
+    // });
+    // console.log(buttonClick, "buttonClick");
+    // console.log(closeButton, "closeButton");
+    // console.log(popupbox, "popupbox");
+  }
+  
+  // console.log(logoAppleButton, "button mac press");
+  // console.log(myBtn2, "button about me press");
+  // console.log(myBtn3, "button finder press");
+  // console.log(terminalButton, "button terminal press");
+  datamap.forEach((value, key) => {
+    doModal(key, value);
+  });
+  console.log(datamap, "datamap");
+  console.log(doModal, "doModal");
+  console.log(key, "key");
+  console.log(value, "value");
+
+  var clicked = false;
+
+  function checkisClicked() {
+    clicked = true;
+    if (clicked === true) {
+      test();
+      console.log("unclicked");
+    } else {
+      console.log("else switch");
+    }
+  }
+  function test(){
+  let day;
+  switch (new Date().getDay()) {
+    case 0:
+      day = "Sunday";
+      break;
+    case 1:
+      day = "Monday";
+      break;
+    case 2:
+      day = "Tuesday";
+      break;
+    case 3:
+      day = "Wednesday";
+      break;
+    case 4:
+      day = "Thursday";
+      break;
+    case 5:
+      day = "Friday";
+      break;
+    case 6:
+      day = "Saturday";
+  }
+  console.log(day, "day");
+  document.getElementById("demo").innerHTML = "Today is " + day;
+}
+});
+ 
+
+$("#terminalBoxJs").load("./template/assets/windows/terminal/terminal.html");
+// $("#bottomIconsJs").load("./template/assets/icons/icons.html");
+
+/*
+const button = document.getElementById('btn');
+let elementClicked = false;
+button.addEventListener('click', function handleClick() {
+  console.log('element clicked');
+
+  elementClicked = true;
+});
+setInterval(() => {
+  if (elementClicked) {
+    console.log('element was clicked');
+  } else {
+    console.log("element hasn't been clicked yet");
+  }
+}, 1500); // 👉️ invoke every 1500 milliseconds
+
+*/
+// document.getElementById("terminalBox").innerHTML='<object type="text/html" data="./terminal.html" ></object>';
 
 /*
  $(".press-me-button").click(function () {
@@ -158,98 +271,3 @@ function closePopup(popupClose) {
   console.log(popupClose, "close");
 }
 */
-
-  var datamap = new Map([
-    [document.getElementById("myBtn"), document.getElementById("myMacMaster")],
-     //[document.getElementById("myBtn1"),document.getElementById("chromeBoxMaster")],
-    [document.getElementById("myBtn2"), document.getElementById("aboutMeMaster")],
-    [document.getElementById("myBtn3"), document.getElementById("finderMaster")],
-    [document.getElementById("terminalButton"), document.getElementById("TerminalMaster")]
-  ]);
-  console.log(myBtn, "button mac press");
-  console.log(myBtn2, "button about me press");
-  console.log(myBtn3, "button finder press");
-  console.log(terminalButton, "button terminal press");
-  datamap.forEach((value, key) => {
-    doModal(key, value);
-  });
-  console.log(datamap, "datamap");
-
-  function doModal(buttonClick, popupbox) {
-  
-    var closeButton = popupbox.getElementsByClassName("close")[0];
-    buttonClick.addEventListener("click", function (event) {
-    popupbox.style.display = "block"; 
-    if (event.target == (popupbox.style.display == "block")); {
-      console.log("test");
-
-      let day;
-switch (new Date().getDay()) {
-
-  case 0:
-    day = "Sunday";
-    break;
-  case 1:
-    day = "Monday";
-    break;
-  case 2:
-    day = "Tuesday";
-    break;
-  case 3:
-    day = "Wednesday";
-    break;
-  case 4:
-    day = "Thursday";
-    break;
-  case 5:
-    day = "Friday";
-    break;
-  case  6:
-    day = "Saturday";
-}
-document.getElementById("demo").innerHTML = "Today is " + day;
-    }
-    });
-
-    closeButton.addEventListener("click", function (event) {
-      if (event.target ==  popupbox.style.display == "block"); {
-        popupbox.style.display = "none";
-      }
-  
-    });
-
-    // window.addEventListener("click", function (event) {
-    //   if (event.target == popupbox) {
-    //     popupbox.style.display = "none";
-    //   }
-    // });
-    console.log(buttonClick, "buttonClick");
-    console.log(closeButton, "closeButton");
-    console.log(popupbox, "popupbox");
-  }
-});
-
-
-
-
-$("#terminalBoxJs").load("./template/assets/windows/terminal/terminal.html"); 
-// $("#bottomIconsJs").load("./template/assets/icons/icons.html"); 
-
-
-const button = document.getElementById('btn');
-let elementClicked = false;
-button.addEventListener('click', function handleClick() {
-  console.log('element clicked');
-
-  elementClicked = true;
-});
-setInterval(() => {
-  if (elementClicked) {
-    console.log('element was clicked');
-  } else {
-    console.log("element hasn't been clicked yet");
-  }
-}, 1500); // 👉️ invoke every 1500 milliseconds
-
-
-// document.getElementById("terminalBox").innerHTML='<object type="text/html" data="./terminal.html" ></object>';
