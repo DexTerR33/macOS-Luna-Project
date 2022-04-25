@@ -28,7 +28,7 @@ font-family: 'Poppins', sans-serif;
 
 @font-face {
   font-family: product-sans;
-  src: url(./assets/fonts/product-sans/Product\ Sans\ Regular.ttf)
+  src: url(template/assets/fonts/product-sans/Product\ Sans\ Regular.ttf);
 }
 
 
@@ -723,6 +723,7 @@ iframe {
   left: 460px;
   outline: none;
   border: none;
+  z-index: 2000;
 }
 
 #aboutmacBox {

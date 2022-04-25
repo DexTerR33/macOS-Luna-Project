@@ -5,7 +5,7 @@
     max-width: 1200px !important;
     width: 1200px !important;
     height: 700px;
-    font-family: product-sans;
+    font-family: product-sans !important;
     overflow: hidden;
   }
   
