@@ -30,6 +30,7 @@ function moveWindows() {
   });
 
   dragElement(document.getElementById("finderBox"));
+  dragElement(document.getElementById("chromePageBox"));
   dragElement(document.getElementById("aboutmeBox"));
   dragElement(document.getElementById("aboutmacBox"));
   dragElement(document.getElementById("terminalBox"));
@@ -127,6 +128,10 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("terminalButton"),
       document.getElementById("TerminalMaster")
     ],
+    [
+      document.getElementById("chromePageButton"),
+      document.getElementById("chromePageMaster")
+    ]
   ]);
   datamap.forEach((value, key) => {
     doModal(key, value);
@@ -175,7 +180,10 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("else switch");
     }
   }
-  $("#terminalBoxJs").load("./template/assets/windows/terminal/terminal.html");
+  $("#chromePageBoxJs").load("./template/assets/windows/chrome/chromePage.html");
+ $("#terminalBoxJs").load("./template/assets/windows/terminal/terminal.html");
+
+  // $("#iconsBoxJss").load("./template/assets/icons/icons.html");
 });
 
 

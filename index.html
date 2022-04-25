@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="style.css" rel="stylesheet" media="all" />
+  <!-- <link href="icons.css" rel="stylesheet" media="all" /> -->
+  <link href="mediaquerryes.css" rel="stylesheet" media="all" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="https://kit.fontawesome.com/dca7f2a586.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
-  <script>
-    $(function () {
-      $("head").load("./template/general/head.html");
-    });
-  </script>
+
+
   <title>macOS LUNA</title>
 </head>
+
 <body>
   <div class="wrapper">
     <div class="container">
@@ -923,7 +938,7 @@
                         <div class="circle circle2"></div>
                         <div class="circle circle3"></div>
                       </div>
-                     <!--<button data-popup-close class="close-popup-button">&times;</button>-->
+                      <!--<button data-popup-close class="close-popup-button">&times;</button>-->
                     </div>
                     <div class="content-popup-middle">
                       <div class="popup-image-profile">
@@ -962,10 +977,17 @@
               </div>
             </div>
           </div>
-          <div id="TerminalMaster" class="modal">
+          <div class="modal" id="TerminalMaster">
             <div class="overlays mo2dal">
               <div id="terminalBox">
                 <div id="terminalBoxJs"></div>
+              </div>
+            </div>
+          </div>
+          <div  class="modal" id="chromePageMaster">
+            <div class="overlays mo2dal">
+              <div id="chromePageBox">
+                <div id="chromePageBoxJs">s</div>
               </div>
             </div>
           </div>
@@ -985,339 +1007,338 @@
 
           <div class="section4_footer" id="bottomIconsssJs">
             <div class="section4_botIcons" id="iconsBsoxJs">
-           
-   <ul>
-    <li>
-      <div class="container-hover-icons bounce-4">
-        <div class="finder-icon square-icon-size" id="myBtn3">
-          <div class="finder-icon-grey-side"></div>
-          <div class="finder-icon-eyes">
-            <div class="finder-icon-eye-left eye"></div>
-            <div class="finder-icon-eye-right eye"></div>
-          </div>
-          <div class="finder-icon-smile"></div>
-        </div>
-      </div>
-    </li>
-    <hr />
-    <li>
-      <div class="container-hover-icons bounce-4">
-        <div class="container-aboutMe square-icon-size">
-          <div class="aboutMe-text" id="myBtn2">ME</div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="container-hover-icons bounce-4">
-        <div class="figma-icon square-icon-size" id="popupbtns">
-          <div class="figma-icons-center">
-            <div class="figma-shape1 figma"></div>
-            <div class="figma-shape2 figma"></div>
-            <div class="figma-shape3 figma"></div>
-            <div class="figma-shape4 figma"></div>
-            <div class="figma-shape5 figma"></div>
-            <div class="figma-shape6 figma"></div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="container-hover-icons bounce-4">
-        <div class="linkDin-icon square-icon-size">
-          <div>in</div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="container-hover-icons bounce-4">
-        <div class="music-icons circe-icon-size" id="myBtn4">
-          <div class="music-icons-center">
-            <div class="music-icon-top"></div>
-            <div class="music-icon-bars">
-              <div class="music-bar1 music-bars"></div>
-              <div class="music-bar2 music-bars"></div>
-            </div>
-            <div class="music-icon-circle">
-              <div class="music-circle1 music-circle"></div>
-              <div class="music-circle2 music-circle"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="container-hover-icons bounce-4">
-        <div class="photos-icons square-icon-size">
-          <div class="photos-icons-center">
-            <div class="photo-icon-shape1 photo-icon"></div>
-            <div class="photo-icon-shape3 photo-icon"></div>
-            <div class="photo-icon-shape4 photo-icon"></div>
-            <div class="photo-icon-shape5 photo-icon"></div>
-            <div class="photo-icon-shape6 photo-icon"></div>
-            <div class="photo-icon-shape7 photo-icon"></div>
-            <div class="photo-icon-shape8 photo-icon"></div>
-            <div class="photo-icon-shape9 photo-icon"></div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <hr />
-    <li>
-      <div class="container-hover-icons bounce-4">
-        <div class="appStore-icon icons-dimension circle-icon-size">
-          <div class="appstore-icon-line1 appStore-icons-inside"></div>
-          <div class="appstore-icon-line2 appStore-icons-inside"></div>
-          <div class="appstore-icon-line3 appStore-icons-inside"></div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="container-hover-icons bounce-4">
-        <div class="calendar-icon circe-icon-size">
-          <div class="calendar-icon-bg">
-            <div class="calendar-icon-top">
-              <div>jun</div>
-            </div>
-            <div class="calendar-icon-middle">
-              <div>21</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="container-hover-icons bounce-4">
-        <div class="google-maps-icon square-icon-size">
-          <div class="google-maps-circlePart"></div>
-          <div class="google-maps-greenPart"></div>
-          <div class="google-maps-lineStraightPart"></div>
-          <div class="google-maps-lineRotateghtPart"></div>
-          <div class="google-maps-pinkShape"></div>
-          <div class="google-maps-whiteShape"></div>
-          <div class="google-maps-white2Shape"></div>
-          <div class="google-maps-speed">
-            280
-            <div class="google-maps-speed-shape1"></div>
-            <div class="google-maps-speed-shape2"></div>
-            <div class="google-maps-speed-shape2"></div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="container-hover-icons" data-popup-target=".popupMac2" id="myBtn1">
-        <div class="icon-chrome chrome circle-icon-size">
-          <div class="icon-chrome-red"></div>
-          <div class="icon-chrome-green"></div>
-          <div class="icon-chrome-yellow"></div>
-          <div class="icon-chrome-circle"></div>
-          <div class="icon-chrome-center"></div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="container-hover-icons bounce-4">
-        <div class="git-hub-container">
-          <div class="github-icon circle-icon-size">
-            <div class="github-icon-ears">
-              <div class="github-icon-ears-left"></div>
-              <div class="github-icon-ears-right"></div>
-            </div>
-            <div class="github-icon-face"></div>
-            <div class="github-icon-body"></div>
-            <div class="github-icon-tails"></div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <hr />
-    <li>
-      <div class="container-hover-icons bounce-4">
-        <div class="adobe-icons afterEffect-icon square-icon-size">
-          <div>Ae</div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="container-hover-icons bounce-4">
-        <div class="adobe-icons premiere-icon square-icon-size">
-          <div>Pr</div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="container-hover-icons bounce-4">
-        <div class="adobe-icons adobe-xd-icon square-icon-size">
-          <div>Xd</div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="container-hover-icons bounce-4">
-        <div class="adobe-icons photoshop-icon square-icon-size">
-          <div>Ps</div>
-        </div>
-      </div>
-    </li>
-    <hr />
-    <li>
-      <div class="container-hover-icons bounce-4">
-        <div class="notes-icon square-icon-size">
-          <div class="notes-icon-top"></div>
-          <div class="notes-icon-container">
-            <hr />
-            <hr />
-            <hr />
-          </div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="container-hover-icons bounce-4">
-        <div class="folder-me2 circle-icon-size">
-          <img src="./png/folders/mac_folder2.png" alt="" />
-        </div>
-      </div>
-    </li>
-  </ul>
-          </div>
-        </div>
-        <div class="active-popup" id="overlasyP"></div>
-        <div id="mystickyNotes">
-          <div class="stickyNotes-container" id="mydivheader">
-            <div class="finder-topnav-items notes-topnav-items">
-              <div class="circle circle1"></div>
-              <div class="circle circle2"></div>
-              <div class="circle circle3"></div>
-            </div>
-            <hr />
-            <div class="notes-middle-content">
-              <p>Hints</p>
-              <p>double click on folders</p>
-              <hr />
-              <p>double click on folders</p>
-              <hr />
-              <p>double click on folders</p>
-              <hr />
-              <p>double click on folders</p>
-              <hr />
-              <p>double click on folders</p>
-              <hr />
-              <p>double click on folders</p>
-              <hr />
-              <p>searcch</p>
-            </div>
-            <div class="notes-footer-content">
-              <input type="button" value="Close" class="btn btn-standard btn-contact" />
-            </div>
-          </div>
-        </div>
 
-        <!-- <iframe src="./assets/chrome-page.html" frameborder="0">test</iframe> -->
-        <!-- <iframe src="./adobeXD.html" frameborder="0"></iframe>  -->
+              <ul>
+                <li>
+                  <div class="container-hover-icons bounce-4">
+                    <div class="finder-icon square-icon-size" id="myBtn3">
+                      <div class="finder-icon-grey-side"></div>
+                      <div class="finder-icon-eyes">
+                        <div class="finder-icon-eye-left eye"></div>
+                        <div class="finder-icon-eye-right eye"></div>
+                      </div>
+                      <div class="finder-icon-smile"></div>
+                    </div>
+                  </div>
+                </li>
+                <hr />
+                <li>
+                  <div class="container-hover-icons bounce-4">
+                    <div class="container-aboutMe square-icon-size">
+                      <div class="aboutMe-text" id="myBtn2">ME</div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="container-hover-icons bounce-4">
+                    <div class="figma-icon square-icon-size" id="popupbtns">
+                      <div class="figma-icons-center">
+                        <div class="figma-shape1 figma"></div>
+                        <div class="figma-shape2 figma"></div>
+                        <div class="figma-shape3 figma"></div>
+                        <div class="figma-shape4 figma"></div>
+                        <div class="figma-shape5 figma"></div>
+                        <div class="figma-shape6 figma"></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="container-hover-icons bounce-4">
+                    <div class="linkDin-icon square-icon-size">
+                      <div>in</div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="container-hover-icons bounce-4">
+                    <div class="music-icons circe-icon-size" id="myBtn4">
+                      <div class="music-icons-center">
+                        <div class="music-icon-top"></div>
+                        <div class="music-icon-bars">
+                          <div class="music-bar1 music-bars"></div>
+                          <div class="music-bar2 music-bars"></div>
+                        </div>
+                        <div class="music-icon-circle">
+                          <div class="music-circle1 music-circle"></div>
+                          <div class="music-circle2 music-circle"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="container-hover-icons bounce-4">
+                    <div class="photos-icons square-icon-size">
+                      <div class="photos-icons-center">
+                        <div class="photo-icon-shape1 photo-icon"></div>
+                        <div class="photo-icon-shape3 photo-icon"></div>
+                        <div class="photo-icon-shape4 photo-icon"></div>
+                        <div class="photo-icon-shape5 photo-icon"></div>
+                        <div class="photo-icon-shape6 photo-icon"></div>
+                        <div class="photo-icon-shape7 photo-icon"></div>
+                        <div class="photo-icon-shape8 photo-icon"></div>
+                        <div class="photo-icon-shape9 photo-icon"></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <hr />
+                <li>
+                  <div class="container-hover-icons bounce-4">
+                    <div class="appStore-icon icons-dimension circle-icon-size">
+                      <div class="appstore-icon-line1 appStore-icons-inside"></div>
+                      <div class="appstore-icon-line2 appStore-icons-inside"></div>
+                      <div class="appstore-icon-line3 appStore-icons-inside"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="container-hover-icons bounce-4">
+                    <div class="calendar-icon circe-icon-size">
+                      <div class="calendar-icon-bg">
+                        <div class="calendar-icon-top">
+                          <div>jun</div>
+                        </div>
+                        <div class="calendar-icon-middle">
+                          <div>21</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="container-hover-icons bounce-4">
+                    <div class="google-maps-icon square-icon-size">
+                      <div class="google-maps-circlePart"></div>
+                      <div class="google-maps-greenPart"></div>
+                      <div class="google-maps-lineStraightPart"></div>
+                      <div class="google-maps-lineRotateghtPart"></div>
+                      <div class="google-maps-pinkShape"></div>
+                      <div class="google-maps-whiteShape"></div>
+                      <div class="google-maps-white2Shape"></div>
+                      <div class="google-maps-speed">
+                        280
+                        <div class="google-maps-speed-shape1"></div>
+                        <div class="google-maps-speed-shape2"></div>
+                        <div class="google-maps-speed-shape2"></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="container-hover-icons" data-popup-target=".popupMac2">
+                    <div class="icon-chrome chrome circle-icon-size" id="chromePageButton">
+                      <div class="icon-chrome-red"></div>
+                      <div class="icon-chrome-green"></div>
+                      <div class="icon-chrome-yellow"></div>
+                      <div class="icon-chrome-circle"></div>
+                      <div class="icon-chrome-center"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="container-hover-icons bounce-4">
+                    <div class="git-hub-container">
+                      <div class="github-icon circle-icon-size">
+                        <div class="github-icon-ears">
+                          <div class="github-icon-ears-left"></div>
+                          <div class="github-icon-ears-right"></div>
+                        </div>
+                        <div class="github-icon-face"></div>
+                        <div class="github-icon-body"></div>
+                        <div class="github-icon-tails"></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <hr />
+                <li>
+                  <div class="container-hover-icons bounce-4">
+                    <div class="adobe-icons afterEffect-icon square-icon-size">
+                      <div>Ae</div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="container-hover-icons bounce-4">
+                    <div class="adobe-icons premiere-icon square-icon-size">
+                      <div>Pr</div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="container-hover-icons bounce-4">
+                    <div class="adobe-icons adobe-xd-icon square-icon-size">
+                      <div>Xd</div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="container-hover-icons bounce-4">
+                    <div class="adobe-icons photoshop-icon square-icon-size">
+                      <div>Ps</div>
+                    </div>
+                  </div>
+                </li>
+                <hr />
+                <li>
+                  <div class="container-hover-icons bounce-4">
+                    <div class="notes-icon square-icon-size">
+                      <div class="notes-icon-top"></div>
+                      <div class="notes-icon-container">
+                        <hr />
+                        <hr />
+                        <hr />
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="container-hover-icons bounce-4">
+                    <div class="folder-me2 circle-icon-size">
+                      <img src="./png/folders/mac_folder2.png" alt="" />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="active-popup" id="overlasyP"></div>
+          <div id="mystickyNotes">
+            <div class="stickyNotes-container" id="mydivheader">
+              <div class="finder-topnav-items notes-topnav-items">
+                <div class="circle circle1"></div>
+                <div class="circle circle2"></div>
+                <div class="circle circle3"></div>
+              </div>
+              <hr />
+              <div class="notes-middle-content">
+                <p>Hints</p>
+                <p>double click on folders</p>
+                <hr />
+                <p>double click on folders</p>
+                <hr />
+                <p>double click on folders</p>
+                <hr />
+                <p>double click on folders</p>
+                <hr />
+                <p>double click on folders</p>
+                <hr />
+                <p>double click on folders</p>
+                <hr />
+                <p>searcch</p>
+              </div>
+              <div class="notes-footer-content">
+                <input type="button" value="Close" class="btn btn-standard btn-contact" />
+              </div>
+            </div>
+          </div>
 
-        <!--  <div Chrome-page="./assets/chrome-page.html"></div> -->
+          <!-- <iframe src="./template/assets/windows/chrome/chromePage.html" frameborder="0">test</iframe> -->
+          <!-- <iframe src="./adobeXD.html" frameborder="0"></iframe>  -->
+
+          <!--  <div Chrome-page="./assets/chrome-page.html"></div> -->
+        </div>
       </div>
     </div>
-  </div>
 
-  <script type="text/javascript">
-
-$("#iconsBoxJss").load("./template/assets/icons/icons.html");
-   $('body').append('<div style="" id="loadingDiv"><div class="loader">Loading...</div></div>');
-    $(window).on('load', function () {
-      setTimeout(removeLoader, 1100); //wait for page load PLUS two seconds.
-    });
-    function removeLoader() {
-      $("#loadingDiv").fadeOut(500, function () {
-        // fadeOut complete. Remove the loading div
-        $("#loadingDiv").remove(); //makes page more lightweight 
+    <script type="text/javascript">
+      $('body').append('<div style="" id="loadingDiv"><div class="loader">Loading...</div></div>');
+      $(window).on('load', function () {
+        setTimeout(removeLoader, 1100); //wait for page load PLUS two seconds.
       });
-    }
 
-    function openPage2(pageName, elmnt, color) {
-      // Hide all elements with class="tabcontent" by default */
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName(
-        "contact-middle-right-person"
-      );
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+      function removeLoader() {
+        $("#loadingDiv").fadeOut(500, function () {
+          // fadeOut complete. Remove the loading div
+          $("#loadingDiv").remove(); //makes page more lightweight 
+        });
       }
-      // Remove the background color of all tablinks/buttons
-      tablinks = document.getElementsByClassName("tablink-profile");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-      }
-      // Show the specific tab content
-      document.getElementById(pageName).style.display = "block";
-      // Add the specific color to the button used to open the tab content
-      // elmnt.style.backgroundColor = color;
-    }
-    // Get the element with id="defaultOpen" and click on it
 
-    document.getElementById("defaultOpenPerson").click();
-
-    function updateClock(hours, minutes, seconds) {
-      var hourDegrees = hours * 30;
-      var minuteDegrees = minutes * 6;
-      var secondDegrees = seconds * 6;
-      $(".hour-line").css({
-        transform: `rotate(${hourDegrees}deg)`,
-      });
-
-      $(".minute-line").css({
-        transform: `rotate(${minuteDegrees}deg)`,
-      });
-
-      $(".second-line").css({
-        transform: `rotate(${secondDegrees}deg)`,
-      });
-    }
-    setClockWithCurrentTime();
-
-    function setClockWithCurrentTime() {
-      var date = new Date();
-      var hours = ((date.getHours() + 11) % 12) + 1;
-      var minutes = date.getMinutes();
-      var seconds = date.getSeconds();
-      updateClock(hours, minutes, seconds);
-    }
-
-    setInterval(setClockWithCurrentTime, 1000);
-
-    /*
-        function includeHTML() {
-      var z, i, elmnt, file, xhttp;
-      loop through a collection of all HTML elements:
-      z = document.getElementsByTagName("*");
-      for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-        search for elements with a certain atrribute:
-        file = elmnt.getAttribute("Chrome-page");
-        if (file) {
-          make an HTTP request using the attribute value as the file name:
-          xhttp = new XMLHttpRequest();
-          xhttp.onreadystatechange = function() {
-            if (this.readyState == 4) {
-              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-              /*remove the attribute, and call this function once more:
-              elmnt.removeAttribute("Chrome-page");
-              includeHTML();
-            }
-          }      
-          xhttp.open("GET", file, true);
-          xhttp.send();
-          exit the function:
-          return;
+      function openPage2(pageName, elmnt, color) {
+        // Hide all elements with class="tabcontent" by default */
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName(
+          "contact-middle-right-person"
+        );
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
         }
+        // Remove the background color of all tablinks/buttons
+        tablinks = document.getElementsByClassName("tablink-profile");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].style.backgroundColor = "";
+        }
+        // Show the specific tab content
+        document.getElementById(pageName).style.display = "block";
+        // Add the specific color to the button used to open the tab content
+        // elmnt.style.backgroundColor = color;
       }
-    };
-    includeHTML();
-    */
-  </script>
-  <script type="text/javascript" src="index.js" defer></script>
+      // Get the element with id="defaultOpen" and click on it
+
+      document.getElementById("defaultOpenPerson").click();
+
+      function updateClock(hours, minutes, seconds) {
+        var hourDegrees = hours * 30;
+        var minuteDegrees = minutes * 6;
+        var secondDegrees = seconds * 6;
+        $(".hour-line").css({
+          transform: `rotate(${hourDegrees}deg)`,
+        });
+
+        $(".minute-line").css({
+          transform: `rotate(${minuteDegrees}deg)`,
+        });
+
+        $(".second-line").css({
+          transform: `rotate(${secondDegrees}deg)`,
+        });
+      }
+      setClockWithCurrentTime();
+
+      function setClockWithCurrentTime() {
+        var date = new Date();
+        var hours = ((date.getHours() + 11) % 12) + 1;
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+        updateClock(hours, minutes, seconds);
+      }
+
+      setInterval(setClockWithCurrentTime, 1000);
+
+      /*
+          function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        loop through a collection of all HTML elements:
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+          elmnt = z[i];
+          search for elements with a certain atrribute:
+          file = elmnt.getAttribute("Chrome-page");
+          if (file) {
+            make an HTTP request using the attribute value as the file name:
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4) {
+                if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                /*remove the attribute, and call this function once more:
+                elmnt.removeAttribute("Chrome-page");
+                includeHTML();
+              }
+            }      
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            exit the function:
+            return;
+          }
+        }
+      };
+      includeHTML();
+      */
+    </script>
+    <script type="text/javascript" src="index.js" defer></script>
 </body>
 
 </html>

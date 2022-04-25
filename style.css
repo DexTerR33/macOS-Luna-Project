@@ -12,6 +12,8 @@ font-family: 'Poppins', sans-serif;
 @import "./template/general/animation/animations.css";
 @import "./template/general/dark-white-mode.css";
 @import "./template/assets/icons/icons.css";
+@import "./template/assets/windows/terminal/terminal.css";
+@import "./template/assets/windows/chrome/chromePage.css";
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Gruppo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&family=Sarpanch:wght@400;500;700;800;900&family=Work+Sans:ital,wght@0,200;0,400;0,500;0,600;0,700;0,900;1,900&display=swap");
 
 
@@ -709,8 +711,13 @@ iframe {
   top: 210px;
   left: 960px;
 }
+#chromePageBox {
+  position: absolute;
+  top: 50px;
+  left: 360px;
+}
 
-#TerminalMaster {
+#terminalBox {
   position: absolute;
   top: 310px;
   left: 460px;
@@ -731,8 +738,9 @@ iframe {
 }
 
 #finderBoxheader,
+#terminalBoxheader,
 #AboutmacBoxheader,
-#chromeBoxheader,
+#chromePageBoxheader,
 #aboutmeBoxheader {
   cursor: move;
   z-index: 40;
@@ -1438,282 +1446,6 @@ input-style:hover {
 
 
 
-
-/*-----------page chrome -----------*/
-
-
-
-/*
-iframe.active {
-  display: flex;
-  pointer-events: all;
-}
-*/
-.chrome-page {
-  max-width: 1200px !important;
-  width: 1200px !important;
-  height: 700px;
-  font-family: product-sans;
-  overflow: hidden;
-}
-
-.chrome-page-left {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-
-}
-
-.chrome-page-container {
-  height: 100%;
-}
-
-.chrome-topnav-items {
-  width: 5%;
-}
-
-.chrome-page-line {
-  width: 100%;
-  display: flex;
-}
-
-.chrome-page-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 35px;
-
-}
-
-.chrome-page-link.chrome-page-line,
-.tabcontent,
-.tablink,
-.chrome-page-bookmark.chrome-page-line,
-.chrome-page-left,
-.chrome-page-top-header {
-  background-color: var(--primaryM-finder-color)
-}
-
-.chrome-link-left {
-  flex-basis: 10%;
-
-}
-
-.chrome-link-left .link ul {
-  display: flex;
-  flex-direction: row;
-  gap: 18px;
-  margin-left: 10px;
-}
-
-.chrome-link-left .link {
-  display: flex;
-  justify-content: center;
-}
-
-.chrome-link-middle {
-  display: flex;
-  flex-direction: row;
-  flex-basis: 70%;
-
-}
-
-.chrome-link-search {
-  position: relative;
-  width: 100%;
-}
-
-.chrome-link-search input {
-  width: 100%;
-  background-color: #121212;
-  border-radius: 10px;
-  border: 1px solid grey;
-  height: 24px;
-  outline: none;
-  padding: 0 20px;
-  color: aliceblue;
-}
-
-.chrome-search-icn {
-  position: absolute;
-  right: 0;
-  margin-right: 10px;
-  color: var(--text-finder-color);
-  z-index: 200;
-  top: 3px;
-  font-size: 0.8em;
-}
-
-.chrome-search-icn>i {
-  margin-left: 5px;
-}
-
-.chrome-link-right {
-  flex-basis: 20%;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  font-size: 0.8em;
-  color: var(--text-low-finder-color);
-}
-
-.chrome-page-middle {
-  height: 90%;
-}
-
-.chrome-page-bookmark {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  justify-content: start;
-  align-items: center;
-  color: var(--Rwhite-color);
-  font-size: 12px;
-  height: 4vh;
-}
-
-.bookmark-chrome>i {
-  margin-right: 5px;
-}
-
-.bookmark-chrome {
-  margin-left: 0.5em;
-}
-
-.chrome-items-buttons>button {
-  padding: 6px 21px;
-  border-radius: 2px;
-  outline: none;
-  border: none;
-}
-
-.chrome-page-bookmark.chrome-page-line {
-  margin-left: 10px;
-}
-
-.chrome-home-items p {
-  font-size: 10px;
-  color: grey;
-}
-
-.chrome-home-items p a:first-child {
-  margin-left: 8px;
-  color: blue;
-}
-
-.chrome-home-items p a:last-child {
-  margin-left: 3px;
-  color: blue;
-}
-
-/* Style tab links */
-.tablink-circle {
-  border-radius: 50px;
-  width: 20px;
-  height: 20px;
-  border: none;
-  outline: none;
-  margin: auto;
-  background: #333;
-  color: white;
-  margin-top: 8px;
-}
-
-
-
-.tablink {
-  background-color: #333333;
-  color: white;
-  float: left;
-  border: none;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  outline: none;
-  cursor: pointer;
-  padding: 1px 10px;
-  font-size: 0.7em;
-  font-weight: 300;
-  width: 20%;
-  text-align: start;
-  height: 30px;
-  margin: 0 1px;
-
-}
-
-.tablink:hover {
-  background-color: #777;
-
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: white;
-  display: none;
-  height: 100%;
-}
-
-.chrome-home-items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 100%;
-  gap: 25px;
-
-}
-
-.chrome-home-items h1 {
-  font-size: 5em;
-  color: #4C8BF5;
-  font-family: unset;
-}
-
-h1 span[rel="red"] {
-  color: #ea4335;
-}
-
-h1 span[rel="yellow"] {
-  color: #FFCD46;
-}
-
-h1 span[rel="green"] {
-  color: #1DA462;
-}
-
-.chrome-home-items input {
-  min-width: 500px;
-  height: 5vh;
-  border-radius: 40px;
-  background: none;
-  border: 1px solid grey;
-  outline: none;
-  padding: 0 30px;
-}
-
-#chrome-home {
-  background-color: #fff;
-}
-
-#chrome-news {
-  background-color: green;
-}
-
-#chrome-contact {
-  background-color: blue;
-}
-
-#chrome-about {
-  background-color: orange;
-}
-
-#chrome-linkdin {
-  background-color: purple;
-}
-
-/*-----------end page chrome -----------*/
-/*=================END CHROME=====================*/
 
 
 
