@@ -93,7 +93,7 @@ ul li a {
 }
 
 .container {
-  background-image: url(./png/macos3.jpg);
+  background-image: url(template/assets/img/png/macos3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -1094,7 +1094,7 @@ input-style:hover {
 .contact-profile-img {
   width: 90px;
   height: 90px;
-  background-image: url(./png/marean.png);
+  background-image: url(template/assets/img/png/marean.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1106,11 +1106,11 @@ input-style:hover {
 }
 
 .contact-profile-img.Sorin {
-  background-image: url(./png/marean.png);
+  background-image: url(template/assets/img/png/marean.png);
 }
 
 .contact-profile-img.Rares {
-  background-image: url(./png/rares.jpg);
+  background-image: url(template/assets/img/png/rares.jpg);
 }
 
 .contact-middle-right-person {
@@ -1478,7 +1478,7 @@ input-style:hover {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(./png/nightdesk.jpg);
+  background-image: url(template/assets/img/png/nightdesk.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
