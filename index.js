@@ -74,9 +74,39 @@ function moveWindows() {
     }
   }
 }
+function test(){
+  let day;
+  switch (new Date().getDay()) {
+    case 0:
+      day = "Sunday";
+      break;
+    case 1:
+      $("#terminalBoxJs").load("./template/assets/windows/terminal/terminal.html");
+      day = "Monday";
+      break;
+    case 2:
+      day = "Tuesday";
+      break;
+    case 3:
+      day = "Wednesday";
+      break;
+    case 4:
+      day = "Thursday";
+      break;
+    case 5:
+      day = "Friday";
+      break;
+    case 6:
+      day = "Saturday";
+  }
+  console.log(day, "day");
+  document.getElementById("demo").innerHTML = "Today is " + day;
+}
 
-
-document.addEventListener("DOMContentLoaded", function () {
+ 
+//Executes after DOM is loaded (before images and CSS):
+document.addEventListener("DOMContentLoaded", function(DomLoaded) {
+  console.log(DomLoaded, "tesst");
   moveWindows();
 
   var datamap = new Map([
@@ -100,9 +130,10 @@ document.addEventListener("DOMContentLoaded", function () {
   function doModal(buttonClick, popupbox) {
     var closeButton = popupbox.getElementsByClassName("close")[0];
     buttonClick.addEventListener("click", function handleClick(event) {
-      checkisClicked();
+      checkisClicked(test());
         popupbox.style.display = "block";
-    });
+        console.log(checkisClicked(test()), "test");
+ 
   
     closeButton.addEventListener("click", function handleClick(event) {
       if ((event.target == popupbox.style.display) == "block");
@@ -110,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
         popupbox.style.display = "none";
       }
     });
-  
+  });
     // window.addEventListener("click", function (event) {
     //   if (event.target == popupbox) {
     //     popupbox.style.display = "none";
@@ -128,10 +159,8 @@ document.addEventListener("DOMContentLoaded", function () {
   datamap.forEach((value, key) => {
     doModal(key, value);
   });
-  console.log(datamap, "datamap");
-  console.log(doModal, "doModal");
-  console.log(key, "key");
-  console.log(value, "value");
+ 
+
 
   var clicked = false;
 
@@ -144,37 +173,9 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("else switch");
     }
   }
-  function test(){
-  let day;
-  switch (new Date().getDay()) {
-    case 0:
-      day = "Sunday";
-      break;
-    case 1:
-      day = "Monday";
-      break;
-    case 2:
-      day = "Tuesday";
-      break;
-    case 3:
-      day = "Wednesday";
-      break;
-    case 4:
-      day = "Thursday";
-      break;
-    case 5:
-      day = "Friday";
-      break;
-    case 6:
-      day = "Saturday";
-  }
-  console.log(day, "day");
-  document.getElementById("demo").innerHTML = "Today is " + day;
-}
+  
 });
- 
 
-$("#terminalBoxJs").load("./template/assets/windows/terminal/terminal.html");
 // $("#bottomIconsJs").load("./template/assets/icons/icons.html");
 
 /*
