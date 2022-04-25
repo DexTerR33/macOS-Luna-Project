@@ -1,5 +1,3 @@
-
-
 function moveWindows() {
   var dropBtns = document.querySelectorAll(".dropdown-button");
   console.log(dropBtns, "btnSho");
@@ -74,14 +72,15 @@ function moveWindows() {
     }
   }
 }
-function test(){
+
+function test() {
   let day;
   switch (new Date().getDay()) {
     case 0:
       day = "Sunday";
       break;
     case 1:
-      $("#terminalBoxJs").load("./template/assets/windows/terminal/terminal.html");
+
       day = "Monday";
       break;
     case 2:
@@ -103,45 +102,50 @@ function test(){
   document.getElementById("demo").innerHTML = "Today is " + day;
 }
 
- 
+
+
 //Executes after DOM is loaded (before images and CSS):
-document.addEventListener("DOMContentLoaded", function(DomLoaded) {
-  console.log(DomLoaded, "tesst");
+document.addEventListener("DOMContentLoaded", function () {
   moveWindows();
+
+
 
   var datamap = new Map([
     [
       document.getElementById("logoAppleButton"),
-      document.getElementById("myMacMaster"),
+      document.getElementById("myMacMaster")
     ],
     [
       document.getElementById("myBtn2"),
-      document.getElementById("aboutMeMaster"),
+      document.getElementById("aboutMeMaster")
     ],
     [
       document.getElementById("myBtn3"),
-      document.getElementById("finderMaster"),
+      document.getElementById("finderMaster")
     ],
     [
       document.getElementById("terminalButton"),
-      document.getElementById("TerminalMaster"),
+      document.getElementById("TerminalMaster")
     ],
   ]);
+  datamap.forEach((value, key) => {
+    doModal(key, value);
+  });
   function doModal(buttonClick, popupbox) {
     var closeButton = popupbox.getElementsByClassName("close")[0];
     buttonClick.addEventListener("click", function handleClick(event) {
-      checkisClicked(test());
-        popupbox.style.display = "block";
-        console.log(checkisClicked(test()), "test");
- 
-  
-    closeButton.addEventListener("click", function handleClick(event) {
-      if ((event.target == popupbox.style.display) == "block");
-      {
-        popupbox.style.display = "none";
-      }
+      checkisClicked();
+      popupbox.style.display = "block";
+
+
+      closeButton.addEventListener("click", function handleClick(event) {
+        if ((event.target == popupbox.style.display) == "block"); {
+          popupbox.style.display = "none";
+        }
+      });
+
     });
-  });
+
     // window.addEventListener("click", function (event) {
     //   if (event.target == popupbox) {
     //     popupbox.style.display = "none";
@@ -151,15 +155,13 @@ document.addEventListener("DOMContentLoaded", function(DomLoaded) {
     // console.log(closeButton, "closeButton");
     // console.log(popupbox, "popupbox");
   }
-  
+
   // console.log(logoAppleButton, "button mac press");
   // console.log(myBtn2, "button about me press");
   // console.log(myBtn3, "button finder press");
   // console.log(terminalButton, "button terminal press");
-  datamap.forEach((value, key) => {
-    doModal(key, value);
-  });
- 
+
+
 
 
   var clicked = false;
@@ -173,8 +175,10 @@ document.addEventListener("DOMContentLoaded", function(DomLoaded) {
       console.log("else switch");
     }
   }
-  
+  $("#terminalBoxJs").load("./template/assets/windows/terminal/terminal.html");
 });
+
+
 
 // $("#bottomIconsJs").load("./template/assets/icons/icons.html");
 
