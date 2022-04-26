@@ -1,3 +1,4 @@
+console.log('start');
 function moveWindows() {
   var dropBtns = document.querySelectorAll(".dropdown-button");
   console.log(dropBtns, "btnSho");
@@ -28,8 +29,9 @@ function moveWindows() {
       closeOpenItems();
     }
   });
-
+console.log('middle');
   dragElement(document.getElementById("finderBox"));
+  dragElement(document.getElementById("adobeXDBox"));
   dragElement(document.getElementById("chromePageBox"));
   dragElement(document.getElementById("aboutmeBox"));
   dragElement(document.getElementById("aboutmacBox"));
@@ -73,7 +75,7 @@ function moveWindows() {
     }
   }
 }
-
+console.log('semi midle');
 function test() {
   let day;
   switch (new Date().getDay()) {
@@ -107,10 +109,11 @@ function test() {
 
 //Executes after DOM is loaded (before images and CSS):
 document.addEventListener("DOMContentLoaded", function () {
+  console.log('movewind');
   moveWindows();
+  console.log('movewind2');
 
-
-
+  console.log('bottom');
   var datamap = new Map([
     [
       document.getElementById("logoAppleButton"),
@@ -131,25 +134,19 @@ document.addEventListener("DOMContentLoaded", function () {
     [
       document.getElementById("chromePageButton"),
       document.getElementById("chromePageMaster")
+    ],
+     [
+      document.getElementById("adobeXDButton"),
+      document.getElementById("adobeXDMaster")
     ]
   ]);
+  console.log('bottom1');
   datamap.forEach((value, key) => {
     doModal(key, value);
+    console.log('bottom55');
   });
-  function doModal(buttonClick, popupbox) {
-    var closeButton = popupbox.getElementsByClassName("close")[0];
-    buttonClick.addEventListener("click", function handleClick(event) {
-      checkisClicked();
-      popupbox.style.display = "block";
+  console.log('bottom2');
 
-
-      closeButton.addEventListener("click", function handleClick(event) {
-        if ((event.target == popupbox.style.display) == "block"); {
-          popupbox.style.display = "none";
-        }
-      });
-
-    });
 
     // window.addEventListener("click", function (event) {
     //   if (event.target == popupbox) {
@@ -159,8 +156,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // console.log(buttonClick, "buttonClick");
     // console.log(closeButton, "closeButton");
     // console.log(popupbox, "popupbox");
-  }
-
+  
+  console.log('bottom6');
   // console.log(logoAppleButton, "button mac press");
   // console.log(myBtn2, "button about me press");
   // console.log(myBtn3, "button finder press");
@@ -170,22 +167,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   var clicked = false;
-
+  console.log('bottom7');
   function checkisClicked() {
     clicked = true;
     if (clicked === true) {
+      console.log('bottom8');
       test();
+      console.log('bottom9');
       console.log("unclicked");
     } else {
       console.log("else switch");
     }
   }
+  console.log('bottom10');
+  $("#adobeXDBoxJs").load("./template/assets/windows/adobexd/adobeXD.html");
   $("#chromePageBoxJs").load("./template/assets/windows/chrome/chromePage.html");
  $("#terminalBoxJs").load("./template/assets/windows/terminal/terminal.html");
-
+ console.log('bottom11');
   // $("#iconsBoxJss").load("./template/assets/icons/icons.html");
 });
+function doModal(buttonClick, popupbox) {
+  console.log('buttonClick', buttonClick);
+  var closeButton = popupbox.querySelector(".close");
+  console.log('bottom55ss');}
+  buttonClick.addEventListener("click", function handleClick(event) {
+    console.log('bottom55sss');
+    checkisClicked();
+    console.log('bottom55ssss');
+    console.log('bottom54');
+    popupbox.style.display = "block";
+    console.log('bottom55');
+    console.log('bottom3');
 
+    closeButton.addEventListener("click", function handleClick(event) {
+      if ((event.target == popupbox.style.display) == "block"); {
+        popupbox.style.display = "none";
+      }
+    });
+    console.log('bottom4');
+  });
+  console.log('bottom5');
+console.log('bottom13');
 
 
 // $("#bottomIconsJs").load("./template/assets/icons/icons.html");
