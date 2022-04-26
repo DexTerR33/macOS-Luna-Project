@@ -48,7 +48,7 @@
             align-items: center;
             gap: 10px;
             padding: 8px;
-            
+
         }
 
         .cv_welcome {
@@ -73,62 +73,76 @@
 
 
         .cv_body {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: row;
-            align-items: center;
+           display: grid;
+           
         }
 
-        .cv_section1,
-        .cv_section2,
-        .cv_section3 {
-            border: 1px solid black;
-            height: 79vh;
-            width: 100%;
 
+        .cv_section1 {
+            width: 25% !important;
+            border-right: 1px solid red;
+        }
+
+        .cv_section2 {
+            width: 50%;
+            border-right: 1px solid red;
+        }
+
+        .cv_section3 {
+            width: 25%;
         }
 
         .cv_section1_box,
         .cv_section2_box,
         .cv_section3_box {
-            border: 1px solid red;
             padding: 5px;
             height: 19vh;
+        }
+        .cv_character.cv_section1_box {
+            height: 9vh !important;
+        }
 
-        }
-        .cv_section1_box:hover, .cv_section2_box:hover,
-        .cv_section3_box:hover{
+        .cv_section1_box:hover,
+        .cv_section2_box:hover,
+        .cv_section3_box:hover {
             background-color: crimson;
-            transition: 0.5s ease ;
+            transition: 0.5s ease;
         }
-        .cv_section1_box:active, .cv_section2_box:active,
-        .cv_section3_box:active{
+
+        .cv_section1_box:active,
+        .cv_section2_box:active,
+        .cv_section3_box:active {
             background-color: gold;
         }
-        .cv_picture.cv_section1_box{
-          background-image: url(/macOS-Luna-Project-main/template/assets/img/png/selfportrait.png); 
-       background-position: center;
-       background-repeat: no-repeat;
-       background-size: contain;
-       width: 100%;
-   
-     z-index: 213;
-    
-          
-            
+
+        .cv_picture.cv_section1_box {
+            background-image: url(/template/assets/img/png/selfportrait.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            z-index: 213;
+        }
+
+        .cv_section1_box > div{
+            font-size: 0.72em;
         }
     </style>
 </head>
+
 <body>
     <div class="cv_wrapper">
         <div class="cv_container">
             <div class="cv_header">
                 <div class="cv_line1">
                     <div class="cv_welcome">Hello!</div>
-                    <div class="cv_aboutMe_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                    <div class="cv_aboutMe_text">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Omnis
                         provident
-                        iusto cupiditate incidunt similique repellendus amet consequuntur id ea eveniet id ea eveniet id
-                        ea eveniet id ea evenietid ea evenietid ea evenietid ea evenietid ea eveniet.</div>
+                        iusto cupiditate incidunt similique repellendus amet
+                        consequuntur id ea eveniet id ea eveniet id
+                        ea eveniet id ea evenietid ea evenietid ea evenietid
+                        ea evenietid ea eveniet.</div>
                 </div>
                 <div class="cv_line2">
                     Lorem ipsum dolor sit amet consectetur adipisicing elite
@@ -137,12 +151,47 @@
             </div>
             <div class="cv_body">
                 <div class="cv_section1">
-                    <div class="cv_picture cv_section1_box">
-                        
+                    <div class="cv_picture cv_section1_box"></div>
+                    <div class="cv_character cv_section1_box">
+                        <h2>Characteristics</h2>
+                        <div>Open minded, organized, calm, <br> interested, clean, motivated, flexibile, intelligent
+                        </div>
                     </div>
-                    <div class="cv_character cv_section1_box">characteristic</div>
-                    <div class="cv_education cv_section1_box">education</div>
-                    <div class="cv_workExp cv_section1_box">work_experience</div>
+                    <div class="cv_education cv_section1_box">
+                        <h2>Education</h2>
+                        <div class="first_education">
+                            <div>Colegiul Tehnic Media</div>
+                            <div>Romania</div>
+                            <div>2002-2006</div>
+                            <div>Profil: operator tehnic calcul</div>
+                        </div>
+                        <div class="second_education">
+                            <div>Universitatea Media Pro</div>
+                            <div>Romania</div>
+                            <div>2006-2008</div>
+                            <div>Profil: Regie/Film</div>
+                        </div>
+                        <div class="third_education">
+                            <div>Scoala informala de IT</div>
+                            <div>Romania</div>
+                            <div>04-2019 - 08-2019 <span> Front-End Developer</span></div>
+                            <div>05-2021 - 07-2021 <span> React Js</span></div>
+                            <div>07-2022 - 09-2022 <span> Back-End Developer</span> status:<span>in progress</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cv_workExp cv_section1_box">
+                        <h2>Work Experience</h2>
+                        <fieldset>
+                            <legend>Videographer:</legend>
+                            <div class="Videographer">
+                              <span>filming <br>
+                                editing video <br>
+                                production</span>
+                            </div>
+
+                        </fieldset>
+                    </div>
                 </div>
                 <div class="cv_section2">
                     <div class="cv_skills_artistic cv_section2_box">skills1</div>
@@ -160,4 +209,5 @@
         </div>
     </div>
 </body>
+
 </html>

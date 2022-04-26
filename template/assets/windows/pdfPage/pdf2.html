@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+             *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        .cv_wrapper {
+            width: 760px;
+            max-width: 760px;
+            max-height: 1100px;
+            height: 1100px;
+            padding: 10px;
+            border: 1px solid red;
+            margin: 0 auto;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 210px 300px 210px;
+            grid-template-rows: repeat(20, 50px);
+            grid-gap: 1px;
+            background-color: rgb(233, 233, 233);
+            padding: 10px;
+        }
+
+        .grid-container>div {
+        
+            font-size: 0.8em;
+        }
+
+        .itemBox-0 {
+            grid-column: 1 / span 3;
+            grid-row: 1 /span 2;
+          
+      margin: auto;
+        }
+      
+
+        .itemBox0 {
+            grid-column: 1 / span 3;
+            grid-row: 3;
+    
+            border-top: 3px solid black;
+            border-bottom: 3px solid black;
+           
+        }
+
+
+        .itemBox1 {
+            background-image: url(/template/assets/img/png/selfportrait.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+           
+            z-index: 213;
+            justify-self: stretch;
+            grid-column: 1;
+            grid-row: 4 /span 4;
+         
+        }
+
+        .itemBox2 {
+            grid-column: 1;
+            grid-row: 8 /span 2;
+          
+        }
+        .itemBox3 {
+            grid-column: 1;
+            grid-row: 10 /span 6;
+            background-color: red;
+          
+        }
+        .itemBox4 {
+            grid-column: 1;
+            grid-row: 16 /span 4;
+            background-color: purple;
+        }
+
+        .cv_line1{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .cv_welcome{
+            font-size: 5em;
+        }
+        .cv_aboutMe_text{
+            font-size: 1.1em;
+        }
+.itemBox0 > div{
+    font-size: 1.6em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 2;
+}
+.cv_section1_box h2 {
+    text-align: center;
+}
+.cv_education{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+    
+    </style>
+</head>
+
+<body>
+
+
+<div class="cv_wrapper">
+    <div class="grid-container">
+        <div class="itemBox-0"> <div class="cv_line1">
+            <div class="cv_welcome">Hello!</div>
+            <div class="cv_aboutMe_text">Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Omnis
+                provident
+                iusto cupiditate incidunt similique repellendus amet
+                consequuntur id ea eveniet id ea eveniet id
+                ea eveniet id ea evenietid ea evenietid ea evenietid
+                ea evenietid ea eveniet.</div>
+        </div></div>
+        <div class="itemBox0"> <div>Curiculum Vitae Of Marian Iordache, <span>Front-End developer</span></div> </div>
+        <div class="itemBox1">
+            <div class="cv_picture cv_section1_box"></div>
+        </div>
+        <div class="itemBox2">
+            <div class="cv_character cv_section1_box">
+                <h2>Characteristics</h2>
+                <div>Open minded, organized, calm, <br> interested, clean, motivated, flexibile, intelligent
+                </div>
+            </div>
+        </div>
+        <div class="itemBox3">  <div class="cv_education cv_section1_box">
+            <h2>Education</h2>
+            <div class="first_education">
+                <div>Colegiul Tehnic Media</div>
+                <div>Romania</div>
+                <div>2002-2006</div>
+                <div>Profil: operator tehnic calcul</div>
+            </div>
+            <div class="second_education">
+                <div>Universitatea Media Pro</div>
+                <div>Romania</div>
+                <div>2006-2008</div>
+                <div>Profil: Regie/Film</div>
+            </div>
+            <div class="third_education">
+                <div>Scoala informala de IT</div>
+                <div>Romania</div>
+                <div>04-2019 - 08-2019 <span> Front-End Developer</span></div>
+                <div>05-2021 - 07-2021 <span> React Js</span></div>
+                <div>05-2021 - 07-2021 <span> React Js</span></div>
+               
+            </div>
+        </div></div>
+        <div class="itemBox4"><div class="cv_workExp cv_section1_box">
+            <h2>Work Experience</h2>
+            <fieldset>
+                <legend>Videographer:</legend>
+                <div class="Videographer">
+                  <span>filming <br>
+                    editing video <br>
+                    production</span>
+                </div>
+
+            </fieldset>
+        </div></div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+        <div class="item8">8</div>
+        <div class="item8">9</div>
+    </div>
+</div>
+</body>
+
+</html>
