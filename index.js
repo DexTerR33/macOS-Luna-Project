@@ -1,119 +1,122 @@
-console.log('start');
-function moveWindows() {
-  var dropBtns = document.querySelectorAll(".dropdown-button");
-  console.log(dropBtns, "btnSho");
-
-  function closeOpenItems() {
-    openMenus = document.querySelectorAll(".dropMenu-list");
-    openMenus.forEach(function (menus) {
-      menus.classList.remove("show");
-    });
-  }
-  dropBtns.forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-      var dropContent = btn.querySelector(".dropMenu-list"),
-        shouldOpen = !dropContent.classList.contains("show");
-      e.preventDefault();
-      // First close all open items.
-      closeOpenItems();
-      // Check if the clicked item should be opened. It is already closed at this point so no further action is required if it should be closed.
-      if (shouldOpen) {
-        // Open the clicked item.
-        dropContent.classList.add("show");
-      }
-      e.stopPropagation();
-    });
-  });
-  window.addEventListener("click", function (event) {
-    if (event.target != dropBtns) {
-      closeOpenItems();
-    }
-  });
-console.log('middle');
-  dragElement(document.getElementById("finderBox"));
-  dragElement(document.getElementById("adobeXDBox"));
-  dragElement(document.getElementById("chromePageBox"));
-  dragElement(document.getElementById("aboutmeBox"));
-  dragElement(document.getElementById("aboutmacBox"));
-  dragElement(document.getElementById("terminalBox"));
-  // dragElement(document.getElementById("chromeBox"));
-
-  function dragElement(elmnt) {
-    var pos1 = 0,
-      pos2 = 0,
-      pos3 = 0,
-      pos4 = 0;
-    if (document.getElementById(elmnt.id + "header")) {
-      document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-    } else {
-      elmnt.onmousedown = dragMouseDown;
-    }
-
-    function dragMouseDown(e) {
-      e = e || window.event;
-      e.preventDefault();
-      pos3 = e.clientX;
-      pos4 = e.clientY;
-      document.onmouseup = closeDragElement;
-      document.onmousemove = elementDrag;
-    }
-
-    function elementDrag(e) {
-      e = e || window.event;
-      e.preventDefault();
-      pos1 = pos3 - e.clientX;
-      pos2 = pos4 - e.clientY;
-      pos3 = e.clientX;
-      pos4 = e.clientY;
-      elmnt.style.top = elmnt.offsetTop - pos2 + "px";
-      elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
-    }
-
-    function closeDragElement() {
-      document.onmouseup = null;
-      document.onmousemove = null;
-    }
-  }
-}
-console.log('semi midle');
-function test() {
-  let day;
-  switch (new Date().getDay()) {
-    case 0:
-      day = "Sunday";
-      break;
-    case 1:
-
-      day = "Monday";
-      break;
-    case 2:
-      day = "Tuesday";
-      break;
-    case 3:
-      day = "Wednesday";
-      break;
-    case 4:
-      day = "Thursday";
-      break;
-    case 5:
-      day = "Friday";
-      break;
-    case 6:
-      day = "Saturday";
-  }
-  console.log(day, "day");
-  document.getElementById("demo").innerHTML = "Today is " + day;
-}
-
-
-
-//Executes after DOM is loaded (before images and CSS):
 document.addEventListener("DOMContentLoaded", function () {
-  console.log('movewind');
-  moveWindows();
-  console.log('movewind2');
+  console.log('start');
 
-  console.log('bottom');
+  function moveWindows() {
+    var dropBtns = document.querySelectorAll(".dropdown-button");
+    console.log(dropBtns, "btnSho");
+
+    function closeOpenItems() {
+      openMenus = document.querySelectorAll(".dropMenu-list");
+      openMenus.forEach(function (menus) {
+        menus.classList.remove("show");
+      });
+    }
+    dropBtns.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        var dropContent = btn.querySelector(".dropMenu-list"),
+          shouldOpen = !dropContent.classList.contains("show");
+        e.preventDefault();
+        // First close all open items.
+        closeOpenItems();
+        // Check if the clicked item should be opened. It is already closed at this point so no further action is required if it should be closed.
+        if (shouldOpen) {
+          // Open the clicked item.
+          dropContent.classList.add("show");
+        }
+        e.stopPropagation();
+      });
+    });
+    window.addEventListener("click", function (event) {
+      if (event.target != dropBtns) {
+        closeOpenItems();
+      }
+    });
+    console.log('middle');
+    dragElement(document.getElementById("finderBox"));
+    dragElement(document.getElementById("adobeXDBox"));
+    dragElement(document.getElementById("chromePageBox"));
+    dragElement(document.getElementById("aboutmeBox"));
+    dragElement(document.getElementById("aboutmacBox"));
+    dragElement(document.getElementById("terminalBox"));
+    // dragElement(document.getElementById("chromeBox"));
+
+    function dragElement(elmnt) {
+      var pos1 = 0,
+        pos2 = 0,
+        pos3 = 0,
+        pos4 = 0;
+      if (document.getElementById(elmnt.id + "header")) {
+        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      } else {
+        elmnt.onmousedown = dragMouseDown;
+      }
+
+      function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+      }
+
+      function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+        elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+      }
+
+      function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+      }
+    }
+  }
+
+
+  function test() {
+    let day;
+    switch (new Date().getDay()) {
+      case 0:
+        day = "Sunday";
+        break;
+      case 1:
+
+        day = "Monday";
+        break;
+      case 2:
+        day = "Tuesday";
+        break;
+      case 3:
+        day = "Wednesday";
+        break;
+      case 4:
+        day = "Thursday";
+        break;
+      case 5:
+        day = "Friday";
+        break;
+      case 6:
+        day = "Saturday";
+    }
+    console.log(day, "day");
+    document.getElementById("demo").innerHTML = "Today is " + day;
+  }
+
+
+
+  //Executes after DOM is loaded (before images and CSS):
+
+
+  moveWindows();
+ 
+
+
   var datamap = new Map([
     [
       document.getElementById("logoAppleButton"),
@@ -135,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("chromePageButton"),
       document.getElementById("chromePageMaster")
     ],
-     [
+    [
       document.getElementById("adobeXDButton"),
       document.getElementById("adobeXDMaster")
     ]
@@ -143,71 +146,67 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log('bottom1');
   datamap.forEach((value, key) => {
     doModal(key, value);
-    console.log('bottom55');
-  });
-  console.log('bottom2');
-
-
-    // window.addEventListener("click", function (event) {
-    //   if (event.target == popupbox) {
-    //     popupbox.style.display = "none";
-    //   }
-    // });
-    // console.log(buttonClick, "buttonClick");
-    // console.log(closeButton, "closeButton");
-    // console.log(popupbox, "popupbox");
   
+  });
+
+
+
+  // window.addEventListener("click", function (event) {
+  //   if (event.target == popupbox) {
+  //     popupbox.style.display = "none";
+  //   }
+  // });
+  // console.log(buttonClick, "buttonClick");
+  // console.log(closeButton, "closeButton");
+  // console.log(popupbox, "popupbox");
+
   console.log('bottom6');
   // console.log(logoAppleButton, "button mac press");
   // console.log(myBtn2, "button about me press");
   // console.log(myBtn3, "button finder press");
   // console.log(terminalButton, "button terminal press");
 
+  function doModal(buttonClick, popupbox) {
+    console.log('buttonClick', buttonClick);
+    var closeButton = popupbox.querySelector(".close");
+    
+    buttonClick.addEventListener("click", function handleClick(event) {
+      checkisClicked();
+      popupbox.style.display = "block";
+  
+      closeButton.addEventListener("click", function handleClick(event) {
+        if ((event.target == popupbox.style.display) == "block"); {
+          popupbox.style.display = "none";
+        }
+      });   
+    });
 
+    var clicked = false;
+  
 
-
-  var clicked = false;
-  console.log('bottom7');
-  function checkisClicked() {
-    clicked = true;
-    if (clicked === true) {
-      console.log('bottom8');
-      test();
-      console.log('bottom9');
-      console.log("unclicked");
-    } else {
-      console.log("else switch");
+    function checkisClicked() {
+      clicked = true;
+      if (clicked === true) {
+       
+        test();
+      
+      } else {
+        console.log("else switch");
+      }
     }
   }
-  console.log('bottom10');
-  $("#adobeXDBoxJs").load("./template/assets/windows/adobexd/adobeXD.html");
-  $("#chromePageBoxJs").load("./template/assets/windows/chrome/chromePage.html");
- $("#terminalBoxJs").load("./template/assets/windows/terminal/terminal.html");
- console.log('bottom11');
+
+
+
+
   // $("#iconsBoxJss").load("./template/assets/icons/icons.html");
 });
-function doModal(buttonClick, popupbox) {
-  console.log('buttonClick', buttonClick);
-  var closeButton = popupbox.querySelector(".close");
-  console.log('bottom55ss');}
-  buttonClick.addEventListener("click", function handleClick(event) {
-    console.log('bottom55sss');
-    checkisClicked();
-    console.log('bottom55ssss');
-    console.log('bottom54');
-    popupbox.style.display = "block";
-    console.log('bottom55');
-    console.log('bottom3');
 
-    closeButton.addEventListener("click", function handleClick(event) {
-      if ((event.target == popupbox.style.display) == "block"); {
-        popupbox.style.display = "none";
-      }
-    });
-    console.log('bottom4');
-  });
-  console.log('bottom5');
-console.log('bottom13');
+console.log('bottom10');
+$("#adobeXDBoxJs").load("./template/assets/windows/adobexd/adobeXD.html");
+$("#chromePageBoxJs").load("./template/assets/windows/chrome/chromePage.html");
+$("#terminalBoxJs").load("./template/assets/windows/terminal/terminal.html");
+console.log('bottom11');
 
 
 // $("#bottomIconsJs").load("./template/assets/icons/icons.html");

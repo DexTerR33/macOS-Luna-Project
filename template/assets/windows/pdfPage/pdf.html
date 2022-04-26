@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>pdf download</title>
+
+
+
+
+
+
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+        .cv_wrapper {
+            width: 760px;
+            max-width: 760px;
+            max-height: 842px;
+            height: 842px;
+            padding: 10px;
+            border: 1px solid red;
+            margin: 0 auto;
+        }
+
+        .cv_container {
+
+            display: block;
+            margin: 0 auto;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .cv_line1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 8px;
+            
+        }
+
+        .cv_welcome {
+            font-size: 3.5em;
+            color: tomato;
+        }
+
+        .cv_aboutMe_text {
+            font-size: 0.9em;
+        }
+
+
+        .cv_line2 {
+            font-size: 1.4em;
+            border: 1px solid black;
+            border-left: none;
+            border-right: none;
+            padding: 10px;
+        }
+
+
+
+
+        .cv_body {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .cv_section1,
+        .cv_section2,
+        .cv_section3 {
+            border: 1px solid black;
+            height: 79vh;
+            width: 100%;
+
+        }
+
+        .cv_section1_box,
+        .cv_section2_box,
+        .cv_section3_box {
+            border: 1px solid red;
+            padding: 5px;
+            height: 19vh;
+
+        }
+        .cv_section1_box:hover, .cv_section2_box:hover,
+        .cv_section3_box:hover{
+            background-color: crimson;
+            transition: 0.5s ease ;
+        }
+        .cv_section1_box:active, .cv_section2_box:active,
+        .cv_section3_box:active{
+            background-color: gold;
+        }
+        .cv_picture.cv_section1_box{
+          background-image: url(/macOS-Luna-Project-main/template/assets/img/png/selfportrait.png); 
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: contain;
+       width: 100%;
+   
+     z-index: 213;
+    
+          
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="cv_wrapper">
+        <div class="cv_container">
+            <div class="cv_header">
+                <div class="cv_line1">
+                    <div class="cv_welcome">Hello!</div>
+                    <div class="cv_aboutMe_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                        provident
+                        iusto cupiditate incidunt similique repellendus amet consequuntur id ea eveniet id ea eveniet id
+                        ea eveniet id ea evenietid ea evenietid ea evenietid ea evenietid ea eveniet.</div>
+                </div>
+                <div class="cv_line2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elite
+                </div>
+
+            </div>
+            <div class="cv_body">
+                <div class="cv_section1">
+                    <div class="cv_picture cv_section1_box">
+                        
+                    </div>
+                    <div class="cv_character cv_section1_box">characteristic</div>
+                    <div class="cv_education cv_section1_box">education</div>
+                    <div class="cv_workExp cv_section1_box">work_experience</div>
+                </div>
+                <div class="cv_section2">
+                    <div class="cv_skills_artistic cv_section2_box">skills1</div>
+                    <div class="cv_skills_artistic cv_section2_box">skills2</div>
+                    <div class="cv_skills_artistic cv_section2_box">skills4</div>
+                    <div class="cv_skills_artistic cv_section2_box">skills5</div>
+                </div>
+                <div class="cv_section3">
+                    <div class="cv_lang cv_section3_box">lang</div>
+                    <div class="cv_lang cv_section3_box">interest</div>
+                    <div class="cv_lang cv_section3_box">hoobyes</div>
+                    <div class="cv_lang cv_section3_box">contact</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

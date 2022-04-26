@@ -74,7 +74,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   image-rendering: -webkit-optimize-contrast;
-  background-image: url(./png/M1.png);
+  background-image: url(/template/assets/img/png/M1.png);
 }
 .container-box {
   width: 120px;
@@ -202,7 +202,7 @@ border: none;
   font-family: "Lato", sans-serif;
 }
 .bg-image {
-  background-image: url(./png/nature1.jpg);
+  background-image: url(/template/assets/img/png/nature1.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

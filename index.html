@@ -1251,10 +1251,10 @@
     </div>
 
     <script type="text/javascript">
-      $('body').append('<div style="" id="loadingDiv"><div class="loader">Loading...</div></div>');
-      $(window).on('load', function () {
-        setTimeout(removeLoader, 1100); //wait for page load PLUS two seconds.
-      });
+      // $('body').append('<div style="" id="loadingDiv"><div class="loader">Loading...</div></div>');
+      // $(window).on('load', function () {
+      //   setTimeout(removeLoader, 1100); //wait for page load PLUS two seconds.
+      // });
 
       function removeLoader() {
         $("#loadingDiv").fadeOut(500, function () {
@@ -1344,7 +1344,11 @@
       };
       includeHTML();
       */
+    //   window.addEventListener("load", function(){
+    //   alert("loaded!");
+    // })
     </script>
+   
     <script type="text/javascript" src="index.js" defer></script>
 </body>
 
