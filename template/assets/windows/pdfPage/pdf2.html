@@ -3,6 +3,7 @@
 
 <head>
     <style>
+       @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Lateef&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&display=swap');
              *,
         *::after,
         *::before {
@@ -11,24 +12,80 @@
             box-sizing: border-box;
         }
 
+/***   smoke**/
+#smoke {
+    position: absolute;
+    z-index: 3;
+    width: 1px;
+    top: 60%;
+    /* height: 160px; */
+    left: 33%;
+    /* bottom: 30px; */
+    transform: rotate(326deg);
+}
 
+/* smoke balls */
+
+#smoke span { 
+  display: block;
+	position: absolute;
+	bottom: -35px; left: 50%; margin-left:-20px;
+	height: 0px; width: 0px;
+	border: 35px solid #f1aeca;
+	border-radius: 35px;
+	left: -14px; opacity: 0;
+	transform: scale(0.2);
+    opacity: 0.7;
+}
+
+/* Smoke animation */
+
+@keyframes smokeL {
+	0%   { transform: scale(0.2) translate(0, 0) }
+	10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+	100% { opacity: 0; transform: scale(1) translate(-20px, -130px) }
+}
+
+@keyframes smokeR {
+	0%   { transform: scale(0.2) translate(0, 0) }
+	10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+	100% { opacity: 0; transform: scale(1) translate(20px, -130px) }
+}
+
+#smoke .s0 { animation: smokeL 10s 0s infinite }
+#smoke .s1 { animation: smokeR 10s 1s infinite }
+#smoke .s2 { animation: smokeL 10s 2s infinite }
+#smoke .s3 { animation: smokeR 10s 3s infinite }
+#smoke .s4 { animation: smokeL 10s 4s infinite }
+#smoke .s5 { animation: smokeR 10s 5s infinite }
+#smoke .s6 { animation: smokeL 10s 6s infinite }
+#smoke .s7 { animation: smokeR 10s 7s infinite }
+#smoke .s8 { animation: smokeL 10s 8s infinite }
+#smoke .s9 { animation: smokeR 10s 9s infinite }
 
         .cv_wrapper {
             width: 760px;
             max-width: 760px;
             max-height: 1100px;
             height: 1100px;
-            padding: 10px;
-            border: 1px solid red;
             margin: 0 auto;
+            display: flex;
+         gap: 200px;
+         align-items: center;
+         justify-content: center;
+         
         }
         .grid-container {
+            border: 1px solid red;
             display: grid;
+     justify-content: center;
             grid-template-columns: 210px 300px 210px;
             grid-template-rows: repeat(20, 50px);
             grid-gap: 1px;
             background-color: rgb(233, 233, 233);
-            padding: 10px;
+        
+            /* font-family: 'Oswald', sans-serif; */
+            font-family: 'Open Sans', sans-serif;
         }
 
         .grid-container>div {
@@ -47,7 +104,9 @@
         .itemBox0 {
             grid-column: 1 / span 3;
             grid-row: 3;
-    
+            letter-spacing: 0.1px;
+            font-family: 'Lateef', cursive;
+            font-weight: bolder;
             border-top: 3px solid black;
             border-bottom: 3px solid black;
            
@@ -120,6 +179,7 @@
         }
         .cv_aboutMe_text{
             font-size: 1.1em;
+            letter-spacing: 1px;
         }
 .itemBox0 > div{
     font-size: 1.6em;
@@ -129,12 +189,14 @@
 }
 .cv_section1_box h2 {
     text-align: center;
+    text-transform: uppercase;
 }
 .cv_education{
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
+
     
     </style>
 </head>
@@ -142,7 +204,8 @@
 <body>
 
 
-<div class="cv_wrapper">
+<div class="cv_wrapper"> 
+    <button>donwload CV</button>
     <div class="grid-container">
         <div class="itemBox-0"> <div class="cv_line1">
             <div class="cv_welcome">Hello!</div>
@@ -155,8 +218,21 @@
                 ea evenietid ea eveniet.</div>
         </div></div>
         <div class="itemBox0"> <div>Curiculum Vitae Of Marian Iordache, <span>Front-End developer</span></div> </div>
-        <div class="itemBox1">
-            <div class="cv_picture cv_section1_box"></div>
+        <div class="itemBox1" style="position: relative; overflow: hidden;">
+            <div class="cv_picture cv_section1_box">
+                <div id="smoke" class="smokeBox">
+                    <span class="s0"></span>
+                    <span class="s1"></span>
+                    <span class="s2"></span>
+                    <span class="s3"></span>
+                    <span class="s4"></span>
+                    <span class="s5"></span>
+                    <span class="s6"></span>
+                    <span class="s7"></span>
+                    <span class="s8"></span>
+                    <span class="s9"></span>
+                  </div>
+            </div>
         </div>
         <div class="itemBox2">
             <div class="cv_character cv_section1_box">
