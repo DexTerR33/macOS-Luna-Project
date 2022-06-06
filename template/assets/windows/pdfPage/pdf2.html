@@ -3,8 +3,10 @@
 
 <head>
     <style>
-       @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Lateef&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&display=swap');
-             *,
+        /*font-family: 'Cinzel', serif;*/
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+
+        *,
         *::after,
         *::before {
             margin: 0;
@@ -12,284 +14,855 @@
             box-sizing: border-box;
         }
 
-/***   smoke**/
-#smoke {
-    position: absolute;
-    z-index: 3;
-    width: 1px;
-    top: 60%;
-    /* height: 160px; */
-    left: 33%;
-    /* bottom: 30px; */
-    transform: rotate(326deg);
-}
+        /***   smoke**/
 
-/* smoke balls */
+        :root {
+            --fontSize: calc((1vw + 1vh) * .75);
+        }
 
-#smoke span { 
-  display: block;
-	position: absolute;
-	bottom: -35px; left: 50%; margin-left:-20px;
-	height: 0px; width: 0px;
-	border: 35px solid #f1aeca;
-	border-radius: 35px;
-	left: -14px; opacity: 0;
-	transform: scale(0.2);
-    opacity: 0.7;
-}
 
-/* Smoke animation */
+        html,
+        body {
+            width: 260mm;
+            height: 100%;
 
-@keyframes smokeL {
-	0%   { transform: scale(0.2) translate(0, 0) }
-	10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
-	100% { opacity: 0; transform: scale(1) translate(-20px, -130px) }
-}
+            margin: 0 auto;
+        }
 
-@keyframes smokeR {
-	0%   { transform: scale(0.2) translate(0, 0) }
-	10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
-	100% { opacity: 0; transform: scale(1) translate(20px, -130px) }
-}
 
-#smoke .s0 { animation: smokeL 10s 0s infinite }
-#smoke .s1 { animation: smokeR 10s 1s infinite }
-#smoke .s2 { animation: smokeL 10s 2s infinite }
-#smoke .s3 { animation: smokeR 10s 3s infinite }
-#smoke .s4 { animation: smokeL 10s 4s infinite }
-#smoke .s5 { animation: smokeR 10s 5s infinite }
-#smoke .s6 { animation: smokeL 10s 6s infinite }
-#smoke .s7 { animation: smokeR 10s 7s infinite }
-#smoke .s8 { animation: smokeL 10s 8s infinite }
-#smoke .s9 { animation: smokeR 10s 9s infinite }
+        /* ... the rest of the rules ... */
+
+        /* html,
+        body {
+            height: 100%;
+        } */
+
+        body {
+            /* font: var(--fontSize)/80% 'Open Sans', sans-serif; */
+            font-family: 'Cinzel', serif
+        }
+
+        /***   smoke**/
+        #smoke {
+            position: absolute;
+            z-index: 3;
+            width: 1px;
+            top: 60%;
+            /* height: 160px; */
+            left: 33%;
+            /* bottom: 30px; */
+            transform: rotate(326deg);
+
+        }
+
+        /* smoke balls */
+
+        #smoke span {
+            display: block;
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            margin-left: -20px;
+            height: 0px;
+            width: 0px;
+            border: 35px solid rgba(187, 187, 187, 0.548);
+            border-radius: 35px;
+            left: -14px;
+            opacity: 0;
+            transform: scale(0.2);
+
+        }
+
+        /* Smoke animation */
+
+        @keyframes smokeL {
+            0% {
+                transform: scale(0.2) translate(0, 0)
+            }
+
+            10% {
+                opacity: 1;
+                transform: scale(0.2) translate(0, -5px)
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(1) translate(-20px, -130px)
+            }
+        }
+
+        @keyframes smokeR {
+            0% {
+                transform: scale(0.2) translate(0, 0)
+            }
+
+            10% {
+                opacity: 1;
+                transform: scale(0.2) translate(0, -5px)
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(1) translate(20px, -130px)
+            }
+        }
+
+        #smoke .s0 {
+            animation: smokeL 10s 0s infinite
+        }
+
+        #smoke .s1 {
+            animation: smokeR 10s 1s infinite
+        }
+
+        #smoke .s2 {
+            animation: smokeL 10s 2s infinite
+        }
+
+        #smoke .s3 {
+            animation: smokeR 10s 3s infinite
+        }
+
+        #smoke .s4 {
+            animation: smokeL 10s 4s infinite
+        }
+
+        #smoke .s5 {
+            animation: smokeR 10s 5s infinite
+        }
+
+        #smoke .s6 {
+            animation: smokeL 10s 6s infinite
+        }
+
+        #smoke .s7 {
+            animation: smokeR 10s 7s infinite
+        }
+
+        #smoke .s8 {
+            animation: smokeL 10s 8s infinite
+        }
+
+        #smoke .s9 {
+            animation: smokeR 10s 9s infinite
+        }
 
         .cv_wrapper {
-            width: 760px;
-            max-width: 760px;
-            max-height: 1100px;
-            height: 1100px;
-            margin: 0 auto;
-            display: flex;
-         gap: 200px;
-         align-items: center;
-         justify-content: center;
-         
-        }
-        .grid-container {
-            border: 1px solid red;
-            display: grid;
-     justify-content: center;
-            grid-template-columns: 210px 300px 210px;
-            grid-template-rows: repeat(20, 50px);
-            grid-gap: 1px;
-            background-color: rgb(233, 233, 233);
-        
-            /* font-family: 'Oswald', sans-serif; */
-            font-family: 'Open Sans', sans-serif;
+            width: 255mm;
+            min-height: 325mm;
+            margin: 0.5mm auto;
+            page-break-after: always;
+            z-index: 1;
+            position: relative;
+            overflow: hidden;
+   
         }
 
-        .grid-container>div {
-        
-            font-size: 0.8em;
+        .cv_wrapper::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
+            background: #fffef0;
+opacity: 0.7;
+            z-index: -2;
+        }
+
+        .cv_wrapper::before {
+       
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: scale(1.05);
+            background-image: url(/template/assets/img/png/papper.png);
+            background-repeat: no-repeat;
+            background-position:top;
+            background-size: cover;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        .grid-container {
+            padding: 10px;
+            display: block;
+        }
+
+        .cv_line1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
         }
 
         .itemBox-0 {
-            grid-column: 1 / span 3;
-            grid-row: 1 /span 2;
-          
-      margin: auto;
+            text-align: center;
+            margin: 0 auto;
+            font-family: 'Cinzel', serif
         }
-      
+
+        .grid-container-middle {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            flex-wrap: nowrap;
+            gap: 5px;
+        }
+
+        .left-grid-container {
+            text-align: start;
+            width: 260px;
+            max-width: 260px;
+            border: 1px solid red;
+
+        }
+
+        .center-grid-container {
+            max-width: 450px;
+            width: 450px;
+            border: 1px solid rgb(38, 119, 240);
+        }
+
+        .right-grid-container {
+            width: 260px;
+            max-width: 260px;
+            border: 1px solid green;
+        }
 
         .itemBox0 {
-            grid-column: 1 / span 3;
-            grid-row: 3;
             letter-spacing: 0.1px;
-            font-family: 'Lateef', cursive;
-            font-weight: bolder;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
             border-top: 3px solid black;
             border-bottom: 3px solid black;
-           
+            font-size: 1.60em;
+            padding: 15px 0px;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1;
+
         }
 
+        ._box {
+            /* background-color: crimson; */
+            padding: 10px;
+            /* margin: 0 auto; */
+        }
+
+
+        .cv_welcome {
+            font-size: 5em;
+            font-weight: 500;
+        }
+
+        .cv_aboutMe_text {
+            font-size: 0.7em;
+            letter-spacing: 1px;
+            text-align: justify;
+            padding: 5px 20px;
+        }
 
         .itemBox1 {
-            background-image: url(/template/assets/img/png/selfportrait.png);
+            background-image: url(/template/assets/img/png/selfportrait3.png);
             background-position: center;
             background-repeat: no-repeat;
-            background-size: contain;
-            width: 100%;          
+            background-size: cover;
+            width: 100%;
+            height: 200px;
             z-index: 213;
-            justify-self: stretch;
-            grid-column: 1;
-            grid-row: 4 /span 4;
-         
+            transition: 0.5s ease;
+
+
         }
 
-        .itemBox2 {
-            grid-column: 1;
-            grid-row: 8 /span 2;
-          
-        }
-        .itemBox3 {
-            grid-column: 1;
-            grid-row: 10 /span 6;
-            background-color: red;
-          
-        }
-        .itemBox4 {
-            grid-column: 1;
-            grid-row: 16 /span 5;
-            background-color: cyan;
-        }
-        .itemBox5 {
-            grid-column: 2;
-            grid-row: 4 /span 4;
-            background-color: purple;
+        .itemBox1:hover {
+            background-color: crimson;
         }
 
-        .itemBox6 {
-            grid-column: 2;
-            grid-row: 8 /span 5;
-            background-color: purple;
-        }
-        .itemBox7 {
-            grid-column: 2;
-            grid-row: 13 /span 5;
-            background-color: red;
-        }
-        .itemBox8 {
-            grid-column: 2;
-            grid-row: 18 /span 3;
-            background-color: red;
-        }
-        .itemBox9 {
-            grid-column: 3;
-            grid-row: 4 / span 17;
-            background-color: green;
+        .itemBox1:active {
+            background-color: orange;
         }
 
-        .cv_line1{
+
+
+.itemBox3{
+    height: 240px;
+    border: 2px solid black;
+}
+
+        .cv_section1_box {
+            padding: 5px;
+        }
+
+        .cv_section1_box h2 {
+            text-align: start;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.2em;
+            font-weight: 700;
+            padding: 0px !important;
+            margin-top: -5px;
+        }
+
+
+        .cv_character {
+            margin-top: 5px;
+        }
+
+        .cv_character>div,
+        .cv_education>div {
+            font-size: 0.73rem;
+            font-weight: 600;
+            color: rgb(78, 78, 78);
+            letter-spacing: -0.1px;
+            margin-top: -1px;
+        }
+
+        .cv_education {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: relative;
+        }
+
+        .cv_education h2::after {
+            content: "ROMANIA";
+            position: absolute;
+            top: 25px;
+            left: 1.5px;
+            font-size: 0.4em;
+
+        }
+
+
+        .dev_main {
+            width: 100%;
+            margin: 0 auto;
+
+        }
+
+        .dev_progress {
+            margin: 10px 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dev_title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2px;
+        }
+
+        .dev_title h3 {
+            font-size: 1.2em;
+            text-transform: capitalize;
+            font-weight: 400;
+            width: 80px;
+        }
+
+        .dev_barline {
+            height: 14px;
+            width: 100%;
+            background: #c8d6e5;
+            border-radius: 20px;
+        }
+
+        .dev_countbar {
+            height: 14px;
+            background: #5f27cd;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            position: relative;
+        }
+
+        .dev_countbar h3 {
+            position: absolute;
+            right: 5px;
+            top: -6.5px;
+            /* background: #34495e; */
+            padding: 4px 6px;
+            font-size: 12px;
+            font-weight: 300;
+            border-radius: 5px;
+            color: azure;
+        }
+
+
+        /* .dev_countbar h3::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 48%;
+            width: 11px;
+            height: 11px;
+            background: #34495e;
+
+            transform: rotate(45deg) translateX(-60%);
+        } */
+
+
+
+
+        /***********dek skills shape**************/
+
+        .dev_shape_skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            height: -webkit-fill-available;
+        }
+
+
+
+        .skills-shape {
+            width: 80px;
+            height: 80px;
+            border-radius: 50px;
+            background-color: #d8d8d8;
+            border: 15px solid black;
+
+        }
+
+        .skills-shape>div {
+            text-align: center;
+            align-items: center;
+            display: flex;
+            height: 100%;
+            justify-content: center;
+        }
+
+        .js-skills {
+            border: 15px solid rgb(255, 81, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 15px solid rgb(15, 99, 224);
+            border-left: 15px solid rgb(15, 99, 224);
+        }
+
+
+        .smokeBox:hover {
+            background-color: red;
+        }
+
+
+
+
+        /***********end dek skills shape**************/
+
+
+
+        /*****box 9*****/
+        .romana-lang,
+        .engleza-lang {
+            width: 80px;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+
+        }
+
+        .shape-flag {
+            width: 30px;
+            height: 40px;
+
+        }
+
+        .lang-cv {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            position: relative;
+        }
+
+        .romana-lang::before {
+            content: "romana";
+            position: absolute;
+            bottom: -20px;
+            left: 13%;
+            width: 100%;
+
+        }
+
+        .engleza-lang::after {
+            content: "english";
+            position: absolute;
+            bottom: -20px;
+            left: 71%;
+            width: 100%;
+
+        }
+
+        .section9 {
+            display: flex;
+            flex-direction: column;
+            gap: 20em;
+
+        }
+
+
+
+
+        /*****end  box 9*****/
+
+
+        /*******engleza-lang******/
+
+        .engleza-lang {
+            background-color: blue;
             display: flex;
             align-items: center;
-            gap: 20px;
+            justify-content: center;
+            overflow: hidden;
+            border: 2px solid white;
+            z-index: 23;
         }
-        .cv_welcome{
-            font-size: 5em;
-        }
-        .cv_aboutMe_text{
-            font-size: 1.1em;
-            letter-spacing: 1px;
-        }
-.itemBox0 > div{
-    font-size: 1.6em;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 2;
-}
-.cv_section1_box h2 {
-    text-align: center;
-    text-transform: uppercase;
-}
-.cv_education{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
 
-    
+        .first-line-flag {
+            background-color: red;
+            width: 100%;
+            height: 8px;
+            border: 1.8px solid white;
+            z-index: 4;
+        }
+
+        .second-line-flag {
+            background-color: red;
+            width: 19%;
+            height: 8px;
+            transform: rotate(90deg);
+            position: absolute;
+            border: 1.8px solid white;
+            z-index: 2;
+        }
+
+        .third-line-flag {
+            background-color: red;
+            width: 50%;
+            height: 8px;
+            transform: rotate(25deg);
+            position: absolute;
+            border: 1.8px solid white;
+        }
+
+        .four-line-flag {
+            background-color: red;
+            width: 50%;
+            height: 8px;
+            transform: rotate(-25deg);
+            position: absolute;
+            border: 1.8px solid white;
+        }
+
+
+        #items8 {
+            background-color: red;
+        }
+
+        /*******engleza-lang******/
+
+
+
+
+        /*artistic skills*/
+
+
+        .container-artistic {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 15vh;
+            border: 1px solid black;
+        }
+
+        .right-artistic {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .artistic-footer {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            align-items: center;
+            height: -webkit-fill-available;
+        }
     </style>
 </head>
 
 <body>
 
 
-<div class="cv_wrapper"> 
-    <button>donwload CV</button>
-    <div class="grid-container">
-        <div class="itemBox-0"> <div class="cv_line1">
-            <div class="cv_welcome">Hello!</div>
-            <div class="cv_aboutMe_text">Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Omnis
-                provident
-                iusto cupiditate incidunt similique repellendus amet
-                consequuntur id ea eveniet id ea eveniet id
-                ea eveniet id ea evenietid ea evenietid ea evenietid
-                ea evenietid ea eveniet.</div>
-        </div></div>
-        <div class="itemBox0"> <div>Curiculum Vitae Of Marian Iordache, <span>Front-End developer</span></div> </div>
-        <div class="itemBox1" style="position: relative; overflow: hidden;">
-            <div class="cv_picture cv_section1_box">
-                <div id="smoke" class="smokeBox">
-                    <span class="s0"></span>
-                    <span class="s1"></span>
-                    <span class="s2"></span>
-                    <span class="s3"></span>
-                    <span class="s4"></span>
-                    <span class="s5"></span>
-                    <span class="s6"></span>
-                    <span class="s7"></span>
-                    <span class="s8"></span>
-                    <span class="s9"></span>
-                  </div>
-            </div>
-        </div>
-        <div class="itemBox2">
-            <div class="cv_character cv_section1_box">
-                <h2>Characteristics</h2>
-                <div>Open minded, organized, calm, <br> interested, clean, motivated, flexibile, intelligent
+    <div class="cv_wrapper">
+        <button style="position: absolute;">donwload CV</button>
+        <div class="grid-container">
+            <div class="grid-container-top itemBox-0">
+                <div class="cv_line1">
+                    <div class="cv_welcome">HELLO!</div>
+                    <div class="cv_aboutMe_text">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Omnis
+                        provident
+                        iusto cupiditate incidunt similique repellendus amet
+                        consequuntur id ea eveniet id ea eveniet id
+                        ea eveniet id ea evenietid ea evenietid ea evenietid
+                        ea evenietid ea eveniet.</div>
+                </div>
+                <div class="itemBox0">
+                    <div>Curiculum Vitae Of Marian Iordache, <span>Front-End developer</span></div>
                 </div>
             </div>
-        </div>
-        <div class="itemBox3">  <div class="cv_education cv_section1_box">
-            <h2>Education</h2>
-            <div class="first_education">
-                <div>Colegiul Tehnic Media</div>
-                <div>Romania</div>
-                <div>2002-2006</div>
-                <div>Profil: operator tehnic calcul</div>
-            </div>
-            <div class="second_education">
-                <div>Universitatea Media Pro</div>
-                <div>Romania</div>
-                <div>2006-2008</div>
-                <div>Profil: Regie/Film</div>
-            </div>
-            <div class="third_education">
-                <div>Scoala informala de IT</div>
-                <div>Romania</div>
-                <div>04-2019 - 08-2019 <span> Front-End Developer</span></div>
-                <div>05-2021 - 07-2021 <span> React Js</span></div>
-                <div>05-2021 - 07-2021 <span> React Js</span></div>
-               
-            </div>
-        </div></div>
-        <div class="itemBox4"><div class="cv_workExp cv_section1_box">
-            <h2>Work Experience</h2>
-            <fieldset>
-                <legend>Videographer:</legend>
-                <div class="Videographer">
-                  <span>filming <br>
-                    editing video <br>
-                    production</span>
-                </div>
+            <div class="grid-container-middle">
+                <div class="left-grid-container left-box _box">
+                    <div class="itemBox1" style="position: relative; overflow: hidden;">
+                        <div class="cv_picture cv_section1_box">
+                            <div id="smoke" class="smokeBox">
+                                <span class="s0"></span>
+                                <span class="s1"></span>
+                                <span class="s2"></span>
+                                <span class="s3"></span>
+                                <span class="s4"></span>
+                                <span class="s5"></span>
+                                <span class="s6"></span>
+                                <span class="s7"></span>
+                                <span class="s8"></span>
+                                <span class="s9"></span>
+                            </div>
+                        </div>
+                    </div>
 
-            </fieldset>
-        </div></div>
-        <div class="itemBox5">
-            <div class="devSkills">
-                <h2>Dev Skills</h2>
+                    <div class="itemBox2">
+                        <div class="cv_character cv_section1_box">
+                            <h2>Characteristics</h2>
+                            <div>Open minded, organized, calm, interested, motivated, flexibile, intelligent, clean
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="itemBox3">
+                        <div class="cv_education cv_section1_box">
+                            <h2>Education</h2>
+
+                            <div class="first_education">
+                                <div data-type="test">Colegiul Tehnic Media</div>
+
+                                <div>2002-2006</div>
+                                <div>Profil: operator tehnic calcul</div>
+                            </div>
+                            <div class="second_education">
+                                <div>Universitatea Media Pro</div>
+
+                                <div>2006-2008</div>
+                                <div>Profil: Regie/Film</div>
+                            </div>
+                            <div class="third_education">
+                                <div>Scoala informala de IT</div>
+
+                                <div>04-2019 - 08-2019 <span> Front-End Developer</span></div>
+                                <div>05-2021 - 07-2021 <span> React Js</span></div>
+                                <div>05-2021 - 07-2021 <span> React Js</span></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="itemBox4">
+                        <div class="cv_workExp cv_section1_box">
+                            <h2>Work Experience</h2>
+                            <fieldset>
+                                <legend>Videographer:</legend>
+                                <div class="Videographer">
+                                    <span>filming <br>
+                                        editing video <br>
+                                        production</span>
+                                </div>
+
+                            </fieldset>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="itemBox4">
+                        <div class="cv_workExp cv_section1_box">
+                            <h2>Work Experience</h2>
+                            <fieldset>
+                                <legend>Videographer:</legend>
+                                <div class="Videographer">
+                                    <span>filming <br>
+                                        editing video <br>
+                                        production</span>
+                                </div>
+
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-grid-container center-box _box">
+                    <div class="itemBox5">
+                        <div class="devSkills">
+                            <h2>Dev Skills</h2>
+                            <div class="dev_main">
+                                <div class="dev_progress">
+                                    <div class="dev_title">
+                                        <h3>HTML</h3>
+                                    </div>
+                                    <div class="dev_barline">
+                                        <div class="dev_countbar" data-percentNumber="90"></div>
+                                    </div>
+                                </div>
+                                <div class="dev_progress">
+                                    <div class="dev_title">
+                                        <h3>CSS</h3>
+                                    </div>
+                                    <div class="dev_barline">
+                                        <div class="dev_countbar" data-percentNumber="80"></div>
+                                    </div>
+                                </div>
+                                <div class="dev_progress">
+                                    <div class="dev_title">
+                                        <h3>javascript</h3>
+                                    </div>
+                                    <div class="dev_barline">
+                                        <div class="dev_countbar" data-percentNumber="50"></div>
+                                    </div>
+                                </div>
+                                <div class="dev_progress">
+                                    <div class="dev_title">
+                                        <h3>Dom</h3>
+                                    </div>
+                                    <div class="dev_barline">
+                                        <div class="dev_countbar" data-percentNumber="71"></div>
+                                    </div>
+                                </div>
+                                <div class="dev_progress">
+                                    <div class="dev_title">
+                                        <h3>React Js</h3>
+                                    </div>
+                                    <div class="dev_barline">
+                                        <div class="dev_countbar" data-percentNumber="30"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="itemBox6">
+                        <h2></h2>
+                        <div class="dev_shape_skills">
+                            <div class="js-skills skills-shape">
+                                <div>JS</div>
+                            </div>
+                            <div class="css-skills skills-shape">
+                                <div>CSS</div>
+                            </div>
+                            <div class="react-skills skills-shape">
+                                <div>CSS</div>
+                            </div>
+                            <div class="firebase-skills skills-shape">
+                                <div>CSS</div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <div class="itemBox7">
+                        <div class="artisticSkills">
+                            <h2>artistic skills</h2>
+                            <div class="container-artistic">
+                                <div class="left-artistic">
+                                    Adobe
+                                </div>
+                                <div class="right-artistic">
+                                    <span>Premiere</span>
+                                    <span>Photoshop</span>
+                                    <span>XD</span>
+                                    <span>Illustrator</span>
+                                    <span>DaVinci</span>
+                                    <span>Figma</span>
+
+                                </div>
+                            </div>
+                            <div class="artistic-footer">
+                                <div class="artisticPr-skills skills-shape">
+                                    <div>Pr</div>
+                                </div>
+                                <div class="artisticPr-skills skills-shape">
+                                    <div>XD</div>
+                                </div>
+                                <div class="artisticPr-skills skills-shape">
+                                    <div>PS</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="itemBox8" id="items8">
+                        <h2>Hobby's</h2>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="right-grid-container right-box _box">
+                    <div class="itemBox9">
+                        <div class="section9">
+                            <div class="lang-cv">
+                                <div class="romana-lang">
+                                    <div class="blue-color shape-flag" style="background-color: blue;"></div>
+                                    <div class="yellow-color shape-flag" style="background-color: yellow;"></div>
+                                    <div class="red-color shape-flag" style="background-color: red;"></div>
+                                </div>
+                                <div class="engleza-lang">
+                                    <div class="first-line-flag"></div>
+                                    <div class="second-line-flag"></div>
+                                    <div class="third-line-flag"></div>
+                                    <div class="four-line-flag"></div>
+                                </div>
+                            </div>
+                            <div class="interest-cv">interest</div>
+                            <div class="follow-cv">
+                                <div class="facebook-cv">fb</div>
+                                <div class="insta-cv">insta</div>
+                                <div class="mail-cv">mail</div>
+                                <div class="linkedin-cv">linkedin</div>
+                                <div class="cssBattle-cv">css battle</div>
+                                <div class="phone-cv">0765.965.155</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
+            <div class="grid-container-footer">
+                footer
+            </div>
         </div>
-        <div class="itemBox6">6</div>
-        <div class="itemBox7"><div class="artisticSkills">
-            <h2>artistic skills</h2>
-        </div></div>
-        <div class="itemBox8">8</div>
-        <div class="itemBox9">9</div>
     </div>
-</div>
+    <script>
+        let numberPercent = document.querySelectorAll('.dev_countbar');
+        let getPercent = Array.from(numberPercent);
+        getPercent.map((items) => {
+            let startCount = 0;
+            let progressBar = () => {
+                startCount++;
+                items.innerHTML = `<h3>${startCount}%</h3>`;
+                items.style.width = `${startCount}%`;
+                if (startCount == items.dataset.percentnumber) {
+                    clearInterval(stop);
+                }
+            }
+            let stop = setInterval(() => {
+                progressBar();
+            }, 25)
+        });
+    </script>
 </body>
 
 </html>
