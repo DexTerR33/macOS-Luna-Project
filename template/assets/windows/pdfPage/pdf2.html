@@ -6,7 +6,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
     <style>
         /*font-family: 'Cinzel', serif;*/
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+        /* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap'); */
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
         *,
         *::after,
@@ -19,7 +22,8 @@
         /***   smoke**/
 
         :root {
-            --fontSize: calc((1vw + 1vh) * .75);
+            --fontSize: calc((1vw + 1vh) / 1.8);
+            --fontSizeSmall: calc((1vw + 1vh) / 2.5);
             --fontSizeH2: calc((1vw + 1vh) / 2);
         }
 
@@ -41,8 +45,13 @@
         } */
 
         body {
-            /* font: var(--fontSize)/80% 'Open Sans', sans-serif; */
-            font-family: 'Cinzel', serif
+            /* font: var(--fontSize)/80% 'Open Sans', sans-serif;
+            font-family: 'Merriweather', serif; */
+            /* font-family: 'Cinzel', serif */
+            /* font-family: 'Merriweather', serif; */
+            /* font-family: 'Mukta', sans-serif; */
+            letter-spacing: -0.5px;
+            font-family: 'Work Sans', sans-serif;
         }
 
         /***   smoke**/
@@ -207,7 +216,7 @@
         .itemBox-0 {
             text-align: center;
             margin: 0 auto;
-            font-family: 'Cinzel', serif
+
         }
 
         .grid-container-middle {
@@ -222,25 +231,24 @@
             text-align: start;
             width: 260px;
             max-width: 260px;
-     
+
 
         }
 
         .center-grid-container {
             max-width: 450px;
             width: 450px;
-           
+
         }
 
         .right-grid-container {
             width: 260px;
             max-width: 260px;
-          
+
         }
 
         .itemBox0 {
             letter-spacing: 0.1px;
-          
             font-weight: 600;
             border-top: 3px solid black;
             border-bottom: 3px solid black;
@@ -249,6 +257,7 @@
             text-transform: uppercase;
             text-align: center;
             line-height: 1;
+
 
         }
 
@@ -261,13 +270,18 @@
 
         .cv_welcome {
             font-size: 5em;
-            font-weight: 500;
+            font-weight: 600;
+
+        }
+
+        .cv_line1 {
+            border-top: 1px solid #131313;
         }
 
         .cv_aboutMe_text {
-            font-size: 0.7em;
-            letter-spacing: 1px;
-            text-align: justify;
+            font-size: var(--fontSizeSmall);
+            word-break: break-all;
+            text-align: start;
             padding: 5px 20px;
         }
 
@@ -280,36 +294,26 @@
             height: 200px;
             z-index: 213;
             transition: 0.5s ease;
-
-
         }
 
-        .itemBox1:hover ,.itemBox5:hover {
-          background-color: #9b622960;
+        .itemBox1:hover,
+        .itemBox5:hover {
+            background-color: #9b622960;
             box-shadow: 0 0 5px 0 grey;
             transition: ease 1s;
         }
 
-        .itemBox1:active {
-          
-        }
-
-
-
         .itemBox3 {
-            height: 240px;
-           
+            height: 180px;
+
         }
 
-        .cv_section1_box {
-            padding: 5px;
-        }
+       
 
         .cv_section1_box h2 {
             text-align: start;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: var(--fontSizeH2);
+            font-size: calc(var(--fontSizeH2) * 1.62);
             font-weight: 700;
             padding: 0px !important;
             margin-top: -5px;
@@ -318,24 +322,33 @@
 
         .cv_character {
             margin-top: 5px;
+            margin-bottom: 5px;
         }
 
-        .cv_character>div,
-        .cv_education>div {
-            font-size: 0.73rem;
-            font-weight: 600;
-            color: rgb(78, 78, 78);
-            letter-spacing: -0.1px;
-            margin-top: -1px;
+        .cv_character>p,
+        .cv_education div>p,
+        .cv_textBox4>p {
+            font-size: calc(var(--fontSizeSmall) / 0.95);
+            font-weight: 500;
+            
         }
 
         .cv_education {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
             position: relative;
+         
+        }
+        .cv_education div {
+            margin-top: -5px;
+        }
+        .cv_education div>p:first-child {
+            font-size: calc(var(--fontSizeSmall) * 1.07);
+            font-weight: 600;
         }
 
+        /* 
         .cv_education h2::after {
             content: "ROMANIA";
             position: absolute;
@@ -343,6 +356,26 @@
             left: 1.5px;
             font-size: 0.4em;
 
+        } */
+
+        .itemBox4 {
+            height: 240px;
+   
+            margin-bottom: 10px;
+        }
+
+        .cv_textBox4>p {
+            word-break: break-all;
+            text-align: justify;
+      
+        }
+
+        .cv_textBox4>p:first-letter {
+
+            float: left;
+            font-size: 6rem;
+            line-height: 0.55;
+            margin:8px 8px 8px -8px;
         }
 
         .itemBox5 {
@@ -372,7 +405,7 @@
         }
 
         .dev_title h3 {
-            font-size: var(--fontSize) -10px;
+            font-size: var(--fontSize);
             text-transform: capitalize;
             font-weight: 500;
 
@@ -390,9 +423,6 @@
         .dev_countbar,
         .dev_barline {
             height: 13px;
-            font-size: 1px;
-
-
         }
 
         .dev_countbar {
@@ -401,8 +431,6 @@
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
             position: relative;
-
-
         }
 
         .dev_countbar h3 {
@@ -411,7 +439,6 @@
             top: -6.5px;
             /* background: #34495e; */
             padding: 4px 6px;
-            font-size: 12px;
             font-weight: 300;
             border-radius: 2px;
             color: rgb(230, 230, 230);
@@ -434,15 +461,17 @@
 
 
         /***********dek skills shape**************/
-.itemBox6{
-    display: block;
-    padding: 10px 0;
-    border-bottom: 1px solid rgb(94, 94, 94);
-}
-.itemBox6 p{
-    padding: 10px 0 5px 0;
-}
-.dev_shape_skills {
+        .itemBox6 {
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid rgb(94, 94, 94);
+        }
+
+        .itemBox6 p {
+            padding: 10px 0 5px 0;
+        }
+
+        .dev_shape_skills {
             text-align: center;
             display: flex;
             flex-direction: row;
@@ -451,7 +480,7 @@
             align-items: flex-start;
             height: 100%;
             position: relative;
-            width: 100%;  
+            width: 100%;
         }
 
         .skills-shape {
@@ -460,25 +489,28 @@
             left: 0;
             width: 100%;
         }
-      
-        .chart::before{ content: "("attr(data-percent)"%)";
-        position: absolute;
-        top:38%;
-        left:50%;
-        transform: translate(-50%,-50%);
+
+        .chart::before {
+            content: ""attr(data-percent)"%";
+            position: absolute;
+            top: 38%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
-            font-size: 16px;
-            animation: percent 1.5s ease forwards ;
+            font-size: var(--fontSizeSmall);
+            animation: percent 1.5s ease forwards;
             opacity: 0;
         }
+
         @keyframes percent {
             from {
                 opacity: 0;
             }
-            to{
+
+            to {
                 opacity: 1;
             }
-            
+
         }
 
 
@@ -592,9 +624,7 @@
         }
 
 
-        #items8 {
-           
-        }
+      
 
         /*******engleza-lang******/
 
@@ -612,9 +642,77 @@
             border: 1px solid black;
         }
 
+        .adobe-icons {
+            width: 48px;
+            height: 48px;
+            background: #001d34;
+            border-radius: 0.7em;
+            display: flex;
+            box-shadow: 0 2px 5px 2px rgb(0 0 0 / 30%);
+        }
+
+        .adobe-icons>div {
+            margin: auto;
+            font-size: 1.3em;
+            font-family: "Open Sans Condensed", sans-serif;
+            font-weight: 700;
+            color: #1c9cff;
+            transform: scaleY(1.1);
+            background-color: red;
+        }
+
+        .premiere-icon {
+            background: #240832;
+        }
+
+        .premiere-icon>div {
+            color: #e373f7;
+        }
+
+        .afterEffect-icon {
+            background: #000058;
+        }
+
+        .afterEffect-icon>div {
+            color: #9494f7;
+        }
+
+        .adobe-xd-icon {
+            background: #450135;
+            border: 5px solid white;
+        }
+
+        .adobe-xd-icon>div {
+            color: #f75eee;
+        }
+
+
+
         .right-artistic {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: start;
+            align-items: center;
+            width: 150px;
+            gap: 5px;
+            max-width: 150px;
+
+            position: relative;
+
+        }
+
+        .right-artistic::before {
+            content: "ADOBE";
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            width: 150px;
+            height: 150px;
+            transform: rotate(-90deg) translate(50%, -50%);
+            font-size: 2em;
+            font-weight: 700;
+            text-align: center;
         }
 
         .artistic-footer {
@@ -666,58 +764,49 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="itemBox2">
                         <div class="cv_character cv_section1_box">
-                            <h2>Characteristics</h2>
-                            <div>Open minded, organized, calm, interested, motivated, flexibile, intelligent, clean
-                            </div>
+        
+                            <p>Open minded, organized,interested ,calm,  motivated, intelligent, clean,cleanssss
+                            </p>
                         </div>
                     </div>
-                    <br>
+                 
+                    <div class="itemBox4">
+                        <div class="cv_textBox4 cv_section1_box">     
+                              <p>Open minded, organized,interested ,calm,  motivated, intelligent, clean,cleanssss
+                            </p>     
+                            <p>Morem ipsum dolor sit amet consectetur adipisicing elit. Quasi nulla quae voluptas
+                                accusamus, cum voluptate omnis, ab totam repellat eius, quia aliquam nisi dolor quidem
+                                autem veniam error quisquam dolorib ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae sunt suscipit commodi assumenda architecto consequatur, deleniti tempora eaque nulla quas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, numquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, laborum! Lorem ipsum</p>
+                        </div>
+                    </div>
+                  
                     <div class="itemBox3">
                         <div class="cv_education cv_section1_box">
                             <h2>Education</h2>
-
                             <div class="first_education">
-                                <div data-type="test">Colegiul Tehnic Media</div>
-
-                                <div>2002-2006</div>
-                                <div>Profil: operator tehnic calcul</div>
+                                <p>Colegiul Tehnic Media</p>
+                                <p>2002-2006</p>
+                                <p>Profil: operator tehnic calcul</p>
                             </div>
                             <div class="second_education">
-                                <div>Universitatea Media Pro</div>
-
-                                <div>2006-2008</div>
-                                <div>Profil: Regie/Film</div>
+                                <p>Universitatea Media Pro</p>
+                                <p>2006-2008</p>
+                                <p>Profil: Regie/Film</p>
                             </div>
                             <div class="third_education">
-                                <div>Scoala informala de IT</div>
-
-                                <div>04-2019 - 08-2019 <span> Front-End Developer</span></div>
-                                <div>05-2021 - 07-2021 <span> React Js</span></div>
-                                <div>05-2021 - 07-2021 <span> React Js</span></div>
+                                <p>Scoala informala de IT</p>
+                                <p>04-2019 - 08-2019 <span> Front-End Developer</span></p>
+                                <p>05-2021 - 07-2021 <span> React Js</span></p>
+                                <p>05-2021 - 07-2021 <span> React Js</span></p>
 
                             </div>
                         </div>
                     </div>
-                    <br>
-                    <div class="itemBox4">
-                        <div class="cv_workExp cv_section1_box">
-                            <h2>Work Experience</h2>
-                            <fieldset>
-                                <legend>Videographer:</legend>
-                                <div class="Videographer">
-                                    <span>filming <br>
-                                        editing video <br>
-                                        production</span>
-                                </div>
-
-                            </fieldset>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="itemBox4">
+                   
+               
+                    <div class="itemBox4-1">
                         <div class="cv_workExp cv_section1_box">
                             <h2>Work Experience</h2>
                             <fieldset>
@@ -784,9 +873,9 @@
 
                     </div>
                     <div class="itemBox6">
-                     
+
                         <h2>Creativity skills</h2>
-                      
+
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, vero?</p>
                         <div class="dev_shape_skills">
                             <div class="js-skills skills-shape">
@@ -814,17 +903,27 @@
                         <div class="artisticSkills">
                             <h2>artistic skills</h2>
                             <div class="container-artistic">
-                                <div class="left-artistic">
-                                    Adobe
-                                </div>
+
                                 <div class="right-artistic">
-                                    <span>Premiere</span>
-                                    <span>Photoshop</span>
-                                    <span>XD</span>
-                                    <span>Illustrator</span>
+
+                                    <div class="adobe-icons photoshop-icon">
+                                        <div>Ps</div>
+                                    </div>
+                                    <div class="adobe-icons premiere-icon">
+                                        <div>Pr</div>
+                                    </div>
+                                    <div class="adobe-icons afterEffect-icon">
+                                        <div>Ae</div>
+                                    </div>
+                                    <div class="adobe-icons adobe-xd-icon">
+                                        <div>Xd</div>
+                                    </div>
                                     <span>DaVinci</span>
                                     <span>Figma</span>
 
+                                </div>
+                                <div class="left-artistic">
+                                    Adobe
                                 </div>
                             </div>
                             <div class="artistic-footer">
@@ -843,9 +942,9 @@
                     </div>
                     <div class="itemBox8" id="items8">
                         <h2>Hobby's</h2>
-                       <ul>
-                           <li></li>
-                       </ul>
+                        <ul>
+                            <li></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="right-grid-container right-box _box">
@@ -878,21 +977,21 @@
                 </div>
             </div>
             <div class="grid-container-footer">
-              <div class="gitHubLinks">
-                  <a href="#">31</a>
-                  <a href="#">31</a>
-                  <a href="#">31</a>
-              </div>
-              <div class="css_battle">
-                <a href="#">31</a>
-                <a href="#">31</a>
-                <a href="#">31</a>
-            </div>
-            <div class="css_battle">
-                <a href="#">31</a>
-                <a href="#">31</a>
-                <a href="#">31</a>
-            </div>
+                <div class="gitHubLinks">
+                    <a href="#">31</a>
+                    <a href="#">31</a>
+                    <a href="#">31</a>
+                </div>
+                <div class="css_battle">
+                    <a href="#">31</a>
+                    <a href="#">31</a>
+                    <a href="#">31</a>
+                </div>
+                <div class="css_battle">
+                    <a href="#">31</a>
+                    <a href="#">31</a>
+                    <a href="#">31</a>
+                </div>
             </div>
         </div>
     </div>
@@ -923,7 +1022,7 @@
                 trackColor: "grey",
                 lineCap: "circle",
                 animate: 1500,
-                
+
             });
         });
     </script>
