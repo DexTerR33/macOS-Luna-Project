@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
     <style>
         /*font-family: 'Cinzel', serif;*/
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
@@ -18,6 +20,7 @@
 
         :root {
             --fontSize: calc((1vw + 1vh) * .75);
+            --fontSizeH2: calc((1vw + 1vh) / 2);
         }
 
 
@@ -155,7 +158,7 @@
             z-index: 1;
             position: relative;
             overflow: hidden;
-   
+
         }
 
         .cv_wrapper::after {
@@ -167,12 +170,12 @@
             height: 100%;
             box-shadow: 2px 3px 20px black, 0 0 125px #8f5922 inset;
             background: #fffef0;
-opacity: 0.7;
+            opacity: 0.7;
             z-index: -2;
         }
 
         .cv_wrapper::before {
-       
+
             content: "";
             position: absolute;
             top: 0;
@@ -182,7 +185,7 @@ opacity: 0.7;
             transform: scale(1.05);
             background-image: url(/template/assets/img/png/papper.png);
             background-repeat: no-repeat;
-            background-position:top;
+            background-position: top;
             background-size: cover;
             opacity: 0.3;
             z-index: -1;
@@ -219,25 +222,25 @@ opacity: 0.7;
             text-align: start;
             width: 260px;
             max-width: 260px;
-            border: 1px solid red;
+     
 
         }
 
         .center-grid-container {
             max-width: 450px;
             width: 450px;
-            border: 1px solid rgb(38, 119, 240);
+           
         }
 
         .right-grid-container {
             width: 260px;
             max-width: 260px;
-            border: 1px solid green;
+          
         }
 
         .itemBox0 {
             letter-spacing: 0.1px;
-            font-family: 'Cinzel', serif;
+          
             font-weight: 600;
             border-top: 3px solid black;
             border-bottom: 3px solid black;
@@ -281,20 +284,22 @@ opacity: 0.7;
 
         }
 
-        .itemBox1:hover {
-            background-color: crimson;
+        .itemBox1:hover ,.itemBox5:hover {
+          background-color: #9b622960;
+            box-shadow: 0 0 5px 0 grey;
+            transition: ease 1s;
         }
 
         .itemBox1:active {
-            background-color: orange;
+          
         }
 
 
 
-.itemBox3{
-    height: 240px;
-    border: 2px solid black;
-}
+        .itemBox3 {
+            height: 240px;
+           
+        }
 
         .cv_section1_box {
             padding: 5px;
@@ -304,7 +309,7 @@ opacity: 0.7;
             text-align: start;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-size: 1.2em;
+            font-size: var(--fontSizeH2);
             font-weight: 700;
             padding: 0px !important;
             margin-top: -5px;
@@ -340,6 +345,10 @@ opacity: 0.7;
 
         }
 
+        .itemBox5 {
+            padding: 0px 0px 25px 0px;
+            border-bottom: 1px solid rgb(94, 94, 94);
+        }
 
         .dev_main {
             width: 100%;
@@ -348,11 +357,12 @@ opacity: 0.7;
         }
 
         .dev_progress {
-            margin: 10px 0;
+            margin: 1px 0;
             display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 10px;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: start;
+
         }
 
         .dev_title {
@@ -362,25 +372,37 @@ opacity: 0.7;
         }
 
         .dev_title h3 {
-            font-size: 1.2em;
+            font-size: var(--fontSize) -10px;
             text-transform: capitalize;
-            font-weight: 400;
-            width: 80px;
+            font-weight: 500;
+
+
         }
 
         .dev_barline {
-            height: 14px;
             width: 100%;
             background: #c8d6e5;
-            border-radius: 20px;
+            border-radius: 2px;
+
+
+        }
+
+        .dev_countbar,
+        .dev_barline {
+            height: 13px;
+            font-size: 1px;
+
+
         }
 
         .dev_countbar {
-            height: 14px;
-            background: #5f27cd;
+            box-shadow: 0px 0px 5px 0px #131313;
+            background: #131313;
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
             position: relative;
+
+
         }
 
         .dev_countbar h3 {
@@ -391,8 +413,8 @@ opacity: 0.7;
             padding: 4px 6px;
             font-size: 12px;
             font-weight: 300;
-            border-radius: 5px;
-            color: azure;
+            border-radius: 2px;
+            color: rgb(230, 230, 230);
         }
 
 
@@ -412,48 +434,53 @@ opacity: 0.7;
 
 
         /***********dek skills shape**************/
-
-        .dev_shape_skills {
+.itemBox6{
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(94, 94, 94);
+}
+.itemBox6 p{
+    padding: 10px 0 5px 0;
+}
+.dev_shape_skills {
+            text-align: center;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            height: -webkit-fill-available;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            height: 100%;
+            position: relative;
+            width: 100%;  
         }
-
-
 
         .skills-shape {
-            width: 80px;
-            height: 80px;
-            border-radius: 50px;
-            background-color: #d8d8d8;
-            border: 15px solid black;
-
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
         }
-
-        .skills-shape>div {
+      
+        .chart::before{ content: "("attr(data-percent)"%)";
+        position: absolute;
+        top:38%;
+        left:50%;
+        transform: translate(-50%,-50%);
             text-align: center;
-            align-items: center;
-            display: flex;
-            height: 100%;
-            justify-content: center;
+            font-size: 16px;
+            animation: percent 1.5s ease forwards ;
+            opacity: 0;
+        }
+        @keyframes percent {
+            from {
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+            
         }
 
-        .js-skills {
-            border: 15px solid rgb(255, 81, 0);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-top: 15px solid rgb(15, 99, 224);
-            border-left: 15px solid rgb(15, 99, 224);
-        }
-
-
-        .smokeBox:hover {
-            background-color: red;
-        }
 
 
 
@@ -566,7 +593,7 @@ opacity: 0.7;
 
 
         #items8 {
-            background-color: red;
+           
         }
 
         /*******engleza-lang******/
@@ -715,7 +742,8 @@ opacity: 0.7;
                                         <h3>HTML</h3>
                                     </div>
                                     <div class="dev_barline">
-                                        <div class="dev_countbar" data-percentNumber="90"></div>
+                                        <div class="dev_countbar" data-percentNumber="90" data-scale-color="#ffb400">13%
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="dev_progress">
@@ -756,24 +784,31 @@ opacity: 0.7;
 
                     </div>
                     <div class="itemBox6">
-                        <h2></h2>
+                     
+                        <h2>Creativity skills</h2>
+                      
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, vero?</p>
                         <div class="dev_shape_skills">
                             <div class="js-skills skills-shape">
-                                <div>JS</div>
+                                <div class="chart" data-percent="13"></div>
+                                <h3>XD</h3>
                             </div>
                             <div class="css-skills skills-shape">
-                                <div>CSS</div>
+                                <div class="chart" data-percent="23"></div>
+                                <h3>PS</h3>
                             </div>
                             <div class="react-skills skills-shape">
-                                <div>CSS</div>
+                                <div class="chart" data-percent="43"></div>
+                                <h3>AI</h3>
                             </div>
                             <div class="firebase-skills skills-shape">
-                                <div>CSS</div>
+                                <div class="chart" data-percent="93"></div>
+                                <h3>PR</h3>
                             </div>
-
-
-
                         </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, vero?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, vero?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, vero?</p>
                     </div>
                     <div class="itemBox7">
                         <div class="artisticSkills">
@@ -808,7 +843,9 @@ opacity: 0.7;
                     </div>
                     <div class="itemBox8" id="items8">
                         <h2>Hobby's</h2>
-                        <span></span>
+                       <ul>
+                           <li></li>
+                       </ul>
                     </div>
                 </div>
                 <div class="right-grid-container right-box _box">
@@ -841,26 +878,53 @@ opacity: 0.7;
                 </div>
             </div>
             <div class="grid-container-footer">
-                footer
+              <div class="gitHubLinks">
+                  <a href="#">31</a>
+                  <a href="#">31</a>
+                  <a href="#">31</a>
+              </div>
+              <div class="css_battle">
+                <a href="#">31</a>
+                <a href="#">31</a>
+                <a href="#">31</a>
+            </div>
+            <div class="css_battle">
+                <a href="#">31</a>
+                <a href="#">31</a>
+                <a href="#">31</a>
+            </div>
             </div>
         </div>
     </div>
     <script>
-        let numberPercent = document.querySelectorAll('.dev_countbar');
-        let getPercent = Array.from(numberPercent);
-        getPercent.map((items) => {
-            let startCount = 0;
-            let progressBar = () => {
-                startCount++;
-                items.innerHTML = `<h3>${startCount}%</h3>`;
-                items.style.width = `${startCount}%`;
-                if (startCount == items.dataset.percentnumber) {
-                    clearInterval(stop);
+        $(function () {
+            let numberPercent = document.querySelectorAll('.dev_countbar');
+            let getPercent = Array.from(numberPercent);
+            getPercent.map((items) => {
+                let startCount = 0;
+                let progressBar = () => {
+                    startCount++;
+                    items.innerHTML = `<h3>${startCount}%</h3>`;
+                    items.style.width = `${startCount}%`;
+                    if (startCount == items.dataset.percentnumber) {
+                        clearInterval(stop);
+                    }
                 }
-            }
-            let stop = setInterval(() => {
-                progressBar();
-            }, 25)
+                let stop = setInterval(() => {
+                    progressBar();
+                }, 25)
+            });
+
+            $('.chart').easyPieChart({
+                size: 80,
+                barColor: "#131313",
+                scaleLength: 3,
+                lineWidth: 10,
+                trackColor: "grey",
+                lineCap: "circle",
+                animate: 1500,
+                
+            });
         });
     </script>
 </body>
