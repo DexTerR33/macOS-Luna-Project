@@ -26,15 +26,14 @@ $(document).ready(function() {
     ]
   ]);
   console.log(datamap, 'datamap');
-  datamap.forEach((value, key) => {
-    doModal(key, value);
-  });
+
 
   function doModal(buttonClick, popupbox) {
     console.log('buttonClick', buttonClick);
     var closeButton = popupbox.querySelector(".close");
     
     buttonClick.addEventListener("click", function handleClick(event) {
+      console.log(event, "event")
       checkisClicked();
       popupbox.style.display = "block";
   
@@ -59,7 +58,9 @@ $(document).ready(function() {
       }
     }
   }
-
+  datamap.forEach((value, key) => {
+    doModal(key, value);
+  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {

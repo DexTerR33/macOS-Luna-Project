@@ -1,0 +1,216 @@
+
+  @font-face {
+    font-family: product-sans;
+    src: url(template/assets/fonts/product-sans/Product\ Sans\ Regular.ttf);
+  }
+
+  .wrapper-linkdin {
+    font-family: product-sans;
+    width: 950px;
+    height: 750px;
+    background: var(--primaryS-finder-color);
+    z-index: 2000;
+  }
+  .container-linkdin {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+  }
+  .linkDin-icon-page {
+    width: 58px !important;
+    height: 58px !important;
+  }
+  .linkDin-icon-page {
+    animation-name: fade-linkdin-move;
+    animation-duration: 1s;
+    animation-delay: 2.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    transform: translateY(40px)  translateX(96px);
+    position: relative;
+  }
+  @keyframes fade-linkdin-move {
+    0% {
+      transform: translateY(40px)  translateX(96px);
+    }
+    100% {
+      transform: translateY(0px)  translateX(96px);
+    }
+  }
+  .linkDin-icon-page::after{
+    content: "Linked";
+    position: absolute;
+    top: -8px;
+    font-size: 60px;
+    font-weight: 700;
+    left: -177px;
+  }
+  .loading-linkedin-bar{
+    width: 235px;
+    transform: translateX(6px);
+    height: 7px;
+    background: #dbdbdb;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: opacity-linkbar 0.5s linear forwards;
+    border-radius: 10px;
+
+  }
+  .loading-linkedin-bar::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 7px;
+    background: #292c33;
+    animation: loading-linkbar 2s 1s linear forwards;
+    border-radius: 10px;
+  }
+  .container-loadingbar{
+    animation: opacity-linkbar2 0.2s 2.4s ease-in-out forwards;
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  
+  @keyframes loading-linkbar {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 350px;
+    }
+  }
+  @keyframes opacity-linkbar {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes opacity-linkbar2 {
+    0% {
+   
+      opacity: 1;
+    }
+    100% {
+ 
+      opacity: 0;
+    }
+  }
+  
+  
+  .loading-linkedin {
+    position: relative;
+    top: -27px;
+    text-align: center;
+    font-size: 0.95em;
+    left: 0px;
+    animation-name: fade-linkdin-loading;
+    animation-duration: 0.6s;
+    animation-delay: 1.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+  }
+  @keyframes fade-linkdin-loading {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  .text-linkdin {
+    animation-name: fade-linkdin;
+    animation-duration: 1.5s;
+    animation-delay: 2.8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    opacity: 0;
+    font-size: 16px;
+    font-family: product-sans;
+  }
+  .button-linkdin {
+    animation-name: fade-linkdin;
+    animation-duration: 1.5s;
+    animation-delay: 2.8s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    opacity: 0;
+    padding: 5px 0px;
+    width: 120px;
+    /* height: 27px; */
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 400;
+  }
+  .button-linkdin:hover {
+    background: rgba(34, 129, 207, 0.993);
+    color: white;
+    cursor: pointer;
+  }
+
+
+  @keyframes fade-linkdin {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .moto-linkdin {
+    font-size: 13px;
+    text-transform: inherit;
+    font-weight: 300;
+    position: relative;
+    bottom: -285px;
+    text-align: center;
+    animation-name: moto-linkdin;
+    animation-duration: 0.5s;
+    animation-delay: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    opacity: 0;
+    color: #959595;
+  }
+  @keyframes moto-linkdin {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .moto-linkdin span {
+    font-style: italic;
+    font-weight: 400;
+  }
+  .link-none {
+    display: none;
+  }
+.linkdin-topnav-items {
+
+    height: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: start;
+    border-top-left-radius: 0;
+    background: var(--second-finder-color);
+}
+
