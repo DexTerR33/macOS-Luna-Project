@@ -1,0 +1,124 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0c1922;
+  
+}
+
+.box {
+  border-radius: 20px;
+  position: relative;
+  width: 400px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: popusp 4s linear infinite;
+}
+@keyframes popup {
+    0% {
+   
+      transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-180deg);
+    }
+  }
+.box::after,
+.box::before,
+.span::after,
+.span::before {
+  width: 700px;
+  height: 650px;
+  animation-name: rotateBorder;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    #00ccff
+  );
+  animation-duration: 4s;
+}
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.box::before {
+  content: "";
+  position: absolute;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    rgb(250, 73, 28)
+  );
+  z-index: 5;
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+.span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.span::before {
+  content: "";
+  position: absolute;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    rgb(12, 248, 71)
+  );
+  z-index: 4;
+  animation-duration: 4s;
+  animation-delay: 1s;
+}
+.span::after {
+  content: "";
+  position: absolute;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    rgb(217, 238, 25)
+  );
+  animation-duration: 4s;
+  animation-delay: 3s;
+}
+.container-box span {
+  position: absolute;
+  border-radius: 16px;
+  inset: 6px;
+  z-index: 20;
+  opacity: 1;
+
+}
+.box h2 {
+  color: azure;
+  font-size: 125px;
+  z-index: 55;
+  font-family: sans-serif;
+}

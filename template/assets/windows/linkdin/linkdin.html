@@ -1,0 +1,188 @@
+<style>
+  @font-face {
+    font-family: product-sans;
+    src: url(template/assets/fonts/product-sans/Product\ Sans\ Regular.ttf);
+  }
+
+  .wrapper-linkdin {
+    font-family: product-sans;
+    width: 1200px;
+    height: 800px;
+    background: white;
+  }
+  .container-linkdin {
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+  }
+  .linkDin-icon-page {
+    width: 58px !important;
+    height: 58px !important;
+  }
+  .linkDin-icon-page {
+    animation-name: fade-linkdin-move;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    transform: translateY(40px);
+    position: relative;
+  }
+  .loading-linkedin {
+    position: relative;
+    top: -27px;
+    text-align: center;
+    font-size: 0.95em;
+    left: 0px;
+    animation-name: fade-linkdin-loading;
+    animation-duration: 0.6s;
+    animation-delay: 1.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+  }
+  @keyframes fade-linkdin-loading {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  .text-linkdin {
+    animation-name: fade-linkdin;
+    animation-duration: 1.5s;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    opacity: 0;
+    font-size: 16px;
+    font-family: product-sans;
+  }
+  .button-linkdin {
+    animation-name: fade-linkdin;
+    animation-duration: 1.5s;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    opacity: 0;
+    padding: 5px 0px;
+    width: 120px;
+    /* height: 27px; */
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 400;
+  }
+  .button-linkdin:hover {
+    background: rgba(34, 129, 207, 0.993);
+    color: white;
+    cursor: pointer;
+  }
+  @keyframes fade-linkdin-move {
+    0% {
+      transform: translateY(40px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes fade-linkdin {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .moto-linkdin {
+    font-size: 13px;
+    text-transform: inherit;
+    font-weight: 300;
+
+    text-align: center;
+    animation-name: moto-linkdin;
+    animation-duration: 0.5s;
+    animation-delay: 3s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    opacity: 0;
+  }
+  @keyframes moto-linkdin {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .moto-linkdin span {
+    font-style: italic;
+    font-weight: 400;
+  }
+  .link-none {
+    display: none;
+  }
+</style>
+
+<div class="wrapper-linkdin d-none" id="contentLink">
+  <div class="linkdin-topnav-items linkdin-topnav-items">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+  </div>
+  <div class="container-linkdin" id="linkdinheader">
+    <div
+      class="linkDin-icon linkDin-icon-page square-icon-size"
+      id="linkedinButton"
+    >
+      <div>in</div>
+    </div>
+    <div class="text-linkdin">Marian Iordache</div>
+    <a class="a-linkdin" href="https://www.linkedin.com/" target="_blank"
+      ><button class="button-linkdin opencloseLink clickMe2" onclick="closeWsindow()">
+        connect
+      </button></a
+    >
+    <div class="loading-linkedin">loading...</div>
+  </div>
+  <div class="moto-linkdin">
+    “To succeed in life, you need two things: ignorance and confidence.”
+    <span>Mark Twain</span>
+  </div>
+</div>
+
+<script>
+  // function closeWindow() {
+  //   let closewindw = (document.getElementById("contentLink").style.display ="none");
+  //   if (closewindw == "none") {
+  //     (window.open = "https://www.linkedin.com/"), "_blank";
+  //   }
+  // }
+  // function reload() {
+  //   location.reload(true);
+  // }
+
+  $('.clickMe2').click(function(){
+    let closewindw = document.getElementById("contentLink");
+    closewindw.style.display ="none"
+    if (closewindw == "none") {
+      (window.open =  "_blank","https://www.linkedin.com/");
+
+   
+    }
+
+  });
+
+</script>

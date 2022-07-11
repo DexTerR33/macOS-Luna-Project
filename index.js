@@ -1,3 +1,67 @@
+$(document).ready(function() {
+  var datamap = new Map([
+    [
+      document.getElementById("logoAppleButton"),
+      document.getElementById("myMacMaster")
+    ],
+    [
+      document.getElementById("myBtn2"),
+      document.getElementById("aboutMeMaster")
+    ],
+    [
+      document.getElementById("myBtn3"),
+      document.getElementById("finderMaster")
+    ],
+    [
+      document.getElementById("terminalButton"),
+      document.getElementById("TerminalMaster")
+    ],
+    [
+      document.getElementById("chromePageButton"),
+      document.getElementById("chromePageMaster")
+    ],
+    [
+      document.getElementById("linkedinButton"),
+      document.getElementById("LinkdinMaster")
+    ]
+  ]);
+  console.log(datamap, 'datamap');
+  datamap.forEach((value, key) => {
+    doModal(key, value);
+  });
+
+  function doModal(buttonClick, popupbox) {
+    console.log('buttonClick', buttonClick);
+    var closeButton = popupbox.querySelector(".close");
+    
+    buttonClick.addEventListener("click", function handleClick(event) {
+      checkisClicked();
+      popupbox.style.display = "block";
+  
+      closeButton.addEventListener("click", function handleClick(event) {
+        if ((event.target == popupbox.style.display) == "block"); {
+          popupbox.style.display = "none";
+        }
+      });   
+    });
+
+    var clicked = false;
+  
+
+    function checkisClicked() {
+      clicked = true;
+      if (clicked === true) {
+       
+     
+      
+      } else {
+        console.log("else switch");
+      }
+    }
+  }
+
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   console.log('start');
 
@@ -38,6 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
     dragElement(document.getElementById("aboutmeBox"));
     dragElement(document.getElementById("aboutmacBox"));
     dragElement(document.getElementById("terminalBox"));
+    dragElement(document.getElementById("linkdinBox"));
+    
     // dragElement(document.getElementById("chromeBox"));
 
     function dragElement(elmnt) {
@@ -117,37 +183,6 @@ document.addEventListener("DOMContentLoaded", function () {
  
 
 
-  var datamap = new Map([
-    [
-      document.getElementById("logoAppleButton"),
-      document.getElementById("myMacMaster")
-    ],
-    [
-      document.getElementById("myBtn2"),
-      document.getElementById("aboutMeMaster")
-    ],
-    [
-      document.getElementById("myBtn3"),
-      document.getElementById("finderMaster")
-    ],
-    [
-      document.getElementById("terminalButton"),
-      document.getElementById("TerminalMaster")
-    ],
-    [
-      document.getElementById("chromePageButton"),
-      document.getElementById("chromePageMaster")
-    ],
-    [
-      document.getElementById("adobeXDButton"),
-      document.getElementById("adobeXDMaster")
-    ]
-  ]);
-  console.log('bottom1');
-  datamap.forEach((value, key) => {
-    doModal(key, value);
-  
-  });
 
 
 
@@ -165,48 +200,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // console.log(myBtn2, "button about me press");
   // console.log(myBtn3, "button finder press");
   // console.log(terminalButton, "button terminal press");
-
-  function doModal(buttonClick, popupbox) {
-    console.log('buttonClick', buttonClick);
-    var closeButton = popupbox.querySelector(".close");
-    
-    buttonClick.addEventListener("click", function handleClick(event) {
-      checkisClicked();
-      popupbox.style.display = "block";
-  
-      closeButton.addEventListener("click", function handleClick(event) {
-        if ((event.target == popupbox.style.display) == "block"); {
-          popupbox.style.display = "none";
-        }
-      });   
-    });
-
-    var clicked = false;
-  
-
-    function checkisClicked() {
-      clicked = true;
-      if (clicked === true) {
-       
-        test();
-      
-      } else {
-        console.log("else switch");
-      }
-    }
-  }
-
-
+ 
 
 
   // $("#iconsBoxJss").load("./template/assets/icons/icons.html");
 });
 
-console.log('bottom10');
+
 $("#adobeXDBoxJs").load("./template/assets/windows/adobexd/adobeXD.html");
 $("#chromePageBoxJs").load("./template/assets/windows/chrome/chromePage.html");
 $("#terminalBoxJs").load("./template/assets/windows/terminal/terminal.html");
-console.log('bottom11');
+$("#linkdinBoxJs").load("./template/assets/windows/linkdin/linkdin.html");
+
 
 
 // $("#bottomIconsJs").load("./template/assets/icons/icons.html");

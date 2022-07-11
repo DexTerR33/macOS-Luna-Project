@@ -4,12 +4,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
     <style>
-      /*font-family: 'Cinzel', serif;*/
-      /* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap'); */
-      @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+      @import url("https://fonts.googleapis.com/css2?family=Rozha+One&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
       *,
       *::after,
       *::before {
@@ -18,11 +16,11 @@
         box-sizing: border-box;
       }
 
-      /***   smoke**/
+      /***  font-family: 'Rozha One', serif;  smoke**/
 
       :root {
         --fontSize: calc((1vw + 1vh) / 1.8);
-        --fontSizeSmall: calc((1vw + 1vh) / 2.5);
+
         --fontSizeH2: calc((1vw + 1vh) / 2);
       }
 
@@ -30,25 +28,8 @@
       body {
         width: 260mm;
         height: 100%;
-
+        font-family: "Montserrat", sans-serif;
         margin: 0 auto;
-      }
-
-      /* ... the rest of the rules ... */
-
-      /* html,
-        body {
-            height: 100%;
-        } */
-
-      body {
-        /* font: var(--fontSize)/80% 'Open Sans', sans-serif;
-            font-family: 'Merriweather', serif; */
-        /* font-family: 'Cinzel', serif */
-        /* font-family: 'Merriweather', serif; */
-        /* font-family: 'Mukta', sans-serif; */
-        letter-spacing: -0.5px;
-        font-family: "Work Sans", sans-serif;
       }
 
       .left-grid-container.left-box._box,
@@ -245,14 +226,16 @@
 
       .itemBox0 {
         letter-spacing: 0.1px;
-        font-weight: 600;
+        font-weight: 100;
         border-top: 3px solid black;
         border-bottom: 3px solid black;
-        font-size: 1.6em;
+        font-size: 2em;
         padding: 15px 0px;
         text-transform: uppercase;
         text-align: center;
         line-height: 1;
+        font-family: "Rozha One", serif;
+        /* font-family: 'DM Serif Text', serif; */
       }
 
       ._box {
@@ -393,18 +376,19 @@
 
       .dev_barline {
         width: 100%;
-        background: #c8d6e5;
+        background: #999999;
         border-radius: 2px;
       }
 
       .dev_countbar,
       .dev_barline {
         height: 13px;
+        margin-bottom: 10px;
       }
 
       .dev_countbar {
-        box-shadow: 0px 0px 5px 0px #131313;
-        background: #131313;
+        box-shadow: 0px 0px 3px 0px #333333;
+        background: #333333;
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
         position: relative;
@@ -414,6 +398,7 @@
         position: absolute;
         right: 5px;
         top: -6.5px;
+        font-size: 14px;
         /* background: #34495e; */
         padding: 4px 6px;
         font-weight: 300;
@@ -444,11 +429,12 @@
         padding: 10px 0 5px 0;
       }
       .itemBox5 h2 {
-        font-size: 40px;
+        font-size: 37px;
         font-weight: 800;
         background: #333;
         color: azure;
         padding: 11px;
+        margin-top: 10px;
         text-transform: uppercase;
       }
       .dev_shape_skills {
@@ -495,88 +481,114 @@
       }
 
       /***********end dek skills shape**************/
-.artisticSkills {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.itemBox7 {
-  border: 1px solid black;
-}
-.artisticSkills h2 {
-  font-size: 2.2em;
-  height: -webkit-fill-available;
-}
-.blocksSkills {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  width: 100%;
-  height: 10vh;
-  justify-content: center;
-  border: 1px solid black;
-  overflow: hidden;
-}
-.blocksSkills .block {
-  width: 30px;
-  height: 50px;
-  background: black;
-  margin-left: 4px;
-  position: relative;
-}
-.blocksSkills .block::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0;
-  width: 15px;
-  height: 120px;
-  background-color: rgb(80, 80, 80);
-}
-.blocksSkills .block::after {
-  content: "%";
-  position: absolute;
-  top: -20px;
-  left: 0;
-  color: crimson;
-  width: 15px;
-  height: 12px;
-  font-weight: 600;
-}
-.block0 {
-  height: 10px !important;
-}
-.block1 {
-  height: 30px !important;
-}
-.block2 {
-  height: 70px !important;
-}
-.block3 {
-  height: 40px !important;
-}
-.block4 {
-  height: 90px !important;
-}
-.block5 {
-  height: 30px !important;
-}
-.block6 {
-  height: 20px !important;
-}
-.block7 {
-  height: 60px !important;
-}
-.block8 {
-  height: 90px !important;
-}
-.block9 {
-  height: 120px !important;
-}
+      .artisticSkills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .itemBox7 {
+        border: 1px dotted black;
+        margin-top: 10px;
+        padding: 5px;
+      }
+      .textBlock{
+        margin-bottom: 10px;
+        margin-top: 10px;
+        word-break: break-all;
+      
+      }
+      .textBlock:nth-child(2){
+        margin-bottom: 10px;
+        margin-top: 0px;
+      }
+      .artisticSkills h2 {
+        font-size: 2.2em;
+        height: -webkit-fill-available;
+      }
+      .blocksSkills {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        width: 100%;
+        height: 18vh;
+        justify-content: center;
+        border: 1px solid black;
+        overflow: hidden;
+      }
+      .blocksSkills .block {
+        width: 30px;
+        height: 50px;
+        background: black;
+        margin-left: 4px;
+        position: relative;
+      }
+      .blocksSkills .block::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 15px;
+        height: 120px;
+        background-color: rgb(80, 80, 80);
+      }
+      .blocksSkills .block::after {
+        content: "30%";
+        position: absolute;
+        top: -18px;
+        left: 2px;
+        text-align: center;
+        color: black;
+        width: 15px;
+        height: 12px;
+        font-weight: 500;
+        font-size: 14px;
+      }
+      .block0 {
+        height: 10px !important;
+      }
+      .block1 {
+        height: 30px !important;
+      }
+      .block2 {
+        height: 70px !important;
+      }
+      .block3 {
+        height: 40px !important;
+      }
+      .block4 {
+        height: 90px !important;
+      }
+      .block5 {
+        height: 30px !important;
+      }
+      .block6 {
+        height: 20px !important;
+      }
+      .block7 {
+        height: 60px !important;
+      }
+      .block8 {
+        height: 90px !important;
+      }
+      .block9 {
+        height: 120px !important;
+      }
       /*****box 9*****/
+      .itemBox8 h2 {
+        float: left;
+        margin-right: 20px;
+      }
+      .itemBox8{
+        height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 0;
+      }
       .romana-lang,
       .engleza-lang {
         width: 80px;
+        height: 40px;
         display: flex;
         flex-direction: row;
         overflow: hidden;
@@ -594,26 +606,14 @@
         position: relative;
       }
 
-      .romana-lang::before {
-        content: "romana";
-        position: absolute;
-        bottom: -20px;
-        left: 13%;
-        width: 100%;
-      }
+    
 
-      .engleza-lang::after {
-        content: "english";
-        position: absolute;
-        bottom: -20px;
-        left: 71%;
-        width: 100%;
-      }
+   
 
       .section9 {
         display: flex;
         flex-direction: column;
-        gap: 20em;
+        gap: 10px;
       }
 
       /*****end  box 9*****/
@@ -626,7 +626,7 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        border: 2px solid white;
+ position: relative;
         z-index: 23;
       }
 
@@ -640,7 +640,7 @@
 
       .second-line-flag {
         background-color: red;
-        width: 19%;
+        width: 95%;
         height: 8px;
         transform: rotate(90deg);
         position: absolute;
@@ -650,7 +650,7 @@
 
       .third-line-flag {
         background-color: red;
-        width: 50%;
+        width: 120%;
         height: 8px;
         transform: rotate(25deg);
         position: absolute;
@@ -659,7 +659,7 @@
 
       .four-line-flag {
         background-color: red;
-        width: 50%;
+        width: 120%;
         height: 8px;
         transform: rotate(-25deg);
         position: absolute;
@@ -669,8 +669,6 @@
       /*******engleza-lang******/
 
       /*artistic skills*/
-
- 
 
       .adobe-icons {
         width: 48px;
@@ -727,14 +725,20 @@
         position: relative;
       }
 
-     
-
       .artistic-footer {
         display: flex;
         justify-content: center;
         gap: 15px;
         align-items: center;
         height: -webkit-fill-available;
+      }
+
+
+
+
+      .interest-cv{
+        padding: 0px 0 10px 0;
+        border-bottom: 5px solid #343434;
       }
     </style>
   </head>
@@ -821,7 +825,7 @@
                   <p>Scoala informala de IT</p>
                   <p>04-2019 - 08-2019 <span> Front-End Developer</span></p>
                   <p>05-2021 - 07-2021 <span> React Js</span></p>
-                 <br>
+                  <br />
                 </div>
               </div>
             </div>
@@ -937,56 +941,42 @@
             <div class="itemBox7">
               <div class="artisticSkills">
                 <h2>Pending</h2>
-                <div class="textBlock">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio cupiditate autem provident aspernatur quisquam temporibus eveniet pariatur, tempora mollitia doloribus?</div>
-               <div class="blocksSkills">
-                <div class="block block0">0</div>
-<div class="block block1">1</div>
-<div class="block block2">2</div>
-<div class="block block3">3</div>
-<div class="block block4">4</div>
-<div class="block block5">5</div>
-<div class="block block6">6</div>
-<div class="block block7">7</div>
-<div class="block block8">8</div>
-<div class="block block9">9</div>
-
-
-               </div>
+                <div class="textBlock">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Optio cupiditate autem provident aspernatur quisquam
+                  temporibus eveniet pariatur, tempora mollitia doloribus?
+                </div>
+                <div class="blocksSkills">
+                  <div class="block block0">0</div>
+                  <div class="block block1">1</div>
+                  <div class="block block2">2</div>
+                  <div class="block block3">3</div>
+                  <div class="block block4">4</div>
+                  <div class="block block5">5</div>
+                  <div class="block block6">6</div>
+                  <div class="block block7">7</div>
+                  <div class="block block8">8</div>
+                  <div class="block block9">9</div>
+                </div>
+                <div class="textBlock">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Optio cupiditate autem provident aspernatur quisquam
+                  temporibus eveniet pariatur, tempora mollitia doloribus?
+                </div>
               </div>
             </div>
-            <div class="itemBox8" id="items8">
-              <h2>Hobby's</h2>
-              <ul>
-                <li></li>
-              </ul>
-            </div>
+          
           </div>
           <div class="right-grid-container right-box _box">
             <div class="itemBox9">
               <div class="section9">
-                <div class="lang-cv">
-                  <div class="romana-lang">
-                    <div
-                      class="blue-color shape-flag"
-                      style="background-color: blue"
-                    ></div>
-                    <div
-                      class="yellow-color shape-flag"
-                      style="background-color: yellow"
-                    ></div>
-                    <div
-                      class="red-color shape-flag"
-                      style="background-color: red"
-                    ></div>
-                  </div>
-                  <div class="engleza-lang">
-                    <div class="first-line-flag"></div>
-                    <div class="second-line-flag"></div>
-                    <div class="third-line-flag"></div>
-                    <div class="four-line-flag"></div>
-                  </div>
-                </div>
-                <div class="interest-cv">interest</div>
+              <h2>Interested</h2>
+                <div class="interest-cv">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste sed natus quis nam nostrum dolore reiciendis non magnam perspiciatis libero ad accusantium mollitia laboriosam tenetur cum quibusdam, deleniti quae suscipit.</div>
+                <div class="interest-cv">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste sed natus quis nam nostrum dolore reiciendis non magnam perspiciatis libero ad accusantium mollitia laboriosam tenetur cum quibusdam, deleniti quae suscipit.</div>
+                <div class="interest-cv">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste sed natus quis nam nostrum dolore reiciendis non magnam perspiciatis libero ad accusantium mollitia laboriosam tenetur cum quibusdam, deleniti quae suscipit.</div>
+                <div class="interest-cv">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste sed natus quis nam nostrum dolore reiciendis non magnam perspiciatis libero ad accusantium mollitia laboriosam tenetur cum quibusdam, deleniti quae suscipit.</div>
+              
+               
                 <div class="follow-cv">
                   <div class="facebook-cv">fb</div>
                   <div class="insta-cv">insta</div>
@@ -994,6 +984,31 @@
                   <div class="linkedin-cv">linkedin</div>
                   <div class="cssBattle-cv">css battle</div>
                   <div class="phone-cv">0765.965.155</div>
+                </div>
+              </div>
+            </div>
+            <div class="itemBox8" id="items8">
+              <h2>Languages</h2>
+              <div class="lang-cv">
+                <div class="romana-lang">
+                  <div
+                    class="blue-color shape-flag"
+                    style="background-color: blue"
+                  ></div>
+                  <div
+                    class="yellow-color shape-flag"
+                    style="background-color: yellow"
+                  ></div>
+                  <div
+                    class="red-color shape-flag"
+                    style="background-color: red"
+                  ></div>
+                </div>
+                <div class="engleza-lang">
+                  <div class="first-line-flag"></div>
+                  <div class="second-line-flag"></div>
+                  <div class="third-line-flag"></div>
+                  <div class="four-line-flag"></div>
                 </div>
               </div>
             </div>
@@ -1015,23 +1030,7 @@
             <a href="#">31</a>
             <a href="#">31</a>
           </div>
-          <div class="right-artistic">
-            <div class="adobe-icons photoshop-icon">
-              <div>Ps</div>
-            </div>
-
-            <div class="adobe-icons premiere-icon">
-              <div>Pr</div>
-            </div>
-            <div class="adobe-icons afterEffect-icon">
-              <div>Ae</div>
-            </div>
-            <div class="adobe-icons adobe-xd-icon">
-              <div>Xd</div>
-            </div>
-            <span>DaVinci</span>
-            <span>Figma</span>
-          </div>
+      
         </div>
       </div>
     </div>
