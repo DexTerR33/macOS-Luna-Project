@@ -27,6 +27,10 @@ $(document).ready(function() {
     [
       document.getElementById("unfinishButton"),
       document.getElementById("unfinishMaster")
+    ], 
+    [
+      document.getElementById("githubButton"),
+      document.getElementById("githubMaster")
     ]
   ]);
   console.log(datamap, 'datamap');
@@ -109,6 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
     dragElement(document.getElementById("terminalBox"));
     dragElement(document.getElementById("linkdinBox"));
     dragElement(document.getElementById("unfinishBox"));
+    dragElement(document.getElementById("githubBox"));
     
     // dragElement(document.getElementById("chromeBox"));
 
@@ -218,6 +223,7 @@ $("#chromePageBoxJs").load("./template/assets/windows/chrome/chromePage.html");
 $("#terminalBoxJs").load("./template/assets/windows/terminal/terminal.html");
 $("#linkdinBoxJs").load("./template/assets/windows/linkdin/linkdin.html");
 $("#unfinishBoxJs").load("./template/assets/windows/unfinish/unfinish.html");
+$("#githubBoxJs").load("./template/assets/windows/github/github.html");
 
 
 
