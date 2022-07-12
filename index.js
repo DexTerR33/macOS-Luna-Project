@@ -38,21 +38,23 @@ $(document).ready(function() {
 
   function doModal(buttonClick, popupbox) {
     console.log('buttonClick', buttonClick);
-    var closeButton = popupbox.querySelector(".close");
+    let closeButton = popupbox.querySelector(".close");
     
     buttonClick.addEventListener("click", function handleClick(event) {
       console.log(event, "event")
       checkisClicked();
       popupbox.style.display = "block";
+      event.preventDefault();
   
       closeButton.addEventListener("click", function handleClick(event) {
         if ((event.target == popupbox.style.display) == "block"); {
           popupbox.style.display = "none";
         }
+        event.stopPropagation();
       });   
     });
 
-    var clicked = false;
+    let clicked = false;
   
 
     function checkisClicked() {
@@ -86,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     dropBtns.forEach(function (btn) {
       btn.addEventListener("click", function (e) {
-        var dropContent = btn.querySelector(".dropMenu-list"),
+        let dropContent = btn.querySelector(".dropMenu-list"),
           shouldOpen = !dropContent.classList.contains("show");
         e.preventDefault();
         // First close all open items.

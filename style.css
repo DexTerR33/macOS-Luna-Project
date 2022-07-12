@@ -795,7 +795,7 @@ iframe {
   border: none;
   z-index: 2000;
 }
-#githubhBox{
+#githubBox{
   position: absolute;
   top: 30px;
   left: 350px;
