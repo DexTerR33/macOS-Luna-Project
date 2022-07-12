@@ -1,3 +1,6 @@
+<style>
+  @import "/style.css";
+</style>
 <div class="wrapper-linkdin d-none" id="contentLink">
   <div class="linkdin-topnav-items" id="linkdinBoxheader">
     <div class="circle circle1"></div>
@@ -17,7 +20,7 @@
     <div class="loading-linkedin-bar loading-animation"></div>
   </div>
   <div class="moto-linkdin">
-    “To succeed in life, you need two things: ignorance and confidence.”
+    “ To succeed in life, you need two things: Ignorance and Confidence. ” <br>
     <span>Mark Twain</span>
   </div>
 </div>
@@ -34,8 +37,8 @@
   // }
 
   $('.clickMe2').click(function(){
-    let closewindw = document.getElementById("contentLink");
-    closewindw.style.display ="none"
+    let closewindw = document.getElementById("contentLink").style.display ="none";
+  
     if (closewindw == "none") {
       (window.open =  "_blank","https://www.linkedin.com/");
     }

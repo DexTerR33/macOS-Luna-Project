@@ -1,10 +1,15 @@
 
 
+.iframeLink{
+  position: relative;
+  left: 0;
+  
+}
 
 .chrome-page {
     max-width: 1200px !important;
     width: 1200px !important;
-    height: 700px;
+    height: 850px;
     font-family: product-sans !important;
     overflow: hidden;
   }

@@ -23,6 +23,10 @@ $(document).ready(function() {
     [
       document.getElementById("linkedinButton"),
       document.getElementById("LinkdinMaster")
+    ],
+    [
+      document.getElementById("unfinishButton"),
+      document.getElementById("unfinishMaster")
     ]
   ]);
   console.log(datamap, 'datamap');
@@ -104,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
     dragElement(document.getElementById("aboutmacBox"));
     dragElement(document.getElementById("terminalBox"));
     dragElement(document.getElementById("linkdinBox"));
+    dragElement(document.getElementById("unfinishBox"));
     
     // dragElement(document.getElementById("chromeBox"));
 
@@ -212,6 +217,7 @@ $("#adobeXDBoxJs").load("./template/assets/windows/adobexd/adobeXD.html");
 $("#chromePageBoxJs").load("./template/assets/windows/chrome/chromePage.html");
 $("#terminalBoxJs").load("./template/assets/windows/terminal/terminal.html");
 $("#linkdinBoxJs").load("./template/assets/windows/linkdin/linkdin.html");
+$("#unfinishBoxJs").load("./template/assets/windows/unfinish/unfinish.html");
 
 
 

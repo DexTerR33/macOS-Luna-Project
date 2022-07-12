@@ -33,6 +33,35 @@ font-family: 'Poppins', sans-serif;
   .container{
     display: none;
   }
+  .container-mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 72vh;
+    flex-direction: column;
+  }
+  .text-container-mobile{
+    flex-basis: 300px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .text-container-mobile h2 {
+    font-size: 2em;
+  }
+  .container-mobile a {
+    flex-basis: 200px;
+    text-decoration: none !important;
+    font-size: 12px !important;
+    color: var(--text-low-finder-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-basis: 200px;
+  }
 }
 @media screen and (min-width:1024px) {
   .container-mobile{
@@ -525,10 +554,9 @@ ul li a {
   text-decoration: none;
   margin-left: 12px;
   color: var(--text-low-finder-color);
-  font-size: 0.72em !important;
-  font-weight: lighter;
+  font-size: 0.78em !important;
   text-transform: capitalize;
-  font-weight: 200 !important;
+  font-weight: 300 !important;
 }
 
 .finder-middle-left ul li a i {
@@ -644,7 +672,7 @@ ul li a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 10px 0 10px;
+  background: var(--btn-contact-simple-two);
   font-size: 0.6em !important;
   font-weight: 300 !important;
   padding: 5px;
@@ -665,14 +693,12 @@ ul li a {
 iframe {
   outline: none;
   border: none;
-  width: 1200px;
-  max-width: 1200px;
-  height: 700px;
-  position: absolute;
-  top: 35px;
-  left: 20%;
-
-
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: white;
 }
 
 #loadingDiv {
@@ -729,7 +755,7 @@ iframe {
   position: absolute;
   top: 50px;
   left: 360px;
-  z-index: 313;
+  z-index: 3133;
 }
 
 #terminalBox {
@@ -762,6 +788,14 @@ iframe {
   border: none;
   z-index: 2000;
 }
+#unfinishBox{
+  position: absolute;
+  top: 30px;
+  left: 350px;
+  outline: none;
+  border: none;
+  z-index: 2000;
+}
 
 
 #finderBoxheader,
@@ -769,7 +803,9 @@ iframe {
 #adobeXDBoxheader,
 #AboutmacBoxheader,
 #chromePageBoxheader,
-#aboutmeBoxheader,#linkdinBoxheader  {
+#aboutmeBoxheader,
+#linkdinBoxheader,
+#unfinishBoxheader  {
   cursor: move;
   z-index: 40;
   color: #fff;
@@ -1270,7 +1306,7 @@ input-style:hover {
 
 .btn-contact {
   padding: 5px 10px;
-  font-size: 0.6rem !important;
+  font-size: 11px!important;
   background-color: var(--btn-contact-simple);
   border: none;
   outline: none;
@@ -1384,6 +1420,7 @@ input-style:hover {
 }
 
 .content-popup-middle {
+  background: var(--primaryM-finder-color);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -1427,7 +1464,7 @@ input-style:hover {
 .popup-information-profile p {
   font-weight: 200;
   font-size: 0.7em;
-  margin-top: -12px;
+  margin-top: -10px;
 }
 
 .popup-information-profile ul {
@@ -1458,9 +1495,13 @@ input-style:hover {
 }
 
 .btn-popup {
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   padding: 0.8em 20px;
   text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 2px;
+  border: none;
+  outline: none;
 }
 
 #overlayP.active {

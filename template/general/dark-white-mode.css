@@ -2,8 +2,8 @@
     /*finder colors*/
     /*contact colors*/
     --aditional-finder-color: #161616;
-    --primaryM-finder-color: #222222e3;
-    --primaryS-finder-color: #3333338c;
+    --primaryM-finder-color: #171717e3;
+    --primaryS-finder-color: #1B24308c;
     --primary-finder-color: #333333;
     --second-finder-color: rgba(27, 27, 27, 0.2);
     --third-finder-color: rgb(20, 20, 20);
@@ -11,15 +11,17 @@
     --text-low-finder-color: #dbdbdb;
     --text-low-finder-color-hover: #ff87ca;
     --items-finder-color: grey;
-    --hover-finder-color: #816b4b;
+    --hover-finder-color: #1a91d6ea;
     --link-finder-color: #d8d8d8;
     --finder-opacity-color: #171618bf;
-    --finder-opacity-color-left: #33333369;
-    --finder-opacity-color-back: #33333369;
-    --btn-contact-simple: #816b4b;
-    --btn-contact-simple-hover: #ff4301;
-    --btn-contact-simple-focus: #f4a442;
-    --btn-contact-simple-active: #e43f5a;
+    --finder-opacity-color-left: #1717179e;
+    --finder-opacity-color-back: #3333339c;
+    --btn-contact-simple: brown;
+    --btn-contact-simple-two: #a52a2a4f;
+
+    --btn-contact-simple-hover: #03506F;
+    --btn-contact-simple-focus: #398ab9f1;
+    --btn-contact-simple-active: #1d9ae2;
     --max-black: #121212;
     --medium-black: #292c33;
     --low-black: #282828;
@@ -28,11 +30,10 @@
     --easy-grey: #abb0b8;
     --soft-grey: #cecdcd;
     --light-white: #ffffff;
-    --Rorange-color: #ff760d;
+    --Rorange-color: #346751e8;
     --Rwhite-color: #f1f1f1;
     --Rhard-black-color: #313131;
     --Rlight-blue-color: #14d5dc;
     --Rcrimson-color: crimson;
     /*End  Colors*/
   }
-  
