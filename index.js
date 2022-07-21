@@ -34,8 +34,7 @@ $(document).ready(function() {
     ]
   ]);
   console.log(datamap, 'datamap');
-
-
+/* open stuff */
   function doModal(buttonClick, popupbox) {
     console.log('buttonClick', buttonClick);
     let closeButton = popupbox.querySelector(".close");
@@ -55,37 +54,32 @@ $(document).ready(function() {
     });
 
     let clicked = false;
-  
-
     function checkisClicked() {
       clicked = true;
       if (clicked === true) {
-       
-     
-      
       } else {
         console.log("else switch");
       }
     }
   }
+
   datamap.forEach((value, key) => {
     doModal(key, value);
   });
 });
-
+/*close open stuff*/ 
 document.addEventListener("DOMContentLoaded", function () {
   console.log('start');
-
   function moveWindows() {
     var dropBtns = document.querySelectorAll(".dropdown-button");
     console.log(dropBtns, "btnSho");
-
     function closeOpenItems() {
       openMenus = document.querySelectorAll(".dropMenu-list");
       openMenus.forEach(function (menus) {
         menus.classList.remove("show");
       });
     }
+
     dropBtns.forEach(function (btn) {
       btn.addEventListener("click", function (e) {
         let dropContent = btn.querySelector(".dropMenu-list"),
@@ -107,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
     console.log('middle');
+
     dragElement(document.getElementById("finderBox"));
     dragElement(document.getElementById("adobeXDBox"));
     dragElement(document.getElementById("chromePageBox"));
@@ -187,18 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("demo").innerHTML = "Today is " + day;
   }
 
-
-
-  //Executes after DOM is loaded (before images and CSS):
-
-
   moveWindows();
- 
-
-
-
-
-
   // window.addEventListener("click", function (event) {
   //   if (event.target == popupbox) {
   //     popupbox.style.display = "none";
@@ -207,15 +191,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // console.log(buttonClick, "buttonClick");
   // console.log(closeButton, "closeButton");
   // console.log(popupbox, "popupbox");
-
-  console.log('bottom6');
   // console.log(logoAppleButton, "button mac press");
   // console.log(myBtn2, "button about me press");
   // console.log(myBtn3, "button finder press");
   // console.log(terminalButton, "button terminal press");
- 
-
-
   // $("#iconsBoxJss").load("./template/assets/icons/icons.html");
 });
 
@@ -226,7 +205,6 @@ $("#terminalBoxJs").load("./template/assets/windows/terminal/terminal.html");
 $("#linkdinBoxJs").load("./template/assets/windows/linkdin/linkdin.html");
 $("#unfinishBoxJs").load("./template/assets/windows/unfinish/unfinish.html");
 $("#githubBoxJs").load("./template/assets/windows/github/github.html");
-
 
 
 // $("#bottomIconsJs").load("./template/assets/icons/icons.html");

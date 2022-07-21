@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <title>Document</title>
+    <style>
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .wrappering-content {
+        display: block;
+        height: 100vh;
+        background: lightcoral;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .container-items {
+        display: inline-flex;
+        column-gap: 15px;
+      }
+      .shapes {
+        width: 300px;
+        height: 500px;
+        border: 1px solid black;
+        background: #fff02f;
+        transition: 0.6s;
+        transform-style: preserve-3d;
+      }
+      .shapes:hover {
+        background-color: red;
+        transition: ease 0.5s;
+        transform: scale(1.05) rotateY(180deg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrappering-content">
+      <div class="container-items">
+        <div class="shape-one shapes">
+          1
+          <div class="triangle_shape"></div>
+        </div>
+        <div class="shape-two shapes">2</div>
+        <div class="shape-three shapes">3</div>
+
+      </div>
+      <br>
+              <button onclick="random_select()">random</button>
+    </div>
+  
+    <script type="text/javascript"></script>
+  </body>
+</html>

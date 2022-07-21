@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .wrapper-container {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container-starts {
+            transform: scale(10);
+        }
+
+        .rating_stars {
+            margin-top: 15px;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 200;
+            color: white;
+            position: relative;
+        }
+
+        .rating_stars span .fa,
+        .rating_stars span.active-low .fa-star-o,
+        .rating_stars span.active-high .fa-star-o {
+            display: none;
+        }
+
+        .rating_stars span .fa-star-o {
+            display: inline-block;
+        }
+
+        .rating_stars span.s.active-high .fa-star {
+            display: inline-block;
+            color: #fb460f;
+        }
+
+        .rating_stars span.s.active-low .fa-star-half-o {
+            display: inline-block;
+            color: #fe670c;
+        }
+
+        .rating_stars span.r {
+            position: absolute;
+            top: 0;
+            height: 20px;
+            width: 10px;
+            left: 0;
+        }
+
+        .rating_stars span.r.r0_5 {
+            left: 0px;
+        }
+
+        .rating_stars span.r.r1 {
+            left: 10px;
+            width: 11px;
+        }
+
+        .rating_stars span.r.r1_5 {
+            left: 21px;
+            width: 13px;
+        }
+
+        .rating_stars span.r.r2 {
+            left: 34px;
+            width: 12px;
+        }
+
+        .rating_stars span.r.r2_5 {
+            left: 46px;
+            width: 12px;
+        }
+
+        .rating_stars span.r.r3 {
+            left: 58px;
+            width: 11px;
+        }
+
+        .rating_stars span.r.r3_5 {
+            left: 69px;
+            width: 12px;
+        }
+
+        .rating_stars span.r.r4 {
+            left: 81px;
+            width: 12px;
+        }
+
+        .rating_stars span.r.r4_5 {
+            left: 93px;
+            width: 12px;
+        }
+
+        .rating_stars span.r.r5 {
+            left: 105px;
+            width: 12px;
+        }
+
+        /* Just to make things look pretty ;) */
+        html,
+        body {
+            text-align: center;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            height: 100%;
+            color: #eee;
+            background: red;
+            /* Old browsers */
+            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+            background: -moz-linear-gradient(-45deg, #7d7e7d 0%, #0e0e0e 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(linear,
+                    left top,
+                    right bottom,
+                    color-stop(0%, #7d7e7d),
+                    color-stop(100%, #0e0e0e));
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(-45deg, #7d7e7d 0%, #0e0e0e 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(-45deg, #0a1741 0%, #0e0e0e 100%);
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(-45deg, #7d7e7d 0%, #0e0e0e 100%);
+            /* IE10+ */
+            background: linear-gradient(135deg, #04456b 0%, #0e0e0e 100%);
+            /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d7e7d', endColorstr='#0e0e0e', GradientType=1);
+            /* IE6-8 fallback on horizontal gradient */
+        }
+
+        .values {
+            margin-top: 20vh;
+        }
+
+        .rating_value {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rating_value label {
+            width: 200px;
+            text-align: center;
+            margin-right: 10px;
+            font-size: 25px;
+        }
+
+        .rating_value input {
+            width: 70px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .info {
+            max-width: 500px;
+            margin: 20px auto;
+        }
+    </style>
+    <title>Netbet Stars</title>
+</head>
+
+<body>
+    <div class="wrapper-container">
+        <h1 style="margin-bottom: 100px">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+            doloremque.
+        </h1>
+        <div class="container-starts">
+            <span class="rating_stars rating_0">
+                <span class="s" data-low="0.5" data-high="1"><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
+                <span class="s" data-low="1.5" data-high="2"><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
+                <span class="s" data-low="2.5" data-high="3"><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
+                <span class="s" data-low="3.5" data-high="4"><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
+                <span class="s" data-low="4.5" data-high="5"><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
+
+                <span class="r r0_5" data-rating="1" data-value="0.5"></span>
+                <span class="r r1" data-rating="1" data-value="1"></span>
+                <span class="r r1_5" data-rating="15" data-value="1.5"></span>
+                <span class="r r2" data-rating="2" data-value="2"></span>
+                <span class="r r2_5" data-rating="25" data-value="2.5"></span>
+                <span class="r r3" data-rating="3" data-value="3"></span>
+                <span class="r r3_5" data-rating="35" data-value="3.5"></span>
+                <span class="r r4" data-rating="4" data-value="4"></span>
+                <span class="r r4_5" data-rating="45" data-value="4.5"></span>
+                <span class="r r5" data-rating="5" data-value="5"></span>
+            </span>
+        </div>
+        <br />
+        <br />
+        <div class="values">
+            <div>
+                <!--   <label>Rating</label><input type="text" id="rating" value="0" />-->
+            </div>
+            <div class="rating_value">
+                <label>Rating Value</label><input type="text" name="rating" id="rating_val" value="0" />
+            </div>
+        </div>
+
+        <div class="info">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, magnam
+                eos pariatur facere dolorem doloremque eum est, distinctio corporis
+                culpa quos necessitatibus assumenda incidunt nostrum! Velit eligendi
+                earum veniam quisquam.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function ($) {
+            $(".rating_stars span.r")
+                .hover(
+                    function (ratingVal) {
+                        // get hovered value
+                        let rating = $(this).data("rating");
+                        let value = $(this).data("value");
+                        $(this)
+                            .parent()
+                            .attr("class", "")
+                            .addClass("rating_stars")
+                            .addClass("rating_" + rating);
+                        highlight_star(value);
+                    },
+                    function () {
+                        // get hidden field value
+                        let rating = $("#rating").val();
+                        let value = $("#rating_val").val();
+
+                        $(this)
+                            .parent()
+                            .attr("class", "")
+                            .addClass("rating_stars")
+                            .addClass("rating_" + rating);
+                        highlight_star(value);
+                    }
+                )
+                .click(function () {
+                    // Set hidden field value
+                    let value = $(this).data("value");
+                    let clickVal = $("#rating_val").val(value);
+                    let rating = $(this).data("rating");
+                    $("#rating").val(rating);
+                    if ($(this).data("value") <= 2.5) {
+                        alert("link 1");
+                        console.log("mai mare ca 2.5");
+                        console.log(value, "valoare");
+                        console.log(rating, "rating");
+                    } else if ($(this).data("value") > 2.5) {
+                        alert("link 2");
+                        console.log("mai mic ca 2.5");
+                        console.log(value, "valoare");
+                        console.log(rating, "rating");
+                    }
+                });
+
+            let highlight_star = function (rating) {
+                $(".rating_stars span.s").each(function () {
+                    let low = $(this).data("low");
+                    let high = $(this).data("high");
+                    $(this).removeClass("active-high").removeClass("active-low");
+                    if (rating >= high) $(this).addClass("active-high");
+                    else if (rating == low) $(this).addClass("active-low");
+                });
+            };
+        });
+    </script>
+</body>
+
+</html>
