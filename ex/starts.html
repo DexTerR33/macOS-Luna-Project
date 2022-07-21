@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <style>
         .wrapper-container {
             overflow: hidden;
@@ -19,6 +21,8 @@
             justify-content: center;
             align-items: center;
         }
+     
+
 
         .container-starts {
             transform: scale(10);
@@ -26,34 +30,38 @@
 
         .rating_stars {
             margin-top: 15px;
-            display: inline-block;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            gap: 2px;
             font-size: 20px;
             font-weight: 200;
             color: white;
             position: relative;
         }
 
-        .rating_stars span .fa,
-        .rating_stars span.active-low .fa-star-o,
-        .rating_stars span.active-high .fa-star-o {
+        .rating_stars div .fa,
+        .rating_stars div.active-low .fa-star-o,
+        .rating_stars div.active-high .fa-star-o {
             display: none;
         }
 
-        .rating_stars span .fa-star-o {
+        .rating_stars div .fa-star-o {
             display: inline-block;
         }
 
-        .rating_stars span.s.active-high .fa-star {
+        .rating_stars div.s.active-high .fa-star{
             display: inline-block;
             color: #fb460f;
         }
 
-        .rating_stars span.s.active-low .fa-star-half-o {
+        .rating_stars div.s.active-low .fa-star-half-o{
             display: inline-block;
             color: #fe670c;
         }
 
-        .rating_stars span.r {
+        .rating_stars div.r {
             position: absolute;
             top: 0;
             height: 20px;
@@ -61,54 +69,61 @@
             left: 0;
         }
 
-        .rating_stars span.r.r0_5 {
-            left: 0px;
+        .rating_stars div.r.r0_5 {
+            left: 4px;
         }
 
-        .rating_stars span.r.r1 {
-            left: 10px;
-            width: 11px;
+        .rating_stars div.r.r1 {
+            left: 14px;
+    width: 11px;
         }
 
-        .rating_stars span.r.r1_5 {
-            left: 21px;
-            width: 13px;
+        .rating_stars div.r.r1_5 {
+            left: 25px;
+    width: 9px;
         }
 
-        .rating_stars span.r.r2 {
+        .rating_stars div.r.r2 {
             left: 34px;
             width: 12px;
         }
 
-        .rating_stars span.r.r2_5 {
+        .rating_stars div.r.r2_5 {
             left: 46px;
-            width: 12px;
+            width: 8px;
         }
 
-        .rating_stars span.r.r3 {
-            left: 58px;
-            width: 11px;
+        .rating_stars div.r.r3 {
+            left: 55px;
+    width: 12px;
         }
 
-        .rating_stars span.r.r3_5 {
-            left: 69px;
-            width: 12px;
+        .rating_stars div.r.r3_5 {
+            left: 67px;
+    width: 8px
+
         }
 
-        .rating_stars span.r.r4 {
-            left: 81px;
-            width: 12px;
+        .rating_stars div.r.r4 {
+            left: 74px;
+    width: 12px;
         }
 
-        .rating_stars span.r.r4_5 {
-            left: 93px;
-            width: 12px;
+        .rating_stars div.r.r4_5 {
+            left: 86px;
+    width: 10px;
         }
 
-        .rating_stars span.r.r5 {
-            left: 105px;
-            width: 12px;
+        .rating_stars div.r.r5 {
+            left: 96px;
+    width: 6px;
         }
+/* .r0, .r1, .r2, .r3, .r4, .r5{
+    background-color: rgba(128, 128, 128, 0.589);
+}
+.r0_5, .r1_5, .r2_5, .r3_5, .r4_5{
+    background-color: rgba(204, 126, 9, 0.521);
+} */
 
         /* Just to make things look pretty ;) */
         html,
@@ -118,37 +133,30 @@
             font-size: 12px;
             height: 100%;
             color: #eee;
-            background: red;
-            /* Old browsers */
-            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-            background: -moz-linear-gradient(-45deg, #7d7e7d 0%, #0e0e0e 100%);
-            /* FF3.6+ */
-            background: -webkit-gradient(linear,
-                    left top,
-                    right bottom,
-                    color-stop(0%, #7d7e7d),
-                    color-stop(100%, #0e0e0e));
-            /* Chrome,Safari4+ */
-            background: -webkit-linear-gradient(-45deg, #7d7e7d 0%, #0e0e0e 100%);
-            /* Chrome10+,Safari5.1+ */
-            background: -o-linear-gradient(-45deg, #0a1741 0%, #0e0e0e 100%);
-            /* Opera 11.10+ */
-            background: -ms-linear-gradient(-45deg, #7d7e7d 0%, #0e0e0e 100%);
-            /* IE10+ */
-            background: linear-gradient(135deg, #04456b 0%, #0e0e0e 100%);
-            /* W3C */
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d7e7d', endColorstr='#0e0e0e', GradientType=1);
-            /* IE6-8 fallback on horizontal gradient */
-        }
+        
+  
 
+            background: linear-gradient(135deg, #04456b 0%, #0e0e0e 100%);
+ 
+        }
+.show_value{
+    height: 100px;
+    width: 250px;
+    line-height: 1.4;
+    font-size: 6em;
+    text-align: center;
+    margin-bottom: 1em;
+    border: 1px solid white;
+}
         .values {
-            margin-top: 20vh;
+            margin-top: 12vh;
         }
 
         .rating_value {
             display: flex;
             justify-content: center;
             align-items: center;
+            display: none;
         }
 
         .rating_value label {
@@ -179,29 +187,43 @@
             doloremque.
         </h1>
         <div class="container-starts">
-            <span class="rating_stars rating_0">
-                <span class="s" data-low="0.5" data-high="1"><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
-                <span class="s" data-low="1.5" data-high="2"><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
-                <span class="s" data-low="2.5" data-high="3"><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
-                <span class="s" data-low="3.5" data-high="4"><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
-                <span class="s" data-low="4.5" data-high="5"><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></span>
+            <div class="rating_stars rating_0">
+             
+                <div class="s" data-low="0.5" data-high="1">
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star"></i></div>
+                <div class="s" data-low="1.5" data-high="2">
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star"></i></div>
+                <div class="s" data-low="2.5" data-high="3">
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star"></i></div>
+                <div class="s" data-low="3.5" data-high="4">
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="s" data-low="4.5" data-high="5"><i class="fa fa-star-o"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star"></i></div>
+                <div class="r r0_5" data-rating="1" data-value="0.5"></div>
+                <div class="r r1" data-rating="1" data-value="1"></div>
+                <div class="r r1_5" data-rating="15" data-value="1.5"></div>
+                <div class="r r2" data-rating="2" data-value="2"></div>
+                <div class="r r2_5" data-rating="25" data-value="2.5"></div>
+                <div class="r r3" data-rating="3" data-value="3"></div>
+                <div class="r r3_5" data-rating="35" data-value="3.5"></div>
+                <div class="r r4" data-rating="4" data-value="4"></div>
+                <div class="r r4_5" data-rating="45" data-value="4.5"></div>
+                <div class="r r5" data-rating="5" data-value="5"></div>
+            </div>
 
-                <span class="r r0_5" data-rating="1" data-value="0.5"></span>
-                <span class="r r1" data-rating="1" data-value="1"></span>
-                <span class="r r1_5" data-rating="15" data-value="1.5"></span>
-                <span class="r r2" data-rating="2" data-value="2"></span>
-                <span class="r r2_5" data-rating="25" data-value="2.5"></span>
-                <span class="r r3" data-rating="3" data-value="3"></span>
-                <span class="r r3_5" data-rating="35" data-value="3.5"></span>
-                <span class="r r4" data-rating="4" data-value="4"></span>
-                <span class="r r4_5" data-rating="45" data-value="4.5"></span>
-                <span class="r r5" data-rating="5" data-value="5"></span>
-            </span>
         </div>
-        <br />
-        <br />
+  
         <div class="values">
             <div>
+                <div id="show_Hvalue" class="show_value">0</div>
                 <!--   <label>Rating</label><input type="text" id="rating" value="0" />-->
             </div>
             <div class="rating_value">
@@ -210,6 +232,7 @@
         </div>
 
         <div class="info">
+  
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, magnam
                 eos pariatur facere dolorem doloremque eum est, distinctio corporis
@@ -221,19 +244,23 @@
 
     <script>
         $(document).ready(function ($) {
-            $(".rating_stars span.r")
+            $(".rating_stars div.r")
                 .hover(
                     function (ratingVal) {
                         // get hovered value
                         let rating = $(this).data("rating");
                         let value = $(this).data("value");
+                       
+                     
                         $(this)
                             .parent()
                             .attr("class", "")
                             .addClass("rating_stars")
                             .addClass("rating_" + rating);
-                        highlight_star(value);
+                         highlight_star(value)
+             
                     },
+                    
                     function () {
                         // get hidden field value
                         let rating = $("#rating").val();
@@ -246,6 +273,7 @@
                             .addClass("rating_" + rating);
                         highlight_star(value);
                     }
+                    
                 )
                 .click(function () {
                     // Set hidden field value
@@ -263,16 +291,23 @@
                         console.log("mai mic ca 2.5");
                         console.log(value, "valoare");
                         console.log(rating, "rating");
-                    }
+                    } 
                 });
 
             let highlight_star = function (rating) {
-                $(".rating_stars span.s").each(function () {
+                $(".rating_stars div.s").each(function () {
                     let low = $(this).data("low");
                     let high = $(this).data("high");
+                    let zero = 0; 
                     $(this).removeClass("active-high").removeClass("active-low");
                     if (rating >= high) $(this).addClass("active-high");
                     else if (rating == low) $(this).addClass("active-low");
+                    else if (rating == zero) $(this).addClass("active-zero");
+                    
+                    let displayRating = rating;
+                    document.getElementById("show_Hvalue").innerHTML = displayRating;
+                    // const content = element.innerHTML;
+                    console.log(displayRating, "displayRating")
                 });
             };
         });
