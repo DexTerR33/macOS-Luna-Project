@@ -342,13 +342,16 @@ to{opacity: 1;}
             if (rating == 0) {
            document.getElementById("show_Hlink").innerHTML = "NO VALUE";
             }
-            else if (rating <= 2) {
+            else if (rating <= 1.5) {
              document.getElementById("show_Hlink").innerHTML = "LOW";
-            } else if (rating == 2.5) {
+            } else if (rating <= 3) {
               document.getElementById("show_Hlink").innerHTML = "MEDIUM";
-            } else if ((rating) => 5) {
+            } else if (rating <= 4.5) {
               document.getElementById("show_Hlink").innerHTML = "GOOD";
+            } else if (rating == 5) {
+              document.getElementById("show_Hlink").innerHTML = "GREAT";
             }
+            
             document.getElementById("show_Hvalue").innerHTML = displayRating;
             // console.log(displayRating, "displayRating");
           });
