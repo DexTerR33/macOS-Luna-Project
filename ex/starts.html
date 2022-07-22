@@ -84,7 +84,12 @@
 
         color: #f04f1d;
       }
-
+      .rating_stars:hover {
+        transform: scale(1.05);
+      }
+      .rating_stars {
+        transition: 0.5s ease;
+      }
       .rating_stars div.r {
         position: absolute;
         top: 0;
@@ -191,12 +196,24 @@
         margin-bottom: 2em;
         text-align: center;
       }
+      .animation{
+        opacity: 0;
+        animation: fade-text 2s 0.5s ease forwards;
+      }
+      .animation-fade {
+        opacity: 0;
+        animation: fade-text 2s ease forwards;
+      }
+      @keyframes fade-text{
+from{opacity: 0;}
+to{opacity: 1;}
+      }
     </style>
     <title>Netbet Stars</title>
   </head>
 
   <body>
-    <div class="wrapper-container">
+    <div class="wrapper-container animation-fade">
       <h1 style="margin-bottom: 100px">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
         doloremque.
@@ -240,19 +257,19 @@
         </div>
       </div>
 
-      <div class="values">
+      <div class="values animation animation-fade-voting">
         <div>
           <div id="show_Hvalue" class="show_value">0</div>
           <div id="show_Hlink" class="show_link">Voteaza</div>
           <!--   <label>Rating</label><input type="text" id="rating" value="0" />-->
         </div>
-        <div class="rating_value">
+        <div class="rating_value animation animation-fade-rating">
           <label>Rating Value</label
           ><input type="text" name="rating" id="rating_val" value="0" />
         </div>
       </div>
 
-      <div class="info">
+      <div class="info animation animation-fade-text">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, magnam
           eos pariatur facere dolorem doloremque eum est, distinctio corporis
@@ -322,8 +339,11 @@
             } else if (rating == low) {
               $(this).addClass("active-low");
             }
-            if (rating <= 2) {
-              document.getElementById("show_Hlink").innerHTML = "LOW";
+            if (rating == 0) {
+           document.getElementById("show_Hlink").innerHTML = "NO VALUE";
+            }
+            else if (rating <= 2) {
+             document.getElementById("show_Hlink").innerHTML = "LOW";
             } else if (rating == 2.5) {
               document.getElementById("show_Hlink").innerHTML = "MEDIUM";
             } else if ((rating) => 5) {
