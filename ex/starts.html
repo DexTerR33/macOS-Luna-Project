@@ -185,6 +185,12 @@
         max-width: 500px;
         margin: 20px auto;
       }
+      .show_link {
+        font-size: 2em;
+        height: 30px;
+        margin-bottom: 2em;
+        text-align: center;
+      }
     </style>
     <title>Netbet Stars</title>
   </head>
@@ -306,29 +312,25 @@
           });
 
         let highlight_star = function (rating) {
-            let displayRating = rating;
+          let displayRating = rating;
           $(".rating_stars div.s").each(function () {
             let low = $(this).data("low");
             let high = $(this).data("high");
-       
             $(this).removeClass("active-high").removeClass("active-low");
             if (rating >= high) {
               $(this).addClass("active-high");
-            
             } else if (rating == low) {
               $(this).addClass("active-low");
-        
-            } 
-            if (rating <= 2){
-                document.getElementById("show_Hlink").innerHTML = "LOW";
-                
-            }else if (rating == 2.5){
-                document.getElementById("show_Hlink").innerHTML = "MEDIUM";
-            }else if (rating => 5) {
-                document.getElementById("show_Hlink").innerHTML = "GOOD";
+            }
+            if (rating <= 2) {
+              document.getElementById("show_Hlink").innerHTML = "LOW";
+            } else if (rating == 2.5) {
+              document.getElementById("show_Hlink").innerHTML = "MEDIUM";
+            } else if ((rating) => 5) {
+              document.getElementById("show_Hlink").innerHTML = "GOOD";
             }
             document.getElementById("show_Hvalue").innerHTML = displayRating;
-            console.log(displayRating, "displayRating");
+            // console.log(displayRating, "displayRating");
           });
         };
       });
