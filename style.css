@@ -37,8 +37,10 @@ font-family: 'Poppins', sans-serif;
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 72vh;
+    height: 100vh;
     flex-direction: column;
+    background: rgb(16,17,24);
+background: linear-gradient(63deg, rgba(16,17,24,1) 0%, rgba(13,16,22,1) 44%, rgba(5,5,5,1) 100%);
   }
   .text-container-mobile{
     flex-basis: 300px;
@@ -46,7 +48,17 @@ font-family: 'Poppins', sans-serif;
     align-items: center;
     display: flex;
     flex-direction: column;
+    color: white;
+    padding: 10px;
+    
   }
+.text-container-mobile div{
+ width: 320px;
+ text-transform: uppercase;
+}
+.text-container-mobile div:nth-child(2){
+  margin-bottom: 10px;
+ }
   .text-container-mobile h2 {
     font-size: 2em;
   }
@@ -57,9 +69,25 @@ font-family: 'Poppins', sans-serif;
     color: var(--text-low-finder-color);
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
     flex-basis: 200px;
+  }
+  .like-mobile-button{
+    margin-top: 10px;
+    padding: 5px;
+    width: 70px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: crimson;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+  }
+  .crafties {
+    width: 200px;
   }
 }
 @media screen and (min-width:1024px) {
