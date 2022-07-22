@@ -28,7 +28,7 @@ font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 
 }
-@media screen and (max-width:1023px) {
+@media screen and (orientation:portrait) and (max-width:1023px) {
   .container{
     display: none;
   }
